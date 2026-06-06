@@ -1,0 +1,32 @@
+###########################################################################
+# Presidential Cabinet - USA Overhaul : Scripted Effects
+# Helper effects used by the focus tree to drive the cabinet system.
+# Everything that GATES content is variable-based, so the tree works even
+# if the (isolated) power-balance feature is unavailable on a given patch.
+###########################################################################
+
+# Called when the Brain Trust focus is taken. The power balance itself is
+# auto-applied to the USA via its definition (default = yes); this just gives
+# a little political capital to kick off cabinet-building.
+USA_setup_cabinet_balance = {
+	add_political_power = 25
+}
+
+# Increment the count of filled cabinet seats (gates The Inner Circle focus).
+USA_fill_cabinet_seat = {
+	add_to_variable = { USA_cabinet_seats_filled = 1 }
+}
+
+# A progressive appointment: raises progressive influence and nudges the
+# cabinet power balance toward the New Deal / progressive pole (left).
+USA_shift_cabinet_progressive = {
+	add_to_variable = { USA_progressive_influence = 1 }
+	add_power_balance_value = { id = USA_cabinet_balance value = -0.15 }
+}
+
+# A conservative appointment: raises conservative influence and nudges the
+# cabinet power balance toward the Old Guard pole (right).
+USA_shift_cabinet_conservative = {
+	add_to_variable = { USA_conservative_influence = 1 }
+	add_power_balance_value = { id = USA_cabinet_balance value = 0.15 }
+}

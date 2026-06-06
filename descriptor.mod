@@ -1,0 +1,9 @@
+version="0.1.0"
+tags={
+	"Alternative History"
+	"Gameplay"
+	"National Focuses"
+	"Historical"
+}
+name="Presidential Cabinet - A USA Overhaul"
+supported_version="1.16.*"

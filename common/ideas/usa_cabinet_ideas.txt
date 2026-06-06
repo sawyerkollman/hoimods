@@ -1,0 +1,304 @@
+###########################################################################
+# Presidential Cabinet - USA Overhaul : Ideas & National Spirits
+# Cabinet members are modelled as national-spirit ideas granted by focuses,
+# so the assembled cabinet displays as an "inner circle" row of spirits.
+###########################################################################
+
+ideas = {
+
+	country = {
+
+		#######################################################################
+		# CABINET MEMBERS - The Inner Circle
+		#######################################################################
+
+		# --- Secretary of State -----------------------------------------
+		USA_cabinet_cordell_hull = {
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				improve_relations_maintain_cost_factor = -0.25
+				opinion_gain_monthly_factor = 0.15
+				political_power_gain = 0.10
+			}
+		}
+
+		USA_cabinet_isolationist_state = {
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				drift_defence_factor = 0.25
+				stability_factor = 0.05
+				justify_war_goal_time_factor = 0.25
+			}
+		}
+
+		# --- Secretary of the Treasury ----------------------------------
+		USA_cabinet_morgenthau = {
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				consumer_goods_factor = -0.05
+				production_speed_buildings_factor = 0.10
+			}
+		}
+
+		USA_cabinet_business_treasury = {
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.10
+				industrial_capacity_factory = 0.05
+				stability_factor = -0.02
+			}
+		}
+
+		# --- Secretary of War -------------------------------------------
+		USA_cabinet_stimson = {
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				army_org_factor = 0.05
+				war_support_factor = 0.05
+				conscription_factor = 0.05
+			}
+		}
+
+		USA_cabinet_woodring = {
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				training_time_army_factor = -0.10
+				consumer_goods_factor = -0.03
+				war_support_factor = -0.05
+			}
+		}
+
+		# --- Attorney General -------------------------------------------
+		USA_cabinet_murphy = {
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.05
+				political_power_gain = 0.05
+			}
+		}
+
+		USA_cabinet_security_ag = {
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				war_support_factor = 0.05
+				drift_defence_factor = 0.15
+				stability_factor = -0.02
+			}
+		}
+
+		#######################################################################
+		# NATIONAL SPIRITS - Granted by the focus tree
+		#######################################################################
+
+		USA_the_second_new_deal_spirit = {
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				production_speed_buildings_factor = 0.10
+				consumer_goods_factor = -0.03
+			}
+		}
+
+		USA_managed_economy_spirit = {
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				industrial_capacity_factory = 0.10
+				production_factory_max_efficiency_factor = 0.05
+			}
+		}
+
+		USA_the_inner_circle_spirit = {
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				political_power_gain = 0.20
+				stability_factor = 0.05
+			}
+		}
+
+		USA_progressive_coalition_spirit = {
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.08
+				consumer_goods_factor = -0.05
+			}
+		}
+
+		USA_conservative_coalition_spirit = {
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.10
+				political_power_gain = 0.10
+			}
+		}
+
+		USA_economic_bill_of_rights_spirit = {
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.10
+				war_support_factor = 0.05
+			}
+		}
+
+		USA_cooperative_commonwealth_spirit = {
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				industrial_capacity_factory = 0.10
+				political_power_gain = 0.10
+				stability_factor = -0.05
+			}
+		}
+
+		USA_old_republic_spirit = {
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				political_power_gain = 0.15
+				production_factory_efficiency_gain_factor = 0.05
+			}
+		}
+
+		USA_american_caesar_spirit = {
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				war_support_factor = 0.10
+				army_org_factor = 0.05
+				stability_factor = -0.05
+			}
+		}
+
+		USA_total_mobilization_spirit = {
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				industrial_capacity_factory = 0.10
+				conscription_factor = 0.05
+			}
+		}
+
+		USA_atomic_monopoly_spirit = {
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				war_support_factor = 0.10
+				justify_war_goal_time_factor = -0.10
+			}
+		}
+
+		USA_lend_lease_spirit = {
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				lend_lease_tension = -0.20
+				industrial_capacity_factory = 0.05
+			}
+		}
+
+		USA_postwar_planning_spirit = {
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				political_power_gain = 0.10
+				stability_factor = 0.05
+			}
+		}
+
+		USA_bretton_woods_spirit = {
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				consumer_goods_factor = -0.05
+				production_factory_efficiency_gain_factor = 0.05
+			}
+		}
+
+		USA_united_nations_spirit = {
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				opinion_gain_monthly_factor = 0.20
+				improve_relations_maintain_cost_factor = -0.25
+			}
+		}
+
+		USA_marshall_plan_spirit = {
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				opinion_gain_monthly_factor = 0.15
+				political_power_gain = 0.05
+			}
+		}
+
+		USA_iron_curtain_spirit = {
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				war_support_factor = 0.05
+				drift_defence_factor = 0.20
+			}
+		}
+
+		USA_containment_spirit = {
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				war_support_factor = 0.10
+				army_org_factor = 0.05
+			}
+		}
+
+		USA_return_to_normalcy_spirit = {
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.10
+				consumer_goods_factor = -0.08
+			}
+		}
+
+		USA_demobilization_spirit = {
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				consumer_goods_factor = -0.10
+				stability_factor = 0.05
+				conscription_factor = -0.02
+			}
+		}
+
+		USA_permanent_establishment_spirit = {
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				army_org_factor = 0.05
+				conscription_factor = 0.05
+				consumer_goods_factor = 0.03
+			}
+		}
+
+		USA_american_century_spirit = {
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				political_power_gain = 0.25
+				industrial_capacity_factory = 0.10
+				opinion_gain_monthly_factor = 0.20
+			}
+		}
+	}
+}

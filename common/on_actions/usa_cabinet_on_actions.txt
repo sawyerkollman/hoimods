@@ -1,0 +1,21 @@
+###########################################################################
+# Presidential Cabinet - USA Overhaul : On Actions
+# Initialise the cabinet tracking variables for the United States at game
+# start so check_variable comparisons in the focus tree behave predictably.
+###########################################################################
+
+on_actions = {
+	on_startup = {
+		effect = {
+			USA = {
+				if = {
+					limit = { NOT = { has_country_flag = USA_cabinet_initialised } }
+					set_country_flag = USA_cabinet_initialised
+					set_variable = { USA_cabinet_seats_filled = 0 }
+					set_variable = { USA_progressive_influence = 0 }
+					set_variable = { USA_conservative_influence = 0 }
+				}
+			}
+		}
+	}
+}
