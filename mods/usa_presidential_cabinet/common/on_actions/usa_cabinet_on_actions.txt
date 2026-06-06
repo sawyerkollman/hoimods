@@ -1,13 +1,20 @@
 ###########################################################################
 # Presidential Cabinet - USA Overhaul : On Actions
-# Initialise the cabinet tracking variables for the United States at game
-# start so check_variable comparisons in the focus tree behave predictably.
+# - Force-load our focus tree for the USA at game start so it overrides the
+#   Road to 56 / vanilla US tree regardless of selection scoring. Because
+#   this mod loads AFTER Road to 56, this effect runs last and wins.
+# - Initialise the cabinet tracking variables so check_variable comparisons
+#   in the focus tree behave predictably.
 ###########################################################################
 
 on_actions = {
 	on_startup = {
 		effect = {
 			USA = {
+				load_focus_tree = {
+					tree = USA_cabinet_focus_tree
+					keep_completed = yes
+				}
 				if = {
 					limit = { NOT = { has_country_flag = USA_cabinet_initialised } }
 					set_country_flag = USA_cabinet_initialised
