@@ -36,6 +36,9 @@ make-up of your cabinet then unlocks divergent paths.
 - **Conservative / reactionary offshoots:** Restore the Old Republic, and
   (deep conservative) *The American Caesar*.
 - **Demobilization vs. a Permanent Military Establishment** after the war.
+- **R&D branch** (Scientific Establishment → Electronics Mastery →
+  Operations Research) granting electronics/research bonuses and an **extra
+  research slot** to push into the extended (Road to 56) tech trees.
 
 ## How the cabinet mechanic is implemented
 
@@ -52,6 +55,19 @@ make-up of your cabinet then unlocks divergent paths.
 
 ## Requirements / compatibility
 
+- **Road to 56 submod.** This mod declares **Road to 56** as a dependency
+  (`dependencies` in `descriptor.mod`) so the launcher loads R56 first and
+  this mod on top. You must **subscribe to Road to 56 yourself** — none of
+  R56's files are copied or redistributed here. With R56 active, the focus
+  tree's tech bonuses feed R56's extended late-war / Cold War trees, and the
+  R&D branch (extra research slot + research speed) lets you actually reach
+  them.
+  - The focus tech bonuses use **vanilla research _categories_**
+    (industry, electronics, nuclear, doctrines), which automatically cover
+    whatever extended techs R56 adds in those categories — no fragile
+    references to R56-specific technology IDs.
+  - It will still load **without** R56; you simply won't have the extended
+    trees, only the deeper research bonuses.
 - Designed against a **Götterdämmerung-era** install (the power balance and
   inner-circle framing assume that DLC's systems). The variable-gated core
   works without it; only the power-balance meter depends on newer scripting.
@@ -60,6 +76,15 @@ make-up of your cabinet then unlocks divergent paths.
   tree.
 - `supported_version` is set to `1.16.*`. If you are on a different patch,
   edit `descriptor.mod` — the launcher only warns, it will still load.
+
+### Load order
+
+In the launcher Playset, order them top-to-bottom:
+
+```
+Road to 56
+Presidential Cabinet - A USA Overhaul   (this mod, loaded last)
+```
 
 ## Installation
 
@@ -70,13 +95,16 @@ make-up of your cabinet then unlocks divergent paths.
    `usa_cabinet.mod` containing:
 
    ```
-   version="0.1.0"
+   version="0.2.0"
    tags={ "Alternative History" "Gameplay" "National Focuses" }
    name="Presidential Cabinet - A USA Overhaul"
    supported_version="1.16.*"
+   dependencies={ "Road to 56" }
    path="mod/usa_cabinet"
    ```
-3. Launch HOI4, enable the mod in the Playset, and start as the USA.
+3. Subscribe to **Road to 56** on the Steam Workshop.
+4. Launch HOI4, enable both mods in the Playset (Road to 56 above this mod),
+   and start as the USA.
 
 ## File layout
 

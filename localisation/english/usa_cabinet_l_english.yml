@@ -77,6 +77,12 @@ l_english:
  USA_the_manhattan_project_desc:0 "In secret laboratories, the nation's finest minds pursue a weapon of unimaginable power. Whoever wields it first may end the war in an instant."
  USA_dawn_of_the_atomic_age:0 "Dawn of the Atomic Age"
  USA_dawn_of_the_atomic_age_desc:0 "The bomb is real. America stands alone atop a new and terrible age, and the world will never be the same."
+ USA_scientific_establishment:0 "A Scientific Establishment"
+ USA_scientific_establishment_desc:0 "Marshal the universities, the national laboratories, and the brightest minds of a generation. The wars of the future will be won in the laboratory as much as on the battlefield."
+ USA_electronics_mastery:0 "Electronics Mastery"
+ USA_electronics_mastery_desc:0 "Radar, computing, and precision electronics will give American forces an edge no enemy can match, and open the door to the technologies of a new age."
+ USA_operations_research:0 "Operations Research"
+ USA_operations_research_desc:0 "Bring scientific rigor to the management of war and industry itself. A dedicated research program lets America pursue more avenues of advancement at once."
 
  # --- Old World Ties / Diplomacy and the Post-War Order ---
  USA_old_world_ties:0 "Old World Ties"
@@ -149,6 +155,10 @@ l_english:
  USA_old_republic_spirit_desc:0 "Limited government and free enterprise return to the heart of American life."
  USA_american_caesar_spirit:0 "The American Caesar"
  USA_american_caesar_spirit_desc:0 "A strong executive imposes order, at the cost of the old constitutional restraints."
+ USA_scientific_establishment_spirit:0 "A Scientific Establishment"
+ USA_scientific_establishment_spirit_desc:0 "A coordinated national research effort speeds American science forward."
+ USA_operations_research_spirit:0 "Operations Research"
+ USA_operations_research_spirit_desc:0 "Scientific method applied to war and industry sharpens both research and production."
  USA_total_mobilization_spirit:0 "Total Mobilization"
  USA_total_mobilization_spirit_desc:0 "The full might of American industry and manpower is committed to the war."
  USA_atomic_monopoly_spirit:0 "Atomic Monopoly"

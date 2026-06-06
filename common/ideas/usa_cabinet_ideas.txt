@@ -181,12 +181,30 @@ ideas = {
 			}
 		}
 
+		USA_scientific_establishment_spirit = {
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				research_speed_factor = 0.05
+			}
+		}
+
+		USA_operations_research_spirit = {
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				research_speed_factor = 0.05
+				production_factory_efficiency_gain_factor = 0.05
+			}
+		}
+
 		USA_total_mobilization_spirit = {
 			allowed = { always = no }
 			removal_cost = -1
 			modifier = {
 				industrial_capacity_factory = 0.10
 				conscription_factor = 0.05
+				research_speed_factor = 0.05
 			}
 		}
 
@@ -298,6 +316,7 @@ ideas = {
 				political_power_gain = 0.25
 				industrial_capacity_factory = 0.10
 				opinion_gain_monthly_factor = 0.20
+				research_speed_factor = 0.10
 			}
 		}
 	}

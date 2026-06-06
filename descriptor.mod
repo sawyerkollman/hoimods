@@ -1,4 +1,4 @@
-version="0.1.0"
+version="0.2.0"
 tags={
 	"Alternative History"
 	"Gameplay"
@@ -7,3 +7,6 @@ tags={
 }
 name="Presidential Cabinet - A USA Overhaul"
 supported_version="1.16.*"
+dependencies={
+	"Road to 56"
+}

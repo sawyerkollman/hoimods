@@ -592,6 +592,53 @@ focus_tree = {
 		ai_will_do = { factor = 5 }
 	}
 
+	# --- Research & Development sub-branch ----------------------------
+	# Drives research into the extended (Road to 56) tech trees: faster
+	# electronics, an extra research slot, and broad research speed.
+	focus = {
+		id = USA_scientific_establishment
+		icon = GFX_goal_generic_secret_weapon
+		relative_position_id = USA_the_arsenal
+		x = 3
+		y = 1
+		cost = 10
+		prerequisite = { focus = USA_the_arsenal }
+		completion_reward = {
+			add_ideas = USA_scientific_establishment_spirit
+			add_tech_bonus = { bonus = 0.5 uses = 1 category = electronics }
+		}
+		ai_will_do = { factor = 5 }
+	}
+
+	focus = {
+		id = USA_electronics_mastery
+		icon = GFX_goal_generic_production
+		relative_position_id = USA_the_arsenal
+		x = 3
+		y = 2
+		cost = 10
+		prerequisite = { focus = USA_scientific_establishment }
+		completion_reward = {
+			add_tech_bonus = { bonus = 0.5 uses = 2 category = electronics }
+		}
+		ai_will_do = { factor = 5 }
+	}
+
+	focus = {
+		id = USA_operations_research
+		icon = GFX_goal_generic_secret_weapon
+		relative_position_id = USA_the_arsenal
+		x = 3
+		y = 3
+		cost = 15
+		prerequisite = { focus = USA_electronics_mastery }
+		completion_reward = {
+			add_ideas = USA_operations_research_spirit
+			add_research_slot = 1
+		}
+		ai_will_do = { factor = 5 }
+	}
+
 	#######################################################################
 	# OLD WORLD TIES - Diplomacy, the war, and the post-war order
 	#######################################################################
