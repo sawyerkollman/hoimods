@@ -1,0 +1,883 @@
+###########################################################################
+# Presidential Cabinet - USA Overhaul
+# Standalone focus tree for the United States.
+# Replaces the vanilla USA tree by out-weighting it for tag USA.
+###########################################################################
+
+focus_tree = {
+	id = USA_cabinet_focus_tree
+
+	country = {
+		factor = 0
+		modifier = {
+			add = 20
+			tag = USA
+		}
+	}
+
+	default = no
+	reset_on_civilwar = no
+
+	#######################################################################
+	# ECONOMIC SPINE - The New Deal endures
+	#######################################################################
+
+	focus = {
+		id = USA_a_nation_rebuilds
+		icon = GFX_goal_USA_new_deal
+		x = 2
+		y = 0
+		cost = 10
+		completion_reward = {
+			add_political_power = 50
+			add_stability = 0.03
+		}
+		ai_will_do = { factor = 5 }
+	}
+
+	focus = {
+		id = USA_relief_programs
+		icon = GFX_goal_generic_construct_civ
+		relative_position_id = USA_a_nation_rebuilds
+		x = -1
+		y = 1
+		cost = 10
+		prerequisite = { focus = USA_a_nation_rebuilds }
+		completion_reward = {
+			add_political_power = 25
+			346 = { add_extra_state_shared_building_slots = 2 }
+			add_stability = 0.02
+		}
+		ai_will_do = { factor = 5 }
+	}
+
+	focus = {
+		id = USA_public_works
+		icon = GFX_goal_generic_construction
+		relative_position_id = USA_a_nation_rebuilds
+		x = 1
+		y = 1
+		cost = 10
+		prerequisite = { focus = USA_a_nation_rebuilds }
+		completion_reward = {
+			add_tech_bonus = { bonus = 0.5 uses = 1 category = construction_tech }
+		}
+		ai_will_do = { factor = 5 }
+	}
+
+	focus = {
+		id = USA_the_second_new_deal
+		icon = GFX_goal_USA_new_deal
+		relative_position_id = USA_a_nation_rebuilds
+		x = 0
+		y = 2
+		cost = 10
+		prerequisite = { focus = USA_relief_programs }
+		prerequisite = { focus = USA_public_works }
+		completion_reward = {
+			add_ideas = USA_the_second_new_deal_spirit
+			add_political_power = 50
+		}
+		ai_will_do = { factor = 5 }
+	}
+
+	focus = {
+		id = USA_social_security_expansion
+		icon = GFX_goal_generic_political_pressure
+		relative_position_id = USA_a_nation_rebuilds
+		x = -1
+		y = 3
+		cost = 10
+		prerequisite = { focus = USA_the_second_new_deal }
+		completion_reward = {
+			add_stability = 0.05
+			add_to_variable = { USA_progressive_influence = 1 }
+		}
+		ai_will_do = { factor = 5 }
+	}
+
+	focus = {
+		id = USA_industrial_relations
+		icon = GFX_goal_generic_production
+		relative_position_id = USA_a_nation_rebuilds
+		x = 1
+		y = 3
+		cost = 10
+		prerequisite = { focus = USA_the_second_new_deal }
+		completion_reward = {
+			add_tech_bonus = { bonus = 0.5 uses = 2 category = industry }
+		}
+		ai_will_do = { factor = 5 }
+	}
+
+	focus = {
+		id = USA_a_managed_economy
+		icon = GFX_goal_USA_war_economy
+		relative_position_id = USA_a_nation_rebuilds
+		x = 0
+		y = 4
+		cost = 10
+		prerequisite = { focus = USA_social_security_expansion }
+		prerequisite = { focus = USA_industrial_relations }
+		completion_reward = {
+			add_ideas = USA_managed_economy_spirit
+		}
+		ai_will_do = { factor = 5 }
+	}
+
+	#######################################################################
+	# THE BRAIN TRUST - Presidential Cabinet / Inner Circle
+	#######################################################################
+
+	focus = {
+		id = USA_the_brain_trust
+		icon = GFX_goal_generic_political_pressure
+		x = 12
+		y = 0
+		cost = 10
+		completion_reward = {
+			add_political_power = 50
+			USA_setup_cabinet_balance = yes
+		}
+		ai_will_do = { factor = 10 }
+	}
+
+	# --- Seat: Secretary of State -------------------------------------
+	focus = {
+		id = USA_secretary_of_state
+		icon = GFX_goal_generic_improve_relations
+		relative_position_id = USA_the_brain_trust
+		x = -6
+		y = 1
+		cost = 8
+		prerequisite = { focus = USA_the_brain_trust }
+		completion_reward = {
+			add_political_power = 15
+		}
+		ai_will_do = { factor = 5 }
+	}
+
+	focus = {
+		id = USA_appoint_hull
+		icon = GFX_goal_generic_alliance
+		relative_position_id = USA_the_brain_trust
+		x = -7
+		y = 2
+		cost = 8
+		prerequisite = { focus = USA_secretary_of_state }
+		mutually_exclusive = { focus = USA_appoint_isolationist_state }
+		completion_reward = {
+			add_ideas = USA_cabinet_cordell_hull
+			USA_fill_cabinet_seat = yes
+			USA_shift_cabinet_progressive = yes
+		}
+		ai_will_do = { factor = 10 }
+	}
+
+	focus = {
+		id = USA_appoint_isolationist_state
+		icon = GFX_goal_generic_neutrality_focus
+		relative_position_id = USA_the_brain_trust
+		x = -5
+		y = 2
+		cost = 8
+		prerequisite = { focus = USA_secretary_of_state }
+		mutually_exclusive = { focus = USA_appoint_hull }
+		completion_reward = {
+			add_ideas = USA_cabinet_isolationist_state
+			USA_fill_cabinet_seat = yes
+			USA_shift_cabinet_conservative = yes
+		}
+		ai_will_do = { factor = 2 }
+	}
+
+	# --- Seat: Secretary of the Treasury ------------------------------
+	focus = {
+		id = USA_secretary_of_treasury
+		icon = GFX_goal_generic_production
+		relative_position_id = USA_the_brain_trust
+		x = -2
+		y = 1
+		cost = 8
+		prerequisite = { focus = USA_the_brain_trust }
+		completion_reward = {
+			add_political_power = 15
+		}
+		ai_will_do = { factor = 5 }
+	}
+
+	focus = {
+		id = USA_appoint_morgenthau
+		icon = GFX_goal_generic_construct_civ
+		relative_position_id = USA_the_brain_trust
+		x = -3
+		y = 2
+		cost = 8
+		prerequisite = { focus = USA_secretary_of_treasury }
+		mutually_exclusive = { focus = USA_appoint_business_treasury }
+		completion_reward = {
+			add_ideas = USA_cabinet_morgenthau
+			USA_fill_cabinet_seat = yes
+			USA_shift_cabinet_progressive = yes
+		}
+		ai_will_do = { factor = 10 }
+	}
+
+	focus = {
+		id = USA_appoint_business_treasury
+		icon = GFX_goal_generic_construct_mil
+		relative_position_id = USA_the_brain_trust
+		x = -1
+		y = 2
+		cost = 8
+		prerequisite = { focus = USA_secretary_of_treasury }
+		mutually_exclusive = { focus = USA_appoint_morgenthau }
+		completion_reward = {
+			add_ideas = USA_cabinet_business_treasury
+			USA_fill_cabinet_seat = yes
+			USA_shift_cabinet_conservative = yes
+		}
+		ai_will_do = { factor = 2 }
+	}
+
+	# --- Seat: Secretary of War ---------------------------------------
+	focus = {
+		id = USA_secretary_of_war
+		icon = GFX_goal_generic_army_doctrines
+		relative_position_id = USA_the_brain_trust
+		x = 2
+		y = 1
+		cost = 8
+		prerequisite = { focus = USA_the_brain_trust }
+		completion_reward = {
+			add_political_power = 15
+		}
+		ai_will_do = { factor = 5 }
+	}
+
+	focus = {
+		id = USA_appoint_stimson
+		icon = GFX_goal_generic_major_war
+		relative_position_id = USA_the_brain_trust
+		x = 1
+		y = 2
+		cost = 8
+		prerequisite = { focus = USA_secretary_of_war }
+		mutually_exclusive = { focus = USA_appoint_woodring }
+		completion_reward = {
+			add_ideas = USA_cabinet_stimson
+			USA_fill_cabinet_seat = yes
+			USA_shift_cabinet_progressive = yes
+		}
+		ai_will_do = { factor = 10 }
+	}
+
+	focus = {
+		id = USA_appoint_woodring
+		icon = GFX_goal_generic_neutrality_focus
+		relative_position_id = USA_the_brain_trust
+		x = 3
+		y = 2
+		cost = 8
+		prerequisite = { focus = USA_secretary_of_war }
+		mutually_exclusive = { focus = USA_appoint_stimson }
+		completion_reward = {
+			add_ideas = USA_cabinet_woodring
+			USA_fill_cabinet_seat = yes
+			USA_shift_cabinet_conservative = yes
+		}
+		ai_will_do = { factor = 2 }
+	}
+
+	# --- Seat: Attorney General ---------------------------------------
+	focus = {
+		id = USA_attorney_general
+		icon = GFX_goal_generic_national_unity
+		relative_position_id = USA_the_brain_trust
+		x = 6
+		y = 1
+		cost = 8
+		prerequisite = { focus = USA_the_brain_trust }
+		completion_reward = {
+			add_political_power = 15
+		}
+		ai_will_do = { factor = 5 }
+	}
+
+	focus = {
+		id = USA_appoint_murphy
+		icon = GFX_goal_generic_political_pressure
+		relative_position_id = USA_the_brain_trust
+		x = 5
+		y = 2
+		cost = 8
+		prerequisite = { focus = USA_attorney_general }
+		mutually_exclusive = { focus = USA_appoint_security_ag }
+		completion_reward = {
+			add_ideas = USA_cabinet_murphy
+			USA_fill_cabinet_seat = yes
+			USA_shift_cabinet_progressive = yes
+		}
+		ai_will_do = { factor = 10 }
+	}
+
+	focus = {
+		id = USA_appoint_security_ag
+		icon = GFX_goal_generic_propaganda
+		relative_position_id = USA_the_brain_trust
+		x = 7
+		y = 2
+		cost = 8
+		prerequisite = { focus = USA_attorney_general }
+		mutually_exclusive = { focus = USA_appoint_murphy }
+		completion_reward = {
+			add_ideas = USA_cabinet_security_ag
+			USA_fill_cabinet_seat = yes
+			USA_shift_cabinet_conservative = yes
+		}
+		ai_will_do = { factor = 2 }
+	}
+
+	# --- The Inner Circle synthesis -----------------------------------
+	focus = {
+		id = USA_the_inner_circle
+		icon = GFX_goal_generic_national_unity
+		relative_position_id = USA_the_brain_trust
+		x = 0
+		y = 3
+		cost = 10
+		prerequisite = { focus = USA_secretary_of_state }
+		prerequisite = { focus = USA_secretary_of_treasury }
+		prerequisite = { focus = USA_secretary_of_war }
+		prerequisite = { focus = USA_attorney_general }
+		available = {
+			check_variable = { USA_cabinet_seats_filled > 2 }
+		}
+		completion_reward = {
+			add_ideas = USA_the_inner_circle_spirit
+			add_political_power = 75
+			country_event = USA_cabinet.1
+		}
+		ai_will_do = { factor = 5 }
+	}
+
+	# --- Ideological coalitions (gated by cabinet make-up) ------------
+	focus = {
+		id = USA_progressive_ascendancy
+		icon = GFX_goal_USA_new_deal
+		relative_position_id = USA_the_brain_trust
+		x = -4
+		y = 4
+		cost = 10
+		prerequisite = { focus = USA_the_inner_circle }
+		mutually_exclusive = { focus = USA_conservative_resurgence }
+		available = {
+			check_variable = { USA_progressive_influence > 2 }
+		}
+		completion_reward = {
+			add_ideas = USA_progressive_coalition_spirit
+			add_popularity = { ideology = democratic popularity = 0.05 }
+		}
+		ai_will_do = { factor = 5 }
+	}
+
+	focus = {
+		id = USA_conservative_resurgence
+		icon = GFX_goal_USA_americasfirst
+		relative_position_id = USA_the_brain_trust
+		x = 4
+		y = 4
+		cost = 10
+		prerequisite = { focus = USA_the_inner_circle }
+		mutually_exclusive = { focus = USA_progressive_ascendancy }
+		available = {
+			check_variable = { USA_conservative_influence > 2 }
+		}
+		completion_reward = {
+			add_ideas = USA_conservative_coalition_spirit
+			add_political_power = 100
+		}
+		ai_will_do = { factor = 5 }
+	}
+
+	# --- ALT-HISTORY: Progressive offshoots ---------------------------
+	focus = {
+		id = USA_economic_bill_of_rights
+		icon = GFX_goal_generic_political_pressure
+		relative_position_id = USA_the_brain_trust
+		x = -5
+		y = 5
+		cost = 10
+		prerequisite = { focus = USA_progressive_ascendancy }
+		completion_reward = {
+			add_ideas = USA_economic_bill_of_rights_spirit
+			add_stability = 0.05
+		}
+		ai_will_do = { factor = 5 }
+	}
+
+	focus = {
+		id = USA_a_cooperative_commonwealth
+		icon = GFX_goal_generic_propaganda
+		relative_position_id = USA_the_brain_trust
+		x = -3
+		y = 5
+		cost = 15
+		prerequisite = { focus = USA_progressive_ascendancy }
+		available = {
+			check_variable = { USA_progressive_influence > 3 }
+		}
+		completion_reward = {
+			add_popularity = { ideology = communism popularity = 0.10 }
+			add_ideas = USA_cooperative_commonwealth_spirit
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	# --- ALT-HISTORY: Conservative / reactionary offshoots ------------
+	focus = {
+		id = USA_restore_the_old_republic
+		icon = GFX_goal_generic_national_unity
+		relative_position_id = USA_the_brain_trust
+		x = 3
+		y = 5
+		cost = 10
+		prerequisite = { focus = USA_conservative_resurgence }
+		completion_reward = {
+			add_ideas = USA_old_republic_spirit
+			add_political_power = 75
+		}
+		ai_will_do = { factor = 5 }
+	}
+
+	focus = {
+		id = USA_the_american_caesar
+		icon = GFX_goal_generic_military_sphere
+		relative_position_id = USA_the_brain_trust
+		x = 5
+		y = 5
+		cost = 15
+		prerequisite = { focus = USA_conservative_resurgence }
+		available = {
+			check_variable = { USA_conservative_influence > 3 }
+		}
+		completion_reward = {
+			add_popularity = { ideology = fascism popularity = 0.10 }
+			add_ideas = USA_american_caesar_spirit
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	#######################################################################
+	# THE ARSENAL - Military build-up and the road to total war
+	#######################################################################
+
+	focus = {
+		id = USA_the_arsenal
+		icon = GFX_goal_USA_war_economy
+		x = 24
+		y = 0
+		cost = 10
+		completion_reward = {
+			add_tech_bonus = { bonus = 0.5 uses = 1 category = industry }
+			add_political_power = 25
+		}
+		ai_will_do = { factor = 5 }
+	}
+
+	focus = {
+		id = USA_war_plan_revision
+		icon = GFX_goal_generic_army_doctrines
+		relative_position_id = USA_the_arsenal
+		x = -1
+		y = 1
+		cost = 10
+		prerequisite = { focus = USA_the_arsenal }
+		completion_reward = {
+			add_tech_bonus = { bonus = 0.5 uses = 1 category = land_doctrine }
+		}
+		ai_will_do = { factor = 5 }
+	}
+
+	focus = {
+		id = USA_two_ocean_navy
+		icon = GFX_goal_generic_navy_battleship
+		relative_position_id = USA_the_arsenal
+		x = 1
+		y = 1
+		cost = 10
+		prerequisite = { focus = USA_the_arsenal }
+		completion_reward = {
+			add_tech_bonus = { bonus = 0.5 uses = 1 category = naval_equipment }
+		}
+		ai_will_do = { factor = 5 }
+	}
+
+	focus = {
+		id = USA_total_mobilization
+		icon = GFX_goal_USA_war_economy
+		relative_position_id = USA_the_arsenal
+		x = 0
+		y = 2
+		cost = 10
+		prerequisite = { focus = USA_war_plan_revision }
+		prerequisite = { focus = USA_two_ocean_navy }
+		available = {
+			date > 1941.12.7
+		}
+		completion_reward = {
+			add_ideas = USA_total_mobilization_spirit
+			add_war_support = 0.10
+		}
+		ai_will_do = { factor = 5 }
+	}
+
+	focus = {
+		id = USA_strategic_bombing
+		icon = GFX_goal_generic_air_bomber
+		relative_position_id = USA_the_arsenal
+		x = -1
+		y = 3
+		cost = 10
+		prerequisite = { focus = USA_total_mobilization }
+		completion_reward = {
+			add_tech_bonus = { bonus = 0.5 uses = 1 category = air_doctrine }
+		}
+		ai_will_do = { factor = 5 }
+	}
+
+	focus = {
+		id = USA_amphibious_doctrine
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		relative_position_id = USA_the_arsenal
+		x = 1
+		y = 3
+		cost = 10
+		prerequisite = { focus = USA_total_mobilization }
+		completion_reward = {
+			add_tech_bonus = { bonus = 0.5 uses = 1 category = naval_doctrine }
+		}
+		ai_will_do = { factor = 5 }
+	}
+
+	focus = {
+		id = USA_the_manhattan_project
+		icon = GFX_goal_generic_secret_weapon
+		relative_position_id = USA_the_arsenal
+		x = 0
+		y = 4
+		cost = 15
+		prerequisite = { focus = USA_strategic_bombing }
+		prerequisite = { focus = USA_amphibious_doctrine }
+		available = {
+			date > 1942.1.1
+		}
+		completion_reward = {
+			add_tech_bonus = { bonus = 1.0 uses = 1 category = nuclear }
+		}
+		ai_will_do = { factor = 5 }
+	}
+
+	focus = {
+		id = USA_dawn_of_the_atomic_age
+		icon = GFX_goal_generic_secret_weapon
+		relative_position_id = USA_the_arsenal
+		x = 0
+		y = 5
+		cost = 15
+		prerequisite = { focus = USA_the_manhattan_project }
+		completion_reward = {
+			add_ideas = USA_atomic_monopoly_spirit
+		}
+		ai_will_do = { factor = 5 }
+	}
+
+	# --- Research & Development sub-branch ----------------------------
+	# Drives research into the extended (Road to 56) tech trees: faster
+	# electronics, an extra research slot, and broad research speed.
+	focus = {
+		id = USA_scientific_establishment
+		icon = GFX_goal_generic_secret_weapon
+		relative_position_id = USA_the_arsenal
+		x = 3
+		y = 1
+		cost = 10
+		prerequisite = { focus = USA_the_arsenal }
+		completion_reward = {
+			add_ideas = USA_scientific_establishment_spirit
+			add_tech_bonus = { bonus = 0.5 uses = 1 category = electronics }
+		}
+		ai_will_do = { factor = 5 }
+	}
+
+	focus = {
+		id = USA_electronics_mastery
+		icon = GFX_goal_generic_production
+		relative_position_id = USA_the_arsenal
+		x = 3
+		y = 2
+		cost = 10
+		prerequisite = { focus = USA_scientific_establishment }
+		completion_reward = {
+			add_tech_bonus = { bonus = 0.5 uses = 2 category = electronics }
+		}
+		ai_will_do = { factor = 5 }
+	}
+
+	focus = {
+		id = USA_operations_research
+		icon = GFX_goal_generic_secret_weapon
+		relative_position_id = USA_the_arsenal
+		x = 3
+		y = 3
+		cost = 15
+		prerequisite = { focus = USA_electronics_mastery }
+		completion_reward = {
+			add_ideas = USA_operations_research_spirit
+			add_research_slot = 1
+		}
+		ai_will_do = { factor = 5 }
+	}
+
+	#######################################################################
+	# OLD WORLD TIES - Diplomacy, the war, and the post-war order
+	#######################################################################
+
+	focus = {
+		id = USA_old_world_ties
+		icon = GFX_goal_generic_improve_relations
+		x = 33
+		y = 0
+		cost = 10
+		completion_reward = {
+			add_political_power = 25
+		}
+		ai_will_do = { factor = 5 }
+	}
+
+	focus = {
+		id = USA_lend_lease_expansion
+		icon = GFX_goal_generic_dangerous_deal
+		relative_position_id = USA_old_world_ties
+		x = -1
+		y = 1
+		cost = 10
+		prerequisite = { focus = USA_old_world_ties }
+		completion_reward = {
+			add_ideas = USA_lend_lease_spirit
+		}
+		ai_will_do = { factor = 5 }
+	}
+
+	focus = {
+		id = USA_good_neighbor
+		icon = GFX_goal_USA_assert_control_over_the_americas
+		relative_position_id = USA_old_world_ties
+		x = 1
+		y = 1
+		cost = 10
+		prerequisite = { focus = USA_old_world_ties }
+		completion_reward = {
+			add_political_power = 25
+			add_stability = 0.02
+		}
+		ai_will_do = { factor = 5 }
+	}
+
+	focus = {
+		id = USA_the_grand_alliance
+		icon = GFX_goal_generic_alliance
+		relative_position_id = USA_old_world_ties
+		x = 0
+		y = 2
+		cost = 10
+		prerequisite = { focus = USA_lend_lease_expansion }
+		prerequisite = { focus = USA_good_neighbor }
+		available = {
+			has_war = yes
+		}
+		bypass = {
+			date > 1945.1.1
+		}
+		completion_reward = {
+			add_war_support = 0.05
+			add_political_power = 50
+		}
+		ai_will_do = { factor = 5 }
+	}
+
+	focus = {
+		id = USA_postwar_planning
+		icon = GFX_goal_generic_forceful_treaty
+		relative_position_id = USA_old_world_ties
+		x = 0
+		y = 3
+		cost = 10
+		prerequisite = { focus = USA_the_grand_alliance }
+		completion_reward = {
+			add_ideas = USA_postwar_planning_spirit
+			add_political_power = 50
+			country_event = USA_cabinet.2
+		}
+		ai_will_do = { factor = 5 }
+	}
+
+	focus = {
+		id = USA_bretton_woods
+		icon = GFX_goal_generic_production
+		relative_position_id = USA_old_world_ties
+		x = -2
+		y = 4
+		cost = 10
+		prerequisite = { focus = USA_postwar_planning }
+		completion_reward = {
+			add_ideas = USA_bretton_woods_spirit
+		}
+		ai_will_do = { factor = 5 }
+	}
+
+	focus = {
+		id = USA_the_united_nations
+		icon = GFX_goal_generic_improve_relations
+		relative_position_id = USA_old_world_ties
+		x = 2
+		y = 4
+		cost = 10
+		prerequisite = { focus = USA_postwar_planning }
+		completion_reward = {
+			add_ideas = USA_united_nations_spirit
+			add_political_power = 50
+		}
+		ai_will_do = { factor = 5 }
+	}
+
+	focus = {
+		id = USA_shape_the_peace
+		icon = GFX_goal_generic_forceful_treaty
+		relative_position_id = USA_old_world_ties
+		x = 0
+		y = 5
+		cost = 10
+		prerequisite = { focus = USA_bretton_woods }
+		prerequisite = { focus = USA_the_united_nations }
+		completion_reward = {
+			add_political_power = 75
+			add_war_support = 0.05
+		}
+		ai_will_do = { factor = 5 }
+	}
+
+	focus = {
+		id = USA_marshall_plan
+		icon = GFX_goal_generic_construct_civ
+		relative_position_id = USA_old_world_ties
+		x = -2
+		y = 6
+		cost = 10
+		prerequisite = { focus = USA_shape_the_peace }
+		completion_reward = {
+			add_ideas = USA_marshall_plan_spirit
+		}
+		ai_will_do = { factor = 5 }
+	}
+
+	focus = {
+		id = USA_iron_curtain
+		icon = GFX_goal_generic_war_with_comintern
+		relative_position_id = USA_old_world_ties
+		x = 2
+		y = 6
+		cost = 10
+		prerequisite = { focus = USA_shape_the_peace }
+		completion_reward = {
+			add_ideas = USA_iron_curtain_spirit
+			add_political_power = 25
+		}
+		ai_will_do = { factor = 5 }
+	}
+
+	# Cold War posture split
+	focus = {
+		id = USA_containment_doctrine
+		icon = GFX_goal_generic_major_war
+		relative_position_id = USA_old_world_ties
+		x = 1
+		y = 7
+		cost = 10
+		prerequisite = { focus = USA_iron_curtain }
+		prerequisite = { focus = USA_marshall_plan }
+		mutually_exclusive = { focus = USA_return_to_normalcy }
+		completion_reward = {
+			add_ideas = USA_containment_spirit
+			add_war_support = 0.10
+		}
+		ai_will_do = { factor = 5 }
+	}
+
+	focus = {
+		id = USA_return_to_normalcy
+		icon = GFX_goal_generic_neutrality_focus
+		relative_position_id = USA_old_world_ties
+		x = 3
+		y = 7
+		cost = 10
+		prerequisite = { focus = USA_iron_curtain }
+		prerequisite = { focus = USA_marshall_plan }
+		mutually_exclusive = { focus = USA_containment_doctrine }
+		completion_reward = {
+			add_ideas = USA_return_to_normalcy_spirit
+			add_stability = 0.10
+		}
+		ai_will_do = { factor = 5 }
+	}
+
+	# Demobilization question (links military and diplomatic spines)
+	focus = {
+		id = USA_demobilization
+		icon = GFX_goal_generic_neutrality_focus
+		relative_position_id = USA_old_world_ties
+		x = -4
+		y = 7
+		cost = 10
+		prerequisite = { focus = USA_marshall_plan }
+		mutually_exclusive = { focus = USA_permanent_establishment }
+		completion_reward = {
+			add_ideas = USA_demobilization_spirit
+			add_political_power = 50
+		}
+		ai_will_do = { factor = 5 }
+	}
+
+	focus = {
+		id = USA_permanent_establishment
+		icon = GFX_goal_generic_military_sphere
+		relative_position_id = USA_old_world_ties
+		x = -6
+		y = 7
+		cost = 10
+		prerequisite = { focus = USA_marshall_plan }
+		mutually_exclusive = { focus = USA_demobilization }
+		completion_reward = {
+			add_ideas = USA_permanent_establishment_spirit
+		}
+		ai_will_do = { factor = 5 }
+	}
+
+	# Capstone
+	focus = {
+		id = USA_the_american_century
+		icon = GFX_goal_generic_national_unity
+		relative_position_id = USA_old_world_ties
+		x = 0
+		y = 8
+		cost = 15
+		prerequisite = { focus = USA_containment_doctrine USA_return_to_normalcy }
+		prerequisite = { focus = USA_the_inner_circle }
+		completion_reward = {
+			add_ideas = USA_american_century_spirit
+			add_political_power = 150
+			country_event = USA_cabinet.3
+		}
+		ai_will_do = { factor = 5 }
+	}
+}

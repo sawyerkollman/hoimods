@@ -1,0 +1,50 @@
+###########################################################################
+# Presidential Cabinet - USA Overhaul : Flavour Events
+###########################################################################
+
+add_namespace = USA_cabinet
+
+# The inner circle takes shape
+country_event = {
+	id = USA_cabinet.1
+	title = USA_cabinet.1.t
+	desc = USA_cabinet.1.d
+	picture = GFX_report_event_usa_great_depression
+
+	is_triggered_only = yes
+
+	option = {
+		name = USA_cabinet.1.a
+		add_political_power = 25
+	}
+}
+
+# Planning the post-war world
+country_event = {
+	id = USA_cabinet.2
+	title = USA_cabinet.2.t
+	desc = USA_cabinet.2.d
+	picture = GFX_report_event_press_conference
+
+	is_triggered_only = yes
+
+	option = {
+		name = USA_cabinet.2.a
+		add_stability = 0.03
+	}
+}
+
+# The American Century
+country_event = {
+	id = USA_cabinet.3
+	title = USA_cabinet.3.t
+	desc = USA_cabinet.3.d
+	picture = GFX_report_event_usa_congress_speaks
+
+	is_triggered_only = yes
+
+	option = {
+		name = USA_cabinet.3.a
+		add_political_power = 50
+	}
+}
