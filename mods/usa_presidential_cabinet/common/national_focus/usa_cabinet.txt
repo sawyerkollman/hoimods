@@ -7,10 +7,14 @@
 focus_tree = {
 	id = USA_cabinet_focus_tree
 
+	# High selection weight so this tree wins over the vanilla AND Road to 56
+	# US trees. A force-load in on_startup (usa_cabinet_on_actions.txt) backs
+	# this up deterministically in case another mod scores higher or
+	# force-loads its own tree.
 	country = {
 		factor = 0
 		modifier = {
-			add = 20
+			add = 1000
 			tag = USA
 		}
 	}
