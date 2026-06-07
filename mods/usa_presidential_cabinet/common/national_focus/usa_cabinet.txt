@@ -884,4 +884,591 @@ focus_tree = {
 		}
 		ai_will_do = { factor = 5 }
 	}
+
+	#######################################################################
+	# WAR ENTRY & THE NEUTRALITY ACTS
+	# Overcome isolationism and prepare the Republic for global war,
+	# or pull up the drawbridge and turn Fortress America.
+	#######################################################################
+
+	focus = {
+		id = USA_the_question_of_neutrality
+		icon = GFX_goal_generic_neutrality_focus
+		x = 44
+		y = 0
+		cost = 10
+		completion_reward = {
+			add_political_power = 50
+			add_war_support = 0.05
+		}
+		ai_will_do = { factor = 5 }
+	}
+
+	focus = {
+		id = USA_revise_the_neutrality_acts
+		icon = GFX_goal_generic_political_pressure
+		relative_position_id = USA_the_question_of_neutrality
+		x = 0
+		y = 1
+		cost = 10
+		prerequisite = { focus = USA_the_question_of_neutrality }
+		completion_reward = {
+			add_war_support = 0.10
+			add_political_power = 25
+		}
+		ai_will_do = { factor = 5 }
+	}
+
+	focus = {
+		id = USA_cash_and_carry
+		icon = GFX_goal_generic_dangerous_deal
+		relative_position_id = USA_the_question_of_neutrality
+		x = -2
+		y = 2
+		cost = 10
+		prerequisite = { focus = USA_revise_the_neutrality_acts }
+		mutually_exclusive = { focus = USA_fortress_america }
+		completion_reward = {
+			add_ideas = USA_interventionism_spirit
+			set_rule = { can_send_volunteers = yes }
+		}
+		ai_will_do = { factor = 5 }
+	}
+
+	focus = {
+		id = USA_fortress_america
+		icon = GFX_goal_USA_americasfirst
+		relative_position_id = USA_the_question_of_neutrality
+		x = 2
+		y = 2
+		cost = 10
+		prerequisite = { focus = USA_revise_the_neutrality_acts }
+		mutually_exclusive = { focus = USA_cash_and_carry }
+		completion_reward = {
+			add_ideas = USA_fortress_america_spirit
+			add_stability = 0.05
+		}
+		ai_will_do = { factor = 5 }
+	}
+
+	focus = {
+		id = USA_repeal_the_arms_embargo
+		icon = GFX_goal_generic_construct_mil
+		relative_position_id = USA_the_question_of_neutrality
+		x = -3
+		y = 3
+		cost = 10
+		prerequisite = { focus = USA_cash_and_carry }
+		completion_reward = {
+			add_war_support = 0.05
+			add_tech_bonus = { bonus = 0.5 uses = 1 category = industry }
+		}
+		ai_will_do = { factor = 5 }
+	}
+
+	focus = {
+		id = USA_selective_service_act
+		icon = GFX_goal_generic_allies_build_infantry
+		relative_position_id = USA_the_question_of_neutrality
+		x = -1
+		y = 3
+		cost = 10
+		prerequisite = { focus = USA_cash_and_carry }
+		completion_reward = {
+			add_ideas = USA_selective_service_spirit
+			add_manpower = 100000
+		}
+		ai_will_do = { factor = 5 }
+	}
+
+	focus = {
+		id = USA_america_goes_to_war
+		icon = GFX_goal_generic_major_war
+		relative_position_id = USA_the_question_of_neutrality
+		x = -2
+		y = 4
+		cost = 15
+		prerequisite = { focus = USA_repeal_the_arms_embargo }
+		prerequisite = { focus = USA_selective_service_act }
+		completion_reward = {
+			add_war_support = 0.20
+			add_political_power = 100
+			set_rule = { can_create_factions = yes can_send_volunteers = yes }
+		}
+		ai_will_do = { factor = 5 }
+	}
+
+	focus = {
+		id = USA_hemisphere_defense
+		icon = GFX_goal_USA_assert_control_over_the_americas
+		relative_position_id = USA_the_question_of_neutrality
+		x = 2
+		y = 3
+		cost = 10
+		prerequisite = { focus = USA_fortress_america }
+		completion_reward = {
+			add_stability = 0.05
+			add_war_support = 0.05
+		}
+		ai_will_do = { factor = 5 }
+	}
+
+	focus = {
+		id = USA_continental_fortress
+		icon = GFX_goal_generic_position_armies
+		relative_position_id = USA_the_question_of_neutrality
+		x = 2
+		y = 4
+		cost = 15
+		prerequisite = { focus = USA_hemisphere_defense }
+		completion_reward = {
+			add_ideas = USA_continental_fortress_spirit
+			add_stability = 0.05
+		}
+		ai_will_do = { factor = 5 }
+	}
+
+	#######################################################################
+	# THE ARMY - Building the ground forces
+	#######################################################################
+
+	focus = {
+		id = USA_the_war_department_army
+		icon = GFX_goal_generic_army_doctrines
+		x = 56
+		y = 0
+		cost = 10
+		completion_reward = {
+			army_experience = 25
+			add_tech_bonus = { bonus = 0.5 uses = 1 category = land_doctrine }
+		}
+		ai_will_do = { factor = 5 }
+	}
+
+	focus = {
+		id = USA_modernize_the_national_guard
+		icon = GFX_goal_generic_allies_build_infantry
+		relative_position_id = USA_the_war_department_army
+		x = -2
+		y = 1
+		cost = 10
+		prerequisite = { focus = USA_the_war_department_army }
+		completion_reward = {
+			add_ideas = USA_national_guard_spirit
+			add_tech_bonus = { bonus = 0.5 uses = 1 category = infantry_weapons }
+		}
+		ai_will_do = { factor = 5 }
+	}
+
+	focus = {
+		id = USA_armored_force
+		icon = GFX_goal_generic_army_tanks
+		relative_position_id = USA_the_war_department_army
+		x = 0
+		y = 1
+		cost = 10
+		prerequisite = { focus = USA_the_war_department_army }
+		completion_reward = {
+			add_tech_bonus = { bonus = 0.5 uses = 1 category = armor }
+		}
+		ai_will_do = { factor = 5 }
+	}
+
+	focus = {
+		id = USA_field_artillery
+		icon = GFX_goal_generic_army_artillery
+		relative_position_id = USA_the_war_department_army
+		x = 2
+		y = 1
+		cost = 10
+		prerequisite = { focus = USA_the_war_department_army }
+		completion_reward = {
+			add_tech_bonus = { bonus = 0.5 uses = 1 category = artillery }
+		}
+		ai_will_do = { factor = 5 }
+	}
+
+	focus = {
+		id = USA_combined_arms_doctrine
+		icon = GFX_goal_generic_army_doctrines
+		relative_position_id = USA_the_war_department_army
+		x = -1
+		y = 2
+		cost = 10
+		prerequisite = { focus = USA_modernize_the_national_guard }
+		prerequisite = { focus = USA_armored_force }
+		completion_reward = {
+			add_ideas = USA_combined_arms_spirit
+			add_tech_bonus = { bonus = 0.5 uses = 1 category = land_doctrine }
+		}
+		ai_will_do = { factor = 5 }
+	}
+
+	focus = {
+		id = USA_airborne_forces
+		icon = GFX_goal_generic_paratrooper
+		relative_position_id = USA_the_war_department_army
+		x = 2
+		y = 2
+		cost = 10
+		prerequisite = { focus = USA_field_artillery }
+		completion_reward = {
+			add_tech_bonus = { bonus = 0.5 uses = 1 category = land_doctrine }
+		}
+		ai_will_do = { factor = 5 }
+	}
+
+	focus = {
+		id = USA_the_modern_us_army
+		icon = GFX_goal_generic_army_doctrines
+		relative_position_id = USA_the_war_department_army
+		x = 0
+		y = 3
+		cost = 15
+		prerequisite = { focus = USA_combined_arms_doctrine }
+		prerequisite = { focus = USA_airborne_forces }
+		completion_reward = {
+			add_ideas = USA_modern_army_spirit
+			army_experience = 50
+		}
+		ai_will_do = { factor = 5 }
+	}
+
+	#######################################################################
+	# THE AIR FORCE - The Army Air Corps takes flight
+	#######################################################################
+
+	focus = {
+		id = USA_the_army_air_corps
+		icon = GFX_goal_generic_air_doctrine
+		x = 66
+		y = 0
+		cost = 10
+		completion_reward = {
+			air_experience = 25
+			add_tech_bonus = { bonus = 0.5 uses = 1 category = air_doctrine }
+		}
+		ai_will_do = { factor = 5 }
+	}
+
+	focus = {
+		id = USA_pursuit_aviation
+		icon = GFX_goal_generic_build_airforce
+		relative_position_id = USA_the_army_air_corps
+		x = -2
+		y = 1
+		cost = 10
+		prerequisite = { focus = USA_the_army_air_corps }
+		completion_reward = {
+			add_tech_bonus = { bonus = 0.5 uses = 1 category = air_doctrine }
+		}
+		ai_will_do = { factor = 5 }
+	}
+
+	focus = {
+		id = USA_strategic_bombing_command
+		icon = GFX_goal_generic_air_bomber
+		relative_position_id = USA_the_army_air_corps
+		x = 0
+		y = 1
+		cost = 10
+		prerequisite = { focus = USA_the_army_air_corps }
+		completion_reward = {
+			add_ideas = USA_army_air_corps_spirit
+			add_tech_bonus = { bonus = 0.5 uses = 1 category = air_doctrine }
+		}
+		ai_will_do = { factor = 5 }
+	}
+
+	focus = {
+		id = USA_naval_aviation
+		icon = GFX_goal_generic_CAS
+		relative_position_id = USA_the_army_air_corps
+		x = 2
+		y = 1
+		cost = 10
+		prerequisite = { focus = USA_the_army_air_corps }
+		completion_reward = {
+			add_tech_bonus = { bonus = 0.5 uses = 1 category = air_doctrine }
+		}
+		ai_will_do = { factor = 5 }
+	}
+
+	focus = {
+		id = USA_air_superiority_doctrine
+		icon = GFX_goal_generic_air_doctrine
+		relative_position_id = USA_the_army_air_corps
+		x = -1
+		y = 2
+		cost = 10
+		prerequisite = { focus = USA_pursuit_aviation }
+		prerequisite = { focus = USA_strategic_bombing_command }
+		completion_reward = {
+			add_tech_bonus = { bonus = 0.5 uses = 1 category = air_doctrine }
+		}
+		ai_will_do = { factor = 5 }
+	}
+
+	focus = {
+		id = USA_the_mighty_eighth
+		icon = GFX_goal_generic_air_bomber
+		relative_position_id = USA_the_army_air_corps
+		x = 1
+		y = 2
+		cost = 15
+		prerequisite = { focus = USA_strategic_bombing_command }
+		prerequisite = { focus = USA_naval_aviation }
+		completion_reward = {
+			add_ideas = USA_air_doctrine_spirit
+			air_experience = 50
+		}
+		ai_will_do = { factor = 5 }
+	}
+
+	#######################################################################
+	# THE NAVY & THE WAR PLANS - Ruling two oceans
+	#######################################################################
+
+	focus = {
+		id = USA_naval_construction
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		x = 78
+		y = 0
+		cost = 10
+		completion_reward = {
+			navy_experience = 25
+			add_tech_bonus = { bonus = 0.5 uses = 1 category = naval_doctrine }
+		}
+		ai_will_do = { factor = 5 }
+	}
+
+	focus = {
+		id = USA_war_plan_orange
+		icon = GFX_goal_generic_navy_carrier
+		relative_position_id = USA_naval_construction
+		x = -3
+		y = 1
+		cost = 10
+		prerequisite = { focus = USA_naval_construction }
+		completion_reward = {
+			add_ideas = USA_war_plan_orange_spirit
+			navy_experience = 25
+		}
+		ai_will_do = { factor = 5 }
+	}
+
+	focus = {
+		id = USA_war_plan_black
+		icon = GFX_goal_generic_navy_battleship
+		relative_position_id = USA_naval_construction
+		x = 0
+		y = 1
+		cost = 10
+		prerequisite = { focus = USA_naval_construction }
+		completion_reward = {
+			add_ideas = USA_war_plan_black_spirit
+			navy_experience = 25
+		}
+		ai_will_do = { factor = 5 }
+	}
+
+	focus = {
+		id = USA_war_plan_red
+		icon = GFX_goal_generic_navy_battleship
+		relative_position_id = USA_naval_construction
+		x = 3
+		y = 1
+		cost = 10
+		prerequisite = { focus = USA_naval_construction }
+		completion_reward = {
+			add_ideas = USA_war_plan_red_spirit
+			navy_experience = 25
+		}
+		ai_will_do = { factor = 2 }
+	}
+
+	focus = {
+		id = USA_pacific_fleet
+		icon = GFX_goal_generic_navy_carrier
+		relative_position_id = USA_naval_construction
+		x = -3
+		y = 2
+		cost = 10
+		prerequisite = { focus = USA_war_plan_orange }
+		completion_reward = {
+			add_ideas = USA_pacific_fleet_spirit
+			add_tech_bonus = { bonus = 0.5 uses = 1 category = naval_equipment }
+		}
+		ai_will_do = { factor = 5 }
+	}
+
+	focus = {
+		id = USA_atlantic_fleet
+		icon = GFX_goal_generic_navy_battleship
+		relative_position_id = USA_naval_construction
+		x = 0
+		y = 2
+		cost = 10
+		prerequisite = { focus = USA_war_plan_black }
+		completion_reward = {
+			add_ideas = USA_atlantic_fleet_spirit
+			add_tech_bonus = { bonus = 0.5 uses = 1 category = naval_equipment }
+		}
+		ai_will_do = { factor = 5 }
+	}
+
+	focus = {
+		id = USA_silent_service
+		icon = GFX_goal_generic_navy_submarine
+		relative_position_id = USA_naval_construction
+		x = 3
+		y = 2
+		cost = 10
+		prerequisite = { focus = USA_war_plan_red }
+		completion_reward = {
+			add_ideas = USA_silent_service_spirit
+			add_tech_bonus = { bonus = 0.5 uses = 1 category = naval_equipment }
+		}
+		ai_will_do = { factor = 5 }
+	}
+
+	focus = {
+		id = USA_carrier_task_force
+		icon = GFX_goal_generic_navy_carrier
+		relative_position_id = USA_naval_construction
+		x = -1
+		y = 3
+		cost = 15
+		prerequisite = { focus = USA_pacific_fleet }
+		prerequisite = { focus = USA_atlantic_fleet }
+		completion_reward = {
+			add_ideas = USA_carrier_doctrine_spirit
+			navy_experience = 50
+		}
+		ai_will_do = { factor = 5 }
+	}
+
+	#######################################################################
+	# POLITICS & THE HOME FRONT
+	#######################################################################
+
+	focus = {
+		id = USA_the_political_landscape
+		icon = GFX_goal_generic_political_pressure
+		x = 92
+		y = 0
+		cost = 10
+		completion_reward = {
+			add_political_power = 50
+		}
+		ai_will_do = { factor = 5 }
+	}
+
+	focus = {
+		id = USA_fireside_chats
+		icon = GFX_goal_generic_propaganda
+		relative_position_id = USA_the_political_landscape
+		x = -2
+		y = 1
+		cost = 10
+		prerequisite = { focus = USA_the_political_landscape }
+		completion_reward = {
+			add_ideas = USA_fireside_chats_spirit
+			add_stability = 0.05
+		}
+		ai_will_do = { factor = 5 }
+	}
+
+	focus = {
+		id = USA_war_bonds
+		icon = GFX_goal_generic_production
+		relative_position_id = USA_the_political_landscape
+		x = 1
+		y = 1
+		cost = 10
+		prerequisite = { focus = USA_the_political_landscape }
+		completion_reward = {
+			add_ideas = USA_war_bonds_spirit
+		}
+		ai_will_do = { factor = 5 }
+	}
+
+	focus = {
+		id = USA_appoint_perkins
+		icon = GFX_goal_generic_political_pressure
+		relative_position_id = USA_the_political_landscape
+		x = 3
+		y = 1
+		cost = 8
+		prerequisite = { focus = USA_the_political_landscape }
+		completion_reward = {
+			add_ideas = USA_cabinet_perkins
+			USA_fill_cabinet_seat = yes
+			USA_shift_cabinet_progressive = yes
+		}
+		ai_will_do = { factor = 5 }
+	}
+
+	focus = {
+		id = USA_civil_rights
+		icon = GFX_goal_generic_national_unity
+		relative_position_id = USA_the_political_landscape
+		x = -3
+		y = 2
+		cost = 10
+		prerequisite = { focus = USA_fireside_chats }
+		mutually_exclusive = { focus = USA_maintain_segregation }
+		completion_reward = {
+			add_ideas = USA_civil_rights_spirit
+			add_to_variable = { USA_progressive_influence = 1 }
+		}
+		ai_will_do = { factor = 5 }
+	}
+
+	focus = {
+		id = USA_maintain_segregation
+		icon = GFX_goal_generic_national_unity
+		relative_position_id = USA_the_political_landscape
+		x = -1
+		y = 2
+		cost = 10
+		prerequisite = { focus = USA_fireside_chats }
+		mutually_exclusive = { focus = USA_civil_rights }
+		completion_reward = {
+			add_ideas = USA_segregation_spirit
+			add_to_variable = { USA_conservative_influence = 1 }
+		}
+		ai_will_do = { factor = 5 }
+	}
+
+	focus = {
+		id = USA_appoint_knox
+		icon = GFX_goal_generic_navy_battleship
+		relative_position_id = USA_the_political_landscape
+		x = 2
+		y = 2
+		cost = 8
+		prerequisite = { focus = USA_war_bonds }
+		completion_reward = {
+			add_ideas = USA_cabinet_knox
+			USA_fill_cabinet_seat = yes
+			USA_shift_cabinet_conservative = yes
+		}
+		ai_will_do = { factor = 5 }
+	}
+
+	focus = {
+		id = USA_a_more_perfect_union
+		icon = GFX_goal_generic_national_unity
+		relative_position_id = USA_the_political_landscape
+		x = -2
+		y = 3
+		cost = 15
+		prerequisite = { focus = USA_civil_rights USA_maintain_segregation }
+		completion_reward = {
+			add_ideas = USA_more_perfect_union_spirit
+			add_political_power = 100
+		}
+		ai_will_do = { factor = 5 }
+	}
 }
