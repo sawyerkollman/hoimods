@@ -89,3 +89,12 @@ mechanical:
 
 Keep each mod's files entirely within its own folder so the mods stay
 independent and never collide.
+
+### Gotcha: localisation files must be UTF-8 **with BOM**
+
+HOI4 `.yml` localisation files have to be saved as **UTF-8 with a byte-order
+mark**. Without the BOM the game may load only part of the file and silently
+drop entries — focus titles and some text show up while other descriptions
+render blank. If you add or edit a `localisation/` file, make sure it keeps
+the BOM (most editors call this "UTF-8 with BOM"; VS Code shows it in the
+status bar as `UTF-8 with BOM`).
