@@ -487,3 +487,86 @@
  usa_cabinet.261.t:0 "The General Comes Home"
  usa_cabinet.261.d:0 "SHAPE Headquarters in Paris is quiet tonight because its Supreme Commander is on a transatlantic telephone call with the Republican National Committee, telling the chairman, with the careful courtesy of a man who has spent forty years giving orders without raising his voice, that yes, he will accept the nomination. The Democrats can nominate their eloquent Governor; the Republicans will nominate the man who planned the liberation of Western Europe and then stayed to organize its defense. The convention hall is already full of 'I Like Ike' buttons."
  usa_cabinet.261.a:0 "The General takes command of the party."
+
+ # ============================ RADICAL WING (TASK 8) ============================
+
+ # --- RAD wing, 1936-44 ---
+ USA_rad_voices:0 "Voices of Discontent"
+ USA_rad_voices_desc:0 "Every radio station carries a prophet of the people: the silver-voiced Senator from Louisiana who promises every man a king's share of the national wealth, the radio priest who has found a congregation of thirty million, the sit-down strikers who have discovered that a factory cannot run without its workers' consent. The Depression has not merely impoverished the country — it has radicalized it, and the voices of that radicalization are learning, for the first time, to speak to one another."
+
+ USA_rad_share_our_wealth:0 "Share Our Wealth"
+ USA_rad_share_our_wealth_desc:0 "Senator Huey P. Long of Louisiana has a plan, and it fits on a pamphlet: cap the fortunes of the rich at a million dollars, guarantee every American family an annual income, and use the surplus to build schools and pay pensions. The economists call it impossible and the newspapers call it dangerous, and the mail-room at the Senate office building handles ten thousand letters a week addressed, personally, to the Kingfish. There has not been a political movement this large in the country since the Populists, and the Populists never had the radio."
+
+ USA_rad_popular_front:0 "The Popular Front"
+ USA_rad_popular_front_desc:0 "In the union halls and the party offices the argument has been settled: the real enemy is fascism, and every force to the left of Wall Street must march together against it. The Communist Party is disciplined, the CIO has organizing money, and the intellectuals who have been drifting leftward since 1929 are ready to sign the manifestoes and staff the committees. A Popular Front is not a party and it is not a government, but it is a political force of the kind that can become one, and the men who built it know it."
+
+ USA_rad_sit_down_wave:0 "The Sit-Down Wave"
+ USA_rad_sit_down_wave_desc:0 "The workers of Flint, Michigan sit down inside General Motors and refuse to leave, and in six weeks they have won the right to organize — not because the law required it but because the factory could not run without them. The tactic spreads to steel, to rubber, to textiles, to the docks: fifty-six sit-downs in the first weeks of 1937 alone. Management has discovered that property rights are worth nothing if labor will not work, and labor has discovered that it is stronger than it knew."
+
+ USA_rad_general_strike:0 "The General Strike"
+ USA_rad_general_strike_desc:0 "What began in the factories has spread to the streets. A general strike is the final argument of organized labor, the proof that the economy runs on workers' consent and not employers' grace, and the question Washington faces is whether to crush it, negotiate it, or be swept aside by it. In San Francisco they know how this can go. In Washington they are about to find out."
+
+ USA_rad_commitment:0 "The People's Front"
+ USA_rad_commitment_desc:0 "The movement that began on the radio and in the union halls has become something new: a political majority with ambitions the old parties cannot satisfy. The People's Front is not the Democratic Party and it is not the Socialist Party — it is the coalescence of the American left into a single force, with a program, a constituency, and a demand that Washington reckon with it seriously, or make way."
+
+ USA_rad_peoples_front_government:0 "The People's Front Government"
+ USA_rad_peoples_front_government_desc:0 "The ballot is counted and the People's Front has won. Not a protest, not a third-party nuisance: an actual government, with the White House and enough of the Congress to govern. Now comes the harder question, the one every movement faces when it finally wins: what kind of government will it be? The democratic socialists want elections and legislation; the vanguard faction wants organization and command. The movement cannot serve two masters for long."
+
+ USA_rad_workers_democracy:0 "Workers' Democracy"
+ USA_rad_workers_democracy_desc:0 "The People's Front will govern democratically or it will not govern at all. Elections continue, the civil liberties are preserved, and the program advances through legislation rather than decree. The skeptics say you cannot change an economic order without breaking the rules that protect it; the democratic socialists answer that the rules are all that stand between a people's government and a tyranny, and they have not come this far to become what they defeated."
+
+ USA_rad_economic_bill_of_rights:0 "An Economic Bill of Rights"
+ USA_rad_economic_bill_of_rights_desc:0 "The political Bill of Rights was written in a time of quill pens and yeoman farmers, and it says nothing about whether a man has a job, a decent wage, or a doctor when his children fall sick. The second Bill of Rights addresses the rights the first one left out: a job, a living wage, decent housing, medical care, and a good education — not as charities but as constitutional guarantees, as firmly anchored in law as the right to speak freely. The republic is being rebuilt from the bottom."
+
+ USA_rad_one_big_union:0 "One Big Union"
+ USA_rad_one_big_union_desc:0 "Industrial unionism, not craft unionism: not the carpenters and the painters in separate halls but every worker in the plant in the same union, sitting at the same table, with the same card. The old AFL fought it for fifty years; the CIO built it anyway; and the People's Front is about to give it the force of law. One big union, representing everyone who works — and the republic that organized them will know where its true power lies."
+
+ USA_rad_vanguard_path:0 "The Vanguard"
+ USA_rad_vanguard_path_desc:0 "The lesson of history, the faction argues, is that you do not share power with the class that is trying to take it back. The People's Front will not be argued out of office by judges appointed for life, will not be voted out by newspapers owned by its enemies, and will not bargain away the revolution one concession at a time. The party takes its mandate as something more than an invitation to govern: it is a mandate to build the kind of state that cannot be undone."
+
+ USA_rad_smash_the_reaction:0 "Smash the Reaction"
+ USA_rad_smash_the_reaction_desc:0 "The committees have been sitting for weeks, the names are being read, and the apparatus of organized reaction — the company unions, the vigilante leagues, the bought judges and the red-baiting congressmen — is being systematically dismantled. The newspapers call it a purge. The party calls it necessary. The men in the dock call it persecution, and some of them are right, and some of them are guilty, and the party does not propose to stop long enough to sort out which is which."
+
+ USA_rad_premature_antifascists:0 "Premature Antifascists"
+ USA_rad_premature_antifascists_desc:0 "The People's Front warned them in 1936 and in 1937 and in 1938, and nobody in the editorial offices of the respectable press was listening. Now the flags are going up in capital after capital, and the men who marched in the Lincoln Brigade and the men who were blacklisted for saying it aloud turn out to have been right — not in retrospect, but in time. The United States is going to fight the fascists, and the radical left is going to fight them first."
+
+ USA_rad_peoples_war:0 "The People's War"
+ USA_rad_peoples_war_desc:0 "This is not a war of governments and armies; it is a war of peoples. The factory worker is a soldier now, and the partisan in the occupied city is a soldier, and the woman building bombers in the plant is a soldier, and all of them know what they are fighting for because the People's Front has been saying it for ten years. Antifascism was once a dirty word in the respectable press. Now it is the name of the war."
+
+ # --- RAD wing spirits (Task 8: 1936-44) ---
+ USA_rad_share_our_wealth_spirit:0 "Share Our Wealth"
+ USA_rad_share_our_wealth_spirit_desc:0 "The Kingfish's program has found its way into policy: capped fortunes, guaranteed incomes, and a federal government that has stopped pretending that inequality is natural. The money is moving, and the men with the pamplets are satisfied."
+
+ USA_rad_sit_down_disruption_spirit:0 "Factory Occupations"
+ USA_rad_sit_down_disruption_spirit_desc:0 "The workers sit inside the machines and the machines do not run. Production is disrupted and management is frightened and the workers know, for the first time, exactly what they are worth to the economy that has been telling them they are replaceable."
+
+ USA_rad_labor_force_spirit:0 "The Labor Force Organized"
+ USA_rad_labor_force_spirit_desc:0 "The general strike has been won, or negotiated to a settlement that looks like a win, and the organized labor movement emerges stronger and more unified than it entered the confrontation. The workers are learning what they can do when they act together."
+
+ USA_rad_people_state_spirit:0 "The People's State"
+ USA_rad_people_state_spirit_desc:0 "The party is the state, and the state is the party, and the party is building something. The organizational apparatus runs from the village soviets to the Central Committee, and the men at the top have no intention of letting it unwind."
+
+ USA_rad_workers_democracy_spirit:0 "Workers' Democracy"
+ USA_rad_workers_democracy_spirit_desc:0 "The ballot is preserved and the rights are protected and the program advances through vote by vote, law by law. It is the slower road, and the vanguard faction says it is the road that does not arrive. The democratic socialists say it is the only road worth taking."
+
+ USA_rad_economic_rights_spirit:0 "Economic Bill of Rights"
+ USA_rad_economic_rights_spirit_desc:0 "The second constitution is enacted, the one that speaks to economic life rather than merely political life. No American is now entitled to be destitute; the republic has acknowledged an obligation it will not be permitted to forget."
+
+ # --- RAD events (Task 8: 1936-44) ---
+ usa_cabinet.210.t:0 "The People's Front Takes Office"
+ usa_cabinet.210.d:0 "The returns are in and they are unambiguous: the People's Front has won the presidency of the United States. In the union halls and the party offices the celebrations are already going, but in the back rooms the argument is already resuming — the argument that has never quite stopped since the movement began. What kind of government will it be? The movement has a majority; now it must decide what to do with it, and how it must decide is itself the first decision of consequence."
+ usa_cabinet.210.a:0 "A democratic socialist government: the ballot is sacred."
+ usa_cabinet.210.b:0 "The vanguard leads. The party must organize, not merely legislate."
+
+ usa_cabinet.211.t:0 "The General Strike Showdown"
+ usa_cabinet.211.d:0 "The strike is not a labor dispute anymore; it is a constitutional crisis. The strikers have shut down the ports, the railways, and half the city governments of the industrial belt, and the administration must answer the question that no one has asked out loud yet: which side is the government on? The police are waiting for orders. The National Guard is waiting for orders. The workers are waiting to find out if they won."
+ usa_cabinet.211.a:0 "Negotiate. The workers' demands are the government's program."
+ usa_cabinet.211.b:0 "Order must be restored, even at a cost."
+
+ usa_cabinet.212.t:0 "The Purge"
+ usa_cabinet.212.d:0 "The committees have their lists and the hearings are scheduled and the party has decided that the revolution will not be undone by the men who are trying to undo it. The opposition is being dismantled — legally where possible, administratively where necessary, and with the security apparatus where nothing else suffices. The press calls it a purge. The party calls it the necessary conclusion of a struggle that began in the boardrooms and the editorial offices of men who never accepted the election results."
+ usa_cabinet.212.a:0 "The revolution protects itself. The elections are suspended."
+
+ # --- RAD leaders ---
+ USA_norman_thomas_desc:0 "The Presbyterian minister turned socialist candidate, who ran for President six times and never won and shaped the country's politics more profoundly than most men who did."
+ USA_earl_browder_desc:0 "The Kansas-born general secretary of the Communist Party of America, who dissolved the party into a political association during the war and found himself, to his own astonishment, leading a government."

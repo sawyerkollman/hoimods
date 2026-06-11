@@ -1167,6 +1167,118 @@ country_event = {
 	}
 }
 
+#######################################################################
+# RADICAL WING EVENTS (usa_cabinet.210-214)
+# .210 The People's Front Government — leader swap, ideology shift, path fork
+# .211 The General Strike Showdown — PP shock, labor force spirit
+# .212 The Vanguard Purge — stability shock, elections suspended
+# .213 The Comintern Offer — join or remain independent socialist
+# .214 The Atomic Choice — share secrets or hold them
+#######################################################################
+
+# The People's Front Government (usa_cabinet.210): fired by
+# USA_rad_peoples_front_government. A radical coalition takes the cabinet;
+# the country must choose the democratic socialist or vanguard path.
+country_event = {
+	id = usa_cabinet.210
+	title = usa_cabinet.210.t
+	desc = usa_cabinet.210.d
+	picture = GFX_report_event_usa_congress_speaks
+
+	is_triggered_only = yes
+
+	# The Democratic Socialist Path: keep elections, build the movement.
+	option = {
+		name = usa_cabinet.210.a
+		ai_chance = { factor = 60 }
+		retire_country_leader = yes
+		create_country_leader = {
+			name = "Norman Thomas"
+			desc = "USA_norman_thomas_desc"
+			picture = "gfx/leaders/Europe/Portrait_Europe_Generic_7.dds"
+			expire = "1965.1.1"
+			ideology = socialism
+		}
+		set_party_name = {
+			ideology = democratic
+			long_name = USA_prog_party_long
+			name = USA_prog_party
+		}
+		add_popularity = { ideology = communism popularity = 0.05 }
+		set_country_flag = USA_rad_democratic
+		set_country_flag = USA_elections_populist
+	}
+
+	# The Vanguard Path: the party takes direct command.
+	option = {
+		name = usa_cabinet.210.b
+		ai_chance = { factor = 40 }
+		retire_country_leader = yes
+		create_country_leader = {
+			name = "Earl Browder"
+			desc = "USA_earl_browder_desc"
+			picture = "gfx/leaders/Europe/Portrait_Europe_Generic_8.dds"
+			expire = "1965.1.1"
+			ideology = communism
+		}
+		set_party_name = {
+			ideology = democratic
+			long_name = USA_prog_party_long
+			name = USA_prog_party
+		}
+		add_popularity = { ideology = communism popularity = 0.10 }
+		add_stability = -0.05
+		set_country_flag = USA_rad_vanguard
+	}
+}
+
+# The General Strike Showdown (usa_cabinet.211): fired by USA_rad_general_strike.
+# The full general strike forces Washington to choose: crush or negotiate.
+country_event = {
+	id = usa_cabinet.211
+	title = usa_cabinet.211.t
+	desc = usa_cabinet.211.d
+	picture = GFX_report_event_usa_great_depression
+
+	is_triggered_only = yes
+
+	# Negotiate with the strikers: the government moves left.
+	option = {
+		name = usa_cabinet.211.a
+		ai_chance = { factor = 70 }
+		add_political_power = -50
+		add_ideas = USA_rad_labor_force_spirit
+		add_stability = -0.05
+	}
+
+	# Break the strike: the government loses the radical wing.
+	option = {
+		name = usa_cabinet.211.b
+		ai_chance = { factor = 30 }
+		add_political_power = -80
+		add_stability = -0.08
+		add_popularity = { ideology = communism popularity = 0.05 }
+	}
+}
+
+# The Vanguard Purge (usa_cabinet.212): fired by USA_rad_smash_the_reaction.
+# The vanguard party eliminates its opponents and suspends elections.
+country_event = {
+	id = usa_cabinet.212
+	title = usa_cabinet.212.t
+	desc = usa_cabinet.212.d
+	picture = GFX_report_event_usa_congress_speaks
+
+	is_triggered_only = yes
+
+	option = {
+		name = usa_cabinet.212.a
+		add_stability = -0.10
+		add_political_power = 60
+		set_country_flag = USA_elections_suspended
+	}
+}
+
 # The General Comes Home - GOP path (usa_cabinet.261): fired by
 # USA_gop_ike_draft. Eisenhower is drafted by the Republican Establishment,
 # bringing the Presidency within reach.

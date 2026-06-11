@@ -692,7 +692,7 @@ focus_tree = {
 			focus = USA_dem_court_fight
 		}
 		mutually_exclusive = { focus = USA_gop_commitment }
-		# TODO(Task 8): add mutually_exclusive = { focus = USA_rad_commitment }
+		mutually_exclusive = { focus = USA_rad_commitment }
 		# TODO(Task 9): add mutually_exclusive = { focus = USA_auth_commitment }
 		completion_reward = {
 			add_stability = 0.05
@@ -1824,7 +1824,7 @@ focus_tree = {
 			focus = USA_gop_balanced_budget
 		}
 		mutually_exclusive = { focus = USA_dem_commitment }
-		# TODO(Task 8): add mutually_exclusive = { focus = USA_rad_commitment }
+		mutually_exclusive = { focus = USA_rad_commitment }
 		# TODO(Task 9): add mutually_exclusive = { focus = USA_auth_commitment }
 		completion_reward = {
 			add_stability = 0.05
@@ -2230,6 +2230,283 @@ focus_tree = {
 			add_popularity = { ideology = communism popularity = 0.02 }
 		}
 		ai_will_do = { factor = 2 }
+	}
+
+	# --- RAD wing, 1936-44 ---------------------------------------------------
+	# Three columns, abs x 3-5 (rel x -1/0/+1 off anchor at abs 4,1).
+	# The stem: voices -> fork (share_our_wealth | popular_front) -> common
+	# ladder -> commitment -> government -> two ideological paths.
+	# War story hangs off commitment at the same era band.
+
+	# The opening voice: a generation of discontents finds its vocabulary.
+	focus = {
+		id = USA_rad_voices
+		icon = GFX_goal_generic_political_pressure
+		relative_position_id = USA_rad_anchor
+		x = 0
+		y = 1
+		cost = 10
+		prerequisite = { focus = USA_rad_anchor }
+		completion_reward = {
+			add_political_power = 50
+			add_popularity = { ideology = communism popularity = 0.03 }
+		}
+		ai_will_do = { factor = 3 }
+	}
+
+	# Share Our Wealth: Long's populist crusade. Excl Popular Front.
+	focus = {
+		id = USA_rad_share_our_wealth
+		icon = GFX_goal_generic_consumer_goods
+		relative_position_id = USA_rad_anchor
+		x = -1
+		y = 2
+		cost = 10
+		prerequisite = { focus = USA_rad_voices }
+		mutually_exclusive = { focus = USA_rad_popular_front }
+		completion_reward = {
+			add_political_power = 60
+			add_ideas = USA_rad_share_our_wealth_spirit
+		}
+		ai_will_do = { factor = 5 }
+	}
+
+	# Popular Front: CPUSA and CIO forge a united front. Excl Share Our Wealth.
+	focus = {
+		id = USA_rad_popular_front
+		icon = GFX_goal_generic_major_alliance
+		relative_position_id = USA_rad_anchor
+		x = 1
+		y = 2
+		cost = 10
+		prerequisite = { focus = USA_rad_voices }
+		mutually_exclusive = { focus = USA_rad_share_our_wealth }
+		completion_reward = {
+			add_popularity = { ideology = communism popularity = 0.10 }
+		}
+		ai_will_do = { factor = 4 }
+	}
+
+	# The Sit-Down Wave: Flint and the great factory occupations.
+	# Prereq: either fork focus (any one = OR within one block per HOI4 docs).
+	focus = {
+		id = USA_rad_sit_down_wave
+		icon = GFX_goal_generic_construct_mil_factory
+		relative_position_id = USA_rad_anchor
+		x = 0
+		y = 3
+		cost = 10
+		prerequisite = {
+			focus = USA_rad_share_our_wealth
+			focus = USA_rad_popular_front
+		}
+		completion_reward = {
+			add_war_support = 0.02
+			add_ideas = USA_rad_sit_down_disruption_spirit
+		}
+		ai_will_do = { factor = 4 }
+	}
+
+	# The General Strike: labor shows its full power against the establishment.
+	focus = {
+		id = USA_rad_general_strike
+		icon = GFX_goal_generic_forceful_treaty
+		relative_position_id = USA_rad_anchor
+		x = 0
+		y = 4
+		cost = 10
+		prerequisite = { focus = USA_rad_sit_down_wave }
+		completion_reward = {
+			add_political_power = -50
+			add_stability = -0.05
+			country_event = { id = usa_cabinet.211 hours = 6 }
+		}
+		ai_will_do = { factor = 4 }
+	}
+
+	# The People's Front: the wing commitment. Sets USA_wing_rad.
+	# Mutually exclusive with ALL other commitment focuses (dem/gop/auth).
+	# TODO(Task 9): add mutually_exclusive = { focus = USA_auth_commitment }
+	focus = {
+		id = USA_rad_commitment
+		icon = GFX_goal_support_democracy
+		relative_position_id = USA_rad_anchor
+		x = 0
+		y = 5
+		cost = 10
+		prerequisite = { focus = USA_rad_general_strike }
+		mutually_exclusive = { focus = USA_dem_commitment }
+		mutually_exclusive = { focus = USA_gop_commitment }
+		completion_reward = {
+			add_stability = 0.05
+			set_country_flag = USA_wing_rad
+		}
+		ai_will_do = { factor = 3 }
+	}
+
+	# The People's Front Government: the radical coalition takes the cabinet.
+	# Fires event usa_cabinet.210 (leader swap, ideology shift, path fork).
+	focus = {
+		id = USA_rad_peoples_front_government
+		icon = GFX_goal_generic_national_unity
+		relative_position_id = USA_rad_anchor
+		x = 0
+		y = 6
+		cost = 10
+		prerequisite = { focus = USA_rad_commitment }
+		completion_reward = {
+			country_event = { id = usa_cabinet.210 hours = 6 }
+		}
+		ai_will_do = { factor = 3 }
+	}
+
+	# --- Path 1: Workers' Democracy (requires USA_rad_democratic flag) ---
+
+	focus = {
+		id = USA_rad_workers_democracy
+		icon = GFX_goal_support_democracy
+		relative_position_id = USA_rad_anchor
+		x = -1
+		y = 7
+		cost = 10
+		prerequisite = { focus = USA_rad_peoples_front_government }
+		mutually_exclusive = { focus = USA_rad_vanguard_path }
+		available = {
+			has_country_flag = USA_rad_democratic
+		}
+		completion_reward = {
+			add_stability = 0.05
+			add_ideas = USA_rad_workers_democracy_spirit
+		}
+		ai_will_do = { factor = 3 }
+	}
+
+	# Economic Bill of Rights: the democratic socialist program in legislation.
+	focus = {
+		id = USA_rad_economic_bill_of_rights
+		icon = GFX_goal_generic_consumer_goods
+		relative_position_id = USA_rad_anchor
+		x = -1
+		y = 8
+		cost = 10
+		prerequisite = { focus = USA_rad_workers_democracy }
+		completion_reward = {
+			add_stability = 0.08
+			add_ideas = USA_rad_economic_rights_spirit
+		}
+		ai_will_do = { factor = 3 }
+	}
+
+	# One Big Union: the industrial union federation reaches its apex.
+	focus = {
+		id = USA_rad_one_big_union
+		icon = GFX_goal_generic_national_unity
+		relative_position_id = USA_rad_anchor
+		x = -1
+		y = 9
+		cost = 10
+		prerequisite = { focus = USA_rad_economic_bill_of_rights }
+		completion_reward = {
+			add_manpower = 200000
+			add_ideas = USA_rad_labor_force_spirit
+		}
+		ai_will_do = { factor = 3 }
+	}
+
+	# --- Path 2: The Vanguard (requires USA_rad_vanguard flag) ---
+
+	focus = {
+		id = USA_rad_vanguard_path
+		icon = GFX_goal_generic_propaganda
+		relative_position_id = USA_rad_anchor
+		x = 1
+		y = 7
+		cost = 10
+		prerequisite = { focus = USA_rad_peoples_front_government }
+		mutually_exclusive = { focus = USA_rad_workers_democracy }
+		available = {
+			has_country_flag = USA_rad_vanguard
+		}
+		completion_reward = {
+			add_ideas = USA_rad_people_state_spirit
+		}
+		ai_will_do = { factor = 2 }
+	}
+
+	# Smash the Reaction: the purge event; elections suspended.
+	# Fires usa_cabinet.212: stability shock, PP boost, elections suspended.
+	focus = {
+		id = USA_rad_smash_the_reaction
+		icon = GFX_goal_generic_major_war
+		relative_position_id = USA_rad_anchor
+		x = 1
+		y = 8
+		cost = 10
+		prerequisite = { focus = USA_rad_vanguard_path }
+		completion_reward = {
+			country_event = { id = usa_cabinet.212 hours = 6 }
+		}
+		ai_will_do = { factor = 2 }
+	}
+
+	# --- War story (off commitment, date-gated) ---
+
+	# Premature Antifascists: the radical left recognized the danger first.
+	# Available 1938+ with commitment; enables wargoal vs fascist major.
+	focus = {
+		id = USA_rad_premature_antifascists
+		icon = GFX_goal_generic_major_war
+		relative_position_id = USA_rad_anchor
+		x = 0
+		y = 7
+		cost = 10
+		prerequisite = { focus = USA_rad_peoples_front_government }
+		available = {
+			date > 1938.1.1
+			has_completed_focus = USA_rad_commitment
+		}
+		completion_reward = {
+			add_war_support = 0.10
+			add_political_power = 30
+			if = {
+				limit = {
+					country_exists = GER
+					GER = { has_government = fascism }
+				}
+				GER = { create_wargoal = {
+					type = annex_everything
+					target = ROOT
+				} }
+				add_political_power = 0
+			}
+			else = {
+				add_political_power = 50
+				add_war_support = 0.05
+			}
+		}
+		ai_will_do = { factor = 2 }
+	}
+
+	# The People's War: mass mobilization in the antifascist cause.
+	focus = {
+		id = USA_rad_peoples_war
+		icon = GFX_goal_generic_allies_build_infantry
+		relative_position_id = USA_rad_anchor
+		x = 0
+		y = 8
+		cost = 10
+		prerequisite = { focus = USA_rad_premature_antifascists }
+		available = {
+			OR = {
+				has_war = yes
+				has_country_flag = USA_at_war
+			}
+		}
+		completion_reward = {
+			add_manpower = 300000
+			add_war_support = 0.05
+		}
+		ai_will_do = { factor = 3 }
 	}
 
 	#######################################################################

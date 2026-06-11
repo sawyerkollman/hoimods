@@ -576,5 +576,77 @@ ideas = {
 				political_power_gain = 0.05
 			}
 		}
+
+		###################################################################
+		# RADICAL WING SPIRITS (Task 8: 1936-44)
+		###################################################################
+
+		# USA_rad_share_our_wealth: Long's populist program — spread the wealth.
+		USA_rad_share_our_wealth_spirit = {
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				political_power_gain = 0.10
+				consumer_goods_factor = -0.03
+			}
+		}
+
+		# USA_rad_sit_down_wave: production disruption during the occupation wave.
+		# Timed idea: expires after 365 days (the strike wave eventually crests).
+		USA_rad_sit_down_disruption_spirit = {
+			allowed = { always = no }
+			removal_cost = -1
+			duration = 365
+			modifier = {
+				industrial_capacity_factory = -0.05
+				war_support_factor = 0.02
+			}
+		}
+
+		# USA_rad_general_strike (via event .211): the labor force organized as
+		# a single army of production.
+		USA_rad_labor_force_spirit = {
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				production_factory_max_efficiency_factor = 0.08
+				production_speed_buildings_factor = 0.05
+				conscription_factor = 0.03
+			}
+		}
+
+		# USA_rad_vanguard_path: the party-state organizational spirit.
+		USA_rad_people_state_spirit = {
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.05
+				political_power_gain = 0.20
+				drift_defence_factor = 0.15
+			}
+		}
+
+		# USA_rad_workers_democracy: democratic socialist governance.
+		USA_rad_workers_democracy_spirit = {
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.05
+				political_power_gain = 0.10
+				consumer_goods_factor = -0.02
+			}
+		}
+
+		# USA_rad_economic_bill_of_rights: the full rights program in law.
+		USA_rad_economic_rights_spirit = {
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.08
+				consumer_goods_factor = -0.03
+				war_support_factor = 0.03
+			}
+		}
+
 	}
 }
