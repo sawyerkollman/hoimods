@@ -2014,6 +2014,207 @@ focus_tree = {
 		ai_will_do = { factor = 8 }
 	}
 
+	# --- GOP wing, 1945-56 --------------------------------------------------
+	# Fork off USA_gop_dewey_dawn: Taft line (x-1) vs Establishment (x+1).
+	# Era bands: '45-47 at rel y 12-13 off anchor, '48-51 at y 14-17,
+	# '52-56 at y 18-21.
+
+	# Mr. Republican: Taft's postwar line. Excl Establishment.
+	focus = {
+		id = USA_gop_mr_republican
+		icon = GFX_goal_generic_political_pressure
+		relative_position_id = USA_gop_anchor
+		x = -1
+		y = 12
+		cost = 10
+		prerequisite = { focus = USA_gop_dewey_dawn }
+		mutually_exclusive = { focus = USA_gop_eastern_establishment }
+		completion_reward = {
+			add_political_power = 50
+			add_stability = 0.02
+		}
+		ai_will_do = { factor = 5 }
+	}
+
+	# The Eastern Establishment: internationalist wing. Excl Taft.
+	focus = {
+		id = USA_gop_eastern_establishment
+		icon = GFX_goal_generic_improve_relations
+		relative_position_id = USA_gop_anchor
+		x = 1
+		y = 12
+		cost = 10
+		prerequisite = { focus = USA_gop_dewey_dawn }
+		mutually_exclusive = { focus = USA_gop_mr_republican }
+		completion_reward = {
+			add_political_power = 50
+			add_stability = 0.02
+			set_country_flag = USA_cab_state_internationalist
+		}
+		ai_will_do = { factor = 5 }
+	}
+
+	# --- Taft line ---
+
+	# Fortress Doctrine: Taft's strategic vision.
+	focus = {
+		id = USA_gop_fortress_doctrine
+		icon = GFX_goal_generic_fortify_city
+		relative_position_id = USA_gop_anchor
+		x = -1
+		y = 13
+		cost = 10
+		prerequisite = { focus = USA_gop_mr_republican }
+		completion_reward = {
+			add_ideas = USA_fortress_america_spirit
+			add_war_support = 0.05
+		}
+		ai_will_do = { factor = 6 }
+	}
+
+	# Bring the Boys Home: rapid demobilization.
+	focus = {
+		id = USA_gop_bring_the_boys_home
+		icon = GFX_goal_generic_national_unity
+		relative_position_id = USA_gop_anchor
+		x = -1
+		y = 14
+		cost = 10
+		prerequisite = { focus = USA_gop_fortress_doctrine }
+		available = {
+			has_war = no
+		}
+		completion_reward = {
+			add_ideas = USA_gop_demobilization_spirit
+			add_stability = 0.05
+		}
+		ai_will_do = { factor = 6 }
+	}
+
+	# Western Hemisphere Imperium: Latin trade bloc.
+	focus = {
+		id = USA_gop_hemisphere_imperium_light
+		icon = GFX_goal_generic_positive_trade_relations
+		relative_position_id = USA_gop_anchor
+		x = -1
+		y = 15
+		cost = 10
+		prerequisite = { focus = USA_gop_bring_the_boys_home }
+		completion_reward = {
+			add_ideas = USA_gop_latin_trade_spirit
+		}
+		ai_will_do = { factor = 6 }
+	}
+
+	# McCarthy Unleashed: the Red hunt. AG cabinet gate.
+	focus = {
+		id = USA_gop_mccarthy_unleashed
+		icon = GFX_goal_generic_propaganda
+		relative_position_id = USA_gop_anchor
+		x = -1
+		y = 16
+		cost = 10
+		prerequisite = { focus = USA_gop_hemisphere_imperium_light }
+		available = {
+			has_country_flag = USA_cab_ag_security_hawk
+		}
+		completion_reward = {
+			add_stability = -0.03
+			add_political_power = 50
+			set_country_flag = USA_mccarthy_era
+			add_ideas = USA_gop_mccarthy_spirit
+		}
+		ai_will_do = { factor = 4 }
+	}
+
+	# --- Establishment line ---
+
+	# The Vandenberg Moment: bipartisan containment.
+	focus = {
+		id = USA_gop_vandenberg_moment
+		icon = GFX_goal_generic_major_alliance
+		relative_position_id = USA_gop_anchor
+		x = 1
+		y = 13
+		cost = 10
+		prerequisite = { focus = USA_gop_eastern_establishment }
+		available = {
+			has_country_flag = USA_era_1948
+		}
+		completion_reward = {
+			add_ideas = USA_gop_bipartisan_containment_spirit
+			set_country_flag = USA_cab_state_internationalist
+		}
+		ai_will_do = { factor = 7 }
+	}
+
+	# Draft Eisenhower: the Establishment's ace card.
+	focus = {
+		id = USA_gop_ike_draft
+		icon = GFX_goal_support_democracy
+		relative_position_id = USA_gop_anchor
+		x = 1
+		y = 14
+		cost = 10
+		prerequisite = { focus = USA_gop_vandenberg_moment }
+		available = {
+			date > 1952.1.1
+			has_country_flag = USA_election_winner_gop
+		}
+		completion_reward = {
+			country_event = { id = usa_cabinet.261 hours = 6 }
+		}
+		ai_will_do = { factor = 7 }
+	}
+
+	# Dynamic Conservatism: Ike's middle way.
+	focus = {
+		id = USA_gop_dynamic_conservatism
+		icon = GFX_goal_generic_construct_civ_factory
+		relative_position_id = USA_gop_anchor
+		x = 1
+		y = 15
+		cost = 10
+		prerequisite = { focus = USA_gop_ike_draft }
+		available = {
+			date > 1953.1.1
+		}
+		completion_reward = {
+			add_stability = 0.05
+			add_ideas = USA_gop_dynamic_conservatism_spirit
+			358 = { # New York
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+		ai_will_do = { factor = 7 }
+	}
+
+	# McCarthy Censured: the Senate acts to end the era.
+	# Requires the mccarthy_era flag (set by Taft line OR any other trigger).
+	focus = {
+		id = USA_gop_mccarthy_censured
+		icon = GFX_goal_generic_national_unity
+		relative_position_id = USA_gop_anchor
+		x = 1
+		y = 16
+		cost = 10
+		prerequisite = { focus = USA_gop_dynamic_conservatism }
+		available = {
+			has_country_flag = USA_mccarthy_era
+		}
+		completion_reward = {
+			add_stability = 0.05
+			add_political_power = -25
+			remove_ideas = USA_gop_mccarthy_spirit
+		}
+		ai_will_do = { factor = 7 }
+	}
+
 	#######################################################################
 	# RADICAL - Voices of discontent
 	#######################################################################
