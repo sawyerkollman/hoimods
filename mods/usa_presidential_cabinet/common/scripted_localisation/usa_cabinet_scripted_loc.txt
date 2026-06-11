@@ -1,0 +1,80 @@
+###########################################################################
+# Presidential Cabinet - USA Overhaul : Scripted Localisation
+#
+# Defines dynamic loc keys for the cabinet power-balance pole names so that
+# events and tooltips can display context-sensitive labels depending on which
+# ideological wing is active.
+#
+# Usage in event/focus desc text:
+#   [USA_cabinet_left_pole_name]   -- left-pole label (Loyalists / Junta / Progressives)
+#   [USA_cabinet_right_pole_name]  -- right-pole label (Fellow Travelers / Movement / Old Guard)
+#
+# NOTE on power_balance UI:
+#   HOI4's power_balance side names are bound to the hardcoded loc keys supplied
+#   in the `left_side` / `right_side` fields of the balance definition
+#   (usa_cabinet_power_balance.txt).  The engine does NOT perform scripted-loc
+#   substitution for those UI labels at the time of writing — only static loc
+#   keys are resolved there.  These defined_text blocks therefore have value
+#   exclusively in scripted contexts: event titles/bodies, focus descriptions,
+#   custom_tooltip text, and any other scopes that process [key] substitution.
+#   The hardcoded fallback keys (USA_pb_progressives / USA_pb_oldguard) remain
+#   the labels shown in the balance widget itself.
+###########################################################################
+
+# --------------------------------------------------------------------------
+# Left pole  (Progressives in the default Dem/GOP game; Loyalists if the
+# radical wing is active; Junta if the authoritarian wing is active)
+# --------------------------------------------------------------------------
+defined_text = {
+    name = USA_cabinet_left_pole_name
+
+    # Radical wing: Loyalists vs Fellow Travelers
+    text = {
+        trigger = {
+            has_country_flag = USA_wing_rad
+        }
+        localization_key = USA_pb_loyalists
+    }
+
+    # Authoritarian wing: The Junta vs The Movement
+    text = {
+        trigger = {
+            has_country_flag = USA_wing_auth
+        }
+        localization_key = USA_pb_junta
+    }
+
+    # Default (Dem coalition, GOP, or no wing flag set)
+    text = {
+        localization_key = USA_pb_progressives
+    }
+}
+
+# --------------------------------------------------------------------------
+# Right pole  (Old Guard in the default Dem/GOP game; Fellow Travelers if the
+# radical wing is active; The Movement if the authoritarian wing is active)
+# --------------------------------------------------------------------------
+defined_text = {
+    name = USA_cabinet_right_pole_name
+
+    # Radical wing: Loyalists vs Fellow Travelers
+    text = {
+        trigger = {
+            has_country_flag = USA_wing_rad
+        }
+        localization_key = USA_pb_fellow_travelers
+    }
+
+    # Authoritarian wing: The Junta vs The Movement
+    text = {
+        trigger = {
+            has_country_flag = USA_wing_auth
+        }
+        localization_key = USA_pb_movement
+    }
+
+    # Default (Dem coalition, GOP, or no wing flag set)
+    text = {
+        localization_key = USA_pb_oldguard
+    }
+}

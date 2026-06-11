@@ -381,6 +381,16 @@
  USA_pb_center:0 "Balanced Cabinet"
  USA_pb_far_right:0 "Old Guard Ascendant"
 
+ # Per-wing alternative pole names used by scripted loc
+ # (common/scripted_localisation/usa_cabinet_scripted_loc.txt).
+ # These are NOT used by the balance widget (engine limitation — see file header);
+ # they appear via [USA_cabinet_left_pole_name] / [USA_cabinet_right_pole_name]
+ # in event text and focus descriptions.
+ USA_pb_loyalists:0 "Loyalists"
+ USA_pb_fellow_travelers:0 "Fellow Travelers"
+ USA_pb_junta:0 "The Junta"
+ USA_pb_movement:0 "The Movement"
+
  # ============================ PARTIES & LEADERS ============================
 
  USA_gop_party:0 "Republican Party"
