@@ -2848,11 +2848,13 @@ focus_tree = {
 		y = 6
 		cost = 10
 		prerequisite = { focus = USA_auth_crush_labor }
-		# TODO(Task 11): auth-era AG appointment should also set USA_cab_ag_security_hawk
+		# Task 11 provides the real pathway via '40/'44/'52 era-slate AG appointments
+		# (USA_appoint_cab40_biddle, USA_appoint_cab44_mcgrath, USA_appoint_cab52_hawk).
+		# The date fallback is harmless and retained for the auth wing's early-game case.
 		available = {
 			OR = {
 				has_country_flag = USA_cab_ag_security_hawk
-				date > 1940.1.1  # Fallback until Task 11 auth-era AG slate sets the flag on later appointments
+				date > 1940.1.1
 			}
 		}
 		completion_reward = {
@@ -3080,6 +3082,692 @@ focus_tree = {
 			country_event = { id = usa_cabinet.220 hours = 12 }
 		}
 		ai_will_do = { factor = 3 }
+	}
+
+	#######################################################################
+	# CABINET SLATES 1940-1952 (Task 11)
+	# Three era resets, each followed by 4 seats × 2 candidates.
+	# Cabinet-reset focuses sit at abs x=18, beside the election focus of
+	# the same year. Seat focuses fan from x=16 to x=19 at y+1; candidate
+	# pairs stack at y+2 / y+3 beneath each seat.
+	# Position map (all abs):
+	#   '40 reset (18,11) → seat row (16-19,12) → candidates (16-19,13/14)
+	#   '44 reset (18,17) → seat row (16-19,18) → candidates (16-19,19/20)
+	#   '52 reset (18,29) → seat row (16-19,30) → candidates (16-19,31/32)
+	#######################################################################
+
+	# --- Cabinet Reset 1940 -------------------------------------------
+	focus = {
+		id = USA_trunk_cabinet_40
+		icon = GFX_goal_generic_political_pressure
+		relative_position_id = USA_trunk_election_1940
+		x = -2
+		y = 0
+		cost = 5
+		prerequisite = { focus = USA_trunk_election_1940 }
+		available = {
+			has_country_flag = USA_era_1940
+		}
+		completion_reward = {
+			USA_clear_cabinet = yes
+			add_political_power = 50
+		}
+		ai_will_do = { factor = 15 }
+	}
+
+	# '40 Seat: Secretary of State
+	focus = {
+		id = USA_cab40_seat_state
+		icon = GFX_goal_generic_improve_relations
+		relative_position_id = USA_trunk_cabinet_40
+		x = -2
+		y = 1
+		cost = 5
+		prerequisite = { focus = USA_trunk_cabinet_40 }
+		completion_reward = {
+			add_political_power = 10
+		}
+		ai_will_do = { factor = 5 }
+	}
+
+	focus = {
+		id = USA_appoint_cab40_hull
+		icon = GFX_goal_generic_alliance
+		relative_position_id = USA_cab40_seat_state
+		x = 0
+		y = 1
+		cost = 8
+		prerequisite = { focus = USA_cab40_seat_state }
+		mutually_exclusive = { focus = USA_appoint_cab40_welles }
+		completion_reward = {
+			add_ideas = USA_cab40_hull
+			USA_fill_cabinet_seat = yes
+			USA_shift_cabinet_progressive = yes
+			set_country_flag = USA_cab_state_internationalist
+		}
+		ai_will_do = { factor = 10 }
+	}
+
+	focus = {
+		id = USA_appoint_cab40_welles
+		icon = GFX_goal_generic_improve_relations
+		relative_position_id = USA_cab40_seat_state
+		x = 0
+		y = 2
+		cost = 8
+		prerequisite = { focus = USA_cab40_seat_state }
+		mutually_exclusive = { focus = USA_appoint_cab40_hull }
+		completion_reward = {
+			add_ideas = USA_cab40_welles
+			USA_fill_cabinet_seat = yes
+			USA_shift_cabinet_progressive = yes
+			set_country_flag = USA_cab_state_internationalist
+		}
+		ai_will_do = { factor = 7 }
+	}
+
+	# '40 Seat: Secretary of the Treasury
+	focus = {
+		id = USA_cab40_seat_treasury
+		icon = GFX_goal_generic_production
+		relative_position_id = USA_trunk_cabinet_40
+		x = -1
+		y = 1
+		cost = 5
+		prerequisite = { focus = USA_trunk_cabinet_40 }
+		completion_reward = {
+			add_political_power = 10
+		}
+		ai_will_do = { factor = 5 }
+	}
+
+	focus = {
+		id = USA_appoint_cab40_morgenthau
+		icon = GFX_goal_generic_construct_civ
+		relative_position_id = USA_cab40_seat_treasury
+		x = 0
+		y = 1
+		cost = 8
+		prerequisite = { focus = USA_cab40_seat_treasury }
+		mutually_exclusive = { focus = USA_appoint_cab40_jones }
+		completion_reward = {
+			add_ideas = USA_cab40_morgenthau
+			USA_fill_cabinet_seat = yes
+			USA_shift_cabinet_progressive = yes
+		}
+		ai_will_do = { factor = 10 }
+	}
+
+	focus = {
+		id = USA_appoint_cab40_jones
+		icon = GFX_goal_generic_construct_mil
+		relative_position_id = USA_cab40_seat_treasury
+		x = 0
+		y = 2
+		cost = 8
+		prerequisite = { focus = USA_cab40_seat_treasury }
+		mutually_exclusive = { focus = USA_appoint_cab40_morgenthau }
+		completion_reward = {
+			add_ideas = USA_cab40_jones
+			USA_fill_cabinet_seat = yes
+			USA_shift_cabinet_conservative = yes
+		}
+		ai_will_do = { factor = 4 }
+	}
+
+	# '40 Seat: Secretary of War
+	focus = {
+		id = USA_cab40_seat_war
+		icon = GFX_goal_generic_army_doctrines
+		relative_position_id = USA_trunk_cabinet_40
+		x = 0
+		y = 1
+		cost = 5
+		prerequisite = { focus = USA_trunk_cabinet_40 }
+		completion_reward = {
+			add_political_power = 10
+		}
+		ai_will_do = { factor = 5 }
+	}
+
+	focus = {
+		id = USA_appoint_cab40_stimson
+		icon = GFX_goal_generic_major_war
+		relative_position_id = USA_cab40_seat_war
+		x = 0
+		y = 1
+		cost = 8
+		prerequisite = { focus = USA_cab40_seat_war }
+		mutually_exclusive = { focus = USA_appoint_cab40_johnson }
+		completion_reward = {
+			add_ideas = USA_cab40_stimson
+			USA_fill_cabinet_seat = yes
+			USA_shift_cabinet_progressive = yes
+			set_country_flag = USA_cab_war_loyalist
+		}
+		ai_will_do = { factor = 10 }
+	}
+
+	focus = {
+		id = USA_appoint_cab40_johnson
+		icon = GFX_goal_generic_neutrality_focus
+		relative_position_id = USA_cab40_seat_war
+		x = 0
+		y = 2
+		cost = 8
+		prerequisite = { focus = USA_cab40_seat_war }
+		mutually_exclusive = { focus = USA_appoint_cab40_stimson }
+		completion_reward = {
+			add_ideas = USA_cab40_johnson
+			USA_fill_cabinet_seat = yes
+			USA_shift_cabinet_conservative = yes
+			set_country_flag = USA_cab_war_loyalist
+		}
+		ai_will_do = { factor = 3 }
+	}
+
+	# '40 Seat: Attorney General (x=2 off cabinet_40 to avoid collision with
+	# USA_trunk_shape_of_the_peace which sits at abs 19,14)
+	focus = {
+		id = USA_cab40_seat_ag
+		icon = GFX_goal_generic_national_unity
+		relative_position_id = USA_trunk_cabinet_40
+		x = 2
+		y = 1
+		cost = 5
+		prerequisite = { focus = USA_trunk_cabinet_40 }
+		completion_reward = {
+			add_political_power = 10
+		}
+		ai_will_do = { factor = 5 }
+	}
+
+	focus = {
+		id = USA_appoint_cab40_jackson
+		icon = GFX_goal_generic_political_pressure
+		relative_position_id = USA_cab40_seat_ag
+		x = 0
+		y = 1
+		cost = 8
+		prerequisite = { focus = USA_cab40_seat_ag }
+		mutually_exclusive = { focus = USA_appoint_cab40_biddle }
+		completion_reward = {
+			add_ideas = USA_cab40_jackson
+			USA_fill_cabinet_seat = yes
+			USA_shift_cabinet_progressive = yes
+			set_country_flag = USA_cab_ag_civil_libertarian
+		}
+		ai_will_do = { factor = 10 }
+	}
+
+	focus = {
+		id = USA_appoint_cab40_biddle
+		icon = GFX_goal_generic_propaganda
+		relative_position_id = USA_cab40_seat_ag
+		x = 0
+		y = 2
+		cost = 8
+		prerequisite = { focus = USA_cab40_seat_ag }
+		mutually_exclusive = { focus = USA_appoint_cab40_jackson }
+		completion_reward = {
+			add_ideas = USA_cab40_biddle
+			USA_fill_cabinet_seat = yes
+			USA_shift_cabinet_conservative = yes
+			set_country_flag = USA_cab_ag_security_hawk
+		}
+		ai_will_do = { factor = 3 }
+	}
+
+	# --- Cabinet Reset 1944 -------------------------------------------
+	focus = {
+		id = USA_trunk_cabinet_44
+		icon = GFX_goal_generic_political_pressure
+		relative_position_id = USA_trunk_election_1944
+		x = -2
+		y = 0
+		cost = 5
+		prerequisite = { focus = USA_trunk_election_1944 }
+		available = {
+			has_country_flag = USA_era_1944
+		}
+		completion_reward = {
+			USA_clear_cabinet = yes
+			add_political_power = 50
+		}
+		ai_will_do = { factor = 15 }
+	}
+
+	# '44 Seat: Secretary of State
+	focus = {
+		id = USA_cab44_seat_state
+		icon = GFX_goal_generic_improve_relations
+		relative_position_id = USA_trunk_cabinet_44
+		x = -2
+		y = 1
+		cost = 5
+		prerequisite = { focus = USA_trunk_cabinet_44 }
+		completion_reward = {
+			add_political_power = 10
+		}
+		ai_will_do = { factor = 5 }
+	}
+
+	focus = {
+		id = USA_appoint_cab44_stettinius
+		icon = GFX_goal_generic_alliance
+		relative_position_id = USA_cab44_seat_state
+		x = 0
+		y = 1
+		cost = 8
+		prerequisite = { focus = USA_cab44_seat_state }
+		mutually_exclusive = { focus = USA_appoint_cab44_byrnes }
+		completion_reward = {
+			add_ideas = USA_cab44_stettinius
+			USA_fill_cabinet_seat = yes
+			USA_shift_cabinet_progressive = yes
+			set_country_flag = USA_cab_state_internationalist
+		}
+		ai_will_do = { factor = 10 }
+	}
+
+	focus = {
+		id = USA_appoint_cab44_byrnes
+		icon = GFX_goal_generic_political_pressure
+		relative_position_id = USA_cab44_seat_state
+		x = 0
+		y = 2
+		cost = 8
+		prerequisite = { focus = USA_cab44_seat_state }
+		mutually_exclusive = { focus = USA_appoint_cab44_stettinius }
+		completion_reward = {
+			add_ideas = USA_cab44_byrnes
+			USA_fill_cabinet_seat = yes
+			USA_shift_cabinet_conservative = yes
+			set_country_flag = USA_cab_state_isolationist
+		}
+		ai_will_do = { factor = 4 }
+	}
+
+	# '44 Seat: Secretary of the Treasury
+	focus = {
+		id = USA_cab44_seat_treasury
+		icon = GFX_goal_generic_production
+		relative_position_id = USA_trunk_cabinet_44
+		x = -1
+		y = 1
+		cost = 5
+		prerequisite = { focus = USA_trunk_cabinet_44 }
+		completion_reward = {
+			add_political_power = 10
+		}
+		ai_will_do = { factor = 5 }
+	}
+
+	focus = {
+		id = USA_appoint_cab44_vinson
+		icon = GFX_goal_generic_construct_civ
+		relative_position_id = USA_cab44_seat_treasury
+		x = 0
+		y = 1
+		cost = 8
+		prerequisite = { focus = USA_cab44_seat_treasury }
+		mutually_exclusive = { focus = USA_appoint_cab44_snyder }
+		completion_reward = {
+			add_ideas = USA_cab44_vinson
+			USA_fill_cabinet_seat = yes
+			USA_shift_cabinet_progressive = yes
+		}
+		ai_will_do = { factor = 10 }
+	}
+
+	focus = {
+		id = USA_appoint_cab44_snyder
+		icon = GFX_goal_generic_construct_mil
+		relative_position_id = USA_cab44_seat_treasury
+		x = 0
+		y = 2
+		cost = 8
+		prerequisite = { focus = USA_cab44_seat_treasury }
+		mutually_exclusive = { focus = USA_appoint_cab44_vinson }
+		completion_reward = {
+			add_ideas = USA_cab44_snyder
+			USA_fill_cabinet_seat = yes
+			USA_shift_cabinet_conservative = yes
+		}
+		ai_will_do = { factor = 4 }
+	}
+
+	# '44 Seat: Secretary of War / Defense
+	focus = {
+		id = USA_cab44_seat_war
+		icon = GFX_goal_generic_army_doctrines
+		relative_position_id = USA_trunk_cabinet_44
+		x = 0
+		y = 1
+		cost = 5
+		prerequisite = { focus = USA_trunk_cabinet_44 }
+		completion_reward = {
+			add_political_power = 10
+		}
+		ai_will_do = { factor = 5 }
+	}
+
+	focus = {
+		id = USA_appoint_cab44_stimson
+		icon = GFX_goal_generic_major_war
+		relative_position_id = USA_cab44_seat_war
+		x = 0
+		y = 1
+		cost = 8
+		prerequisite = { focus = USA_cab44_seat_war }
+		mutually_exclusive = { focus = USA_appoint_cab44_forrestal }
+		completion_reward = {
+			add_ideas = USA_cab44_stimson
+			USA_fill_cabinet_seat = yes
+			USA_shift_cabinet_progressive = yes
+			set_country_flag = USA_cab_war_loyalist
+		}
+		ai_will_do = { factor = 10 }
+	}
+
+	focus = {
+		id = USA_appoint_cab44_forrestal
+		icon = GFX_goal_generic_build_navy
+		relative_position_id = USA_cab44_seat_war
+		x = 0
+		y = 2
+		cost = 8
+		prerequisite = { focus = USA_cab44_seat_war }
+		mutually_exclusive = { focus = USA_appoint_cab44_stimson }
+		completion_reward = {
+			add_ideas = USA_cab44_forrestal
+			USA_fill_cabinet_seat = yes
+			USA_shift_cabinet_conservative = yes
+		}
+		ai_will_do = { factor = 5 }
+	}
+
+	# '44 Seat: Attorney General
+	focus = {
+		id = USA_cab44_seat_ag
+		icon = GFX_goal_generic_national_unity
+		relative_position_id = USA_trunk_cabinet_44
+		x = 1
+		y = 1
+		cost = 5
+		prerequisite = { focus = USA_trunk_cabinet_44 }
+		completion_reward = {
+			add_political_power = 10
+		}
+		ai_will_do = { factor = 5 }
+	}
+
+	focus = {
+		id = USA_appoint_cab44_clark
+		icon = GFX_goal_generic_political_pressure
+		relative_position_id = USA_cab44_seat_ag
+		x = 0
+		y = 1
+		cost = 8
+		prerequisite = { focus = USA_cab44_seat_ag }
+		mutually_exclusive = { focus = USA_appoint_cab44_mcgrath }
+		completion_reward = {
+			add_ideas = USA_cab44_clark
+			USA_fill_cabinet_seat = yes
+			USA_shift_cabinet_progressive = yes
+			set_country_flag = USA_cab_ag_civil_libertarian
+		}
+		ai_will_do = { factor = 10 }
+	}
+
+	focus = {
+		id = USA_appoint_cab44_mcgrath
+		icon = GFX_goal_generic_propaganda
+		relative_position_id = USA_cab44_seat_ag
+		x = 0
+		y = 2
+		cost = 8
+		prerequisite = { focus = USA_cab44_seat_ag }
+		mutually_exclusive = { focus = USA_appoint_cab44_clark }
+		completion_reward = {
+			add_ideas = USA_cab44_mcgrath
+			USA_fill_cabinet_seat = yes
+			USA_shift_cabinet_conservative = yes
+			set_country_flag = USA_cab_ag_security_hawk
+		}
+		ai_will_do = { factor = 4 }
+	}
+
+	# --- Cabinet Reset 1952 -------------------------------------------
+	focus = {
+		id = USA_trunk_cabinet_52
+		icon = GFX_goal_generic_political_pressure
+		relative_position_id = USA_trunk_election_1952
+		x = -2
+		y = 0
+		cost = 5
+		prerequisite = { focus = USA_trunk_election_1952 }
+		available = {
+			has_country_flag = USA_era_1952
+		}
+		completion_reward = {
+			USA_clear_cabinet = yes
+			add_political_power = 50
+		}
+		ai_will_do = { factor = 15 }
+	}
+
+	# '52 Seat: Secretary of State
+	focus = {
+		id = USA_cab52_seat_state
+		icon = GFX_goal_generic_improve_relations
+		relative_position_id = USA_trunk_cabinet_52
+		x = -2
+		y = 1
+		cost = 5
+		prerequisite = { focus = USA_trunk_cabinet_52 }
+		completion_reward = {
+			add_political_power = 10
+		}
+		ai_will_do = { factor = 5 }
+	}
+
+	focus = {
+		id = USA_appoint_cab52_dulles
+		icon = GFX_goal_generic_alliance
+		relative_position_id = USA_cab52_seat_state
+		x = 0
+		y = 1
+		cost = 8
+		prerequisite = { focus = USA_cab52_seat_state }
+		mutually_exclusive = { focus = USA_appoint_cab52_taftman }
+		completion_reward = {
+			add_ideas = USA_cab52_dulles
+			USA_fill_cabinet_seat = yes
+			USA_shift_cabinet_conservative = yes
+			set_country_flag = USA_cab_state_internationalist
+		}
+		ai_will_do = { factor = 10 }
+	}
+
+	focus = {
+		id = USA_appoint_cab52_taftman
+		icon = GFX_goal_generic_neutrality_focus
+		relative_position_id = USA_cab52_seat_state
+		x = 0
+		y = 2
+		cost = 8
+		prerequisite = { focus = USA_cab52_seat_state }
+		mutually_exclusive = { focus = USA_appoint_cab52_dulles }
+		completion_reward = {
+			add_ideas = USA_cab52_taftman
+			USA_fill_cabinet_seat = yes
+			USA_shift_cabinet_conservative = yes
+			set_country_flag = USA_cab_state_isolationist
+		}
+		ai_will_do = { factor = 4 }
+	}
+
+	# '52 Seat: Secretary of the Treasury
+	focus = {
+		id = USA_cab52_seat_treasury
+		icon = GFX_goal_generic_production
+		relative_position_id = USA_trunk_cabinet_52
+		x = -1
+		y = 1
+		cost = 5
+		prerequisite = { focus = USA_trunk_cabinet_52 }
+		completion_reward = {
+			add_political_power = 10
+		}
+		ai_will_do = { factor = 5 }
+	}
+
+	focus = {
+		id = USA_appoint_cab52_humphrey
+		icon = GFX_goal_generic_consumer_goods
+		relative_position_id = USA_cab52_seat_treasury
+		x = 0
+		y = 1
+		cost = 8
+		prerequisite = { focus = USA_cab52_seat_treasury }
+		mutually_exclusive = { focus = USA_appoint_cab52_banker }
+		completion_reward = {
+			add_ideas = USA_cab52_humphrey
+			USA_fill_cabinet_seat = yes
+			USA_shift_cabinet_conservative = yes
+		}
+		ai_will_do = { factor = 10 }
+	}
+
+	focus = {
+		id = USA_appoint_cab52_banker
+		icon = GFX_goal_generic_construct_civ
+		relative_position_id = USA_cab52_seat_treasury
+		x = 0
+		y = 2
+		cost = 8
+		prerequisite = { focus = USA_cab52_seat_treasury }
+		mutually_exclusive = { focus = USA_appoint_cab52_humphrey }
+		completion_reward = {
+			add_ideas = USA_cab52_banker
+			USA_fill_cabinet_seat = yes
+			USA_shift_cabinet_conservative = yes
+		}
+		ai_will_do = { factor = 4 }
+	}
+
+	# '52 Seat: Secretary of Defense
+	focus = {
+		id = USA_cab52_seat_defense
+		icon = GFX_goal_generic_army_doctrines
+		relative_position_id = USA_trunk_cabinet_52
+		x = 0
+		y = 1
+		cost = 5
+		prerequisite = { focus = USA_trunk_cabinet_52 }
+		completion_reward = {
+			add_political_power = 10
+		}
+		ai_will_do = { factor = 5 }
+	}
+
+	focus = {
+		id = USA_appoint_cab52_wilson
+		icon = GFX_goal_generic_construct_mil_factory
+		relative_position_id = USA_cab52_seat_defense
+		x = 0
+		y = 1
+		cost = 8
+		prerequisite = { focus = USA_cab52_seat_defense }
+		mutually_exclusive = { focus = USA_appoint_cab52_macarthur }
+		completion_reward = {
+			add_ideas = USA_cab52_wilson
+			USA_fill_cabinet_seat = yes
+			USA_shift_cabinet_conservative = yes
+		}
+		ai_will_do = { factor = 10 }
+	}
+
+	focus = {
+		id = USA_appoint_cab52_macarthur
+		icon = GFX_goal_generic_major_war
+		relative_position_id = USA_cab52_seat_defense
+		x = 0
+		y = 2
+		cost = 8
+		prerequisite = { focus = USA_cab52_seat_defense }
+		mutually_exclusive = { focus = USA_appoint_cab52_wilson }
+		available = {
+			OR = {
+				has_country_flag = USA_wing_auth
+				has_country_flag = USA_wing_gop
+			}
+		}
+		completion_reward = {
+			add_ideas = USA_cab52_macarthur
+			USA_fill_cabinet_seat = yes
+			USA_shift_cabinet_conservative = yes
+			set_country_flag = USA_cab_war_loyalist
+		}
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				factor = 3
+				has_country_flag = USA_wing_auth
+			}
+		}
+	}
+
+	# '52 Seat: Attorney General
+	focus = {
+		id = USA_cab52_seat_ag
+		icon = GFX_goal_generic_national_unity
+		relative_position_id = USA_trunk_cabinet_52
+		x = 1
+		y = 1
+		cost = 5
+		prerequisite = { focus = USA_trunk_cabinet_52 }
+		completion_reward = {
+			add_political_power = 10
+		}
+		ai_will_do = { factor = 5 }
+	}
+
+	focus = {
+		id = USA_appoint_cab52_brownell
+		icon = GFX_goal_generic_political_pressure
+		relative_position_id = USA_cab52_seat_ag
+		x = 0
+		y = 1
+		cost = 8
+		prerequisite = { focus = USA_cab52_seat_ag }
+		mutually_exclusive = { focus = USA_appoint_cab52_hawk }
+		completion_reward = {
+			add_ideas = USA_cab52_brownell
+			USA_fill_cabinet_seat = yes
+			USA_shift_cabinet_progressive = yes
+			set_country_flag = USA_cab_ag_civil_libertarian
+		}
+		ai_will_do = { factor = 10 }
+	}
+
+	focus = {
+		id = USA_appoint_cab52_hawk
+		icon = GFX_goal_generic_propaganda
+		relative_position_id = USA_cab52_seat_ag
+		x = 0
+		y = 2
+		cost = 8
+		prerequisite = { focus = USA_cab52_seat_ag }
+		mutually_exclusive = { focus = USA_appoint_cab52_brownell }
+		completion_reward = {
+			add_ideas = USA_cab52_hawk
+			USA_fill_cabinet_seat = yes
+			USA_shift_cabinet_conservative = yes
+			set_country_flag = USA_cab_ag_security_hawk
+		}
+		ai_will_do = { factor = 4 }
 	}
 
 	#######################################################################

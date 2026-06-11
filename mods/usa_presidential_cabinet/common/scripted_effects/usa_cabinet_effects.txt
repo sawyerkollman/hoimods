@@ -228,6 +228,7 @@ USA_resolve_election = {
 # era slates) MUST be appended to the remove_ideas list below.
 USA_clear_cabinet = {
 	remove_ideas = {
+		# '36 slate
 		USA_cabinet_cordell_hull
 		USA_cabinet_isolationist_state
 		USA_cabinet_morgenthau
@@ -236,6 +237,33 @@ USA_clear_cabinet = {
 		USA_cabinet_woodring
 		USA_cabinet_murphy
 		USA_cabinet_security_ag
+		# '40 slate
+		USA_cab40_hull
+		USA_cab40_welles
+		USA_cab40_morgenthau
+		USA_cab40_jones
+		USA_cab40_stimson
+		USA_cab40_johnson
+		USA_cab40_jackson
+		USA_cab40_biddle
+		# '44 slate
+		USA_cab44_stettinius
+		USA_cab44_byrnes
+		USA_cab44_vinson
+		USA_cab44_snyder
+		USA_cab44_stimson
+		USA_cab44_forrestal
+		USA_cab44_clark
+		USA_cab44_mcgrath
+		# '52 slate
+		USA_cab52_dulles
+		USA_cab52_taftman
+		USA_cab52_humphrey
+		USA_cab52_banker
+		USA_cab52_wilson
+		USA_cab52_macarthur
+		USA_cab52_brownell
+		USA_cab52_hawk
 	}
 	set_variable = { USA_cabinet_seats_filled = 0 }
 }

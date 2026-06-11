@@ -897,5 +897,273 @@ ideas = {
 			}
 		}
 
+
+		###################################################################
+		# CABINET SLATES 1940-52 (Task 11)
+		###################################################################
+
+		# --- '40 Slate: Secretary of State ---
+		USA_cab40_hull = {
+			allowed = { always = no }
+			removal_cost = -1
+			picture = GFX_idea_generic_political_advisor_europe_2
+			modifier = {
+				improve_relations_maintain_cost_factor = -0.25
+				opinion_gain_monthly_factor = 0.15
+				political_power_gain = 0.10
+			}
+		}
+
+		USA_cab40_welles = {
+			allowed = { always = no }
+			removal_cost = -1
+			picture = GFX_idea_generic_political_advisor_europe_3
+			modifier = {
+				improve_relations_maintain_cost_factor = -0.30
+				opinion_gain_monthly_factor = 0.20
+			}
+		}
+
+		# --- '40 Slate: Secretary of the Treasury ---
+		USA_cab40_morgenthau = {
+			allowed = { always = no }
+			removal_cost = -1
+			picture = GFX_idea_generic_political_advisor_europe_2
+			modifier = {
+				consumer_goods_factor = -0.05
+				production_speed_buildings_factor = 0.10
+			}
+		}
+
+		USA_cab40_jones = {
+			allowed = { always = no }
+			removal_cost = -1
+			picture = GFX_idea_generic_political_advisor_europe_1
+			modifier = {
+				consumer_goods_factor = -0.03
+				production_factory_efficiency_gain_factor = 0.05
+			}
+		}
+
+		# --- '40 Slate: Secretary of War ---
+		USA_cab40_stimson = {
+			allowed = { always = no }
+			removal_cost = -1
+			picture = GFX_idea_generic_political_advisor_europe_1
+			modifier = {
+				army_org_factor = 0.05
+				war_support_factor = 0.05
+				conscription_factor = 0.05
+			}
+		}
+
+		USA_cab40_johnson = {
+			allowed = { always = no }
+			removal_cost = -1
+			picture = GFX_idea_generic_political_advisor_europe_2
+			modifier = {
+				training_time_army_factor = -0.05
+				industrial_capacity_factory = 0.05
+			}
+		}
+
+		# --- '40 Slate: Attorney General ---
+		USA_cab40_jackson = {
+			allowed = { always = no }
+			removal_cost = -1
+			picture = GFX_idea_generic_political_advisor_europe_3
+			modifier = {
+				stability_factor = 0.05
+				political_power_gain = 0.05
+			}
+		}
+
+		USA_cab40_biddle = {
+			allowed = { always = no }
+			removal_cost = -1
+			picture = GFX_idea_generic_political_advisor_europe_1
+			modifier = {
+				war_support_factor = 0.05
+				drift_defence_factor = 0.15
+				stability_factor = -0.02
+			}
+		}
+
+		# --- '44 Slate: Secretary of State ---
+		USA_cab44_stettinius = {
+			allowed = { always = no }
+			removal_cost = -1
+			picture = GFX_idea_generic_political_advisor_europe_2
+			modifier = {
+				improve_relations_maintain_cost_factor = -0.20
+				opinion_gain_monthly_factor = 0.20
+				political_power_gain = 0.05
+			}
+		}
+
+		USA_cab44_byrnes = {
+			allowed = { always = no }
+			removal_cost = -1
+			picture = GFX_idea_generic_political_advisor_europe_1
+			modifier = {
+				political_power_gain = 0.15
+				justify_war_goal_time_factor = -0.10
+			}
+		}
+
+		# --- '44 Slate: Secretary of the Treasury ---
+		USA_cab44_vinson = {
+			allowed = { always = no }
+			removal_cost = -1
+			picture = GFX_idea_generic_political_advisor_europe_3
+			modifier = {
+				political_power_gain = 0.10
+				production_speed_buildings_factor = 0.05
+			}
+		}
+
+		USA_cab44_snyder = {
+			allowed = { always = no }
+			removal_cost = -1
+			picture = GFX_idea_generic_political_advisor_europe_2
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.08
+				industrial_capacity_factory = 0.05
+				consumer_goods_factor = -0.02
+			}
+		}
+
+		# --- '44 Slate: Secretary of War / Defense ---
+		USA_cab44_stimson = {
+			allowed = { always = no }
+			removal_cost = -1
+			picture = GFX_idea_generic_political_advisor_europe_1
+			modifier = {
+				army_org_factor = 0.05
+				war_support_factor = 0.05
+				conscription_factor = 0.05
+			}
+		}
+
+		USA_cab44_forrestal = {
+			allowed = { always = no }
+			removal_cost = -1
+			picture = GFX_idea_generic_political_advisor_europe_3
+			modifier = {
+				experience_gain_navy = 0.10
+				industrial_capacity_factory = 0.05
+			}
+		}
+
+		# --- '44 Slate: Attorney General ---
+		USA_cab44_clark = {
+			allowed = { always = no }
+			removal_cost = -1
+			picture = GFX_idea_generic_political_advisor_europe_2
+			modifier = {
+				stability_factor = 0.05
+				political_power_gain = 0.05
+			}
+		}
+
+		USA_cab44_mcgrath = {
+			allowed = { always = no }
+			removal_cost = -1
+			picture = GFX_idea_generic_political_advisor_europe_1
+			modifier = {
+				war_support_factor = 0.05
+				drift_defence_factor = 0.15
+				stability_factor = -0.02
+			}
+		}
+
+		# --- '52 Slate: Secretary of State ---
+		USA_cab52_dulles = {
+			allowed = { always = no }
+			removal_cost = -1
+			picture = GFX_idea_generic_political_advisor_europe_2
+			modifier = {
+				war_support_factor = 0.08
+				opinion_gain_monthly_factor = 0.10
+				improve_relations_maintain_cost_factor = -0.10
+			}
+		}
+
+		USA_cab52_taftman = {
+			allowed = { always = no }
+			removal_cost = -1
+			picture = GFX_idea_generic_political_advisor_europe_3
+			modifier = {
+				drift_defence_factor = 0.20
+				stability_factor = 0.05
+				justify_war_goal_time_factor = 0.20
+			}
+		}
+
+		# --- '52 Slate: Secretary of the Treasury ---
+		USA_cab52_humphrey = {
+			allowed = { always = no }
+			removal_cost = -1
+			picture = GFX_idea_generic_political_advisor_europe_1
+			modifier = {
+				consumer_goods_factor = -0.05
+				production_factory_efficiency_gain_factor = 0.05
+			}
+		}
+
+		USA_cab52_banker = {
+			allowed = { always = no }
+			removal_cost = -1
+			picture = GFX_idea_generic_political_advisor_europe_2
+			modifier = {
+				industrial_capacity_factory = 0.05
+				production_speed_buildings_factor = 0.05
+			}
+		}
+
+		# --- '52 Slate: Secretary of Defense ---
+		USA_cab52_wilson = {
+			allowed = { always = no }
+			removal_cost = -1
+			picture = GFX_idea_generic_political_advisor_europe_3
+			modifier = {
+				industrial_capacity_factory = 0.05
+				production_speed_arms_factory_factor = 0.10
+			}
+		}
+
+		USA_cab52_macarthur = {
+			allowed = { always = no }
+			removal_cost = -1
+			picture = GFX_idea_generic_political_advisor_europe_1
+			modifier = {
+				army_org_factor = 0.08
+				war_support_factor = 0.10
+				conscription_factor = 0.05
+			}
+		}
+
+		# --- '52 Slate: Attorney General ---
+		USA_cab52_brownell = {
+			allowed = { always = no }
+			removal_cost = -1
+			picture = GFX_idea_generic_political_advisor_europe_2
+			modifier = {
+				stability_factor = 0.07
+				political_power_gain = 0.05
+			}
+		}
+
+		USA_cab52_hawk = {
+			allowed = { always = no }
+			removal_cost = -1
+			picture = GFX_idea_generic_political_advisor_europe_1
+			modifier = {
+				stability_factor = 0.02
+				war_support_factor = 0.05
+				drift_defence_factor = 0.15
+			}
+		}
+
 	}
 }
