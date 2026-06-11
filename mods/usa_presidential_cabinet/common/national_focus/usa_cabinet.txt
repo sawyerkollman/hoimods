@@ -122,6 +122,9 @@ focus_tree = {
 			add_ideas = USA_cabinet_isolationist_state
 			USA_fill_cabinet_seat = yes
 			USA_shift_cabinet_conservative = yes
+			# Cabinet flag: gates GOP Task 7's America First path (an isolationist
+			# State Department is required to pursue the full non-intervention agenda).
+			set_country_flag = USA_cab_state_isolationist
 		}
 		ai_will_do = { factor = 2 }
 	}
@@ -273,6 +276,10 @@ focus_tree = {
 			add_ideas = USA_cabinet_security_ag
 			USA_fill_cabinet_seat = yes
 			USA_shift_cabinet_conservative = yes
+			# Cabinet flag: gates GOP Task 7's McCarthy Unleashed path and other
+			# security-hawk content in Tasks 7/8/9 that requires a law-and-order
+			# Justice Department.
+			set_country_flag = USA_cab_ag_security_hawk
 		}
 		ai_will_do = { factor = 2 }
 	}
@@ -612,10 +619,8 @@ focus_tree = {
 
 	# The court-packing gamble: an immediate political mauling, repaid with
 	# interest when the Court switches (usa_cabinet.250, +120 PP).
-	# MUTUAL-EXCLUSION (Task 7): this focus must become mutually exclusive
-	# with USA_gop_nine_old_men_win when the GOP wing lands; declaring that
-	# id today would be a dangling reference, so Task 7 must add the
-	# mutually_exclusive block on BOTH focuses.
+	# MUTUAL-EXCLUSION (Task 7 follow-up): USA_gop_nine_old_men_win is now
+	# live, so the handshake is declared on both sides.
 	focus = {
 		id = USA_dem_court_fight
 		icon = GFX_goal_generic_forceful_treaty
@@ -624,6 +629,7 @@ focus_tree = {
 		y = 2
 		cost = 10
 		prerequisite = { focus = USA_dem_second_new_deal }
+		mutually_exclusive = { focus = USA_gop_nine_old_men_win }
 		available = {
 			date > 1937.1.1
 		}
@@ -667,12 +673,10 @@ focus_tree = {
 
 	# The wing-commitment focus: locks the USA onto the Democratic track.
 	#
-	# MUTUAL-EXCLUSION: Tasks 7/8/9 must add mutually_exclusive vs
-	# USA_dem_commitment on their commitment focuses (USA_gop_commitment,
-	# USA_rad_commitment, USA_auth_commitment) AND add the reciprocal
-	# mutually_exclusive block here. Declaring those ids today would be
-	# dangling references (the validator fails the build), so this focus
-	# ships without the exclusions until the other wings exist.
+	# MUTUAL-EXCLUSION (Task 7 follow-up): USA_gop_commitment is now live, so
+	# the handshake is declared on both sides. Tasks 8/9 must add their own
+	# reciprocal blocks here when USA_rad_commitment and USA_auth_commitment
+	# are created.
 	focus = {
 		id = USA_dem_commitment
 		icon = GFX_goal_support_democracy
@@ -687,6 +691,9 @@ focus_tree = {
 			focus = USA_dem_wagner_act
 			focus = USA_dem_court_fight
 		}
+		mutually_exclusive = { focus = USA_gop_commitment }
+		# TODO(Task 8): add mutually_exclusive = { focus = USA_rad_commitment }
+		# TODO(Task 9): add mutually_exclusive = { focus = USA_auth_commitment }
 		completion_reward = {
 			add_stability = 0.05
 			set_country_flag = USA_wing_dem
@@ -1710,6 +1717,301 @@ focus_tree = {
 			add_political_power = 25
 		}
 		ai_will_do = { factor = 5 }
+	}
+
+	# --- GOP wing, 1936-44 --------------------------------------------------
+	# Three columns, abs x 26-28 (rel x -1/0/+1 off the anchor at abs 27,1).
+	# Era bands: '36-39 rows at abs y 2-5 (rel y 1-4), '40-43 at y 6-10
+	# (rel y 5-9), '44-47 from y 12 (rel y 11+). Cabinet gates via country
+	# flags set by the '36 appointment focuses.
+
+	# The Landon banner: the GOP's case against the New Deal, front and centre.
+	focus = {
+		id = USA_gop_landon_banner
+		icon = GFX_goal_generic_political_pressure
+		relative_position_id = USA_gop_anchor
+		x = 0
+		y = 1
+		cost = 10
+		prerequisite = { focus = USA_gop_anchor }
+		completion_reward = {
+			add_political_power = 50
+			add_popularity = { ideology = democratic popularity = 0.02 }
+		}
+		ai_will_do = { factor = 8 }
+	}
+
+	# The Nine Old Men: the GOP champions the judiciary against court-packing.
+	# Mutually exclusive with USA_dem_court_fight (handshake on both sides).
+	focus = {
+		id = USA_gop_nine_old_men_win
+		icon = GFX_goal_generic_national_unity
+		relative_position_id = USA_gop_anchor
+		x = 1
+		y = 2
+		cost = 10
+		prerequisite = { focus = USA_gop_landon_banner }
+		mutually_exclusive = { focus = USA_dem_court_fight }
+		available = {
+			date > 1937.1.1
+		}
+		completion_reward = {
+			add_political_power = 75
+			add_stability = 0.03
+		}
+		ai_will_do = { factor = 8 }
+	}
+
+	# A balanced budget: the Old Guard's fiscal creed.
+	focus = {
+		id = USA_gop_balanced_budget
+		icon = GFX_goal_generic_production
+		relative_position_id = USA_gop_anchor
+		x = -1
+		y = 2
+		cost = 10
+		prerequisite = { focus = USA_gop_landon_banner }
+		completion_reward = {
+			add_stability = 0.03
+			add_ideas = USA_gop_fiscal_discipline_spirit
+		}
+		ai_will_do = { factor = 8 }
+	}
+
+	# Business restoration: the factories and counting-houses call the tune.
+	focus = {
+		id = USA_gop_business_restoration
+		icon = GFX_goal_generic_construct_civ_factory
+		relative_position_id = USA_gop_anchor
+		x = -1
+		y = 3
+		cost = 10
+		prerequisite = { focus = USA_gop_balanced_budget }
+		completion_reward = {
+			add_political_power = 30
+			358 = { # New York
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			361 = { # New Jersey
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+		ai_will_do = { factor = 8 }
+	}
+
+	# The Grand Old Party: the wing commitment focus.
+	# Sets USA_wing_gop. Mutually exclusive with dem/rad/auth commitments.
+	# Tasks 8/9 must add their reciprocal mutually_exclusive blocks here.
+	focus = {
+		id = USA_gop_commitment
+		icon = GFX_goal_support_democracy
+		relative_position_id = USA_gop_anchor
+		x = 0
+		y = 3
+		cost = 10
+		prerequisite = {
+			focus = USA_gop_nine_old_men_win
+			focus = USA_gop_balanced_budget
+		}
+		mutually_exclusive = { focus = USA_dem_commitment }
+		# TODO(Task 8): add mutually_exclusive = { focus = USA_rad_commitment }
+		# TODO(Task 9): add mutually_exclusive = { focus = USA_auth_commitment }
+		completion_reward = {
+			add_stability = 0.05
+			set_country_flag = USA_wing_gop
+		}
+		ai_will_do = { factor = 8 }
+	}
+
+	# America First: the isolationist State Department's signature policy.
+	# Cabinet gate: requires the isolationist Secretary of State.
+	focus = {
+		id = USA_gop_america_first
+		icon = GFX_goal_generic_neutrality_focus
+		relative_position_id = USA_gop_anchor
+		x = 0
+		y = 4
+		cost = 10
+		prerequisite = { focus = USA_gop_commitment }
+		available = {
+			date > 1938.1.1
+			has_country_flag = USA_cab_state_isolationist
+		}
+		completion_reward = {
+			add_war_support = -0.05
+			add_stability = 0.05
+			add_ideas = USA_gop_america_first_spirit
+		}
+		ai_will_do = { factor = 7 }
+	}
+
+	# The Neutrality Acts with teeth: no loans, no convoys, no entanglement.
+	focus = {
+		id = USA_gop_neutrality_acts_teeth
+		icon = GFX_goal_generic_dangerous_deal
+		relative_position_id = USA_gop_anchor
+		x = 0
+		y = 5
+		cost = 10
+		prerequisite = { focus = USA_gop_america_first }
+		completion_reward = {
+			add_war_support = -0.05
+			add_stability = 0.03
+			# Strengthen the isolationist idea - remove it and re-add with
+			# a bonus spirit representing the reinforced legal architecture.
+			add_ideas = USA_gop_neutrality_fortress_spirit
+		}
+		ai_will_do = { factor = 7 }
+	}
+
+	# Fortress America: forts, hemispheric defense, the two-ocean moat.
+	focus = {
+		id = USA_gop_fortress_america
+		icon = GFX_goal_generic_fortify_city
+		relative_position_id = USA_gop_anchor
+		x = -1
+		y = 6
+		cost = 10
+		prerequisite = { focus = USA_gop_neutrality_acts_teeth }
+		completion_reward = {
+			add_ideas = USA_fortress_america_spirit
+			add_ideas = USA_hemisphere_defense_spirit
+			every_owned_state = {
+				limit = {
+					OR = {
+						is_core_of = USA
+						state = 359 # Maine
+						state = 364 # Louisiana
+					}
+					coast = yes
+				}
+				add_building_construction = {
+					type = coastal_bunker
+					level = 1
+					instant_build = yes
+					province = { all_provinces = yes }
+				}
+			}
+		}
+		ai_will_do = { factor = 7 }
+	}
+
+	# Hemisphere Patrol: the Monroe Doctrine enforced by the Navy.
+	focus = {
+		id = USA_gop_hemisphere_patrol
+		icon = GFX_goal_generic_build_navy
+		relative_position_id = USA_gop_anchor
+		x = 1
+		y = 6
+		cost = 10
+		prerequisite = { focus = USA_gop_neutrality_acts_teeth }
+		completion_reward = {
+			add_ideas = USA_gop_hemisphere_patrol_spirit
+		}
+		ai_will_do = { factor = 7 }
+	}
+
+	# Armed Neutrality: keep the powder dry but stay out of Europe's war.
+	# Mutually exclusive with Reluctant Crusade.
+	focus = {
+		id = USA_gop_armed_neutrality
+		icon = GFX_goal_generic_prepare_war
+		relative_position_id = USA_gop_anchor
+		x = -1
+		y = 7
+		cost = 10
+		prerequisite = {
+			focus = USA_gop_fortress_america
+			focus = USA_gop_hemisphere_patrol
+		}
+		mutually_exclusive = { focus = USA_gop_reluctant_crusade }
+		completion_reward = {
+			add_war_support = 0.05
+			add_manpower = 100000
+		}
+		ai_will_do = { factor = 5 }
+	}
+
+	# Reluctant Crusade: war has come; the GOP fights, but on its own terms.
+	# Available only when at war. Mutually exclusive with Armed Neutrality.
+	focus = {
+		id = USA_gop_reluctant_crusade
+		icon = GFX_goal_generic_major_war
+		relative_position_id = USA_gop_anchor
+		x = 1
+		y = 7
+		cost = 10
+		prerequisite = {
+			focus = USA_gop_fortress_america
+			focus = USA_gop_hemisphere_patrol
+		}
+		mutually_exclusive = { focus = USA_gop_armed_neutrality }
+		available = {
+			has_war = yes
+		}
+		completion_reward = {
+			add_war_support = 0.10
+			add_stability = 0.03
+		}
+		ai_will_do = { factor = 7 }
+	}
+
+	# War on Our Terms: the GOP shapes the war effort from inside.
+	# Requires the Reluctant Crusade path.
+	focus = {
+		id = USA_gop_war_on_our_terms
+		icon = GFX_goal_generic_allies_build_infantry
+		relative_position_id = USA_gop_anchor
+		x = 1
+		y = 8
+		cost = 10
+		prerequisite = { focus = USA_gop_reluctant_crusade }
+		available = {
+			has_war = yes
+		}
+		completion_reward = {
+			add_war_support = 0.05
+			army_experience = 25
+			add_ideas = USA_gop_war_effort_spirit
+		}
+		ai_will_do = { factor = 7 }
+	}
+
+	# Dewey for President: the '44 challenge. The GOP fields a fresh face for
+	# the wartime election. Fires GOP flavor event usa_cabinet.260 which adds
+	# PP and sets up the party for the postwar contest.
+	focus = {
+		id = USA_gop_dewey_dawn
+		icon = GFX_goal_support_democracy
+		relative_position_id = USA_gop_anchor
+		x = 0
+		y = 11
+		cost = 5
+		prerequisite = {
+			focus = USA_gop_war_on_our_terms
+			focus = USA_gop_armed_neutrality
+		}
+		available = {
+			date > 1944.6.1
+			OR = {
+				has_country_flag = USA_election_winner_gop
+				has_country_flag = USA_wing_gop
+			}
+		}
+		completion_reward = {
+			country_event = { id = usa_cabinet.260 hours = 6 }
+		}
+		ai_will_do = { factor = 8 }
 	}
 
 	#######################################################################

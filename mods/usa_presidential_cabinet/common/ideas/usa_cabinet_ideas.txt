@@ -431,5 +431,150 @@ ideas = {
 				political_power_gain = 0.10
 			}
 		}
+
+		###################################################################
+		# REPUBLICAN WING SPIRITS (Task 7: 1936-44)
+		###################################################################
+
+		# USA_gop_balanced_budget: the Old Guard's fiscal creed (-3% consumer
+		# goods as the budget is balanced; stability boost).
+		USA_gop_fiscal_discipline_spirit = {
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				consumer_goods_factor = -0.03
+				stability_factor = 0.03
+				political_power_gain = 0.05
+			}
+		}
+
+		# USA_gop_america_first: the isolationist policy in full flower.
+		USA_gop_america_first_spirit = {
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.05
+				drift_defence_factor = 0.20
+				justify_war_goal_time_factor = 0.25
+				war_support_factor = -0.05
+			}
+		}
+
+		# USA_gop_neutrality_acts_teeth: the legal architecture of non-entanglement.
+		USA_gop_neutrality_fortress_spirit = {
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.03
+				drift_defence_factor = 0.15
+				lend_lease_tension = 0.25
+			}
+		}
+
+		# USA_gop_fortress_america: continental defense made doctrine.
+		# Grants fort-construction bonuses and a reinforced coastal perimeter.
+		USA_fortress_america_spirit = {
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				production_speed_bunker_factor = 0.25
+				production_speed_coastal_bunker_factor = 0.25
+				defence = 0.05
+			}
+		}
+
+		# USA_gop_fortress_america (companion): hemisphere defense spirit.
+		# The Monroe Doctrine as a military planning document.
+		USA_hemisphere_defense_spirit = {
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				navy_max_range_factor = 0.10
+				experience_gain_navy = 0.05
+				war_support_factor = 0.03
+			}
+		}
+
+		# USA_gop_hemisphere_patrol: the Navy enforces the Monroe Doctrine.
+		USA_gop_hemisphere_patrol_spirit = {
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				experience_gain_navy = 0.10
+				navy_max_range_factor = 0.15
+				improve_relations_maintain_cost_factor = -0.10
+			}
+		}
+
+		# USA_gop_war_on_our_terms: the party of efficiency shapes the war effort.
+		USA_gop_war_effort_spirit = {
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				army_org_factor = 0.05
+				production_factory_efficiency_gain_factor = 0.05
+				war_support_factor = 0.05
+			}
+		}
+
+		###################################################################
+		# REPUBLICAN WING SPIRITS (Task 7: 1945-56)
+		###################################################################
+
+		# USA_gop_bring_the_boys_home: rapid demobilization bonus.
+		USA_gop_demobilization_spirit = {
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				consumer_goods_factor = -0.08
+				stability_factor = 0.05
+				production_speed_arms_factory_factor = -0.10
+			}
+		}
+
+		# USA_gop_hemisphere_imperium_light: Latin trade bloc.
+		USA_gop_latin_trade_spirit = {
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				trade_opinion_factor = 0.15
+				improve_relations_maintain_cost_factor = -0.15
+				consumer_goods_factor = -0.03
+			}
+		}
+
+		# USA_gop_mccarthy_unleashed: the Red hunt begins.
+		USA_gop_mccarthy_spirit = {
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.03
+				drift_defence_factor = 0.25
+				political_power_gain = 0.10
+			}
+		}
+
+		# USA_gop_vandenberg_moment: bipartisan containment.
+		USA_gop_bipartisan_containment_spirit = {
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				opinion_gain_monthly_factor = 0.10
+				improve_relations_maintain_cost_factor = -0.15
+				war_support_factor = 0.05
+			}
+		}
+
+		# USA_gop_dynamic_conservatism: Eisenhower's middle way.
+		USA_gop_dynamic_conservatism_spirit = {
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.05
+				consumer_goods_factor = -0.03
+				production_speed_buildings_factor = 0.08
+				political_power_gain = 0.05
+			}
+		}
 	}
 }

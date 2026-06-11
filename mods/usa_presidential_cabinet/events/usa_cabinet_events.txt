@@ -1136,3 +1136,65 @@ country_event = {
 		add_political_power = 120
 	}
 }
+
+# Dewey for President (usa_cabinet.260): GOP flavor event fired by
+# USA_gop_dewey_dawn. Governor Thomas Dewey mounts his '44 challenge,
+# adding PP and setting the wing up for the postwar contest.
+country_event = {
+	id = usa_cabinet.260
+	title = usa_cabinet.260.t
+	desc = usa_cabinet.260.d
+	picture = GFX_report_event_usa_congress_speaks
+
+	is_triggered_only = yes
+
+	# Run the campaign: build the party machine and lay the groundwork.
+	option = {
+		name = usa_cabinet.260.a
+		ai_chance = { factor = 70 }
+		add_political_power = 75
+		set_country_flag = USA_gop_dewey_challenge
+		add_stability = 0.02
+	}
+
+	# Demand the mandate: press all the way for a GOP White House.
+	option = {
+		name = usa_cabinet.260.b
+		ai_chance = { factor = 30 }
+		add_political_power = 50
+		set_country_flag = USA_gop_dewey_challenge
+		add_war_support = 0.03
+	}
+}
+
+# The General Comes Home - GOP path (usa_cabinet.261): fired by
+# USA_gop_ike_draft. Eisenhower is drafted by the Republican Establishment,
+# bringing the Presidency within reach.
+country_event = {
+	id = usa_cabinet.261
+	title = usa_cabinet.261.t
+	desc = usa_cabinet.261.d
+	picture = GFX_report_event_usa_congress_speaks
+
+	is_triggered_only = yes
+
+	option = {
+		name = usa_cabinet.261.a
+		ai_chance = { factor = 100 }
+		retire_country_leader = yes
+		create_country_leader = {
+			name = "Dwight D. Eisenhower"
+			desc = "USA_dwight_eisenhower_gop_desc"
+			picture = "gfx/leaders/Europe/Portrait_Europe_Generic_5.dds"
+			expire = "1965.1.1"
+			ideology = conservatism
+		}
+		set_party_name = {
+			ideology = democratic
+			long_name = USA_gop_party_long
+			name = USA_gop_party
+		}
+		add_stability = 0.05
+		add_political_power = 50
+	}
+}
