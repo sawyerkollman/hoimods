@@ -10,6 +10,8 @@ Checks (per mod folder under mods/):
   5. Every `country_event = { id = ... }` / `country_event = ns.N` fired
      anywhere exists in the events files.
   6. localisation/**.yml files start with the UTF-8 BOM.
+  7. Every event definition's title / desc (scalar or `desc = { text = KEY }`)
+     / option name resolves to an existing loc key.
 
 Usage:  python3 tools/validate_mod.py [mod_name] [--mods-dir PATH]
 Exit 0 = clean, 1 = findings (printed).
@@ -184,6 +186,76 @@ def collect_events(mod: Path) -> set:
         ids |= set(re.findall(r"\bid\s*=\s*([\w]+\.\d+)", txt))
     return ids
 
+def char_depths(text: str) -> list:
+    """Brace depth of each character position (depth BEFORE the char)."""
+    depths = []
+    d = 0
+    for ch in text:
+        depths.append(d)
+        if ch == '{':
+            d += 1
+        elif ch == '}':
+            d -= 1
+    return depths
+
+def blocks_at_depth(text: str, key: str, depth: int = 0):
+    """Yield bodies of `key = { ... }` blocks whose `{` opens at `depth`."""
+    depths = char_depths(text)
+    for m in re.finditer(rf"\b{key}\s*=\s*\{{", text):
+        if depths[m.end() - 1] != depth:
+            continue
+        j = m.end()
+        d = 1
+        while d and j < len(text):
+            if text[j] == '{':
+                d += 1
+            elif text[j] == '}':
+                d -= 1
+            j += 1
+        yield text[m.end():j - 1]
+
+def scalars_at_depth(body: str, key: str, depth: int = 0) -> list:
+    """All bare `key = VALUE` assignments at the given brace depth of body.
+
+    Quoted values (key = "...") deliberately do not match: they are literal
+    strings (e.g. create_country_leader names), not loc keys.
+    """
+    depths = char_depths(body)
+    return [m.group(1)
+            for m in re.finditer(rf"\b{key}\s*=\s*([\w\.]+)", body)
+            if depths[m.start()] == depth]
+
+def check_event_loc(mod: Path, loc_keys: set, findings: list):
+    """Every event definition's title/desc/option-name keys must have loc.
+
+    Walks each top-level `country_event = { ... }` DEFINITION block (fired
+    `country_event = { id = ... }` effects are nested deeper and ignored).
+    Handles both `desc = KEY` and `desc = { text = KEY trigger = ... }`.
+    Option names are only read at the top level of the option block, so
+    nested `set_party_name = { name = ... }` etc. are not mistaken for them.
+    """
+    ev_dir = mod / "events"
+    if not ev_dir.is_dir():
+        return
+    for f in ev_dir.glob("*.txt"):
+        txt = strip_comments(f.read_text(encoding="utf-8-sig"))
+        for body in blocks_at_depth(txt, "country_event", depth=0):
+            eids = scalars_at_depth(body, "id")
+            eid = eids[0] if eids else "<no id>"
+            keys = []
+            keys += [("title", k) for k in scalars_at_depth(body, "title")]
+            keys += [("desc", k) for k in scalars_at_depth(body, "desc")]
+            for dblock in blocks_at_depth(body, "desc", depth=0):
+                keys += [("desc text", k)
+                         for k in re.findall(r"\btext\s*=\s*([\w\.]+)", dblock)]
+            for obody in blocks_at_depth(body, "option", depth=0):
+                keys += [("option name", k)
+                         for k in scalars_at_depth(obody, "name")]
+            for what, key in keys:
+                if key not in loc_keys:
+                    findings.append(
+                        f"event {eid} ({f.name}): {what} `{key}` missing loc key")
+
 def main():
     parser = argparse.ArgumentParser(description="Lint HOI4 mods in this repo.")
     parser.add_argument("mod_name", nargs="?", help="Only lint this mod (by folder name).")
@@ -203,6 +275,7 @@ def main():
         event_ids = collect_events(mod)
         check_focus_tree(mod, loc_keys, event_ids, findings)
         check_ideas(mod, loc_keys, findings)
+        check_event_loc(mod, loc_keys, findings)
     for line in findings:
         print(f"FAIL {line}")
     print(f"{'CLEAN' if not findings else f'{len(findings)} finding(s)'}")

@@ -3,8 +3,10 @@
 # Standalone 1936-1956 focus tree for the United States.
 # Replaces the vanilla USA tree by out-weighting it for tag USA.
 #
-# Layout (absolute x): RADICAL 1-7 | DEM 9-17 | TRUNK 19-21 | GOP 23-31 |
+# Layout (absolute x): RADICAL 1-7 | DEM 9-17 | TRUNK 16-22 | GOP 23-31 |
 #                      AUTH 33-39 | MILITARY 42-46
+# The trunk election column sits at x=20; the '36 cabinet cluster spans
+# abs x 16-22 (y 3-5) and must never reach x>=23 (GOP wing) or x<=15.
 # Era bands (y): 1936-39 -> 0-5 | 1940-43 -> 6-11 | 1944-47 -> 12-17 |
 #                1948-51 -> 18-23 | 1952-56 -> 24-29
 #
@@ -49,9 +51,13 @@ focus_tree = {
 	}
 
 	# --- The Brain Trust: the 1936 cabinet ----------------------------
-	# Four seats, two mutually exclusive candidates each. Progressive
-	# candidates sit on the left column of each pair and shift the cabinet
-	# power balance left; conservative candidates shift it right.
+	# Four seats (abs x 16/18/20/22, y=3), two mutually exclusive candidates
+	# each, stacked vertically beneath their seat: the progressive candidate
+	# at y=4, the conservative at y=5. Progressive candidates shift the
+	# cabinet power balance left; conservative candidates shift it right.
+	# The whole cluster stays within abs x 16-22 so it cannot collide with
+	# the GOP wing at x>=23. (20,3)-(20,5) is safe: the trunk column's next
+	# occupant, the '36 election, sits at (20,6).
 
 	focus = {
 		id = USA_trunk_brain_trust
@@ -73,7 +79,7 @@ focus_tree = {
 		id = USA_secretary_of_state
 		icon = GFX_goal_generic_improve_relations
 		relative_position_id = USA_trunk_brain_trust
-		x = -3
+		x = -4
 		y = 1
 		cost = 8
 		prerequisite = { focus = USA_trunk_brain_trust }
@@ -87,7 +93,7 @@ focus_tree = {
 		id = USA_appoint_hull
 		icon = GFX_goal_generic_alliance
 		relative_position_id = USA_secretary_of_state
-		x = -1
+		x = 0
 		y = 1
 		cost = 8
 		prerequisite = { focus = USA_secretary_of_state }
@@ -105,7 +111,7 @@ focus_tree = {
 		icon = GFX_goal_generic_neutrality_focus
 		relative_position_id = USA_secretary_of_state
 		x = 0
-		y = 1
+		y = 2
 		cost = 8
 		prerequisite = { focus = USA_secretary_of_state }
 		mutually_exclusive = { focus = USA_appoint_hull }
@@ -122,7 +128,7 @@ focus_tree = {
 		id = USA_secretary_of_treasury
 		icon = GFX_goal_generic_production
 		relative_position_id = USA_trunk_brain_trust
-		x = -1
+		x = -2
 		y = 1
 		cost = 8
 		prerequisite = { focus = USA_trunk_brain_trust }
@@ -136,7 +142,7 @@ focus_tree = {
 		id = USA_appoint_morgenthau
 		icon = GFX_goal_generic_construct_civ
 		relative_position_id = USA_secretary_of_treasury
-		x = -1
+		x = 0
 		y = 1
 		cost = 8
 		prerequisite = { focus = USA_secretary_of_treasury }
@@ -154,7 +160,7 @@ focus_tree = {
 		icon = GFX_goal_generic_construct_mil
 		relative_position_id = USA_secretary_of_treasury
 		x = 0
-		y = 1
+		y = 2
 		cost = 8
 		prerequisite = { focus = USA_secretary_of_treasury }
 		mutually_exclusive = { focus = USA_appoint_morgenthau }
@@ -171,7 +177,7 @@ focus_tree = {
 		id = USA_secretary_of_war
 		icon = GFX_goal_generic_army_doctrines
 		relative_position_id = USA_trunk_brain_trust
-		x = 1
+		x = 0
 		y = 1
 		cost = 8
 		prerequisite = { focus = USA_trunk_brain_trust }
@@ -202,8 +208,8 @@ focus_tree = {
 		id = USA_appoint_woodring
 		icon = GFX_goal_generic_neutrality_focus
 		relative_position_id = USA_secretary_of_war
-		x = 1
-		y = 1
+		x = 0
+		y = 2
 		cost = 8
 		prerequisite = { focus = USA_secretary_of_war }
 		mutually_exclusive = { focus = USA_appoint_stimson }
@@ -220,7 +226,7 @@ focus_tree = {
 		id = USA_attorney_general
 		icon = GFX_goal_generic_national_unity
 		relative_position_id = USA_trunk_brain_trust
-		x = 3
+		x = 2
 		y = 1
 		cost = 8
 		prerequisite = { focus = USA_trunk_brain_trust }
@@ -251,8 +257,8 @@ focus_tree = {
 		id = USA_appoint_security_ag
 		icon = GFX_goal_generic_propaganda
 		relative_position_id = USA_attorney_general
-		x = 1
-		y = 1
+		x = 0
+		y = 2
 		cost = 8
 		prerequisite = { focus = USA_attorney_general }
 		mutually_exclusive = { focus = USA_appoint_murphy }
@@ -267,12 +273,14 @@ focus_tree = {
 	# --- The Election of 1936 ------------------------------------------
 	# Chapter break: fires the usa_cabinet.100 ballot event. Bypassed if
 	# the nation is already at war (elections resolve off-screen).
+	# Sits at (20,6): y=6 rather than y=5 so the conservative candidate row
+	# of the cabinet cluster (y=5) can use the trunk column at (20,5).
 	focus = {
 		id = USA_trunk_election_1936
 		icon = GFX_goal_support_democracy
 		relative_position_id = USA_trunk_inheritance_of_32
 		x = 0
-		y = 5
+		y = 6
 		cost = 5
 		prerequisite = { focus = USA_trunk_brain_trust }
 		available = {
@@ -289,7 +297,7 @@ focus_tree = {
 
 	# --- The trunk elections, 1940-1952 --------------------------------
 	# One per era band, all on trunk column x=20 absolute (chained off
-	# USA_trunk_election_1936 at (20,5) via relative_position_id):
+	# USA_trunk_election_1936 at (20,6) via relative_position_id):
 	# y = 11 / 17 / 23 / 29. Each fires its ballot chain (.110/.120/.130/
 	# .140) following the Task-3 pattern; every outcome event runs
 	# USA_clear_cabinet + the era flag of the term it opens.
@@ -305,13 +313,19 @@ focus_tree = {
 	# Prerequisites are "the previous election focus OR its dark twin", so
 	# neither the crisis path nor the step-back path dead-ends the trunk:
 	# bypass in HOI4 only triggers once a focus's prerequisites are met.
+	#
+	# OR semantics, per the national-focus docs: listing both focuses inside
+	# ONE prerequisite block means "any one of these" (OR). Do NOT split
+	# them into separate prerequisite blocks - separate blocks are AND-ed
+	# together, and since each pair here is mutually exclusive that would
+	# make these focuses permanently unreachable.
 
 	focus = {
 		id = USA_trunk_election_1940
 		icon = GFX_goal_support_democracy
 		relative_position_id = USA_trunk_election_1936
 		x = 0
-		y = 6
+		y = 5
 		cost = 5
 		prerequisite = { focus = USA_trunk_election_1936 }
 		mutually_exclusive = { focus = USA_trunk_third_term_crisis }
@@ -406,7 +420,7 @@ focus_tree = {
 		icon = GFX_goal_generic_major_war
 		relative_position_id = USA_trunk_election_1936
 		x = 1
-		y = 3
+		y = 2
 		cost = 5
 		available = {
 			OR = {
@@ -465,7 +479,7 @@ focus_tree = {
 		icon = GFX_goal_generic_forceful_treaty
 		relative_position_id = USA_trunk_election_1936
 		x = 2
-		y = 5
+		y = 4
 		cost = 5
 		prerequisite = { focus = USA_trunk_election_1936 }
 		mutually_exclusive = { focus = USA_trunk_election_1940 }

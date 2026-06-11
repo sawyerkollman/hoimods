@@ -324,6 +324,13 @@ country_event = {
 		USA_set_era_flag_1944 = yes
 		country_event = { id = usa_cabinet.149 hours = 12 }
 	}
+
+	# Catch-all: if neither winner flag survived (resolver edge case), the
+	# event must still offer an option or it would render with none.
+	option = {
+		name = usa_cabinet.114.c
+		add_political_power = -25
+	}
 }
 
 #######################################################################
@@ -483,6 +490,13 @@ country_event = {
 		USA_clear_cabinet = yes
 		USA_set_era_flag_1948 = yes
 		country_event = { id = usa_cabinet.149 hours = 12 }
+	}
+
+	# Catch-all: if neither winner flag survived (resolver edge case), the
+	# event must still offer an option or it would render with none.
+	option = {
+		name = usa_cabinet.124.c
+		add_political_power = -25
 	}
 }
 
@@ -818,6 +832,13 @@ country_event = {
 		USA_clear_cabinet = yes
 		USA_set_era_flag_1956 = yes
 		country_event = { id = usa_cabinet.149 hours = 12 }
+	}
+
+	# Catch-all: if neither winner flag survived (resolver edge case), the
+	# event must still offer an option or it would render with none.
+	option = {
+		name = usa_cabinet.144.c
+		add_political_power = -25
 	}
 }
 

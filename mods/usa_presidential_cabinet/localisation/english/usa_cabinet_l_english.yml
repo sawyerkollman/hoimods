@@ -172,6 +172,7 @@
  usa_cabinet.114.d:0 "The returns make no familiar pattern: the old parties have been beaten in precincts they have owned since Appomattox. Something new is loose in the Republic, a politics of marching columns and meeting halls rather than smoke-filled rooms, and the men who manage the old order read the county totals with cold hands."
  usa_cabinet.114.a:0 "The people have found their voice."
  usa_cabinet.114.b:0 "The hour produces the man."
+ usa_cabinet.114.c:0 "The republic endures."
 
  # --- The Election of 1944 (usa_cabinet.120-124) ---
  usa_cabinet.120.t:0 "The Election of 1944"
@@ -192,6 +193,7 @@
  usa_cabinet.124.d:0 "The two old parties spent the autumn arguing with one another and discovered in November that the country had stopped listening to both. The movements have come in from the margins with their own slates, their own songs, and their own ideas about what the Republic owes its people, and the count is not even close."
  usa_cabinet.124.a:0 "The people have found their voice."
  usa_cabinet.124.b:0 "The hour produces the man."
+ usa_cabinet.124.c:0 "The republic endures."
 
  # --- The Election of 1948 (usa_cabinet.130-134; option four uses .e) ---
  usa_cabinet.130.t:0 "The Election of 1948"
@@ -229,6 +231,7 @@
  usa_cabinet.144.d:0 "Under the prosperity, it turns out, the anger was still there. The movements the professionals wrote off as wartime fevers have carried the day outright, and the United States has elected a government that intends to be remembered as a founding, not an administration."
  usa_cabinet.144.a:0 "The future arrives ahead of schedule."
  usa_cabinet.144.b:0 "Strength, and no apologies."
+ usa_cabinet.144.c:0 "The republic endures."
 
  # --- Shared inauguration flavour ---
  usa_cabinet.149.t:0 "The Torch Passes"
@@ -244,6 +247,17 @@
  usa_cabinet.201.d:0 "There will be no ballot this year. The proclamation cites the war powers, the impossibility of a soldiers' vote, and the manifest will of the people as already expressed; the Attorney General's opinion runs to forty pages and persuades no one who was not persuaded already. The courts adjourn for an indefinite recess. The Republic now runs on habit, and on the army."
  usa_cabinet.201.a:0 "The state must hold, whatever else falls."
  usa_cabinet.201.b:0 "Reverse course. Announce the ballot of 1948 now."
+
+ # ============================ POWER BALANCE ============================
+
+ # Keys for common/power_balance/usa_cabinet_power_balance.txt: the balance
+ # id, both side ids, and the three range ids.
+ USA_cabinet_balance:0 "The Cabinet"
+ USA_pb_progressives:0 "Progressives"
+ USA_pb_oldguard:0 "Old Guard"
+ USA_pb_far_left:0 "New Deal Ascendant"
+ USA_pb_center:0 "Balanced Cabinet"
+ USA_pb_far_right:0 "Old Guard Ascendant"
 
  # ============================ PARTIES & LEADERS ============================
 
