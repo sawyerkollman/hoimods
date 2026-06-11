@@ -225,8 +225,6 @@ focus_tree = {
 			add_ideas = USA_cabinet_woodring
 			USA_fill_cabinet_seat = yes
 			USA_shift_cabinet_conservative = yes
-			# Gates USA_auth_atomic_diplomacy (war loyalist)
-			set_country_flag = USA_cab_war_loyalist
 		}
 		ai_will_do = { factor = 2 }
 	}
@@ -366,10 +364,8 @@ focus_tree = {
 		x = 0
 		y = 6
 		cost = 5
-		prerequisite = {
-			focus = USA_trunk_election_1940
-			focus = USA_trunk_third_term_crisis
-		}
+		prerequisite = { focus = USA_trunk_election_1940 }
+		prerequisite = { focus = USA_trunk_third_term_crisis }
 		mutually_exclusive = { focus = USA_trunk_suspended_election }
 		available = {
 			date > 1944.6.1
@@ -390,10 +386,8 @@ focus_tree = {
 		x = 0
 		y = 6
 		cost = 5
-		prerequisite = {
-			focus = USA_trunk_election_1944
-			focus = USA_trunk_suspended_election
-		}
+		prerequisite = { focus = USA_trunk_election_1944 }
+		prerequisite = { focus = USA_trunk_suspended_election }
 		available = {
 			date > 1948.6.1
 		}
@@ -519,10 +513,8 @@ focus_tree = {
 		x = 0
 		y = 6
 		cost = 5
-		prerequisite = {
-			focus = USA_trunk_third_term_crisis
-			focus = USA_trunk_election_1940
-		}
+		prerequisite = { focus = USA_trunk_third_term_crisis }
+		prerequisite = { focus = USA_trunk_election_1940 }
 		mutually_exclusive = { focus = USA_trunk_election_1944 }
 		available = {
 			has_war = yes
@@ -1267,7 +1259,7 @@ focus_tree = {
 		cost = 10
 		prerequisite = { focus = USA_dem_united_nations }
 		available = {
-			has_country_flag = USA_era_1952
+			has_country_flag = USA_era_1948
 		}
 		completion_reward = {
 			add_stability = 0.05
@@ -1336,7 +1328,7 @@ focus_tree = {
 		cost = 10
 		prerequisite = { focus = USA_dem_fair_deal }
 		available = {
-			has_country_flag = USA_era_1952
+			has_country_flag = USA_era_1948
 			has_country_flag = USA_cab_ag_civil_libertarian
 		}
 		completion_reward = {
@@ -1488,10 +1480,8 @@ focus_tree = {
 		x = -1
 		y = 17
 		cost = 10
-		prerequisite = {
-			focus = USA_dem_nato
-			focus = USA_dem_korea_line
-		}
+		prerequisite = { focus = USA_dem_nato }
+		prerequisite = { focus = USA_dem_korea_line }
 		mutually_exclusive = { focus = USA_dem_election_52_egghead }
 		available = {
 			has_country_flag = USA_election_winner_dem
@@ -1525,10 +1515,8 @@ focus_tree = {
 		x = 1
 		y = 17
 		cost = 10
-		prerequisite = {
-			focus = USA_dem_nato
-			focus = USA_dem_korea_line
-		}
+		prerequisite = { focus = USA_dem_nato }
+		prerequisite = { focus = USA_dem_korea_line }
 		mutually_exclusive = { focus = USA_dem_election_52_ike }
 		available = {
 			has_country_flag = USA_election_winner_dem
@@ -3295,7 +3283,6 @@ focus_tree = {
 			add_ideas = USA_cab40_johnson
 			USA_fill_cabinet_seat = yes
 			USA_shift_cabinet_conservative = yes
-			set_country_flag = USA_cab_war_loyalist
 		}
 		ai_will_do = { factor = 3 }
 	}
@@ -3361,6 +3348,7 @@ focus_tree = {
 		y = 0
 		cost = 5
 		prerequisite = { focus = USA_trunk_election_1944 }
+		prerequisite = { focus = USA_trunk_suspended_election }
 		available = {
 			has_country_flag = USA_era_1944
 		}

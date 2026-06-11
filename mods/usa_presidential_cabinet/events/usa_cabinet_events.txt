@@ -1491,8 +1491,7 @@ country_event = {
 		name = usa_cabinet.216.b
 		ai_chance = { factor = 50 }
 		add_stability = -0.03
-		add_political_power = 20
-		add_extra_state_shared_building_slots = 1
+		add_political_power = 15
 	}
 }
 
