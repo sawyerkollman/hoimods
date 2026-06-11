@@ -1,50 +1,142 @@
 ###########################################################################
-# Presidential Cabinet - USA Overhaul : Flavour Events
+# Presidential Cabinet - USA Overhaul : Events
+# Namespace plan (see docs/superpowers/plans/2026-06-10-usa-focus-tree-overhaul.md):
+#   usa_cabinet.100-199  election chains
+#   usa_cabinet.200-249  coups / succession
+#   usa_cabinet.250-299  era flavour
 ###########################################################################
 
-add_namespace = USA_cabinet
+add_namespace = usa_cabinet
 
-# The inner circle takes shape
+#######################################################################
+# THE ELECTION OF 1936 (usa_cabinet.100-104)
+# Fired by focus USA_trunk_election_1936. This chain is the pattern every
+# later election copies: ballot event -> outcome event -> new-term flavour.
+#######################################################################
+
+# The ballot: campaign hard, trust the cabinet's record, or court the fringe
 country_event = {
-	id = USA_cabinet.1
-	title = USA_cabinet.1.t
-	desc = USA_cabinet.1.d
-	picture = GFX_report_event_usa_great_depression
+	id = usa_cabinet.100
+	title = usa_cabinet.100.t
+	desc = usa_cabinet.100.d
+	picture = GFX_report_event_usa_congress_speaks
 
 	is_triggered_only = yes
 
+	# Campaign on the New Deal: the historical landslide.
 	option = {
-		name = USA_cabinet.1.a
-		add_political_power = 25
+		name = usa_cabinet.100.a
+		ai_chance = { factor = 70 }
+		country_event = { id = usa_cabinet.101 hours = 6 }
+	}
+
+	# Let the cabinet's balance decide. An Old Guard cabinet (balance on the
+	# conservative side) hands the GOP its upset; otherwise FDR holds. If the
+	# power balance is unavailable on this patch, default to the incumbent.
+	option = {
+		name = usa_cabinet.100.b
+		ai_chance = { factor = 25 }
+		if = {
+			limit = {
+				has_power_balance = { id = USA_cabinet_balance }
+				power_balance_value = { id = USA_cabinet_balance value > 0.05 }
+			}
+			country_event = { id = usa_cabinet.103 hours = 6 }
+		}
+		else = {
+			country_event = { id = usa_cabinet.101 hours = 6 }
+		}
+	}
+
+	# Back a third-party surge. Stand-in gate: the radical anchor focus.
+	# TODO(Task 8): tighten to "completed >= 3 radical-wing focuses" once
+	# the radical wing exists.
+	option = {
+		name = usa_cabinet.100.c
+		trigger = {
+			has_completed_focus = USA_rad_anchor
+		}
+		ai_chance = { factor = 5 }
+		country_event = { id = usa_cabinet.102 hours = 6 }
 	}
 }
 
-# Planning the post-war world
+# Roosevelt Triumphant: the historical forty-six-state avalanche
 country_event = {
-	id = USA_cabinet.2
-	title = USA_cabinet.2.t
-	desc = USA_cabinet.2.d
+	id = usa_cabinet.101
+	title = usa_cabinet.101.t
+	desc = usa_cabinet.101.d
 	picture = GFX_report_event_press_conference
 
 	is_triggered_only = yes
 
 	option = {
-		name = USA_cabinet.2.a
-		add_stability = 0.03
+		name = usa_cabinet.101.a
+		add_stability = 0.05
+		USA_set_era_flag_1940 = yes
+		# '36 continuity exception: FDR keeps his cabinet, so USA_clear_cabinet
+		# is deliberately NOT called here. Every later election outcome
+		# (Task 4 onward) must call it.
+		country_event = { id = usa_cabinet.104 hours = 12 }
 	}
 }
 
-# The American Century
+# A House Divided: the third-party surge breaks the arithmetic
 country_event = {
-	id = USA_cabinet.3
-	title = USA_cabinet.3.t
-	desc = USA_cabinet.3.d
+	id = usa_cabinet.102
+	title = usa_cabinet.102.t
+	desc = usa_cabinet.102.d
+	picture = GFX_report_event_usa_great_depression
+
+	is_triggered_only = yes
+
+	option = {
+		name = usa_cabinet.102.a
+		add_political_power = -50
+		set_country_flag = USA_election_upset
+	}
+}
+
+# Landon!: the Old Guard cabinet hands the GOP its upset
+country_event = {
+	id = usa_cabinet.103
+	title = usa_cabinet.103.t
+	desc = usa_cabinet.103.d
 	picture = GFX_report_event_usa_congress_speaks
 
 	is_triggered_only = yes
 
 	option = {
-		name = USA_cabinet.3.a
-		add_political_power = 50
+		name = usa_cabinet.103.a
+		retire_country_leader = yes
+		create_country_leader = {
+			name = "Alf Landon"
+			desc = "USA_alf_landon_desc"
+			picture = "gfx/leaders/Europe/Portrait_Europe_Generic_1.dds"
+			expire = "1965.1.1"
+			ideology = conservatism
+		}
+		set_party_name = {
+			ideology = democratic
+			long_name = USA_gop_party_long
+			name = USA_gop_party
+		}
+		USA_clear_cabinet = yes
+		USA_set_era_flag_1940 = yes
+		country_event = { id = usa_cabinet.104 hours = 12 }
+	}
+}
+
+# A New Term Begins: inauguration flavour after .101 / .103
+country_event = {
+	id = usa_cabinet.104
+	title = usa_cabinet.104.t
+	desc = usa_cabinet.104.d
+	picture = GFX_report_event_press_conference
+
+	is_triggered_only = yes
+
+	option = {
+		name = usa_cabinet.104.a
 	}
 }

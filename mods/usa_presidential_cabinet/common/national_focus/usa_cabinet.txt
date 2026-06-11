@@ -48,6 +48,245 @@ focus_tree = {
 		ai_will_do = { factor = 10 }
 	}
 
+	# --- The Brain Trust: the 1936 cabinet ----------------------------
+	# Four seats, two mutually exclusive candidates each. Progressive
+	# candidates sit on the left column of each pair and shift the cabinet
+	# power balance left; conservative candidates shift it right.
+
+	focus = {
+		id = USA_trunk_brain_trust
+		icon = GFX_goal_generic_political_pressure
+		relative_position_id = USA_trunk_inheritance_of_32
+		x = 0
+		y = 2
+		cost = 10
+		prerequisite = { focus = USA_trunk_inheritance_of_32 }
+		completion_reward = {
+			add_political_power = 50
+			USA_setup_cabinet_balance = yes
+		}
+		ai_will_do = { factor = 10 }
+	}
+
+	# --- Seat: Secretary of State -------------------------------------
+	focus = {
+		id = USA_secretary_of_state
+		icon = GFX_goal_generic_improve_relations
+		relative_position_id = USA_trunk_brain_trust
+		x = -3
+		y = 1
+		cost = 8
+		prerequisite = { focus = USA_trunk_brain_trust }
+		completion_reward = {
+			add_political_power = 15
+		}
+		ai_will_do = { factor = 5 }
+	}
+
+	focus = {
+		id = USA_appoint_hull
+		icon = GFX_goal_generic_alliance
+		relative_position_id = USA_secretary_of_state
+		x = -1
+		y = 1
+		cost = 8
+		prerequisite = { focus = USA_secretary_of_state }
+		mutually_exclusive = { focus = USA_appoint_isolationist_state }
+		completion_reward = {
+			add_ideas = USA_cabinet_cordell_hull
+			USA_fill_cabinet_seat = yes
+			USA_shift_cabinet_progressive = yes
+		}
+		ai_will_do = { factor = 10 }
+	}
+
+	focus = {
+		id = USA_appoint_isolationist_state
+		icon = GFX_goal_generic_neutrality_focus
+		relative_position_id = USA_secretary_of_state
+		x = 0
+		y = 1
+		cost = 8
+		prerequisite = { focus = USA_secretary_of_state }
+		mutually_exclusive = { focus = USA_appoint_hull }
+		completion_reward = {
+			add_ideas = USA_cabinet_isolationist_state
+			USA_fill_cabinet_seat = yes
+			USA_shift_cabinet_conservative = yes
+		}
+		ai_will_do = { factor = 2 }
+	}
+
+	# --- Seat: Secretary of the Treasury ------------------------------
+	focus = {
+		id = USA_secretary_of_treasury
+		icon = GFX_goal_generic_production
+		relative_position_id = USA_trunk_brain_trust
+		x = -1
+		y = 1
+		cost = 8
+		prerequisite = { focus = USA_trunk_brain_trust }
+		completion_reward = {
+			add_political_power = 15
+		}
+		ai_will_do = { factor = 5 }
+	}
+
+	focus = {
+		id = USA_appoint_morgenthau
+		icon = GFX_goal_generic_construct_civ
+		relative_position_id = USA_secretary_of_treasury
+		x = -1
+		y = 1
+		cost = 8
+		prerequisite = { focus = USA_secretary_of_treasury }
+		mutually_exclusive = { focus = USA_appoint_business_treasury }
+		completion_reward = {
+			add_ideas = USA_cabinet_morgenthau
+			USA_fill_cabinet_seat = yes
+			USA_shift_cabinet_progressive = yes
+		}
+		ai_will_do = { factor = 10 }
+	}
+
+	focus = {
+		id = USA_appoint_business_treasury
+		icon = GFX_goal_generic_construct_mil
+		relative_position_id = USA_secretary_of_treasury
+		x = 0
+		y = 1
+		cost = 8
+		prerequisite = { focus = USA_secretary_of_treasury }
+		mutually_exclusive = { focus = USA_appoint_morgenthau }
+		completion_reward = {
+			add_ideas = USA_cabinet_business_treasury
+			USA_fill_cabinet_seat = yes
+			USA_shift_cabinet_conservative = yes
+		}
+		ai_will_do = { factor = 2 }
+	}
+
+	# --- Seat: Secretary of War ---------------------------------------
+	focus = {
+		id = USA_secretary_of_war
+		icon = GFX_goal_generic_army_doctrines
+		relative_position_id = USA_trunk_brain_trust
+		x = 1
+		y = 1
+		cost = 8
+		prerequisite = { focus = USA_trunk_brain_trust }
+		completion_reward = {
+			add_political_power = 15
+		}
+		ai_will_do = { factor = 5 }
+	}
+
+	focus = {
+		id = USA_appoint_stimson
+		icon = GFX_goal_generic_major_war
+		relative_position_id = USA_secretary_of_war
+		x = 0
+		y = 1
+		cost = 8
+		prerequisite = { focus = USA_secretary_of_war }
+		mutually_exclusive = { focus = USA_appoint_woodring }
+		completion_reward = {
+			add_ideas = USA_cabinet_stimson
+			USA_fill_cabinet_seat = yes
+			USA_shift_cabinet_progressive = yes
+		}
+		ai_will_do = { factor = 10 }
+	}
+
+	focus = {
+		id = USA_appoint_woodring
+		icon = GFX_goal_generic_neutrality_focus
+		relative_position_id = USA_secretary_of_war
+		x = 1
+		y = 1
+		cost = 8
+		prerequisite = { focus = USA_secretary_of_war }
+		mutually_exclusive = { focus = USA_appoint_stimson }
+		completion_reward = {
+			add_ideas = USA_cabinet_woodring
+			USA_fill_cabinet_seat = yes
+			USA_shift_cabinet_conservative = yes
+		}
+		ai_will_do = { factor = 2 }
+	}
+
+	# --- Seat: Attorney General ---------------------------------------
+	focus = {
+		id = USA_attorney_general
+		icon = GFX_goal_generic_national_unity
+		relative_position_id = USA_trunk_brain_trust
+		x = 3
+		y = 1
+		cost = 8
+		prerequisite = { focus = USA_trunk_brain_trust }
+		completion_reward = {
+			add_political_power = 15
+		}
+		ai_will_do = { factor = 5 }
+	}
+
+	focus = {
+		id = USA_appoint_murphy
+		icon = GFX_goal_generic_political_pressure
+		relative_position_id = USA_attorney_general
+		x = 0
+		y = 1
+		cost = 8
+		prerequisite = { focus = USA_attorney_general }
+		mutually_exclusive = { focus = USA_appoint_security_ag }
+		completion_reward = {
+			add_ideas = USA_cabinet_murphy
+			USA_fill_cabinet_seat = yes
+			USA_shift_cabinet_progressive = yes
+		}
+		ai_will_do = { factor = 10 }
+	}
+
+	focus = {
+		id = USA_appoint_security_ag
+		icon = GFX_goal_generic_propaganda
+		relative_position_id = USA_attorney_general
+		x = 1
+		y = 1
+		cost = 8
+		prerequisite = { focus = USA_attorney_general }
+		mutually_exclusive = { focus = USA_appoint_murphy }
+		completion_reward = {
+			add_ideas = USA_cabinet_security_ag
+			USA_fill_cabinet_seat = yes
+			USA_shift_cabinet_conservative = yes
+		}
+		ai_will_do = { factor = 2 }
+	}
+
+	# --- The Election of 1936 ------------------------------------------
+	# Chapter break: fires the usa_cabinet.100 ballot event. Bypassed if
+	# the nation is already at war (elections resolve off-screen).
+	focus = {
+		id = USA_trunk_election_1936
+		icon = GFX_goal_support_democracy
+		relative_position_id = USA_trunk_inheritance_of_32
+		x = 0
+		y = 5
+		cost = 5
+		prerequisite = { focus = USA_trunk_brain_trust }
+		available = {
+			date > 1936.6.1
+		}
+		bypass = {
+			has_war = yes
+		}
+		completion_reward = {
+			country_event = { id = usa_cabinet.100 hours = 6 }
+		}
+		ai_will_do = { factor = 20 }
+	}
+
 	#######################################################################
 	# DEM - The New Deal coalition
 	#######################################################################
