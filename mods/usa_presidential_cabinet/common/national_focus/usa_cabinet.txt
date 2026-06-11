@@ -2955,7 +2955,10 @@ focus_tree = {
 		ai_will_do = { factor = 3 }
 	}
 
-	# --- AUTH 1945-56 ---
+	# --- AUTH 1945-56: Pax Americana to Imperium ---
+	# Postwar auth focuses. Prerequisite chain: pax_americana →
+	# tribute_system/atomic_diplomacy → legions_overseas → imperium.
+	# Counterweight: succession_question (avail stability < 0.4).
 
 	# Pax Americana: the Caesar's postwar order. The hemisphere obeys,
 	# and the world is learning what that means.
