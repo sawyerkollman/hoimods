@@ -369,5 +369,67 @@ ideas = {
 				political_power_gain = 0.05
 			}
 		}
+
+		###################################################################
+		# DEMOCRATIC WING SPIRITS (Task 6: 1945-56)
+		###################################################################
+
+		# USA_dem_marshall_plan event 251: the outlays flow for two years.
+		# Timed idea: expires after 730 days. Represents the ongoing costs
+		# of the program while the benefit comes from raised European opinion.
+		USA_marshall_outlays_spirit = {
+			allowed = { always = no }
+			removal_cost = -1
+			duration = 730
+			modifier = {
+				political_power_gain = -0.10
+				consumer_goods_factor = 0.02
+			}
+		}
+
+		# USA_dem_nsc68: the military buildup of 1950.
+		USA_nsc68_rearmament_spirit = {
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				conscription_factor = 0.05
+				army_org_factor = 0.05
+				production_speed_arms_factory_factor = 0.10
+			}
+		}
+
+		# USA_dem_nato: an entangling alliance at last.
+		USA_nato_spirit = {
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				improve_relations_maintain_cost_factor = -0.20
+				opinion_gain_monthly_factor = 0.15
+				army_org_factor = 0.05
+			}
+		}
+
+		# USA_dem_new_look: Eisenhower's economy-of-force doctrine.
+		USA_new_look_spirit = {
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				air_experience_gain_factor = 0.10
+				nuclear_production_factor = 0.25
+				consumer_goods_factor = -0.03
+			}
+		}
+
+		# USA_dem_hundred_million_strong: the affluent society capstone.
+		USA_hundred_million_strong_spirit = {
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.08
+				consumer_goods_factor = -0.05
+				production_speed_buildings_factor = 0.10
+				political_power_gain = 0.10
+			}
+		}
 	}
 }

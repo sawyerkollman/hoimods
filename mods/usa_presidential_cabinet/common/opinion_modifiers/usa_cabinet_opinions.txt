@@ -21,4 +21,9 @@ opinion_modifiers = {
 	USA_wartime_conference = {
 		value = 15
 	}
+
+	# USA_dem_truman_doctrine: America pledges support to free peoples.
+	USA_truman_doctrine_partner = {
+		value = 25
+	}
 }

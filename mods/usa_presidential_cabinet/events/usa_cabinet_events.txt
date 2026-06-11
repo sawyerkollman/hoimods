@@ -1031,6 +1031,96 @@ country_event = {
 # ERA FLAVOUR (usa_cabinet.250-299)
 #######################################################################
 
+# The Marshall Plan (usa_cabinet.251): fired by USA_dem_marshall_plan.
+# The USA offers reconstruction aid to Western European democracies.
+# Recipients must exist and be democratic; USA absorbs the cost regardless.
+# A fallback option exists if no eligible recipients are present.
+country_event = {
+	id = usa_cabinet.251
+	title = usa_cabinet.251.t
+	desc = usa_cabinet.251.d
+	picture = GFX_report_event_press_conference
+
+	is_triggered_only = yes
+
+	# Full programme: all willing recipients receive the Marshall aid.
+	option = {
+		name = usa_cabinet.251.a
+		trigger = {
+			OR = {
+				AND = { country_exists = ENG has_government = democratic }
+				AND = { country_exists = FRA has_government = democratic }
+				AND = { country_exists = HOL has_government = democratic }
+			}
+		}
+		ai_chance = { factor = 80 }
+		add_political_power = -50
+		add_ideas = USA_marshall_outlays_spirit
+		if = {
+			limit = { country_exists = ENG has_government = democratic }
+			ENG = {
+				add_opinion_modifier = { target = USA modifier = USA_atlantic_charter_partner }
+				add_political_power = 25
+			}
+		}
+		if = {
+			limit = { country_exists = FRA has_government = democratic }
+			FRA = {
+				add_opinion_modifier = { target = USA modifier = USA_atlantic_charter_partner }
+				add_political_power = 25
+			}
+		}
+		if = {
+			limit = { country_exists = HOL has_government = democratic }
+			HOL = {
+				add_opinion_modifier = { target = USA modifier = USA_atlantic_charter_partner }
+				add_political_power = 25
+			}
+		}
+		add_ideas = USA_marshall_plan_spirit
+	}
+
+	# Limited programme: some recipients but not all.
+	option = {
+		name = usa_cabinet.251.b
+		trigger = {
+			OR = {
+				AND = { country_exists = ENG has_government = democratic }
+				AND = { country_exists = FRA has_government = democratic }
+				AND = { country_exists = HOL has_government = democratic }
+			}
+		}
+		ai_chance = { factor = 15 }
+		add_political_power = -25
+		if = {
+			limit = { country_exists = ENG has_government = democratic }
+			ENG = { add_opinion_modifier = { target = USA modifier = USA_atlantic_charter_partner } }
+		}
+		if = {
+			limit = { country_exists = FRA has_government = democratic }
+			FRA = { add_opinion_modifier = { target = USA modifier = USA_atlantic_charter_partner } }
+		}
+		add_ideas = USA_marshall_plan_spirit
+	}
+
+	# Fallback: no eligible recipients exist (e.g., all under occupation
+	# or non-democratic). The plan goes unspent; still qualifies the focus.
+	option = {
+		name = usa_cabinet.251.c
+		trigger = {
+			NOT = { country_exists = ENG has_government = democratic }
+			NOT = { country_exists = FRA has_government = democratic }
+			NOT = { country_exists = HOL has_government = democratic }
+		}
+		ai_chance = { factor = 5 }
+		add_political_power = 25
+	}
+}
+
+#######################################################################
+# ERA FLAVOUR (usa_cabinet.250-299)
+#######################################################################
+
 # The Switch in Time: the delayed payoff of the court fight
 # (USA_dem_court_fight pays -75 PP up front and fires this 30 days on).
 country_event = {

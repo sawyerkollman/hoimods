@@ -62,6 +62,42 @@
  USA_mil_anchor:0 "The Arsenal Question"
  USA_mil_anchor_desc:0 "The Army of the United States musters fewer men than Romania's, and its arsenals hold the leftovers of 1918. Whoever rules in Washington, and whatever they believe, the question of American arms will not wait upon politics."
 
+ # --- Democratic wing, 1945-56 (Task 6) ---
+ USA_dem_bretton_woods:0 "The Bretton Woods System"
+ USA_dem_bretton_woods_desc:0 "Forty-four nations send their delegates to a New Hampshire resort hotel, and in three weeks they reorganize the world's money. The dollar is fixed to gold at thirty-five dollars the ounce; every other currency is fixed to the dollar; and a new International Monetary Fund stands ready to lend to governments that cannot keep their peg. The pound sterling is not abolished, but it is subordinated, and the men at the Bank of England know it. The age of financial nationalism is over, and the age of American-managed globalism has begun, whether the world has quite agreed to it or not."
+ USA_dem_united_nations:0 "The United Nations"
+ USA_dem_united_nations_desc:0 "The last time the United States was invited to join the concert of nations it sent the invitation back unopened. This time the Senate ratifies the Charter with eighty-nine votes, the United Nations takes up its address in New York, and the Secretary of State begins learning what it means to chair meetings in which the Soviet Union has a permanent veto. The building on the East River is drafty and the translators are overworked, but it is the first machinery ever built for the governance of the whole world, and it is powered chiefly by American money and American faith that the institution will not be needed for very long."
+ USA_dem_containment:0 "Containment"
+ USA_dem_containment_desc:0 "The long telegram from Moscow runs to eight thousand words, and every word argues the same thing: the Soviet Union is a revolutionary power that cannot be appeased, only resisted. Mr. Kennan's doctrine reaches the desk of every senior official in Washington, where it is debated, edited, simplified, and finally issued as policy. The United States will meet Soviet expansion wherever it appears, at whatever cost, for as long as it takes. The Cold War is not yet a phrase in common usage, but its strategy is now a government memorandum, and the government is already spending to match it."
+ USA_dem_fair_deal:0 "The Fair Deal"
+ USA_dem_fair_deal_desc:0 "The President has come back from the dead politically, and he intends to use the time. National health insurance, civil rights legislation, federal aid to education, an expansion of Social Security to cover the workers the original act left out: the Fair Deal is the New Deal at full pressure, offered now by a man who has nothing left to lose and a Congress that is not quite sure how to tell him no. Some of it passes and some of it dies in committee, and the historians will argue about which was which, but the direction of the argument is established for a generation."
+ USA_dem_truman_doctrine:0 "The Truman Doctrine"
+ USA_dem_truman_doctrine_desc:0 "Greece is in civil war and Turkey is under Soviet pressure and the British have told Washington, with the exhausted candor of an empire that can no longer pay its own bills, that they cannot carry either burden past the spring. The President goes before a joint session of Congress and announces that the United States must support free peoples who are resisting subjugation. It is the first time an American president has asked Congress for money to fight someone else's communist insurgency, and the senators know it will not be the last. The check for Greece and Turkey is the smallest item on a bill that will run for decades."
+ USA_dem_red_scare_managed:0 "The Loyalty Boards With Limits"
+ USA_dem_red_scare_managed_desc:0 "The loyalty review boards are a fact of postwar Washington, and the Attorney General's list of subversive organizations is a bureaucratic inevitability no administration can wish away. What this one can do is run the machinery with a sense of proportion: require actual evidence before an accusation sticks, keep the hearings from becoming public inquisitions, and remind Congress that the Constitution has not been suspended for the duration of the Cold War. The security services are unhappy, the demagogues on Capitol Hill are furious, and the civil libertarians are cautiously satisfied, which is probably the correct distribution of discontent."
+ USA_dem_marshall_plan:0 "The Marshall Plan"
+ USA_dem_marshall_plan_desc:0 "The Secretary of State goes to Harvard in June and offers, in twelve minutes of quiet prose, to rebuild the economies of any European country willing to participate and account for the money. The offer is extended to the Soviet Union and its neighbors on principle, knowing they will refuse on principle, and they oblige. Sixteen nations accept and send their delegations to Paris to draw up a joint recovery program. Over the next four years thirteen billion dollars flows from the United States Treasury into the factories, railways, and coalfields of Western Europe. The customers are being rebuilt. The question is what they will buy once they are back on their feet."
+ USA_dem_nsc68:0 "NSC-68"
+ USA_dem_nsc68_desc:0 "The document is classified and runs to sixty-six pages, and its argument is as simple as it is expensive: the Soviet Union is pursuing a program of world domination, it will have a significant nuclear arsenal by 1954, and the United States military budget must treble if the free world is to survive the decade. The Secretary of Defense objects that the country cannot afford it. The Secretary of State argues that the country cannot afford not to. The Soviet test of an atomic device and the opening of the Korean War answer the question before the President has to, and the supplemental appropriations begin moving through the Congress before the summer is out."
+ USA_dem_nato:0 "The North Atlantic Treaty"
+ USA_dem_nato_desc:0 "For the first time since the French alliance of 1778, the United States commits by treaty to the defense of foreign soil. An attack on one is an attack on all, and all twelve signatories know which of the twelve will actually be expected to deter the Red Army. The skeptics call it an entangling alliance and quote Washington's farewell address; the supporters reply that Washington never faced Stalin, and that the farms of Kansas are only safe if the Rhine is held. The Senate ratifies with eighty-two votes, and a Supreme Commander is dispatched to Paris to organize the defense that everyone hopes will never be tested."
+ USA_dem_korea_line:0 "The Thirty-Eighth Parallel"
+ USA_dem_korea_line_desc:0 "The line was arbitrary to begin with — the work of two young officers with a National Geographic map on the night of Japan's surrender — and now it is the most important line in the world. The United Nations resolution passes in the Security Council while the Soviet delegate is away from his chair protesting the China seat, and American forces are moving north within the week. The General commanding promises it will be over by Christmas, and the men on the ground, counting the mountains, are not so sure. The line must hold, and the line does hold, and forty thousand Americans who came to hold it do not go home."
+ USA_dem_election_52_ike:0 "The General Comes Home"
+ USA_dem_election_52_ike_desc:0 "Both parties have courted him and the Democrats have landed him. General of the Army Dwight D. Eisenhower has spent his adult life in government service and declines, absolutely, to call himself a politician, which is the most political thing he could possibly say. He is the commander who won the war in Europe, the Supreme Commander who is organizing the peace, and the one candidate in the field whom nobody can accuse of having made the policy mistakes that landed America in its present discontents. The professionals in both parties regard him with the fondness that professionals reserve for amateurs who happen to be unbeatable."
+ USA_dem_election_52_egghead:0 "Eloquence Against the Tide"
+ USA_dem_election_52_egghead_desc:0 "The Governor of Illinois did not want the nomination and said so in terms that would have disqualified any other candidate. He drafts his own speeches, speaks in subordinate clauses, and tells audiences what he actually believes about the complexity of the world. The eggheads adore him and the machine politicians are uneasy and the General's grin has not dimmed for a moment, but Adlai Stevenson is asking the voters to think, and sometimes that is enough. The campaign is a masterpiece of political intelligence and a monument to what a democracy can demand of itself when it chooses to."
+ USA_dem_new_look:0 "The New Look"
+ USA_dem_new_look_desc:0 "The President was a soldier and he knows what soldiers cost, and he has decided that the country cannot afford the army it was fielding and a civil economy too. The New Look is his answer: fewer divisions, more bombers, a larger nuclear stockpile, and the doctrine of massive retaliation to fill the gap between the two. A dollar of deterrence, the budget-cutters explain, buys more security than a dollar of conventional forces. The Joint Chiefs are unhappy, the Europeans are nervous, and the President is firm. More bang for the buck, he says, and the phrase enters the vocabulary of strategy."
+ USA_dem_atoms_for_peace:0 "Atoms for Peace"
+ USA_dem_atoms_for_peace_desc:0 "The President goes before the General Assembly and offers to contribute American fissionable material to an international pool, administered by the United Nations, for peaceful purposes. It is the first time an American president has addressed the world on the subject of atomic energy without a threat attached, and the hall is genuinely moved. The Soviets are suspicious and the proposal takes years to negotiate into the International Atomic Energy Agency, but the speech itself does something treaties cannot: it establishes that the American government does not regard the atomic bomb as simply the largest artillery shell ever made, but as a thing that requires a different kind of politics."
+ USA_dem_saint_lawrence:0 "The Saint Lawrence Seaway"
+ USA_dem_saint_lawrence_desc:0 "The project has been proposed and deferred for thirty years while the railroads lobbied against it and Congress demurred. Now the shovels go in and the Great Lakes become a seaway: oceangoing vessels will be able to sail from Duluth to the Atlantic without a single portage, and the industrial heartland of the continent will have a direct passage to the world. The seaway opens in 1959 and the Queen herself comes for the ceremony, and the grain elevators of Minnesota are suddenly within reach of Liverpool."
+ USA_dem_interstate:0 "The Interstate Highway System"
+ USA_dem_interstate_desc:0 "The General had seen what the Autobahn did for Germany, and the President is not going to let the country that invented the automobile fall behind in the business of roads. The Federal Aid Highway Act authorizes forty-one thousand miles of divided highway across the whole breadth of the Republic, the largest public works program in human history, paid for in gasoline taxes and built to standards that will carry the traffic of the twenty-first century. The suburbs expand along the interchanges, the truck lines displace the railroads, and the American landscape is permanently reorganized around the automobile and the filling station."
+ USA_dem_hundred_million_strong:0 "The Affluent Society"
+ USA_dem_hundred_million_strong_desc:0 "A hundred and seventy million Americans and the largest economy the world has ever seen: the generation that survived the Depression and won the war is spending the proceeds. The suburbs fill with ranch houses and the garages fill with tail-finned automobiles and the children fill the schools, and a Harvard economist writes a book arguing that the country's chief problem is no longer scarcity but the quality of its abundance. The complaint is a luxury. A nation that can afford to worry about the spiritual cost of its prosperity is a nation that has, by any reasonable measure of history, already won."
+
  # --- Democratic wing, 1936-44 ---
  USA_dem_second_new_deal:0 "The Second New Deal"
  USA_dem_second_new_deal_desc:0 "The first hundred days saved the banks; this second wave means to save the men. Works progress, rural power, and a federal payroll that reaches into every county: the New Deal stops apologizing for itself and starts building."
@@ -169,6 +205,18 @@
  USA_permanent_establishment_spirit_desc:0 "A standing military and its supporting industry keep America ready for any threat that may come."
  USA_american_century_spirit:0 "The American Century"
  USA_american_century_spirit_desc:0 "Industry, ideals, and steady leadership together place America at the very summit of the world."
+
+ # --- Democratic wing spirits (Task 6) ---
+ USA_marshall_outlays_spirit:0 "Marshall Outlays"
+ USA_marshall_outlays_spirit_desc:0 "Thirteen billion dollars is flowing toward Europe over four years, and the Treasury is bearing the weight. The investment will be repaid in prosperity and in gratitude, but the bill comes first."
+ USA_nsc68_rearmament_spirit:0 "NSC-68 Rearmament"
+ USA_nsc68_rearmament_spirit_desc:0 "The defense budget has been trebled, the draft boards are busy, and the factories that retooled for consumer goods are retooling again. The Cold War is being waged at peacetime, and it costs nearly as much."
+ USA_nato_spirit:0 "The Atlantic Alliance"
+ USA_nato_spirit_desc:0 "For the first time in its history the Republic is committed by treaty to the defense of European soil. The commitment costs money and men and a permanent Supreme Headquarters, but it buys something the Atlantic Ocean alone cannot: deterrence by guarantee."
+ USA_new_look_spirit:0 "The New Look"
+ USA_new_look_spirit_desc:0 "The bomber force is built up, the nuclear stockpile is growing, and the conventional divisions are being thinned out. More bang for the buck is the doctrine, and the budget committees have no objection to the bang."
+ USA_hundred_million_strong_spirit:0 "The Affluent Society"
+ USA_hundred_million_strong_spirit_desc:0 "The highways are full, the suburbs are growing, and the economy is the largest and most productive in the history of the world. The country has arrived at the summit it has been climbing toward since 1936, and it is taking a moment to look around."
 
  # --- Democratic wing spirits (Task 5) ---
  USA_labor_peace_spirit:0 "Labor Peace"
@@ -302,6 +350,13 @@
  usa_cabinet.205.a:0 "Mr. Truman takes the oath."
  usa_cabinet.205.b:0 "Wallace was kept on the ticket after all. The torch passes left."
 
+ # --- The Marshall Plan (usa_cabinet.251) ---
+ usa_cabinet.251.t:0 "The European Recovery Programme"
+ usa_cabinet.251.d:0 "The Secretary of State has offered American money to any European nation that will draw up a rational recovery program and submit to American accounting. The Soviets have called it dollar imperialism and declined on behalf of their neighbors; sixteen others have said yes, and their delegations are assembled in Paris. The question now is how much of the programme America is willing to fund at full scale, and whether the Congress will pass the appropriations before the French elections decide the matter for everyone."
+ usa_cabinet.251.a:0 "Full programme. Rebuild the customers."
+ usa_cabinet.251.b:0 "Partial commitment. Spend what the Congress will bear."
+ usa_cabinet.251.c:0 "No eligible recipients. The money stays home."
+
  # --- Era flavour (usa_cabinet.250-299) ---
  usa_cabinet.250.t:0 "The Switch in Time"
  usa_cabinet.250.d:0 "Mr. Justice Roberts has crossed the aisle without leaving his chair: the minimum wage stands, the Wagner Act stands, and the court-packing bill dies quietly in committee, having accomplished everything it threatened. The President has lost the battle in the Senate and discovers, reading the morning's opinions, that he has won the Constitution."
@@ -313,6 +368,7 @@
  USA_cash_and_carry_partner:0 "Cash and Carry"
  USA_atlantic_charter_partner:0 "The Atlantic Charter"
  USA_wartime_conference:0 "Wartime Conference"
+ USA_truman_doctrine_partner:0 "The Truman Doctrine"
 
  # ============================ POWER BALANCE ============================
 

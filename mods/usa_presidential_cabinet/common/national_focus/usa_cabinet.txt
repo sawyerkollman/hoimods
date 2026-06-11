@@ -102,6 +102,9 @@ focus_tree = {
 			add_ideas = USA_cabinet_cordell_hull
 			USA_fill_cabinet_seat = yes
 			USA_shift_cabinet_progressive = yes
+			# Cabinet flag: gates Task 6's containment path (an internationalist
+			# State Department is required for the doctrine of containment).
+			set_country_flag = USA_cab_state_internationalist
 		}
 		ai_will_do = { factor = 10 }
 	}
@@ -249,6 +252,10 @@ focus_tree = {
 			add_ideas = USA_cabinet_murphy
 			USA_fill_cabinet_seat = yes
 			USA_shift_cabinet_progressive = yes
+			# Cabinet flag: gates Task 6's red-scare-managed path (a
+			# civil-libertarian AG is required to hold the loyalty purge
+			# within constitutional limits).
+			set_country_flag = USA_cab_ag_civil_libertarian
 		}
 		ai_will_do = { factor = 10 }
 	}
@@ -1113,6 +1120,571 @@ focus_tree = {
 		}
 		completion_reward = {
 			country_event = { id = usa_cabinet.205 hours = 6 }
+		}
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 2
+				has_government = democratic
+			}
+		}
+	}
+
+	# --- DEM wing, 1945-56 (Task 6) ----------------------------------------
+	# Continues off USA_dem_anchor (abs 13,1). Era band '44-47 at rel y 12-16,
+	# '48-51 at rel y 17-22, '52-56 at rel y 23-28. Dem zone abs x 12-14
+	# (rel x -1/0/+1). No focus may reach x>=15 or collide with existing rows.
+	# Two cabinet-flag gates (Hull internationalist, Murphy civil-libertarian)
+	# use country flags set retroactively on the '36 appointment focuses.
+	# The Ike/Stevenson '52 pair are mutually exclusive on BOTH focuses.
+	#
+	# Position summary (all relative to USA_dem_anchor):
+	#  '45 stripe:  bretton_woods(0,12)  united_nations(1,12)
+	#  '47 stripe:  containment(0,13)    fair_deal(1,13)
+	#  '47 stripe:  truman_doctrine(0,14) red_scare_managed(1,14)
+	#  '48 stripe:  marshall_plan(-1,15) nato(-1,16)
+	#  '50 stripe:  nsc68(1,15)          korea_line(1,16)
+	#  '52 stripe:  election_52_ike(-1,17) election_52_egghead(1,17)
+	#  '53 stripe:  new_look(0,18)
+	#  '54 stripe:  atoms_for_peace(0,19) saint_lawrence(1,19)
+	#  '56 stripe:  interstate(-1,20)
+	#  '56 capstone: hundred_million_strong(-1,21)
+
+	# Bretton Woods (1944-45): the dollar becomes the world's anchor.
+	# Prerequisites: era_1948 flag (election of 1944 resolved) plus the
+	# postwar/peacetime gate. GFX: generic economic focus.
+	focus = {
+		id = USA_dem_bretton_woods
+		icon = GFX_goal_generic_construct_civ_factory
+		relative_position_id = USA_dem_anchor
+		x = 0
+		y = 12
+		cost = 10
+		prerequisite = { focus = USA_dem_president_is_dead }
+		available = {
+			has_country_flag = USA_era_1948
+			OR = {
+				has_country_flag = USA_postwar
+				date > 1946.1.1
+			}
+		}
+		completion_reward = {
+			add_ideas = USA_bretton_woods_spirit
+			add_tech_bonus = {
+				bonus = 0.50
+				uses = 1
+				category = trade_laws
+			}
+		}
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 2
+				has_government = democratic
+			}
+		}
+	}
+
+	# The United Nations (1945): Dumbarton Oaks made real.
+	# Prerequisites: USA_trunk_shape_of_the_peace completed (peace shaped).
+	focus = {
+		id = USA_dem_united_nations
+		icon = GFX_goal_generic_alliance
+		relative_position_id = USA_dem_anchor
+		x = 1
+		y = 12
+		cost = 10
+		prerequisite = { focus = USA_trunk_shape_of_the_peace }
+		completion_reward = {
+			add_political_power = 120
+			add_ideas = USA_united_nations_spirit
+		}
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 2
+				has_government = democratic
+			}
+		}
+	}
+
+	# Containment (1947): the long telegram heeded.
+	# Cabinet gate: Hull's internationalist tradition carried forward via
+	# the country flag set on USA_appoint_hull's completion_reward.
+	focus = {
+		id = USA_dem_containment
+		icon = GFX_goal_generic_major_alliance
+		relative_position_id = USA_dem_anchor
+		x = 0
+		y = 13
+		cost = 10
+		prerequisite = { focus = USA_dem_united_nations }
+		available = {
+			date > 1947.1.1
+			has_country_flag = USA_cab_state_internationalist
+		}
+		completion_reward = {
+			add_ideas = USA_containment_spirit
+		}
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 2
+				has_government = democratic
+			}
+		}
+	}
+
+	# The Fair Deal (1949): the New Deal's second act.
+	# Gates on era_1948 (election of 1948 resolved); no cabinet gate.
+	focus = {
+		id = USA_dem_fair_deal
+		icon = GFX_goal_generic_consumer_goods
+		relative_position_id = USA_dem_anchor
+		x = 1
+		y = 13
+		cost = 10
+		prerequisite = { focus = USA_dem_united_nations }
+		available = {
+			has_country_flag = USA_era_1952
+		}
+		completion_reward = {
+			add_stability = 0.05
+			add_ideas = USA_the_second_new_deal_spirit
+		}
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 2
+				has_government = democratic
+			}
+		}
+	}
+
+	# The Truman Doctrine (1947): aid to free peoples.
+	focus = {
+		id = USA_dem_truman_doctrine
+		icon = GFX_goal_generic_military_deal
+		relative_position_id = USA_dem_anchor
+		x = 0
+		y = 14
+		cost = 10
+		prerequisite = { focus = USA_dem_containment }
+		available = {
+			date > 1947.3.1
+		}
+		completion_reward = {
+			add_political_power = 60
+			if = {
+				limit = { country_exists = GRE }
+				GRE = {
+					add_opinion_modifier = {
+						target = USA
+						modifier = USA_truman_doctrine_partner
+					}
+				}
+			}
+			if = {
+				limit = { country_exists = TUR }
+				TUR = {
+					add_opinion_modifier = {
+						target = USA
+						modifier = USA_truman_doctrine_partner
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 2
+				has_government = democratic
+			}
+		}
+	}
+
+	# Red Scare Managed (1950): loyalty boards with limits.
+	# Cabinet gate: Murphy's civil-libertarian tradition via country flag.
+	focus = {
+		id = USA_dem_red_scare_managed
+		icon = GFX_goal_generic_national_unity
+		relative_position_id = USA_dem_anchor
+		x = 1
+		y = 14
+		cost = 10
+		prerequisite = { focus = USA_dem_fair_deal }
+		available = {
+			has_country_flag = USA_era_1952
+			has_country_flag = USA_cab_ag_civil_libertarian
+		}
+		completion_reward = {
+			add_stability = 0.03
+			add_political_power = -50
+		}
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 2
+				has_government = democratic
+			}
+		}
+	}
+
+	# The Marshall Plan (1948): rebuilding the customers.
+	# On completion fires event usa_cabinet.251 (choice of recipients).
+	focus = {
+		id = USA_dem_marshall_plan
+		icon = GFX_goal_generic_positive_trade_relations
+		relative_position_id = USA_dem_anchor
+		x = -1
+		y = 15
+		cost = 10
+		prerequisite = { focus = USA_dem_truman_doctrine }
+		available = {
+			date > 1948.1.1
+		}
+		completion_reward = {
+			country_event = { id = usa_cabinet.251 hours = 6 }
+		}
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 2
+				has_government = democratic
+			}
+		}
+	}
+
+	# NSC-68 (1950): rearming the peace.
+	focus = {
+		id = USA_dem_nsc68
+		icon = GFX_goal_generic_allies_build_infantry
+		relative_position_id = USA_dem_anchor
+		x = 1
+		y = 15
+		cost = 10
+		prerequisite = { focus = USA_dem_containment }
+		available = {
+			date > 1950.1.1
+		}
+		completion_reward = {
+			add_manpower = 250000
+			add_ideas = USA_nsc68_rearmament_spirit
+			add_building_construction = {
+				type = arms_factory
+				level = 2
+				instant_build = yes
+				provinces_to_highlight = {
+					owned_by = ROOT
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 2
+				has_government = democratic
+			}
+		}
+	}
+
+	# NATO (1949): an entangling alliance at last.
+	focus = {
+		id = USA_dem_nato
+		icon = GFX_goal_generic_major_alliance
+		relative_position_id = USA_dem_anchor
+		x = -1
+		y = 16
+		cost = 10
+		prerequisite = { focus = USA_dem_marshall_plan }
+		available = {
+			date > 1949.4.1
+		}
+		completion_reward = {
+			add_ideas = USA_nato_spirit
+			if = {
+				limit = { country_exists = ENG }
+				ENG = { add_opinion_modifier = { target = USA modifier = USA_atlantic_charter_partner } }
+			}
+			if = {
+				limit = { country_exists = FRA }
+				FRA = { add_opinion_modifier = { target = USA modifier = USA_atlantic_charter_partner } }
+			}
+		}
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 2
+				has_government = democratic
+			}
+		}
+	}
+
+	# Korea (1950): drawing the line at the 38th parallel.
+	focus = {
+		id = USA_dem_korea_line
+		icon = GFX_goal_generic_major_war
+		relative_position_id = USA_dem_anchor
+		x = 1
+		y = 16
+		cost = 10
+		prerequisite = { focus = USA_dem_nsc68 }
+		available = {
+			date > 1950.6.1
+			OR = {
+				has_war = yes
+				has_country_flag = USA_at_war
+			}
+		}
+		completion_reward = {
+			army_experience = 50
+			add_war_support = 0.05
+		}
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 2
+				has_government = democratic
+			}
+		}
+	}
+
+	# The Election of 1952 - Ike (Democratic path): the general comes home.
+	# Mutually exclusive with the Stevenson path. Both gate on election_winner_dem.
+	focus = {
+		id = USA_dem_election_52_ike
+		icon = GFX_goal_support_democracy
+		relative_position_id = USA_dem_anchor
+		x = -1
+		y = 17
+		cost = 10
+		prerequisite = {
+			focus = USA_dem_nato
+			focus = USA_dem_korea_line
+		}
+		mutually_exclusive = { focus = USA_dem_election_52_egghead }
+		available = {
+			has_country_flag = USA_election_winner_dem
+			has_country_flag = USA_era_1956
+		}
+		completion_reward = {
+			retire_country_leader = yes
+			create_country_leader = {
+				name = "Dwight D. Eisenhower"
+				desc = "USA_dwight_eisenhower_desc"
+				picture = "gfx/leaders/Europe/Portrait_Europe_Generic_5.dds"
+				expire = "1965.1.1"
+				ideology = liberalism
+			}
+			add_stability = 0.05
+		}
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 2
+				has_government = democratic
+			}
+		}
+	}
+
+	# The Election of 1952 - Stevenson: eloquence against the tide.
+	# Mutually exclusive with the Ike path. Both gate on election_winner_dem.
+	focus = {
+		id = USA_dem_election_52_egghead
+		icon = GFX_goal_support_democracy
+		relative_position_id = USA_dem_anchor
+		x = 1
+		y = 17
+		cost = 10
+		prerequisite = {
+			focus = USA_dem_nato
+			focus = USA_dem_korea_line
+		}
+		mutually_exclusive = { focus = USA_dem_election_52_ike }
+		available = {
+			has_country_flag = USA_election_winner_dem
+			has_country_flag = USA_era_1956
+		}
+		completion_reward = {
+			retire_country_leader = yes
+			create_country_leader = {
+				name = "Adlai Stevenson"
+				desc = "USA_adlai_stevenson_desc"
+				picture = "gfx/leaders/Europe/Portrait_Europe_Generic_6.dds"
+				expire = "1965.1.1"
+				ideology = liberalism
+			}
+			add_stability = 0.02
+		}
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				factor = 2
+				has_government = democratic
+			}
+		}
+	}
+
+	# The New Look (1953): more bang for the buck.
+	# Requires either '52 focus completed (Ike OR Stevenson path).
+	focus = {
+		id = USA_dem_new_look
+		icon = GFX_goal_generic_air_superiority
+		relative_position_id = USA_dem_anchor
+		x = 0
+		y = 18
+		cost = 10
+		prerequisite = {
+			focus = USA_dem_election_52_ike
+			focus = USA_dem_election_52_egghead
+		}
+		available = {
+			date > 1953.1.1
+		}
+		completion_reward = {
+			air_experience = 50
+			add_tech_bonus = {
+				bonus = 0.50
+				uses = 1
+				category = nuclear
+			}
+			add_ideas = USA_new_look_spirit
+		}
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 2
+				has_government = democratic
+			}
+		}
+	}
+
+	# Atoms for Peace (1954): the peaceful atom offered to the world.
+	focus = {
+		id = USA_dem_atoms_for_peace
+		icon = GFX_goal_generic_scientific_exchange
+		relative_position_id = USA_dem_anchor
+		x = 0
+		y = 19
+		cost = 10
+		prerequisite = { focus = USA_dem_new_look }
+		available = {
+			date > 1953.12.1
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.50
+				uses = 2
+				category = nuclear
+			}
+			add_world_tension = -5.0
+		}
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 2
+				has_government = democratic
+			}
+		}
+	}
+
+	# The Saint Lawrence Seaway (1955): the inland sea opened.
+	focus = {
+		id = USA_dem_saint_lawrence
+		icon = GFX_goal_generic_build_navy
+		relative_position_id = USA_dem_anchor
+		x = 1
+		y = 19
+		cost = 10
+		prerequisite = {
+			focus = USA_dem_election_52_ike
+			focus = USA_dem_election_52_egghead
+		}
+		available = {
+			date > 1954.1.1
+		}
+		completion_reward = {
+			362 = { # Great Lakes region
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			370 = { # Minnesota
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 2
+				has_government = democratic
+			}
+		}
+	}
+
+	# The Interstate Highway System (1956): ribbons of concrete.
+	focus = {
+		id = USA_dem_interstate
+		icon = GFX_goal_generic_construct_civilian
+		relative_position_id = USA_dem_anchor
+		x = -1
+		y = 20
+		cost = 10
+		prerequisite = {
+			focus = USA_dem_election_52_ike
+			focus = USA_dem_election_52_egghead
+		}
+		available = {
+			date > 1956.1.1
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.50
+				uses = 1
+				category = industry
+			}
+			every_owned_state = {
+				limit = { is_core_of = USA }
+				add_infrastructure = 1
+			}
+		}
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 2
+				has_government = democratic
+			}
+		}
+	}
+
+	# The Affluent Society (1956): the victory-lap capstone.
+	focus = {
+		id = USA_dem_hundred_million_strong
+		icon = GFX_goal_generic_construct_civ_factory
+		relative_position_id = USA_dem_anchor
+		x = -1
+		y = 21
+		cost = 10
+		prerequisite = { focus = USA_dem_interstate }
+		available = {
+			date > 1956.6.1
+		}
+		completion_reward = {
+			add_ideas = USA_hundred_million_strong_spirit
+			add_stability = 0.05
 		}
 		ai_will_do = {
 			factor = 10
