@@ -287,6 +287,225 @@ focus_tree = {
 		ai_will_do = { factor = 20 }
 	}
 
+	# --- The trunk elections, 1940-1952 --------------------------------
+	# One per era band, all on trunk column x=20 absolute (chained off
+	# USA_trunk_election_1936 at (20,5) via relative_position_id):
+	# y = 11 / 17 / 23 / 29. Each fires its ballot chain (.110/.120/.130/
+	# .140) following the Task-3 pattern; every outcome event runs
+	# USA_clear_cabinet + the era flag of the term it opens.
+	#
+	# Bypass rules:
+	#  - '40 and '44 are bypassed at war (the vote resolves off-screen;
+	#    bypassed focuses still count as completed for has_completed_focus,
+	#    which the era-flag backstop in usa_cabinet_effects.txt relies on).
+	#  - '48 and '52 happen war or no war (the postwar ballots), and are
+	#    bypassed only when USA_elections_suspended is set (the Caesar has
+	#    cancelled elections outright).
+	#
+	# Prerequisites are "the previous election focus OR its dark twin", so
+	# neither the crisis path nor the step-back path dead-ends the trunk:
+	# bypass in HOI4 only triggers once a focus's prerequisites are met.
+
+	focus = {
+		id = USA_trunk_election_1940
+		icon = GFX_goal_support_democracy
+		relative_position_id = USA_trunk_election_1936
+		x = 0
+		y = 6
+		cost = 5
+		prerequisite = { focus = USA_trunk_election_1936 }
+		mutually_exclusive = { focus = USA_trunk_third_term_crisis }
+		available = {
+			date > 1940.6.1
+		}
+		bypass = {
+			has_war = yes
+		}
+		completion_reward = {
+			country_event = { id = usa_cabinet.110 hours = 6 }
+		}
+		ai_will_do = { factor = 20 }
+	}
+
+	focus = {
+		id = USA_trunk_election_1944
+		icon = GFX_goal_support_democracy
+		relative_position_id = USA_trunk_election_1940
+		x = 0
+		y = 6
+		cost = 5
+		prerequisite = {
+			focus = USA_trunk_election_1940
+			focus = USA_trunk_third_term_crisis
+		}
+		mutually_exclusive = { focus = USA_trunk_suspended_election }
+		available = {
+			date > 1944.6.1
+		}
+		bypass = {
+			has_war = yes
+		}
+		completion_reward = {
+			country_event = { id = usa_cabinet.120 hours = 6 }
+		}
+		ai_will_do = { factor = 20 }
+	}
+
+	focus = {
+		id = USA_trunk_election_1948
+		icon = GFX_goal_support_democracy
+		relative_position_id = USA_trunk_election_1944
+		x = 0
+		y = 6
+		cost = 5
+		prerequisite = {
+			focus = USA_trunk_election_1944
+			focus = USA_trunk_suspended_election
+		}
+		available = {
+			date > 1948.6.1
+		}
+		# No war bypass: the postwar elections are held even under arms.
+		# Only the Caesar cancels them.
+		bypass = {
+			has_country_flag = USA_elections_suspended
+		}
+		completion_reward = {
+			country_event = { id = usa_cabinet.130 hours = 6 }
+		}
+		ai_will_do = { factor = 20 }
+	}
+
+	focus = {
+		id = USA_trunk_election_1952
+		icon = GFX_goal_support_democracy
+		relative_position_id = USA_trunk_election_1948
+		x = 0
+		y = 6
+		cost = 5
+		prerequisite = { focus = USA_trunk_election_1948 }
+		available = {
+			date > 1952.6.1
+		}
+		bypass = {
+			has_country_flag = USA_elections_suspended
+		}
+		completion_reward = {
+			country_event = { id = usa_cabinet.140 hours = 6 }
+		}
+		ai_will_do = { factor = 20 }
+	}
+
+	# --- War pivots ------------------------------------------------------
+	# USA_trunk_infamy: war has come to America (or America has gone to it).
+	# No prerequisite - the bombs do not consult the focus tree. Fires no
+	# event; the on_actions/pulse wiring owns the USA_at_war story flag and
+	# this focus doubles as a safety-net setter.
+	focus = {
+		id = USA_trunk_infamy
+		icon = GFX_goal_generic_major_war
+		relative_position_id = USA_trunk_election_1936
+		x = 1
+		y = 3
+		cost = 5
+		available = {
+			OR = {
+				has_war = yes
+				has_country_flag = USA_at_war
+			}
+		}
+		completion_reward = {
+			add_war_support = 0.10
+			set_country_flag = USA_at_war
+			if = {
+				limit = {
+					NOT = { has_idea = war_economy }
+					NOT = { has_idea = tot_economic_mobilisation }
+				}
+				add_ideas = war_economy
+			}
+		}
+		ai_will_do = { factor = 15 }
+	}
+
+	# USA_trunk_shape_of_the_peace: the postwar pivot. Deliberately has NO
+	# prerequisite on USA_trunk_infamy - if America never fought but a major
+	# power capitulated abroad, the peace must still be shaped.
+	focus = {
+		id = USA_trunk_shape_of_the_peace
+		icon = GFX_goal_generic_improve_relations
+		relative_position_id = USA_trunk_infamy
+		x = -2
+		y = 6
+		cost = 5
+		available = {
+			has_war = no
+			OR = {
+				has_country_flag = USA_at_war
+				any_other_country = {
+					is_major = yes
+					has_capitulated = yes
+				}
+			}
+		}
+		completion_reward = {
+			add_political_power = 120
+			set_country_flag = USA_postwar
+		}
+		ai_will_do = { factor = 10 }
+	}
+
+	# --- Authoritarian on-ramps ------------------------------------------
+	# The dark twins of the 1940 and 1944 elections. Taking one replaces the
+	# ballot of that year; the fired event offers a step-back option that
+	# clears USA_elections_suspended and lets the NEXT election (reachable
+	# via the OR-prerequisites above) put the Republic back on track.
+	focus = {
+		id = USA_trunk_third_term_crisis
+		icon = GFX_goal_generic_forceful_treaty
+		relative_position_id = USA_trunk_election_1936
+		x = 2
+		y = 5
+		cost = 5
+		prerequisite = { focus = USA_trunk_election_1936 }
+		mutually_exclusive = { focus = USA_trunk_election_1940 }
+		available = {
+			date > 1940.1.1
+		}
+		completion_reward = {
+			add_stability = -0.10
+			set_country_flag = USA_elections_suspended
+			country_event = { id = usa_cabinet.200 hours = 6 }
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	focus = {
+		id = USA_trunk_suspended_election
+		icon = GFX_goal_generic_propaganda
+		relative_position_id = USA_trunk_third_term_crisis
+		x = 0
+		y = 6
+		cost = 5
+		prerequisite = {
+			focus = USA_trunk_third_term_crisis
+			focus = USA_trunk_election_1940
+		}
+		mutually_exclusive = { focus = USA_trunk_election_1944 }
+		available = {
+			has_war = yes
+			OR = {
+				has_country_flag = USA_auth_onramp
+				has_completed_focus = USA_auth_anchor
+			}
+		}
+		completion_reward = {
+			set_country_flag = USA_elections_suspended
+			country_event = { id = usa_cabinet.201 hours = 6 }
+		}
+		ai_will_do = { factor = 0 }
+	}
+
 	#######################################################################
 	# DEM - The New Deal coalition
 	#######################################################################

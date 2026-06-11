@@ -30,21 +30,32 @@ country_event = {
 		country_event = { id = usa_cabinet.101 hours = 6 }
 	}
 
-	# Let the cabinet's balance decide. An Old Guard cabinet (balance on the
-	# conservative side) hands the GOP its upset; otherwise FDR holds. If the
-	# power balance is unavailable on this patch, default to the incumbent.
+	# Let the cabinet's balance decide. USA_resolve_election (scripted
+	# effects) weighs the cabinet power balance and the wing flags, then
+	# sets exactly one USA_election_winner_* flag, which we read back here.
+	# In 1936 no wing commitment flags can exist yet, so only the dem/gop
+	# outcomes are reachable; rad/auth route to the hung election for safety.
 	option = {
 		name = usa_cabinet.100.b
 		ai_chance = { factor = 25 }
-		if = {
-			limit = {
-				has_power_balance = { id = USA_cabinet_balance }
-				power_balance_value = { id = USA_cabinet_balance value > 0.05 }
+		USA_resolve_election = yes
+		hidden_effect = {
+			if = {
+				limit = { has_country_flag = USA_election_winner_gop }
+				country_event = { id = usa_cabinet.103 hours = 6 }
 			}
-			country_event = { id = usa_cabinet.103 hours = 6 }
-		}
-		else = {
-			country_event = { id = usa_cabinet.101 hours = 6 }
+			else_if = {
+				limit = {
+					OR = {
+						has_country_flag = USA_election_winner_rad
+						has_country_flag = USA_election_winner_auth
+					}
+				}
+				country_event = { id = usa_cabinet.102 hours = 6 }
+			}
+			else = {
+				country_event = { id = usa_cabinet.101 hours = 6 }
+			}
 		}
 	}
 
@@ -81,7 +92,10 @@ country_event = {
 	}
 }
 
-# A House Divided: the third-party surge breaks the arithmetic
+# A House Divided: the third-party surge breaks the arithmetic.
+# Deliberately sets NO era flag - the hung outcome leaves the term in
+# question; USA_era_flag_backstop (monthly pulse) sets USA_era_1940 after
+# election day 1936 regardless, so the tree never stalls on this outcome.
 country_event = {
 	id = usa_cabinet.102
 	title = usa_cabinet.102.t
@@ -138,5 +152,756 @@ country_event = {
 
 	option = {
 		name = usa_cabinet.104.a
+	}
+}
+
+#######################################################################
+# THE ELECTION OF 1940 (usa_cabinet.110-114)
+# Fired by USA_trunk_election_1940 (only at peace - the focus bypasses
+# at war). Every outcome: USA_clear_cabinet + USA_set_era_flag_1944 +
+# the shared inauguration flavour (.149).
+# Dem/GOP outcomes carry no add_popularity nudges (both parties live in
+# the same `democratic` ideology group); the fringe outcomes nudge
+# communism/fascism instead.
+#######################################################################
+
+# The ballot: a third term, the Willkie crusade, or the country decides
+country_event = {
+	id = usa_cabinet.110
+	title = usa_cabinet.110.t
+	desc = usa_cabinet.110.d
+	picture = GFX_report_event_usa_congress_speaks
+
+	is_triggered_only = yes
+
+	# The third term: the historical outcome.
+	option = {
+		name = usa_cabinet.110.a
+		ai_chance = { factor = 60 }
+		country_event = { id = usa_cabinet.111 hours = 6 }
+	}
+
+	# Back the Willkie crusade: the swap only lands if the GOP wing has
+	# been invested in (USA_wing_gop); otherwise the challenge falls short.
+	option = {
+		name = usa_cabinet.110.b
+		ai_chance = { factor = 10 }
+		hidden_effect = {
+			if = {
+				limit = { has_country_flag = USA_wing_gop }
+				country_event = { id = usa_cabinet.112 hours = 6 }
+			}
+			else = {
+				country_event = { id = usa_cabinet.113 hours = 6 }
+			}
+		}
+	}
+
+	# Let the country decide: the resolver sets a winner flag, we route.
+	option = {
+		name = usa_cabinet.110.c
+		ai_chance = { factor = 30 }
+		USA_resolve_election = yes
+		hidden_effect = {
+			if = {
+				limit = { has_country_flag = USA_election_winner_gop }
+				country_event = { id = usa_cabinet.112 hours = 6 }
+			}
+			else_if = {
+				limit = {
+					OR = {
+						has_country_flag = USA_election_winner_rad
+						has_country_flag = USA_election_winner_auth
+					}
+				}
+				country_event = { id = usa_cabinet.114 hours = 6 }
+			}
+			else = {
+				country_event = { id = usa_cabinet.111 hours = 6 }
+			}
+		}
+	}
+}
+
+# The Third Term: FDR breaks the two-term tradition
+country_event = {
+	id = usa_cabinet.111
+	title = usa_cabinet.111.t
+	desc = usa_cabinet.111.d
+	picture = GFX_report_event_press_conference
+
+	is_triggered_only = yes
+
+	option = {
+		name = usa_cabinet.111.a
+		add_stability = -0.02
+		USA_clear_cabinet = yes
+		USA_set_era_flag_1944 = yes
+		country_event = { id = usa_cabinet.149 hours = 12 }
+	}
+}
+
+# Willkie!: the amateurs take the White House
+# Generic portrait for now - swap to a proper Willkie portrait in the
+# Task 13 GFX sweep.
+country_event = {
+	id = usa_cabinet.112
+	title = usa_cabinet.112.t
+	desc = usa_cabinet.112.d
+	picture = GFX_report_event_usa_congress_speaks
+
+	is_triggered_only = yes
+
+	option = {
+		name = usa_cabinet.112.a
+		retire_country_leader = yes
+		create_country_leader = {
+			name = "Wendell Willkie"
+			desc = "USA_wendell_willkie_desc"
+			picture = "gfx/leaders/Europe/Portrait_Europe_Generic_1.dds"
+			expire = "1965.1.1"
+			ideology = conservatism
+		}
+		set_party_name = {
+			ideology = democratic
+			long_name = USA_gop_party_long
+			name = USA_gop_party
+		}
+		USA_clear_cabinet = yes
+		USA_set_era_flag_1944 = yes
+		country_event = { id = usa_cabinet.149 hours = 12 }
+	}
+}
+
+# The Crusade Falls Short: the challenge fails, FDR holds at a price
+country_event = {
+	id = usa_cabinet.113
+	title = usa_cabinet.113.t
+	desc = usa_cabinet.113.d
+	picture = GFX_report_event_press_conference
+
+	is_triggered_only = yes
+
+	option = {
+		name = usa_cabinet.113.a
+		add_political_power = -50
+		USA_clear_cabinet = yes
+		USA_set_era_flag_1944 = yes
+		country_event = { id = usa_cabinet.149 hours = 12 }
+	}
+}
+
+# The Center Gives Way: a fringe upset at the ballot box. The option that
+# shows is decided by which USA_election_winner_* flag the resolver set;
+# no leader swap happens here - the wing content (Tasks 8/9) forms the
+# actual government, the trunk only records the upset.
+country_event = {
+	id = usa_cabinet.114
+	title = usa_cabinet.114.t
+	desc = usa_cabinet.114.d
+	picture = GFX_report_event_usa_great_depression
+
+	is_triggered_only = yes
+
+	option = {
+		name = usa_cabinet.114.a
+		trigger = { has_country_flag = USA_election_winner_rad }
+		add_political_power = -75
+		add_popularity = { ideology = communism popularity = 0.05 }
+		set_country_flag = USA_election_upset
+		USA_clear_cabinet = yes
+		USA_set_era_flag_1944 = yes
+		country_event = { id = usa_cabinet.149 hours = 12 }
+	}
+
+	option = {
+		name = usa_cabinet.114.b
+		trigger = { has_country_flag = USA_election_winner_auth }
+		add_political_power = -75
+		add_popularity = { ideology = fascism popularity = 0.05 }
+		set_country_flag = USA_auth_onramp
+		USA_clear_cabinet = yes
+		USA_set_era_flag_1944 = yes
+		country_event = { id = usa_cabinet.149 hours = 12 }
+	}
+}
+
+#######################################################################
+# THE ELECTION OF 1944 (usa_cabinet.120-124)
+# Fired by USA_trunk_election_1944 (only at peace - bypassed at war).
+# Every outcome: USA_clear_cabinet + USA_set_era_flag_1948 + .149.
+# No FDR-death simulation here; Task 5's succession event (.205) owns it.
+#######################################################################
+
+# The ballot: a fourth term, the Dewey challenge, or the country decides
+country_event = {
+	id = usa_cabinet.120
+	title = usa_cabinet.120.t
+	desc = usa_cabinet.120.d
+	picture = GFX_report_event_usa_congress_speaks
+
+	is_triggered_only = yes
+
+	option = {
+		name = usa_cabinet.120.a
+		ai_chance = { factor = 60 }
+		country_event = { id = usa_cabinet.121 hours = 6 }
+	}
+
+	# The Dewey challenge: lands only with GOP wing investment.
+	option = {
+		name = usa_cabinet.120.b
+		ai_chance = { factor = 10 }
+		hidden_effect = {
+			if = {
+				limit = { has_country_flag = USA_wing_gop }
+				country_event = { id = usa_cabinet.122 hours = 6 }
+			}
+			else = {
+				country_event = { id = usa_cabinet.123 hours = 6 }
+			}
+		}
+	}
+
+	option = {
+		name = usa_cabinet.120.c
+		ai_chance = { factor = 30 }
+		USA_resolve_election = yes
+		hidden_effect = {
+			if = {
+				limit = { has_country_flag = USA_election_winner_gop }
+				country_event = { id = usa_cabinet.122 hours = 6 }
+			}
+			else_if = {
+				limit = {
+					OR = {
+						has_country_flag = USA_election_winner_rad
+						has_country_flag = USA_election_winner_auth
+					}
+				}
+				country_event = { id = usa_cabinet.124 hours = 6 }
+			}
+			else = {
+				country_event = { id = usa_cabinet.121 hours = 6 }
+			}
+		}
+	}
+}
+
+# The Fourth Term
+country_event = {
+	id = usa_cabinet.121
+	title = usa_cabinet.121.t
+	desc = usa_cabinet.121.d
+	picture = GFX_report_event_press_conference
+
+	is_triggered_only = yes
+
+	option = {
+		name = usa_cabinet.121.a
+		add_stability = -0.02
+		USA_clear_cabinet = yes
+		USA_set_era_flag_1948 = yes
+		country_event = { id = usa_cabinet.149 hours = 12 }
+	}
+}
+
+# Dewey Takes the Prize (generic portrait; Task 13 GFX sweep)
+country_event = {
+	id = usa_cabinet.122
+	title = usa_cabinet.122.t
+	desc = usa_cabinet.122.d
+	picture = GFX_report_event_usa_congress_speaks
+
+	is_triggered_only = yes
+
+	option = {
+		name = usa_cabinet.122.a
+		retire_country_leader = yes
+		create_country_leader = {
+			name = "Thomas E. Dewey"
+			desc = "USA_thomas_dewey_desc"
+			picture = "gfx/leaders/Europe/Portrait_Europe_Generic_2.dds"
+			expire = "1965.1.1"
+			ideology = conservatism
+		}
+		set_party_name = {
+			ideology = democratic
+			long_name = USA_gop_party_long
+			name = USA_gop_party
+		}
+		USA_clear_cabinet = yes
+		USA_set_era_flag_1948 = yes
+		country_event = { id = usa_cabinet.149 hours = 12 }
+	}
+}
+
+# The Governor Falls Short
+country_event = {
+	id = usa_cabinet.123
+	title = usa_cabinet.123.t
+	desc = usa_cabinet.123.d
+	picture = GFX_report_event_press_conference
+
+	is_triggered_only = yes
+
+	option = {
+		name = usa_cabinet.123.a
+		add_political_power = -50
+		USA_clear_cabinet = yes
+		USA_set_era_flag_1948 = yes
+		country_event = { id = usa_cabinet.149 hours = 12 }
+	}
+}
+
+# The Old Parties Repudiated: the 1944 fringe upset (see .114 notes)
+country_event = {
+	id = usa_cabinet.124
+	title = usa_cabinet.124.t
+	desc = usa_cabinet.124.d
+	picture = GFX_report_event_usa_great_depression
+
+	is_triggered_only = yes
+
+	option = {
+		name = usa_cabinet.124.a
+		trigger = { has_country_flag = USA_election_winner_rad }
+		add_political_power = -75
+		add_popularity = { ideology = communism popularity = 0.05 }
+		set_country_flag = USA_election_upset
+		USA_clear_cabinet = yes
+		USA_set_era_flag_1948 = yes
+		country_event = { id = usa_cabinet.149 hours = 12 }
+	}
+
+	option = {
+		name = usa_cabinet.124.b
+		trigger = { has_country_flag = USA_election_winner_auth }
+		add_political_power = -75
+		add_popularity = { ideology = fascism popularity = 0.05 }
+		set_country_flag = USA_auth_onramp
+		USA_clear_cabinet = yes
+		USA_set_era_flag_1948 = yes
+		country_event = { id = usa_cabinet.149 hours = 12 }
+	}
+}
+
+#######################################################################
+# THE ELECTION OF 1948 (usa_cabinet.130-134)
+# Fired by USA_trunk_election_1948 - held war or no war; only the Caesar
+# bypasses it. Every outcome: USA_clear_cabinet + USA_set_era_flag_1952
+# + .149. NOTE: the 4th ballot option uses loc key .130.e, because .130.d
+# is taken by the event description.
+#######################################################################
+
+# The ballot: the whistle-stop holdout, the Dewey machine, Gideon's Army
+country_event = {
+	id = usa_cabinet.130
+	title = usa_cabinet.130.t
+	desc = usa_cabinet.130.d
+	picture = GFX_report_event_usa_congress_speaks
+
+	is_triggered_only = yes
+
+	option = {
+		name = usa_cabinet.130.a
+		ai_chance = { factor = 65 }
+		country_event = { id = usa_cabinet.131 hours = 6 }
+	}
+
+	# The upset everyone expected: Dewey actually defeats Truman. A direct
+	# player choice - no wing gate; in 1948 the whole country believed it.
+	option = {
+		name = usa_cabinet.130.b
+		ai_chance = { factor = 15 }
+		country_event = { id = usa_cabinet.132 hours = 6 }
+	}
+
+	option = {
+		name = usa_cabinet.130.c
+		ai_chance = { factor = 15 }
+		USA_resolve_election = yes
+		hidden_effect = {
+			if = {
+				limit = { has_country_flag = USA_election_winner_gop }
+				country_event = { id = usa_cabinet.132 hours = 6 }
+			}
+			else_if = {
+				limit = { has_country_flag = USA_election_winner_rad }
+				country_event = { id = usa_cabinet.133 hours = 6 }
+			}
+			else_if = {
+				limit = { has_country_flag = USA_election_winner_auth }
+				country_event = { id = usa_cabinet.134 hours = 6 }
+			}
+			else = {
+				country_event = { id = usa_cabinet.131 hours = 6 }
+			}
+		}
+	}
+
+	# The Wallace surge: only on the table with radical wing investment.
+	option = {
+		name = usa_cabinet.130.e
+		trigger = { has_country_flag = USA_wing_rad }
+		ai_chance = { factor = 5 }
+		country_event = { id = usa_cabinet.133 hours = 6 }
+	}
+}
+
+# DEWEY DEFEATS TRUMAN: the headline is wrong, the haberdasher holds.
+# If the sitting leader is not already Truman (no death simulation in the
+# trunk), swap him in - generic portrait, Task 13 GFX sweep.
+country_event = {
+	id = usa_cabinet.131
+	title = usa_cabinet.131.t
+	desc = usa_cabinet.131.d
+	picture = GFX_report_event_press_conference
+
+	is_triggered_only = yes
+
+	option = {
+		name = usa_cabinet.131.a
+		if = {
+			limit = {
+				NOT = {
+					has_country_leader = { name = "Harry S. Truman" ruling_only = yes }
+				}
+			}
+			retire_country_leader = yes
+			create_country_leader = {
+				name = "Harry S. Truman"
+				desc = "USA_harry_truman_desc"
+				picture = "gfx/leaders/Europe/Portrait_Europe_Generic_3.dds"
+				expire = "1965.1.1"
+				ideology = liberalism
+			}
+		}
+		set_party_name = {
+			ideology = democratic
+			long_name = USA_dem_party_long
+			name = USA_dem_party
+		}
+		add_stability = 0.03
+		USA_clear_cabinet = yes
+		USA_set_era_flag_1952 = yes
+		country_event = { id = usa_cabinet.149 hours = 12 }
+	}
+}
+
+# President Dewey: this time the pollsters were right
+country_event = {
+	id = usa_cabinet.132
+	title = usa_cabinet.132.t
+	desc = usa_cabinet.132.d
+	picture = GFX_report_event_usa_congress_speaks
+
+	is_triggered_only = yes
+
+	option = {
+		name = usa_cabinet.132.a
+		retire_country_leader = yes
+		create_country_leader = {
+			name = "Thomas E. Dewey"
+			desc = "USA_thomas_dewey_desc"
+			picture = "gfx/leaders/Europe/Portrait_Europe_Generic_2.dds"
+			expire = "1965.1.1"
+			ideology = conservatism
+		}
+		set_party_name = {
+			ideology = democratic
+			long_name = USA_gop_party_long
+			name = USA_gop_party
+		}
+		USA_clear_cabinet = yes
+		USA_set_era_flag_1952 = yes
+		country_event = { id = usa_cabinet.149 hours = 12 }
+	}
+}
+
+# Gideon's Army: the Wallace upset (radical wing only)
+country_event = {
+	id = usa_cabinet.133
+	title = usa_cabinet.133.t
+	desc = usa_cabinet.133.d
+	picture = GFX_report_event_usa_great_depression
+
+	is_triggered_only = yes
+
+	option = {
+		name = usa_cabinet.133.a
+		retire_country_leader = yes
+		create_country_leader = {
+			name = "Henry A. Wallace"
+			desc = "USA_henry_wallace_desc"
+			picture = "gfx/leaders/Europe/Portrait_Europe_Generic_4.dds"
+			expire = "1965.1.1"
+			ideology = socialism
+		}
+		set_party_name = {
+			ideology = democratic
+			long_name = USA_prog_party_long
+			name = USA_prog_party
+		}
+		add_popularity = { ideology = communism popularity = 0.03 }
+		add_stability = -0.03
+		USA_clear_cabinet = yes
+		USA_set_era_flag_1952 = yes
+		country_event = { id = usa_cabinet.149 hours = 12 }
+	}
+}
+
+# The Man on Horseback: the authoritarian ballot upset of 1948.
+# Only routed here when the resolver set USA_election_winner_auth, so the
+# single option needs no trigger.
+country_event = {
+	id = usa_cabinet.134
+	title = usa_cabinet.134.t
+	desc = usa_cabinet.134.d
+	picture = GFX_report_event_usa_great_depression
+
+	is_triggered_only = yes
+
+	option = {
+		name = usa_cabinet.134.a
+		add_political_power = -75
+		add_popularity = { ideology = fascism popularity = 0.05 }
+		set_country_flag = USA_auth_onramp
+		USA_clear_cabinet = yes
+		USA_set_era_flag_1952 = yes
+		country_event = { id = usa_cabinet.149 hours = 12 }
+	}
+}
+
+#######################################################################
+# THE ELECTION OF 1952 (usa_cabinet.140-144; .143 reserved)
+# Fired by USA_trunk_election_1952. Every outcome: USA_clear_cabinet +
+# USA_set_era_flag_1956 + .149. The Eisenhower draft here is the generic
+# trunk case; the Democratic wing's own '52 focuses (Task 6) carry the
+# party-specific versions.
+#######################################################################
+
+# The ballot: draft the General, back the Governor, or the country decides
+country_event = {
+	id = usa_cabinet.140
+	title = usa_cabinet.140.t
+	desc = usa_cabinet.140.d
+	picture = GFX_report_event_usa_congress_speaks
+
+	is_triggered_only = yes
+
+	option = {
+		name = usa_cabinet.140.a
+		ai_chance = { factor = 60 }
+		country_event = { id = usa_cabinet.141 hours = 6 }
+	}
+
+	option = {
+		name = usa_cabinet.140.b
+		ai_chance = { factor = 25 }
+		country_event = { id = usa_cabinet.142 hours = 6 }
+	}
+
+	option = {
+		name = usa_cabinet.140.c
+		ai_chance = { factor = 15 }
+		USA_resolve_election = yes
+		hidden_effect = {
+			if = {
+				limit = { has_country_flag = USA_election_winner_gop }
+				country_event = { id = usa_cabinet.141 hours = 6 }
+			}
+			else_if = {
+				limit = {
+					OR = {
+						has_country_flag = USA_election_winner_rad
+						has_country_flag = USA_election_winner_auth
+					}
+				}
+				country_event = { id = usa_cabinet.144 hours = 6 }
+			}
+			else = {
+				country_event = { id = usa_cabinet.142 hours = 6 }
+			}
+		}
+	}
+}
+
+# I Like Ike (generic portrait; Task 13 GFX sweep)
+country_event = {
+	id = usa_cabinet.141
+	title = usa_cabinet.141.t
+	desc = usa_cabinet.141.d
+	picture = GFX_report_event_press_conference
+
+	is_triggered_only = yes
+
+	option = {
+		name = usa_cabinet.141.a
+		retire_country_leader = yes
+		create_country_leader = {
+			name = "Dwight D. Eisenhower"
+			desc = "USA_dwight_eisenhower_desc"
+			picture = "gfx/leaders/Europe/Portrait_Europe_Generic_5.dds"
+			expire = "1965.1.1"
+			ideology = conservatism
+		}
+		set_party_name = {
+			ideology = democratic
+			long_name = USA_gop_party_long
+			name = USA_gop_party
+		}
+		add_stability = 0.05
+		USA_clear_cabinet = yes
+		USA_set_era_flag_1956 = yes
+		country_event = { id = usa_cabinet.149 hours = 12 }
+	}
+}
+
+# Madly for Adlai (generic portrait; Task 13 GFX sweep)
+country_event = {
+	id = usa_cabinet.142
+	title = usa_cabinet.142.t
+	desc = usa_cabinet.142.d
+	picture = GFX_report_event_press_conference
+
+	is_triggered_only = yes
+
+	option = {
+		name = usa_cabinet.142.a
+		retire_country_leader = yes
+		create_country_leader = {
+			name = "Adlai Stevenson"
+			desc = "USA_adlai_stevenson_desc"
+			picture = "gfx/leaders/Europe/Portrait_Europe_Generic_6.dds"
+			expire = "1965.1.1"
+			ideology = liberalism
+		}
+		set_party_name = {
+			ideology = democratic
+			long_name = USA_dem_party_long
+			name = USA_dem_party
+		}
+		add_stability = 0.02
+		USA_clear_cabinet = yes
+		USA_set_era_flag_1956 = yes
+		country_event = { id = usa_cabinet.149 hours = 12 }
+	}
+}
+
+# The Old Order Overturned: the 1952 fringe upset (see .114 notes)
+country_event = {
+	id = usa_cabinet.144
+	title = usa_cabinet.144.t
+	desc = usa_cabinet.144.d
+	picture = GFX_report_event_usa_great_depression
+
+	is_triggered_only = yes
+
+	option = {
+		name = usa_cabinet.144.a
+		trigger = { has_country_flag = USA_election_winner_rad }
+		add_political_power = -75
+		add_popularity = { ideology = communism popularity = 0.05 }
+		set_country_flag = USA_election_upset
+		USA_clear_cabinet = yes
+		USA_set_era_flag_1956 = yes
+		country_event = { id = usa_cabinet.149 hours = 12 }
+	}
+
+	option = {
+		name = usa_cabinet.144.b
+		trigger = { has_country_flag = USA_election_winner_auth }
+		add_political_power = -75
+		add_popularity = { ideology = fascism popularity = 0.05 }
+		set_country_flag = USA_auth_onramp
+		USA_clear_cabinet = yes
+		USA_set_era_flag_1956 = yes
+		country_event = { id = usa_cabinet.149 hours = 12 }
+	}
+}
+
+# The Torch Passes: shared inauguration flavour for every election from
+# 1940 on. One generically-written event instead of four near-identical
+# flavour events (approved deviation from the original sketch).
+country_event = {
+	id = usa_cabinet.149
+	title = usa_cabinet.149.t
+	desc = usa_cabinet.149.d
+	picture = GFX_report_event_press_conference
+
+	is_triggered_only = yes
+
+	option = {
+		name = usa_cabinet.149.a
+	}
+}
+
+#######################################################################
+# THE AUTHORITARIAN ON-RAMPS (usa_cabinet.200-201)
+# Fired by USA_trunk_third_term_crisis / USA_trunk_suspended_election.
+# Each offers commit-or-step-back. Era flags need no handling here:
+# USA_era_flag_backstop counts the crisis focuses as the dark twins of
+# the elections they replace, and the USA_elections_suspended flag keeps
+# later eras advancing while the Caesar reigns.
+#######################################################################
+
+# The Third Term Crisis: the election of 1940 is "postponed"
+country_event = {
+	id = usa_cabinet.200
+	title = usa_cabinet.200.t
+	desc = usa_cabinet.200.d
+	picture = GFX_report_event_usa_congress_speaks
+
+	is_triggered_only = yes
+
+	# Commit: the constitutional order bends; the authoritarian wing opens.
+	option = {
+		name = usa_cabinet.200.a
+		ai_chance = { factor = 50 }
+		add_political_power = -100
+		add_popularity = { ideology = fascism popularity = 0.05 }
+		set_country_flag = USA_auth_onramp
+	}
+
+	# Step back: clear USA_elections_suspended; the democratic track
+	# reopens through USA_trunk_election_1944 (whose OR-prerequisite
+	# accepts the crisis focus as the 1940 cycle's dark twin).
+	option = {
+		name = usa_cabinet.200.b
+		ai_chance = { factor = 50 }
+		clr_country_flag = USA_elections_suspended
+		add_stability = 0.05
+		add_political_power = 25
+	}
+}
+
+# The Suspended Election: martial law swallows the ballot of 1944
+country_event = {
+	id = usa_cabinet.201
+	title = usa_cabinet.201.t
+	desc = usa_cabinet.201.d
+	picture = GFX_report_event_usa_congress_speaks
+
+	is_triggered_only = yes
+
+	# Commit: the Caesar's state hardens.
+	option = {
+		name = usa_cabinet.201.a
+		ai_chance = { factor = 50 }
+		set_country_flag = USA_elections_suspended
+		set_country_flag = USA_auth_onramp
+		add_stability = -0.05
+		add_popularity = { ideology = fascism popularity = 0.05 }
+	}
+
+	# Step back: announce the ballot of 1948; USA_trunk_election_1948
+	# accepts this focus as the 1944 cycle's dark twin.
+	option = {
+		name = usa_cabinet.201.b
+		ai_chance = { factor = 50 }
+		clr_country_flag = USA_elections_suspended
+		add_stability = 0.05
+		add_political_power = 25
 	}
 }
