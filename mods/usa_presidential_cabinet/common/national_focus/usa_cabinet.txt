@@ -803,6 +803,7 @@ focus_tree = {
 		prerequisite = { focus = USA_dem_cash_and_carry }
 		available = {
 			date > 1940.6.1
+			has_country_flag = USA_cab_state_internationalist
 		}
 		completion_reward = {
 			if = {
@@ -912,6 +913,9 @@ focus_tree = {
 		y = 8
 		cost = 10
 		prerequisite = { focus = USA_dem_lend_lease }
+		available = {
+			has_country_flag = USA_cab_state_internationalist
+		}
 		completion_reward = {
 			add_ideas = USA_war_aims_spirit
 			if = {
@@ -1005,6 +1009,7 @@ focus_tree = {
 		prerequisite = { focus = USA_dem_atlantic_charter }
 		available = {
 			date > 1943.1.1
+			has_country_flag = USA_cab_state_internationalist
 			OR = {
 				has_country_flag = USA_at_war
 				has_war = yes
@@ -1097,6 +1102,7 @@ focus_tree = {
 		prerequisite = { focus = USA_dem_tehran }
 		available = {
 			date > 1944.11.1
+			has_country_flag = USA_cab_state_internationalist
 		}
 		completion_reward = {
 			set_country_flag = USA_yalta_accords
@@ -1174,6 +1180,7 @@ focus_tree = {
 		prerequisite = { focus = USA_dem_president_is_dead }
 		available = {
 			has_country_flag = USA_era_1944
+			has_country_flag = USA_cab_state_internationalist
 			OR = {
 				has_country_flag = USA_postwar
 				date > 1946.1.1
@@ -1206,6 +1213,9 @@ focus_tree = {
 		y = 12
 		cost = 10
 		prerequisite = { focus = USA_trunk_shape_of_the_peace }
+		available = {
+			has_country_flag = USA_cab_state_internationalist
+		}
 		completion_reward = {
 			add_political_power = 120
 			add_ideas = USA_united_nations_spirit
@@ -1283,6 +1293,7 @@ focus_tree = {
 		prerequisite = { focus = USA_dem_containment }
 		available = {
 			date > 1947.3.1
+			has_country_flag = USA_cab_state_internationalist
 		}
 		completion_reward = {
 			add_political_power = 60
@@ -1377,6 +1388,7 @@ focus_tree = {
 		prerequisite = { focus = USA_dem_containment }
 		available = {
 			date > 1950.1.1
+			has_country_flag = USA_cab_war_loyalist
 		}
 		completion_reward = {
 			add_manpower = 250000
@@ -1415,6 +1427,7 @@ focus_tree = {
 		prerequisite = { focus = USA_dem_marshall_plan }
 		available = {
 			date > 1949.4.1
+			has_country_flag = USA_cab_state_internationalist
 		}
 		completion_reward = {
 			add_ideas = USA_nato_spirit
@@ -1447,6 +1460,7 @@ focus_tree = {
 		prerequisite = { focus = USA_dem_nsc68 }
 		available = {
 			date > 1950.6.1
+			has_country_flag = USA_cab_war_loyalist
 			OR = {
 				has_war = yes
 				has_country_flag = USA_at_war
@@ -1866,6 +1880,9 @@ focus_tree = {
 		y = 5
 		cost = 10
 		prerequisite = { focus = USA_gop_america_first }
+		available = {
+			has_country_flag = USA_cab_state_isolationist
+		}
 		completion_reward = {
 			add_war_support = -0.05
 			add_stability = 0.03
@@ -1917,6 +1934,9 @@ focus_tree = {
 		y = 6
 		cost = 10
 		prerequisite = { focus = USA_gop_neutrality_acts_teeth }
+		available = {
+			has_country_flag = USA_cab_war_loyalist
+		}
 		completion_reward = {
 			add_ideas = USA_gop_hemisphere_patrol_spirit
 		}
@@ -1937,6 +1957,9 @@ focus_tree = {
 			focus = USA_gop_hemisphere_patrol
 		}
 		mutually_exclusive = { focus = USA_gop_reluctant_crusade }
+		available = {
+			has_country_flag = USA_cab_state_isolationist
+		}
 		completion_reward = {
 			add_war_support = 0.05
 			add_manpower = 100000
@@ -1980,6 +2003,7 @@ focus_tree = {
 		prerequisite = { focus = USA_gop_reluctant_crusade }
 		available = {
 			has_war = yes
+			has_country_flag = USA_cab_war_loyalist
 		}
 		completion_reward = {
 			add_war_support = 0.05
@@ -2067,6 +2091,9 @@ focus_tree = {
 		y = 13
 		cost = 10
 		prerequisite = { focus = USA_gop_mr_republican }
+		available = {
+			has_country_flag = USA_cab_state_isolationist
+		}
 		completion_reward = {
 			add_ideas = USA_fortress_america_spirit
 			add_war_support = 0.05
@@ -2180,6 +2207,7 @@ focus_tree = {
 		prerequisite = { focus = USA_gop_ike_draft }
 		available = {
 			date > 1953.1.1
+			has_country_flag = USA_cab_state_internationalist
 		}
 		completion_reward = {
 			add_stability = 0.05
@@ -2874,6 +2902,9 @@ focus_tree = {
 		y = 7
 		cost = 10
 		prerequisite = { focus = USA_auth_new_order_at_home }
+		available = {
+			has_country_flag = USA_cab_ag_security_hawk
+		}
 		completion_reward = {
 			# Daily PP drain modelled via the loyalty_oaths_spirit idea modifier.
 			add_stability = 0.10
@@ -2893,6 +2924,9 @@ focus_tree = {
 		y = 6
 		cost = 10
 		prerequisite = { focus = USA_auth_crush_labor }
+		available = {
+			has_country_flag = USA_cab_ag_security_hawk
+		}
 		completion_reward = {
 			add_popularity = { ideology = democratic popularity = -0.01 }
 			add_ideas = USA_auth_press_control_spirit
@@ -3806,6 +3840,7 @@ focus_tree = {
 		prerequisite = { focus = USA_mil_anchor }
 		available = {
 			date > 1939.1.1
+			has_country_flag = USA_cab_war_loyalist
 		}
 		completion_reward = {
 			# Two civilian factories — one in Texas (oil country), one in California.

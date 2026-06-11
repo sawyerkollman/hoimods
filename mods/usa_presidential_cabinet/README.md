@@ -1,135 +1,90 @@
-# Presidential Cabinet — A USA Overhaul (HOI4)
+# Wings of the Eagle — Presidential Cabinet USA Overhaul (HOI4) v0.3.0
 
-A standalone focus tree for the **United States** in Hearts of Iron IV. It
-replaces the vanilla US tree with a new one built around a **Presidential
-Cabinet / "inner circle"** system inspired by Germany's Götterdämmerung
-mechanic, plus a layered historical-and-alternate-history spine that gives
-the United States real depth **beyond 1942** (postwar planning, Bretton
-Woods, the UN, the Marshall Plan, and the opening moves of the Cold War).
+A complete 1936–1956 national focus tree for the United States in Hearts of Iron IV that replaces the vanilla US tree with a **186-focus** "Wings of the Eagle" layout — a cabinet-and-elections trunk down the center, four ideology wings fanning outward, and one shared military pillar that all paths share.
 
-## Features
+## Wings at a Glance
 
-### The Brain Trust (the cabinet / inner circle)
-Assemble FDR's inner circle through focuses. Each of four cabinet seats has
-two **mutually exclusive** candidates pulling the administration toward the
-**Progressive / New Deal** pole or the **Old Guard / Conservative** pole:
+### Democratic Wing
+Historical Roosevelt → Truman → Eisenhower/Stevenson spine, gated on cabinet appointments and era flags.
 
-| Seat | Progressive pick | Conservative pick |
-|------|------------------|-------------------|
-| Secretary of State | Cordell Hull (internationalist) | An Isolationist |
-| Secretary of the Treasury | Henry Morgenthau | A Man of Business |
-| Secretary of War | Henry Stimson | Harry Woodring |
-| Attorney General | Frank Murphy | A Security Hawk |
+- **1936–44:** New Deal legislation, Hull's foreign policy ladder (Cash-and-Carry → Destroyers for Bases → Lend-Lease), and the wartime mobilization arc (WPB, OSRD, Tehran, Yalta)
+- **1945–48:** Bretton Woods, the United Nations, the Truman Doctrine, and Marshall Plan as separate focuses
+- **1949–52:** NATO, NSC-68 rearmament, Korea, and the managed Red Scare (gated on the AG's civil-libertarian flag)
+- **1953–56:** New Look strategy, Atoms for Peace, the St. Lawrence Seaway, and the Interstate Highway capstone
 
-Every appointment grants that member as a **national-spirit idea** (so the
-cabinet shows as a row of "inner circle" portraits with their own bonuses)
-and shifts a **Cabinet power balance** (Progressives ⟷ Old Guard). The
-make-up of your cabinet then unlocks divergent paths.
+### Republican Wing
+America First isolationism vs. Eastern Establishment internationalism — the player's fork at "Dewey for President" (1944).
 
-### Layered historical + alternate-history paths
-- **Historical spine:** A Nation Rebuilds → Second New Deal → Total
-  Mobilization (1941+) → Manhattan Project → Postwar Planning → Bretton
-  Woods → United Nations → Marshall Plan → Iron Curtain → **Containment vs.
-  Return to Normalcy**, capped by *The American Century*.
-- **Progressive offshoots:** Economic Bill of Rights, and (deep progressive)
-  *A Cooperative Commonwealth*.
-- **Conservative / reactionary offshoots:** Restore the Old Republic, and
-  (deep conservative) *The American Caesar*.
-- **Demobilization vs. a Permanent Military Establishment** after the war.
-- **R&D branch** (Scientific Establishment → Electronics Mastery →
-  Operations Research) granting electronics/research bonuses and an **extra
-  research slot** to push into the extended (Road to 56) tech trees.
+- **Isolationist line:** America First → Neutrality Acts with Teeth → Fortress America → Armed Neutrality; gated on the isolationist State seat flag
+- **Taft postwar:** Mr. Republican → Fortress Doctrine → Bring the Boys Home → Hemisphere Imperium → McCarthy Unleashed (gated on security-hawk AG flag)
+- **Establishment postwar:** Eastern Establishment → Vandenberg Moment → Draft Eisenhower → Dynamic Conservatism → McCarthy Censured
+- **Shared gate:** both postwar lines feed into Rollback vs. Containment, reflecting the 1952 foreign-policy debate
 
-## How the cabinet mechanic is implemented
+### Radical Wing
+Share Our Wealth / Popular Front → Workers' Democracy vs. Vanguard — two mutually exclusive capstones.
 
-- The cabinet is **focus-driven** (as requested), with mutually-exclusive
-  candidate focuses per seat.
-- Appointees and milestones are **national-spirit ideas** (`common/ideas`).
-- Internal struggle is shown by a **power balance** (`common/power_balance`).
-- **Crucially, every branching path is gated on hidden influence
-  _variables_** (`USA_progressive_influence` / `USA_conservative_influence` /
-  `USA_cabinet_seats_filled`), not on the power balance. This means the tree
-  and cabinet remain fully functional even if a particular game version
-  handles power-balance scripting differently — the power balance is purely a
-  flavour indicator.
+- **Opening arc:** Voices of Discontent → fork to Long's SOW or CPUSA Popular Front → Sit-Down Wave → Labor Bill of Rights
+- **Mid-game:** Radical Commitment → seizure of government → Third Camp neutrality or Comintern pivot
+- **Democratic path:** Workers' Parliament → Economic Democracy → Red Half-Century (democratic)
+- **Vanguard path:** Smash the Reaction → Comintern Pivot → Atomic Secrets Shared → Red Half-Century (vanguard)
 
-## Requirements / compatibility
+### Authoritarian Wing
+Business Plot / Silver Legion → Pax Americana → Imperium — Caesar's ascent.
 
-- **Road to 56 submod.** This mod declares **Road to 56** as a dependency
-  (`dependencies` in `descriptor.mod`) so the launcher loads R56 first and
-  this mod on top. You must **subscribe to Road to 56 yourself** — none of
-  R56's files are copied or redistributed here. With R56 active, the focus
-  tree's tech bonuses feed R56's extended late-war / Cold War trees, and the
-  R&D branch (extra research slot + research speed) lets you actually reach
-  them.
-  - The focus tech bonuses use **vanilla research _categories_**
-    (industry, electronics, nuclear, doctrines), which automatically cover
-    whatever extended techs R56 adds in those categories — no fragile
-    references to R56-specific technology IDs.
-  - It will still load **without** R56; you simply won't have the extended
-    trees, only the deeper research bonuses.
-- Designed against a **Götterdämmerung-era** install (the power balance and
-  inner-circle framing assume that DLC's systems). The variable-gated core
-  works without it; only the power-balance meter depends on newer scripting.
-- Replaces the vanilla USA national focus tree (it out-weights it for tag
-  USA), so it is **not compatible** with other mods that overhaul the US
-  tree.
-- `supported_version` is set to `1.16.*`. If you are on a different patch,
-  edit `descriptor.mod` — the launcher only warns, it will still load.
+- **Rise:** Business Plot → Silver Legion Rises → Crush Labor; press control and loyalty oaths gated on security-hawk AG
+- **Consolidation:** New Order at Home (surveillance state), Hemisphere Destiny, Tribune of the People
+- **Expansion:** Pax Americana → Tribute System → Legions Overseas; Atomic Diplomacy gated on War Department loyalist
+- **Endgame:** The Imperium (ideology locked to fascism) + The Succession Question flavor capstone
 
-### Load order
+### Military Pillar (shared by all wings)
+All ideologies can take this pillar; no wing prerequisite.
 
-In the launcher Playset, order them top-to-bottom:
+- **Industry:** War Resources Board (gated on war-loyalist War Dept.) → Synthetic Rubber → Willow Run → Liberty Fleet
+- **Navy:** Two-Ocean Navy → Carrier Doctrine → Essex Program → Fleet Train
+- **Air:** Air Corps Expansion → Very Long Range → Strategic Air Command → Jet Transition → Century Series
+- **Atomic:** Uranium Committee → Manhattan Project → Trinity → The Super → Atoms Underwater
+- **Korea-era:** Rotation System → Helicopter Age → Continental Defense
 
-```
-Road to 56
-Presidential Cabinet - A USA Overhaul   (this mod, loaded last)
-```
+## Cabinet System
+
+Five election focuses act as chapter breaks: **1936, 1940, 1944, 1948, 1952**. Each election fires a campaign event and sets an era flag (`USA_era_1940`, etc.) that gates later focuses. After each election the player assembles (or reassembles) **four cabinet seats**:
+
+| Seat | Progressive / Internationalist pick | Conservative / Hawk pick |
+|------|--------------------------------------|--------------------------|
+| Secretary of State | Cordell Hull / Stettinius / Byrnes | Isolationist appointee / Taftman |
+| Secretary of the Treasury | Henry Morgenthau / Vinson / Snyder | Business Treasury / Banker |
+| Secretary of War / Defense | Henry Stimson / Forrestal / Wilson | Harry Woodring / MacArthur |
+| Attorney General | Frank Murphy / Clark / Brownell | Security Hawk / McGrath appointee |
+
+Each appointment sets a **country flag** (`USA_cab_state_internationalist`, `USA_cab_state_isolationist`, `USA_cab_war_loyalist`, `USA_cab_ag_civil_libertarian`, `USA_cab_ag_security_hawk`). Those flags gate 25 later focuses across all five wings — a civil-libertarian AG is required to manage the Red Scare, an internationalist State Department is required to reach Bretton Woods and NATO, a war-loyalist Defense secretary is required to pursue NSC-68 and Atomic Diplomacy.
+
+Cabinet appointments also track a **Progressive ⟷ Old Guard power balance** (`USA_cabinet_power_balance`) and fill `USA_cabinet_seats_filled`, which the 1936 election focus reads before unlocking the wing anchors.
+
+## Requirements
+
+- **Hearts of Iron IV** (tested against current Paradox launcher)
+- **Road to 56** — place this mod **above** Road to 56 in your playset load order so R56 loads first
+
+The mod will load without R56, but the extended Cold War tech trees (jet aircraft, nuclear doctrine, late electronics) will be absent.
 
 ## Installation
 
-**Easiest (Windows):** from the repo root, run the installer — it copies this
-mod into your HOI4 mod folder and creates the launcher pointer for you:
+### Linux / macOS
+From the repository root:
+```bash
+./install.sh usa_presidential_cabinet
+```
+This copies the mod folder and writes the launcher pointer file to your HOI4 mod directory.
 
+### Windows
 ```powershell
-powershell -ExecutionPolicy Bypass -File .\install.ps1 -Mod usa_presidential_cabinet
+.\install.ps1 usa_presidential_cabinet
 ```
 
-**Manual:** copy both of these from the repo's `mods\` folder into your HOI4
-mod directory (`Documents\Paradox Interactive\Hearts of Iron IV\mod\`):
+### Manual
+Copy both of these from `mods/` into your HOI4 mod directory
+(`Documents\Paradox Interactive\Hearts of Iron IV\mod\`):
+- the `usa_presidential_cabinet/` folder
+- the `usa_presidential_cabinet.mod` pointer file
 
-- the `usa_presidential_cabinet\` folder
-- the `usa_presidential_cabinet.mod` pointer file (already set with
-  `path="mod/usa_presidential_cabinet"`)
-
-Then subscribe to **Road to 56** on the Steam Workshop, launch HOI4, enable
-both mods in a Playset (Road to 56 above this mod), and start as the USA.
-
-## File layout
-
-```
-descriptor.mod
-common/national_focus/usa_cabinet.txt        # the focus tree
-common/ideas/usa_cabinet_ideas.txt           # cabinet members + spirits
-common/power_balance/usa_cabinet_power_balance.txt
-common/scripted_effects/usa_cabinet_effects.txt
-common/on_actions/usa_cabinet_on_actions.txt # variable init at game start
-events/usa_cabinet_events.txt                # flavour events
-localisation/english/usa_cabinet_l_english.yml
-```
-
-## Known limitations / next steps
-
-- No custom art yet — focuses reuse vanilla goal icons and ideas use default
-  portraits. Drop sprites into `gfx/interface/` and wire them up to brand it.
-- Cabinet members are spirits, not recruitable advisor *characters*; a future
-  pass could promote them to full character/advisor definitions with
-  portraits.
-- The alt-history paths set ideology popularity but do not yet force full
-  government changes, civil wars, or unique war goals — natural areas to
-  expand.
-
-This is a v0.1 foundation: it loads as a coherent, internally-consistent
-tree. Because it can't be play-tested in this environment, load it once in
-your own game and check the error log (`logs/error.log`) for any
-version-specific tweaks.
+Then enable both Road to 56 and this mod in a Playset, with Road to 56 above this mod.
