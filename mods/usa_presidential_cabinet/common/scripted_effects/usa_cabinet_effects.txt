@@ -30,3 +30,42 @@ USA_shift_cabinet_conservative = {
 	add_to_variable = { USA_conservative_influence = 1 }
 	add_power_balance_value = { id = USA_cabinet_balance value = 0.15 }
 }
+
+###########################################################################
+# ERA FLAGS - Set by the election resolution events as each presidential
+# term begins. Era-gated focuses and slates read these flags.
+###########################################################################
+
+USA_set_era_flag_1940 = {
+	set_country_flag = USA_era_1940
+}
+
+USA_set_era_flag_1944 = {
+	set_country_flag = USA_era_1944
+}
+
+USA_set_era_flag_1948 = {
+	set_country_flag = USA_era_1948
+}
+
+USA_set_era_flag_1952 = {
+	set_country_flag = USA_era_1952
+}
+
+# Sweep the cabinet clean between administrations: removes every cabinet
+# seat idea from any era and resets the seat counter.
+# IMPORTANT: every new cabinet idea id added by later tasks (the 1940-1952
+# era slates) MUST be appended to the remove_ideas list below.
+USA_clear_cabinet = {
+	remove_ideas = {
+		USA_cabinet_cordell_hull
+		USA_cabinet_isolationist_state
+		USA_cabinet_morgenthau
+		USA_cabinet_business_treasury
+		USA_cabinet_stimson
+		USA_cabinet_woodring
+		USA_cabinet_murphy
+		USA_cabinet_security_ag
+	}
+	set_variable = { USA_cabinet_seats_filled = 0 }
+}
