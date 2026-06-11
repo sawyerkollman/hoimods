@@ -1162,7 +1162,7 @@ focus_tree = {
 	#  '56 capstone: hundred_million_strong(-1,21)
 
 	# Bretton Woods (1944-45): the dollar becomes the world's anchor.
-	# Prerequisites: era_1948 flag (election of 1944 resolved) plus the
+	# Prerequisites: era_1944 flag (election of 1944 resolved) plus the
 	# postwar/peacetime gate. GFX: generic economic focus.
 	focus = {
 		id = USA_dem_bretton_woods
@@ -1173,7 +1173,7 @@ focus_tree = {
 		cost = 10
 		prerequisite = { focus = USA_dem_president_is_dead }
 		available = {
-			has_country_flag = USA_era_1948
+			has_country_flag = USA_era_1944
 			OR = {
 				has_country_flag = USA_postwar
 				date > 1946.1.1
@@ -1481,7 +1481,6 @@ focus_tree = {
 		mutually_exclusive = { focus = USA_dem_election_52_egghead }
 		available = {
 			has_country_flag = USA_election_winner_dem
-			has_country_flag = USA_era_1956
 		}
 		completion_reward = {
 			retire_country_leader = yes
@@ -1519,7 +1518,6 @@ focus_tree = {
 		mutually_exclusive = { focus = USA_dem_election_52_ike }
 		available = {
 			has_country_flag = USA_election_winner_dem
-			has_country_flag = USA_era_1956
 		}
 		completion_reward = {
 			retire_country_leader = yes
@@ -2850,8 +2848,12 @@ focus_tree = {
 		y = 6
 		cost = 10
 		prerequisite = { focus = USA_auth_crush_labor }
+		# TODO(Task 11): auth-era AG appointment should also set USA_cab_ag_security_hawk
 		available = {
-			has_country_flag = USA_cab_ag_security_hawk
+			OR = {
+				has_country_flag = USA_cab_ag_security_hawk
+				date > 1940.1.1  # Fallback until Task 11 auth-era AG slate sets the flag on later appointments
+			}
 		}
 		completion_reward = {
 			add_ideas = USA_auth_security_state_spirit
