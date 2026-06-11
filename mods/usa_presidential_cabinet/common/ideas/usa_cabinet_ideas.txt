@@ -648,5 +648,46 @@ ideas = {
 			}
 		}
 
+		###################################################################
+		# RADICAL WING SPIRITS (Task 8: 1945-56)
+		###################################################################
+
+		# USA_rad_third_camp: the independent socialist path — neither
+		# Moscow nor Washington.
+		USA_rad_third_camp_spirit = {
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				trade_opinion_factor = 0.15
+				improve_relations_maintain_cost_factor = -0.15
+				political_power_gain = 0.10
+			}
+		}
+
+		# USA_rad_red_half_century_dem capstone: the victory of democratic
+		# socialism.
+		USA_rad_red_half_century_dem_spirit = {
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.10
+				political_power_gain = 0.15
+				consumer_goods_factor = -0.05
+				production_speed_buildings_factor = 0.10
+			}
+		}
+
+		# USA_rad_red_half_century_van capstone: the party-state at its apex.
+		USA_rad_red_half_century_van_spirit = {
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				war_support_factor = 0.10
+				political_power_gain = 0.20
+				army_org_factor = 0.05
+				stability_factor = -0.03
+			}
+		}
+
 	}
 }

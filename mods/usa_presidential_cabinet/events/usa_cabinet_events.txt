@@ -1279,6 +1279,87 @@ country_event = {
 	}
 }
 
+# The Comintern Offer (usa_cabinet.213): fired by USA_rad_comintern_pivot.
+# Moscow extends an invitation; the vanguard state must decide.
+country_event = {
+	id = usa_cabinet.213
+	title = usa_cabinet.213.t
+	desc = usa_cabinet.213.d
+	picture = GFX_report_event_usa_congress_speaks
+
+	is_triggered_only = yes
+
+	# Join the Comintern: full alignment with Moscow.
+	option = {
+		name = usa_cabinet.213.a
+		ai_chance = { factor = 50 }
+		if = {
+			limit = { country_exists = SOV }
+			SOV = { set_faction_leader = yes }
+			if = {
+				limit = {
+					SOV = { is_faction_leader = yes }
+				}
+				join_faction = SOV
+			}
+		}
+		add_political_power = 40
+	}
+
+	# Remain independent: a socialist America on its own terms.
+	option = {
+		name = usa_cabinet.213.b
+		ai_chance = { factor = 50 }
+		if = {
+			limit = { country_exists = SOV }
+			SOV = {
+				add_opinion_modifier = {
+					target = USA
+					modifier = USA_wartime_conference
+				}
+			}
+		}
+		add_stability = 0.03
+		add_political_power = 25
+	}
+}
+
+# The Atomic Choice (usa_cabinet.214): fired by USA_rad_atomic_secrets_shared.
+# The vanguard state holds the bomb's secrets. Share, or hold?
+country_event = {
+	id = usa_cabinet.214
+	title = usa_cabinet.214.t
+	desc = usa_cabinet.214.d
+	picture = GFX_report_event_usa_congress_speaks
+
+	is_triggered_only = yes
+
+	# Share the secrets with Moscow: socialist solidarity.
+	option = {
+		name = usa_cabinet.214.a
+		ai_chance = { factor = 50 }
+		if = {
+			limit = { country_exists = SOV }
+			SOV = {
+				add_opinion_modifier = {
+					target = USA
+					modifier = USA_wartime_conference
+				}
+			}
+		}
+		add_world_tension = 15.0
+		add_stability = -0.05
+	}
+
+	# Hold the secret: even among friends, power must be balanced.
+	option = {
+		name = usa_cabinet.214.b
+		ai_chance = { factor = 50 }
+		add_political_power = 30
+		add_stability = 0.03
+	}
+}
+
 # The General Comes Home - GOP path (usa_cabinet.261): fired by
 # USA_gop_ike_draft. Eisenhower is drafted by the Republican Establishment,
 # bringing the Presidency within reach.

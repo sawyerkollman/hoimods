@@ -2509,6 +2509,167 @@ focus_tree = {
 		ai_will_do = { factor = 3 }
 	}
 
+	# --- RAD wing, 1945-56 ---------------------------------------------------
+	# Workers' democracy postwar line (requires USA_rad_democratic):
+	#   third_camp -> economic_democracy -> red_half_century_dem
+	# Vanguard postwar line (requires USA_rad_vanguard):
+	#   comintern_pivot -> atomic_secrets_shared -> red_half_century_van
+	# Shared postwar:
+	#   peoples_war_memorial (avail USA_postwar flag)
+
+	# Workers' Democracy postwar: an independent socialist America.
+	focus = {
+		id = USA_rad_third_camp
+		icon = GFX_goal_generic_positive_trade_relations
+		relative_position_id = USA_rad_anchor
+		x = -1
+		y = 10
+		cost = 10
+		prerequisite = { focus = USA_rad_workers_democracy }
+		available = {
+			OR = {
+				has_country_flag = USA_postwar
+				has_country_flag = USA_era_1948
+			}
+		}
+		completion_reward = {
+			add_political_power = 40
+			add_ideas = USA_rad_third_camp_spirit
+		}
+		ai_will_do = { factor = 3 }
+	}
+
+	# Economic Democracy: socialist economic planning in peacetime.
+	focus = {
+		id = USA_rad_economic_democracy
+		icon = GFX_goal_generic_construct_civ_factory
+		relative_position_id = USA_rad_anchor
+		x = -1
+		y = 11
+		cost = 10
+		prerequisite = { focus = USA_rad_third_camp }
+		available = {
+			has_country_flag = USA_postwar
+		}
+		completion_reward = {
+			add_political_power = 50
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+		}
+		ai_will_do = { factor = 3 }
+	}
+
+	# The Red Half-Century (democratic path): the progressive capstone.
+	focus = {
+		id = USA_rad_red_half_century_dem
+		icon = GFX_goal_generic_construct_civ_factory
+		relative_position_id = USA_rad_anchor
+		x = -1
+		y = 12
+		cost = 10
+		prerequisite = { focus = USA_rad_economic_democracy }
+		available = {
+			date > 1954.1.1
+		}
+		completion_reward = {
+			add_ideas = USA_rad_red_half_century_dem_spirit
+			add_stability = 0.05
+		}
+		ai_will_do = { factor = 3 }
+	}
+
+	# Comintern Pivot: the vanguard state reaches toward Moscow.
+	# Fires usa_cabinet.213 (offer to join Comintern faction).
+	focus = {
+		id = USA_rad_comintern_pivot
+		icon = GFX_goal_generic_major_alliance
+		relative_position_id = USA_rad_anchor
+		x = 1
+		y = 10
+		cost = 10
+		prerequisite = { focus = USA_rad_smash_the_reaction }
+		available = {
+			OR = {
+				has_country_flag = USA_postwar
+				has_country_flag = USA_era_1948
+			}
+		}
+		completion_reward = {
+			if = {
+				limit = { country_exists = SOV }
+				SOV = {
+					add_opinion_modifier = {
+						target = USA
+						modifier = USA_wartime_conference
+					}
+				}
+			}
+			country_event = { id = usa_cabinet.213 hours = 6 }
+		}
+		ai_will_do = { factor = 2 }
+	}
+
+	# Atomic Secrets Shared: the choice to give Moscow the Bomb.
+	# Fires usa_cabinet.214 (world tension spike or solidarity).
+	focus = {
+		id = USA_rad_atomic_secrets_shared
+		icon = GFX_goal_generic_scientific_exchange
+		relative_position_id = USA_rad_anchor
+		x = 0
+		y = 11
+		cost = 10
+		prerequisite = { focus = USA_rad_comintern_pivot }
+		available = {
+			has_country_flag = USA_postwar
+		}
+		completion_reward = {
+			country_event = { id = usa_cabinet.214 hours = 6 }
+		}
+		ai_will_do = { factor = 2 }
+	}
+
+	# The Red Half-Century (vanguard path): the party-state capstone.
+	focus = {
+		id = USA_rad_red_half_century_van
+		icon = GFX_goal_generic_propaganda
+		relative_position_id = USA_rad_anchor
+		x = 1
+		y = 12
+		cost = 10
+		prerequisite = { focus = USA_rad_atomic_secrets_shared }
+		available = {
+			date > 1954.1.1
+		}
+		completion_reward = {
+			add_ideas = USA_rad_red_half_century_van_spirit
+			set_cosmetic_tag = USA_SOCIALIST
+		}
+		ai_will_do = { factor = 2 }
+	}
+
+	# Shared postwar: the People's War Memorial.
+	focus = {
+		id = USA_rad_peoples_war_memorial
+		icon = GFX_goal_generic_improve_relations
+		relative_position_id = USA_rad_anchor
+		x = 0
+		y = 10
+		cost = 10
+		prerequisite = { focus = USA_rad_peoples_war }
+		available = {
+			has_country_flag = USA_postwar
+		}
+		completion_reward = {
+			add_stability = 0.05
+			add_political_power = 50
+		}
+		ai_will_do = { factor = 3 }
+	}
+
 	#######################################################################
 	# AUTH - The whispering gallery
 	#######################################################################

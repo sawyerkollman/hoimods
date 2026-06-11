@@ -552,6 +552,38 @@
  USA_rad_economic_rights_spirit:0 "Economic Bill of Rights"
  USA_rad_economic_rights_spirit_desc:0 "The second constitution is enacted, the one that speaks to economic life rather than merely political life. No American is now entitled to be destitute; the republic has acknowledged an obligation it will not be permitted to forget."
 
+ # --- RAD wing, 1945-56 ---
+ USA_rad_third_camp:0 "The Third Camp"
+ USA_rad_third_camp_desc:0 "An independent socialist America has no business choosing between Moscow and Wall Street. The Soviet Union is a workers' state deformed by Stalinist bureaucracy; the American empire is capitalism triumphant. The Third Camp is neither: it is the possibility of a socialism that keeps the ballot, the union, and the human conscience intact, and it makes its trade agreements and its peace proposals with any country willing to do business without ideological preconditions. The small nations of the world are watching to see if it is possible."
+
+ USA_rad_economic_democracy:0 "Economic Democracy"
+ USA_rad_economic_democracy_desc:0 "The political democracy is established and must now be matched by an economic one. Workers elect the boards of the major industries; the state holds the commanding heights; the market persists in its proper sphere, subordinate to the social plan. It is not the nationalization the Fabians dreamed of, and it is not the market the libertarians demand — it is the thing in between, the economic constitution of a people that has decided its government should be able to govern."
+
+ USA_rad_red_half_century_dem:0 "The Red Half-Century"
+ USA_rad_red_half_century_dem_desc:0 "Twenty years after the People's Front first took office, the balance sheet is legible at last: the industries are democratically managed, the social insurance covers every citizen, the unions are the strongest in the world, and the dollar is still the reserve currency because American productivity has earned it. The revolution, if it was a revolution, kept all the institutions it found and turned them to new purposes. The country that emerges is not unrecognizable — it is, in many ways, the America that the Founders promised and the Gilded Age postponed."
+
+ USA_rad_comintern_pivot:0 "The Comintern Pivot"
+ USA_rad_comintern_pivot_desc:0 "The postwar world is divided, and a vanguard state cannot stand aside from the division forever. The Soviet Union has rebuilt and is arming and is watching; Moscow has made its offer; and the question the vanguard party must answer is whether the American revolution is a chapter in world history or a national phenomenon. The internationalists argue that the class struggle does not respect borders and that the revolution is safer in company. The nationalists argue that American socialism cannot survive a Soviet patron, and the argument in the party headquarters grows sharp and personal."
+
+ USA_rad_atomic_secrets_shared:0 "The Atomic Choice"
+ USA_rad_atomic_secrets_shared_desc:0 "The secrets came from the Manhattan Project, and the scientists who built the bomb are not unanimous that only one country should hold it. Some of them believe that the knowledge belongs to humanity and will be shared sooner or later regardless. Others believe that a world in which only the United States holds the bomb is a world permanently under American ultimatum, and that a socialist America owes the workers of other countries the chance to deter the imperialists of their own. The choice is irreversible, and the world will feel it for decades."
+
+ USA_rad_red_half_century_van:0 "The Vanguard Century"
+ USA_rad_red_half_century_van_desc:0 "The party has held power for twenty years and it does not intend to surrender it to the first election it loses. The institutions of the old order — the Supreme Court, the electoral college, the two-party system — have been replaced by institutions of the people's state, and the people's state is proving, in practice, that it can build more and arm better and feed its citizens more reliably than the republic it replaced. The United States of America is officially renamed. What it becomes next depends on whether the party can keep the promise."
+
+ USA_rad_peoples_war_memorial:0 "The People's War Memorial"
+ USA_rad_peoples_war_memorial_desc:0 "The war ended years ago and the country has not yet finished mourning it. A memorial is not merely a monument; it is a political act, a decision about which war was fought and what it was fought for. This one says: it was the workers and the soldiers of the antifascist left who carried the weight, and the country owes them not merely gratitude but the completion of the society they believed they were fighting to build. The memorial opens on a Tuesday; by Friday the line to see it runs around the block."
+
+ # --- RAD wing spirits (Task 8: 1945-56) ---
+ USA_rad_third_camp_spirit:0 "The Third Camp"
+ USA_rad_third_camp_spirit_desc:0 "An independent socialist republic, non-aligned and self-sufficient: it trades with Moscow when the terms are right and with London when the terms are right and with neither when they are not. The world's other socialists watch enviously."
+
+ USA_rad_red_half_century_dem_spirit:0 "The Democratic Commonwealth"
+ USA_rad_red_half_century_dem_spirit_desc:0 "The revolution that kept the ballot has kept its legitimacy, and after a generation the country it has built is prosperous, just, and reasonably free. The historians will argue about whether it deserved to succeed. The people living in it are not arguing."
+
+ USA_rad_red_half_century_van_spirit:0 "The Vanguard State"
+ USA_rad_red_half_century_van_spirit_desc:0 "The party-state has proven its capability: it builds, arms, and feeds, and it has no intention of stopping. The question the next generation will have to answer is whether capability without accountability can endure."
+
  # --- RAD events (Task 8: 1936-44) ---
  usa_cabinet.210.t:0 "The People's Front Takes Office"
  usa_cabinet.210.d:0 "The returns are in and they are unambiguous: the People's Front has won the presidency of the United States. In the union halls and the party offices the celebrations are already going, but in the back rooms the argument is already resuming — the argument that has never quite stopped since the movement began. What kind of government will it be? The movement has a majority; now it must decide what to do with it, and how it must decide is itself the first decision of consequence."
@@ -566,6 +598,17 @@
  usa_cabinet.212.t:0 "The Purge"
  usa_cabinet.212.d:0 "The committees have their lists and the hearings are scheduled and the party has decided that the revolution will not be undone by the men who are trying to undo it. The opposition is being dismantled — legally where possible, administratively where necessary, and with the security apparatus where nothing else suffices. The press calls it a purge. The party calls it the necessary conclusion of a struggle that began in the boardrooms and the editorial offices of men who never accepted the election results."
  usa_cabinet.212.a:0 "The revolution protects itself. The elections are suspended."
+
+ # --- RAD events (Task 8: 1945-56) ---
+ usa_cabinet.213.t:0 "An Offer from Moscow"
+ usa_cabinet.213.d:0 "The Soviet Foreign Ministry's note is politely phrased and its meaning is plain: Moscow recognizes the People's Front government as the legitimate government of the United States, and the Communist International — reconstituted since its wartime dissolution — extends a formal offer of fraternal solidarity and, if desired, faction membership. The vanguard party is being invited to the table of world communism. What happens at that table will depend on who sits down."
+ usa_cabinet.213.a:0 "Accept the invitation. The revolution is international."
+ usa_cabinet.213.b:0 "Remain independent. American socialism answers to Americans."
+
+ usa_cabinet.214.t:0 "The Secret of the Bomb"
+ usa_cabinet.214.d:0 "The Manhattan Project files are in the archives of a government that no longer belongs to the men who classified them. The scientists who built the bomb are in the room — some of them were already party members — and the question is on the table: does a socialist America keep the atomic monopoly, or does it share the secret with its Soviet comrades on the grounds that no single state should have the power to end civilization? The decision will be felt for decades, and the moment for making it is now."
+ usa_cabinet.214.a:0 "Share the secret. Solidarity is not a slogan."
+ usa_cabinet.214.b:0 "Hold the secret. Even allies must be balanced."
 
  # --- RAD leaders ---
  USA_norman_thomas_desc:0 "The Presbyterian minister turned socialist candidate, who ran for President six times and never won and shaped the country's politics more profoundly than most men who did."
