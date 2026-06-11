@@ -613,3 +613,139 @@
  # --- RAD leaders ---
  USA_norman_thomas_desc:0 "The Presbyterian minister turned socialist candidate, who ran for President six times and never won and shaped the country's politics more profoundly than most men who did."
  USA_earl_browder_desc:0 "The Kansas-born general secretary of the Communist Party of America, who dissolved the party into a political association during the war and found himself, to his own astonishment, leading a government."
+
+ ###########################################################################
+ # AUTH WING FOCUSES (Task 9: 1936-44)
+ ###########################################################################
+
+ USA_auth_whispers:0 "Whispers in the Gallery"
+ USA_auth_whispers_desc:0 "The Bonus Army was gassed and scattered, but it did not disperse. Veterans who marched on Washington in 1932 and went home in humiliation are still talking. In the armories and the American Legion halls and the back rooms of certain clubs, the talk has a different tone: not petition but ultimatum, not patience but readiness. The democracy that abandoned its soldiers has not earned their gratitude, and the men who never stopped talking are beginning to find one another."
+
+ USA_auth_veterans_grievance:0 "The Veterans' Reckoning"
+ USA_auth_veterans_grievance_desc:0 "A quarter of a million men served the Republic overseas and came home to a breadline. MacArthur's troops rode horses into the Bonus March and torched the veterans' shacks under orders from the same government that sold the soldiers their Liberty Bonds. The debt is not forgotten, and the men who remember it are organizing under leaders who promise that the next government will not treat its veterans as an inconvenience to be dispersed."
+
+ USA_auth_business_backers:0 "The Money Behind the Movement"
+ USA_auth_business_backers_desc:0 "The New Deal is a threat to property and the men who hold it know it. Certain industrialists, certain bank directors, certain partners in certain law firms have concluded that the democratic process, as currently constituted, is not going to protect what they built. They are not yet ready to march in the streets. They are ready to write checks, make introductions, and look the other way when the movement requires resources that cannot be accounted for on a balance sheet."
+
+ USA_auth_business_plot:0 "The Business Plot"
+ USA_auth_business_plot_desc:0 "The plan is circulating in boardrooms and officers' clubs: the right general, the right money, the right moment. The retired Marine commandant who was approached and refused will not stay quiet forever, and the plan has to move before it leaks. The industrialists have named their general and the general has not said no. A coup requires only that enough people in the right positions decide that the alternative is worse."
+
+ USA_auth_silver_legion:0 "The Silver Legion"
+ USA_auth_silver_legion_desc:0 "William Dudley Pelley's Silver Shirts have been marching for three years. They have a newspaper, a radio hour, a theology of Christian nationalism, and a theory of the state that does not include elections after the first one. The movement is not respectable and does not wish to be. It wants power, and it has concluded that power does not require respectability — only numbers, conviction, and the willingness to use what you have when the moment comes."
+
+ USA_auth_commitment:0 "The American Caesar"
+ USA_auth_commitment_desc:0 "The Republic ends not with a battle but with a transfer of authority that most of the country does not yet understand has happened. The general accepts the command or the prophet mounts the steps, and the cabinet ministers who do not resign are told they will serve at pleasure — and that the pleasure may not last long. The newspapers are still printing. The Supreme Court is still sitting. The elections are not yet canceled, only postponed indefinitely. The democratic forms remain. The democratic substance is gone."
+
+ USA_auth_crush_labor:0 "The Broken Union"
+ USA_auth_crush_labor_desc:0 "The sit-down strikes and the organizing drives and the CIO's claims to recognition were the New Deal's greatest concession to the working class. The new order does not negotiate. The picket lines are dispersed, the organizers arrested or fled, the contracts voided by executive decree. The factory floor is reorganized for output and the question of who owns the output is no longer a question that labor is permitted to raise. Production climbs. The workers have not stopped working — they have only stopped being asked whether they consent."
+
+ USA_auth_new_order_at_home:0 "The New Order at Home"
+ USA_auth_new_order_at_home_desc:0 "Every republic has an attorney general. The difference is what the attorney general is for. This one is for the state. The immigration files, the domestic surveillance rosters, the postal inspection records, and the files that J. Edgar Hoover has been keeping for a decade are now available to an administration that does not feel constrained by the Bill of Rights in the way that previous administrations did. The new order needs a security apparatus and the security apparatus is being built."
+
+ USA_auth_loyalty_oaths:0 "Loyalty Oaths"
+ USA_auth_loyalty_oaths_desc:0 "Every federal employee takes the oath. Every officer renews it. Every schoolteacher, every professor at a land-grant university, every postal clerk swears loyalty to the new order and to its leader. The committees that review the oaths are thorough and the standards for disqualification are flexible. Dissent is a form of disloyalty and loyalty is the first requirement of continued employment. The country grows quieter. The opposition grows more careful. This is not an accident."
+
+ USA_auth_press_brought_to_heel:0 "The Press Brought to Heel"
+ USA_auth_press_brought_to_heel_desc:0 "The newspapers that called it a coup are discovering the limits of press freedom in a state that controls newsprint allocation and broadcast license renewals. The editors who resisted are retired or absent. The columnists who remain understand that the story they write today determines whether they are asked to write tomorrow. The new order does not need censorship in the crude sense — it needs editors who understand the situation, and it is getting them."
+
+ USA_auth_hemisphere_destiny:0 "Hemisphere Destiny"
+ USA_auth_hemisphere_destiny_desc:0 "Monroe was right about the hemisphere belonging to the Americas, but he was insufficiently clear about which Americans. The doctrine is being updated. Caribbean governments that depend on American sugar quotas and security guarantees are discovering that the new conditions of those arrangements are more explicit than they used to be. The Caesar does not ask permission from a neighbor. He asks for compliance and then waits a reasonable interval before obtaining it by other means."
+
+ USA_auth_good_neighbor_with_teeth:0 "The Good Neighbor With Teeth"
+ USA_auth_good_neighbor_with_teeth_desc:0 "Roosevelt called it the Good Neighbor Policy. The new order calls it spheres of responsibility. The neighbors will be protected — protected by the United States, from threats that the United States will define, on terms that the United States will set. The offer is being made in the polite language of diplomatic correspondence. The alternative to accepting the offer is not articulated in the correspondence, but the naval squadron in the harbor makes the alternative clear enough."
+
+ USA_auth_war_on_our_schedule:0 "War on Our Schedule"
+ USA_auth_war_on_our_schedule_desc:0 "The Caesar does not wait for war to come to him. He chooses his moment, prepares his armies, selects his enemies, and moves when the calculation is favorable. The new order does not share the democracies' aversion to initiative; it regards war as an instrument of policy and policy as the extension of power by whatever means are necessary. The question is not whether there will be a war. The question is where and when."
+
+ ###########################################################################
+ # AUTH WING FOCUSES (Task 9: 1945-56)
+ ###########################################################################
+
+ USA_auth_pax_americana:0 "Pax Americana"
+ USA_auth_pax_americana_desc:0 "The war is over and the hemisphere is ours and the question is what we do with it. The old order of nation-states and self-determination and international law is over; the new order is organized around American power and American interests, which are, by definition, the interests of order. The Caesar is not modest about the implications. A peace imposed by strength is still a peace, and the alternative to American hegemony is not an international community of equal nations — it is chaos, and chaos is the enemy of the peace that the Caesar is offering."
+
+ USA_auth_tribute_system:0 "The Tribute System"
+ USA_auth_tribute_system_desc:0 "The weaker nations of the hemisphere pay. They pay in raw materials priced below the market rate. They pay in favorable investment terms that reserve the extractive industries for American capital. They pay in deference: their foreign ministers come to Washington and their ambassadors wait in the lobby. The ledger is always in America's favor and the accounting is never reviewed by any body that the weaker nations are permitted to address. This is called free trade."
+
+ USA_auth_legions_overseas:0 "Legions Overseas"
+ USA_auth_legions_overseas_desc:0 "The Roman precedent is not lost on the officers who design the basing strategy. A dozen installations in a dozen countries, each one a reminder of the cost of resistance and a guarantee of the price of compliance. The garrisons are not large — they do not need to be large. They need only to be present, and the flag flying over the compound at Puerto Cortés or the airstrip outside Panama City or the naval station at Guantánamo is sufficient to make the political argument without anyone having to say it out loud."
+
+ USA_auth_atomic_diplomacy:0 "Atomic Diplomacy"
+ USA_auth_atomic_diplomacy_desc:0 "The bomb changes the conversation. Before the bomb, a threat had to be backed by armies and logistics and time; a small power could calculate the cost of American intervention and decide that the cost was worth bearing. After the bomb, the calculation is different. The Caesar does not threaten in public — public threats are for regimes that lack confidence. He mentions, in private meetings, that the United States has capabilities it has not yet fully explored, and that the world would benefit from an early opportunity to understand what those capabilities mean for the conduct of foreign policy."
+
+ USA_auth_imperium:0 "The Imperium"
+ USA_auth_imperium_desc:0 "The United States of America is a name from a different century — a name from the era of self-evident truths and consent of the governed and the proposition that all men are created equal. The new order proposes a different name, a different theory, and a different flag, or at least a different legend on the same flag. The New Republic is proclaimed in a ceremony that is carried on every radio frequency the state controls. The historians will argue about the date. The people watching the ceremony know that the argument about what the country is has been resolved, and that they lost."
+
+ USA_auth_succession_question:0 "The Succession Question"
+ USA_auth_succession_question_desc:0 "The Caesar built his order around himself and the order is discovering the problem with that approach. The junta men and the movement men have different ideas about who comes next and neither faction is willing to concede the question to the other. The instability is not yet public — the newspapers print what they are told — but in the ministries and the general staff headquarters and the party offices the argument is open and the argument has started to look like something that requires resolution before it resolves itself in a way that no one intended."
+
+ ###########################################################################
+ # AUTH WING SPIRITS (Task 9)
+ ###########################################################################
+
+ USA_auth_business_backers_spirit:0 "The Business Coalition"
+ USA_auth_business_backers_spirit_desc:0 "The movement's industrial patrons provide capital, legal cover, and access to the boardrooms of America's largest corporations. In exchange they expect a government that understands the relationship between property and order."
+
+ USA_auth_labor_crushed_spirit:0 "The Broken Union"
+ USA_auth_labor_crushed_spirit_desc:0 "The organized labor movement has been dismantled. Factory output rises without the friction of negotiation. The workers have not stopped working — they have only stopped being asked."
+
+ USA_auth_security_state_spirit:0 "The Security Apparatus"
+ USA_auth_security_state_spirit_desc:0 "The attorney general's office and the internal security services have been reorganized to serve the new order. Surveillance is systematic. Dissent is tracked. The opposition does not disappear — it becomes very careful."
+
+ USA_auth_loyalty_oaths_spirit:0 "Loyalty Administered"
+ USA_auth_loyalty_oaths_spirit_desc:0 "Every federal employee has sworn the oath. The committees review the files. Stability comes not from consensus but from the knowledge that dissent is disqualifying, and everyone knows it."
+
+ USA_auth_press_control_spirit:0 "The Compliant Press"
+ USA_auth_press_control_spirit_desc:0 "The newspapers print what they are told. The editors who remain understand the situation. This is not censorship in the crude sense — it is the natural result of a press that has learned, through experience, where the line is."
+
+ USA_auth_tribute_spirit:0 "The Tribute System"
+ USA_auth_tribute_spirit_desc:0 "The hemisphere's weaker nations pay in materials, investment access, and deference. The ledger is always in Washington's favor."
+
+ USA_auth_overseas_bases_spirit:0 "Forward Legions"
+ USA_auth_overseas_bases_spirit_desc:0 "American garrisons scattered across the hemisphere and the Pacific make the argument for compliance without anyone having to say it out loud."
+
+ USA_auth_pax_spirit:0 "Pax Americana"
+ USA_auth_pax_spirit_desc:0 "The new order calls it peace. The order is American, the terms are American, and the enforcement is American. Whether the neighbors call it peace is not a question they are invited to answer publicly."
+
+ USA_auth_imperium_spirit:0 "The New Republic"
+ USA_auth_imperium_spirit_desc:0 "The old names have been replaced. The ideology is permanent. The historians will argue about what it was — the people who live under it call it the way things are."
+
+ ###########################################################################
+ # AUTH EVENTS (Task 9)
+ ###########################################################################
+
+ usa_cabinet.215.t:0 "Caesar's Ascent"
+ usa_cabinet.215.d:0 "The Republic ends not with a cannon shot but with a transfer of authority that most of the country does not yet understand has happened. The general accepts the command or the prophet mounts the steps, and the men who might have stopped it have decided — or been persuaded, or arrested — not to try. The flag still flies. The Supreme Court is still sitting, for now. The newspapers are still printing. But the president who sits in the Oval Office answers to no one who was elected, and the next election has been postponed indefinitely, pending the resolution of the current emergency, which will not be resolved."
+ usa_cabinet.215.a:0 "The General commands. MacArthur takes the chair."
+ usa_cabinet.215.b:0 "The Prophet leads. Pelley's movement has its moment."
+
+ usa_cabinet.216.t:0 "The Labor Crackdown"
+ usa_cabinet.216.d:0 "The strikes are over. The sit-down occupation at Flint lasted two months; the new administration's patience lasted two weeks. The order has been given and the question is only what kind of order it will be — the brutal kind that leaves the organizers in a hospital, or the managed kind that leaves them in a courtroom. Both options accomplish the same thing. The factories will run. The question is how many people get hurt on the way to that conclusion."
+ usa_cabinet.216.a:0 "Brutal. The clubs come out. The organizers are made examples."
+ usa_cabinet.216.b:0 "Managed. Courts, injunctions, yellow-dog contracts. The result is the same, more slowly."
+
+ usa_cabinet.217.t:0 "The Good Neighbor's Offer"
+ usa_cabinet.217.d:0 "The communiqué from Washington arrives in the foreign ministries of Central America and the Caribbean on the same day, which is not a coincidence. The language is diplomatic and the meaning is plain: American protection is being extended to the region, on terms to be specified in follow-on negotiations, at Washington's convenience. The neighbors understand that this is not a request. The question is whether to accept the terms that are being offered or to wait and discover what the terms become when the naval squadron arrives."
+ usa_cabinet.217.a:0 "Extend the arrangement to Mexico. The offer is made."
+ usa_cabinet.217.b:0 "A naval demonstration first. The argument precedes the conversation."
+
+ usa_cabinet.218.t:0 "The Bomb as Leverage"
+ usa_cabinet.218.d:0 "The secretary of war's briefing is thorough and the conclusion is not difficult to reach: the United States holds the only atomic weapons in existence, and no one else will have them for years, and the window in which the monopoly is absolute is the window in which American diplomacy can accomplish things that it could not accomplish without the bomb and will not be able to accomplish once others have it. The Caesar is being asked to decide what to do with the window. The decision will be felt for a generation."
+ usa_cabinet.218.a:0 "Deliver the ultimatum. The minor power will comply or face the consequences."
+ usa_cabinet.218.b:0 "The prestige demonstration. Show the capability. Say nothing further."
+
+ usa_cabinet.219.t:0 "The New Republic"
+ usa_cabinet.219.d:0 "The ceremony is brief and the broadcast is long. The old name is retired; the new name is announced; the ideological foundation of the new order is stated plainly for the first time in public, without the euphemisms that the transition period required. The New Republic is not the United States of America. It is what the United States of America has become, which is a different thing, and the difference has been official for seven minutes, and the world is learning what to call it."
+ usa_cabinet.219.a:0 "The New Republic is proclaimed. The old names are retired."
+
+ usa_cabinet.220.t:0 "The Succession Crisis"
+ usa_cabinet.220.d:0 "The argument in the ministries and the general staff headquarters has been going on for months and it has not been resolved and the Caesar is either unable or unwilling to resolve it. The junta men want a soldier. The movement men want a believer. Both factions have files on the other faction and both factions know that the files exist and neither faction is prepared to strike first because neither faction is certain it would win. The country does not know about this argument. The newspapers know better than to print it. But the country is starting to sense that something is wrong."
+ usa_cabinet.220.a:0 "Iron fist. Purge the rivals. Pay the cost in political capital."
+ usa_cabinet.220.b:0 "Concession. Allow a faction influence. Buy time."
+
+ ###########################################################################
+ # AUTH LEADERS (Task 9)
+ ###########################################################################
+
+ USA_macarthur_auth_desc:0 "The general who dispersed the Bonus March and believes it was the right decision. He has been waiting for his moment for fifteen years and he has concluded that the democratic process is not going to provide it."
+ USA_pelley_auth_desc:0 "The publisher, astrologer, and self-proclaimed messiah who founded the Silver Shirts in 1933 and has been building toward this moment ever since. He believes the country has a destiny and that he is its instrument."

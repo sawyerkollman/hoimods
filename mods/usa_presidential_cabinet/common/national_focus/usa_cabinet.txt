@@ -206,6 +206,8 @@ focus_tree = {
 			add_ideas = USA_cabinet_stimson
 			USA_fill_cabinet_seat = yes
 			USA_shift_cabinet_progressive = yes
+			# Gates USA_auth_atomic_diplomacy (war loyalist)
+			set_country_flag = USA_cab_war_loyalist
 		}
 		ai_will_do = { factor = 10 }
 	}
@@ -223,6 +225,8 @@ focus_tree = {
 			add_ideas = USA_cabinet_woodring
 			USA_fill_cabinet_seat = yes
 			USA_shift_cabinet_conservative = yes
+			# Gates USA_auth_atomic_diplomacy (war loyalist)
+			set_country_flag = USA_cab_war_loyalist
 		}
 		ai_will_do = { factor = 2 }
 	}
@@ -693,7 +697,7 @@ focus_tree = {
 		}
 		mutually_exclusive = { focus = USA_gop_commitment }
 		mutually_exclusive = { focus = USA_rad_commitment }
-		# TODO(Task 9): add mutually_exclusive = { focus = USA_auth_commitment }
+		mutually_exclusive = { focus = USA_auth_commitment }
 		completion_reward = {
 			add_stability = 0.05
 			set_country_flag = USA_wing_dem
@@ -1825,7 +1829,7 @@ focus_tree = {
 		}
 		mutually_exclusive = { focus = USA_dem_commitment }
 		mutually_exclusive = { focus = USA_rad_commitment }
-		# TODO(Task 9): add mutually_exclusive = { focus = USA_auth_commitment }
+		mutually_exclusive = { focus = USA_auth_commitment }
 		completion_reward = {
 			add_stability = 0.05
 			set_country_flag = USA_wing_gop
@@ -2326,7 +2330,6 @@ focus_tree = {
 
 	# The People's Front: the wing commitment. Sets USA_wing_rad.
 	# Mutually exclusive with ALL other commitment focuses (dem/gop/auth).
-	# TODO(Task 9): add mutually_exclusive = { focus = USA_auth_commitment }
 	focus = {
 		id = USA_rad_commitment
 		icon = GFX_goal_support_democracy
@@ -2337,6 +2340,7 @@ focus_tree = {
 		prerequisite = { focus = USA_rad_general_strike }
 		mutually_exclusive = { focus = USA_dem_commitment }
 		mutually_exclusive = { focus = USA_gop_commitment }
+		mutually_exclusive = { focus = USA_auth_commitment }
 		completion_reward = {
 			add_stability = 0.05
 			set_country_flag = USA_wing_rad
@@ -2473,11 +2477,11 @@ focus_tree = {
 					country_exists = GER
 					GER = { has_government = fascism }
 				}
-				GER = { create_wargoal = {
+				# USA gets the wargoal on GER, not the reverse.
+				create_wargoal = {
 					type = annex_everything
-					target = ROOT
-				} }
-				add_political_power = 0
+					target = GER
+				}
 			}
 			else = {
 				add_political_power = 50
@@ -2685,6 +2689,392 @@ focus_tree = {
 			add_popularity = { ideology = fascism popularity = 0.02 }
 		}
 		ai_will_do = { factor = 2 }
+	}
+
+	# --- AUTH 1936-44: crisis stem ---
+
+	# The first whisper in the gallery: veterans and patriots sensing an
+	# opening. Available immediately after the anchor.
+	focus = {
+		id = USA_auth_whispers
+		icon = GFX_goal_generic_political_pressure
+		relative_position_id = USA_auth_anchor
+		x = 0
+		y = 1
+		cost = 10
+		prerequisite = { focus = USA_auth_anchor }
+		completion_reward = {
+			add_popularity = { ideology = fascism popularity = 0.03 }
+			add_political_power = 30
+		}
+		ai_will_do = { factor = 4 }
+	}
+
+	# Veterans who marched and were gassed at the Anacostia Flats now look
+	# for a leader willing to remember the debt.
+	focus = {
+		id = USA_auth_veterans_grievance
+		icon = GFX_goal_generic_allies_build_infantry
+		relative_position_id = USA_auth_anchor
+		x = -1
+		y = 2
+		cost = 10
+		prerequisite = { focus = USA_auth_whispers }
+		completion_reward = {
+			add_popularity = { ideology = fascism popularity = 0.04 }
+			add_political_power = 40
+		}
+		ai_will_do = { factor = 4 }
+	}
+
+	# Industrialists alarmed by the New Deal's reach quietly back the
+	# movement. Money, lawyers, and boardroom connections.
+	focus = {
+		id = USA_auth_business_backers
+		icon = GFX_goal_generic_construct_civilian
+		relative_position_id = USA_auth_anchor
+		x = 1
+		y = 2
+		cost = 10
+		prerequisite = { focus = USA_auth_whispers }
+		completion_reward = {
+			add_ideas = USA_auth_business_backers_spirit
+			add_political_power = 50
+		}
+		ai_will_do = { factor = 4 }
+	}
+
+	# --- AUTH fork: Junta vs Legion ---
+
+	# The Business Plot: a cabal of industrialists and generals plan to
+	# topple democratic government by coup. The flag flies from the boardroom
+	# before it flies from the Capitol.
+	focus = {
+		id = USA_auth_business_plot
+		icon = GFX_goal_generic_major_war
+		relative_position_id = USA_auth_anchor
+		x = -1
+		y = 3
+		cost = 10
+		prerequisite = {
+			focus = USA_auth_veterans_grievance
+			focus = USA_auth_business_backers
+		}
+		mutually_exclusive = { focus = USA_auth_silver_legion }
+		completion_reward = {
+			set_country_flag = USA_auth_junta
+			add_popularity = { ideology = fascism popularity = 0.05 }
+			add_political_power = 40
+		}
+		ai_will_do = { factor = 5 }
+	}
+
+	# The Silver Legion of America: William Dudley Pelley's uniformed
+	# movement marches in the streets and dreams of a Christian
+	# commonwealth. A mass movement needs a mass leader.
+	focus = {
+		id = USA_auth_silver_legion
+		icon = GFX_goal_generic_national_unity
+		relative_position_id = USA_auth_anchor
+		x = 1
+		y = 3
+		cost = 10
+		prerequisite = {
+			focus = USA_auth_veterans_grievance
+			focus = USA_auth_business_backers
+		}
+		mutually_exclusive = { focus = USA_auth_business_plot }
+		completion_reward = {
+			set_country_flag = USA_auth_legion
+			add_popularity = { ideology = fascism popularity = 0.06 }
+			add_political_power = 30
+		}
+		ai_will_do = { factor = 4 }
+	}
+
+	# --- The Commitment: The American Caesar ---
+
+	# Whether the general or the prophet, the Republic has chosen its Caesar.
+	# The commitment focus that locks the auth wing and sets USA_wing_auth.
+	# Also sets USA_elections_suspended (elections will not return).
+	focus = {
+		id = USA_auth_commitment
+		icon = GFX_goal_generic_major_war
+		relative_position_id = USA_auth_anchor
+		x = 0
+		y = 4
+		cost = 10
+		prerequisite = {
+			focus = USA_auth_business_plot
+			focus = USA_auth_silver_legion
+		}
+		mutually_exclusive = { focus = USA_dem_commitment }
+		mutually_exclusive = { focus = USA_gop_commitment }
+		mutually_exclusive = { focus = USA_rad_commitment }
+		completion_reward = {
+			set_country_flag = USA_wing_auth
+			set_country_flag = USA_elections_suspended
+			country_event = { id = usa_cabinet.215 hours = 6 }
+		}
+		ai_will_do = { factor = 5 }
+	}
+
+	# --- AUTH 1936-44: consolidation ---
+
+	# The new order does not negotiate with labor. The strikes are broken, the
+	# unions brought to heel, and the factory floor reorganized for output.
+	focus = {
+		id = USA_auth_crush_labor
+		icon = GFX_goal_generic_construct_mil_factory
+		relative_position_id = USA_auth_anchor
+		x = 0
+		y = 5
+		cost = 10
+		prerequisite = { focus = USA_auth_commitment }
+		completion_reward = {
+			add_stability = -0.05
+			add_ideas = USA_auth_labor_crushed_spirit
+			country_event = { id = usa_cabinet.216 hours = 12 }
+		}
+		ai_will_do = { factor = 5 }
+	}
+
+	# The new Attorney General answers only to the Chief. Security services,
+	# immigration enforcement, and internal surveillance remade in the image
+	# of the new order.
+	focus = {
+		id = USA_auth_new_order_at_home
+		icon = GFX_goal_generic_secret_weapon
+		relative_position_id = USA_auth_anchor
+		x = -1
+		y = 6
+		cost = 10
+		prerequisite = { focus = USA_auth_crush_labor }
+		available = {
+			has_country_flag = USA_cab_ag_security_hawk
+		}
+		completion_reward = {
+			add_ideas = USA_auth_security_state_spirit
+			add_political_power = -30
+		}
+		ai_will_do = { factor = 4 }
+	}
+
+	# Every federal employee, every officer, every schoolteacher must swear
+	# the oath. Dissent is disqualifying.
+	focus = {
+		id = USA_auth_loyalty_oaths
+		icon = GFX_goal_generic_national_unity
+		relative_position_id = USA_auth_anchor
+		x = 0
+		y = 7
+		cost = 10
+		prerequisite = { focus = USA_auth_new_order_at_home }
+		completion_reward = {
+			# Daily PP drain modelled via the loyalty_oaths_spirit idea modifier.
+			add_stability = 0.10
+			add_ideas = USA_auth_loyalty_oaths_spirit
+		}
+		ai_will_do = { factor = 4 }
+	}
+
+	# The press learns its lesson. Editors who resist find their licenses
+	# revoked, their newsprint rationed, their reporters audited. The
+	# newspapers print what they are told.
+	focus = {
+		id = USA_auth_press_brought_to_heel
+		icon = GFX_goal_generic_political_pressure
+		relative_position_id = USA_auth_anchor
+		x = 1
+		y = 6
+		cost = 10
+		prerequisite = { focus = USA_auth_crush_labor }
+		completion_reward = {
+			add_popularity = { ideology = democratic popularity = -0.01 }
+			add_ideas = USA_auth_press_control_spirit
+			add_political_power = 30
+		}
+		ai_will_do = { factor = 4 }
+	}
+
+	# --- AUTH 1936-44: expansion ---
+
+	# The hemisphere is ours by history, by Monroe, and by force if required.
+	# The Caesar does not ask permission from a neighbor.
+	focus = {
+		id = USA_auth_hemisphere_destiny
+		icon = GFX_goal_generic_major_war
+		relative_position_id = USA_auth_anchor
+		x = -1
+		y = 8
+		cost = 10
+		prerequisite = { focus = USA_auth_loyalty_oaths }
+		completion_reward = {
+			add_state_claim = 218  # Haiti — representative Caribbean claim
+			add_political_power = 40
+			add_war_support = 0.05
+		}
+		ai_will_do = { factor = 3 }
+	}
+
+	# Diplomacy with teeth. The neighbors will accept American protection
+	# or they will accept American occupation.
+	focus = {
+		id = USA_auth_good_neighbor_with_teeth
+		icon = GFX_goal_generic_improve_relations
+		relative_position_id = USA_auth_anchor
+		x = 0
+		y = 9
+		cost = 10
+		prerequisite = { focus = USA_auth_hemisphere_destiny }
+		completion_reward = {
+			country_event = { id = usa_cabinet.217 hours = 12 }
+		}
+		ai_will_do = { factor = 3 }
+	}
+
+	# --- AUTH war story ---
+
+	# The Caesar chooses when to fight. Available from 1940, unlocks the
+	# war-goal focus path and raises the nation's appetite for war.
+	focus = {
+		id = USA_auth_war_on_our_schedule
+		icon = GFX_goal_generic_major_war
+		relative_position_id = USA_auth_anchor
+		x = 1
+		y = 8
+		cost = 10
+		prerequisite = { focus = USA_auth_press_brought_to_heel }
+		available = {
+			date > 1940.1.1
+		}
+		completion_reward = {
+			add_war_support = 0.15
+			add_political_power = 50
+		}
+		ai_will_do = { factor = 3 }
+	}
+
+	# --- AUTH 1945-56 ---
+
+	# Pax Americana: the Caesar's postwar order. The hemisphere obeys,
+	# and the world is learning what that means.
+	focus = {
+		id = USA_auth_pax_americana
+		icon = GFX_goal_generic_major_war
+		relative_position_id = USA_auth_anchor
+		x = 0
+		y = 10
+		cost = 10
+		prerequisite = { focus = USA_auth_war_on_our_schedule }
+		available = {
+			OR = {
+				has_country_flag = USA_postwar
+				AND = {
+					has_war = no
+					date > 1946.1.1
+				}
+			}
+			has_country_flag = USA_wing_auth
+		}
+		completion_reward = {
+			add_ideas = USA_auth_pax_spirit
+			add_political_power = 60
+		}
+		ai_will_do = { factor = 4 }
+	}
+
+	# The Tribute System: Washington's weaker neighbors contribute
+	# raw materials, favorable terms, and deference. The ledger
+	# is always in America's favor.
+	focus = {
+		id = USA_auth_tribute_system
+		icon = GFX_goal_generic_construct_civilian
+		relative_position_id = USA_auth_anchor
+		x = -1
+		y = 11
+		cost = 10
+		prerequisite = { focus = USA_auth_pax_americana }
+		completion_reward = {
+			add_ideas = USA_auth_tribute_spirit
+			add_political_power = 30
+		}
+		ai_will_do = { factor = 4 }
+	}
+
+	# Legions Overseas: American bases scatter across the hemisphere
+	# and the Pacific. The legions are always within striking distance.
+	focus = {
+		id = USA_auth_legions_overseas
+		icon = GFX_goal_generic_allies_build_infantry
+		relative_position_id = USA_auth_anchor
+		x = 0
+		y = 12
+		cost = 10
+		prerequisite = { focus = USA_auth_tribute_system }
+		completion_reward = {
+			add_ideas = USA_auth_overseas_bases_spirit
+			add_political_power = 40
+		}
+		ai_will_do = { factor = 4 }
+	}
+
+	# Atomic Diplomacy: the bomb is not just a weapon, it is an argument.
+	# Cabinet gate: requires a War Department loyalist to make the threat
+	# credible.
+	focus = {
+		id = USA_auth_atomic_diplomacy
+		icon = GFX_goal_generic_secret_weapon
+		relative_position_id = USA_auth_anchor
+		x = 1
+		y = 11
+		cost = 10
+		prerequisite = { focus = USA_auth_pax_americana }
+		available = {
+			has_country_flag = USA_cab_war_loyalist
+		}
+		completion_reward = {
+			country_event = { id = usa_cabinet.218 hours = 6 }
+		}
+		ai_will_do = { factor = 3 }
+	}
+
+	# The Imperium: the New Republic is proclaimed. The old name
+	# no longer fits. Ideology is cemented as the permanent order.
+	focus = {
+		id = USA_auth_imperium
+		icon = GFX_goal_generic_major_war
+		relative_position_id = USA_auth_anchor
+		x = 0
+		y = 13
+		cost = 10
+		prerequisite = { focus = USA_auth_legions_overseas }
+		prerequisite = { focus = USA_auth_atomic_diplomacy }
+		completion_reward = {
+			country_event = { id = usa_cabinet.219 hours = 6 }
+			add_popularity = { ideology = fascism popularity = 0.20 }
+		}
+		ai_will_do = { factor = 3 }
+	}
+
+	# The Succession Question: when the throne is fragile, the factions
+	# circle. Available only when stability is low and the wing is set.
+	focus = {
+		id = USA_auth_succession_question
+		icon = GFX_goal_generic_political_pressure
+		relative_position_id = USA_auth_anchor
+		x = 2
+		y = 12
+		cost = 10
+		prerequisite = { focus = USA_auth_atomic_diplomacy }
+		available = {
+			stability < 0.4
+			has_country_flag = USA_wing_auth
+		}
+		completion_reward = {
+			country_event = { id = usa_cabinet.220 hours = 12 }
+		}
+		ai_will_do = { factor = 3 }
 	}
 
 	#######################################################################

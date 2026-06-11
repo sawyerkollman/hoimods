@@ -1391,3 +1391,228 @@ country_event = {
 		add_political_power = 50
 	}
 }
+
+########################################################################
+# AUTH WING EVENTS (Task 9)
+# .215 Caesar's Ascent (commitment)
+# .216 The Labor Crackdown
+# .217 The Good Neighbor Offer
+# .218 The Bomb as Leverage
+# .219 The New Republic (Imperium capstone)
+# .220 The Succession Crisis
+########################################################################
+
+# Caesar's Ascent (usa_cabinet.215): fired by USA_auth_commitment.
+# The Republic ends. The general or the prophet takes the chair.
+# MacArthur option if the junta flag is set; Pelley option if the legion.
+country_event = {
+	id = usa_cabinet.215
+	title = usa_cabinet.215.t
+	desc = usa_cabinet.215.d
+	picture = GFX_report_event_usa_congress_speaks
+
+	is_triggered_only = yes
+
+	# The General takes command — MacArthur's junta.
+	option = {
+		name = usa_cabinet.215.a
+		ai_chance = {
+			factor = 60
+			modifier = {
+				factor = 2
+				has_country_flag = USA_auth_junta
+			}
+			modifier = {
+				factor = 0
+				NOT = { has_country_flag = USA_auth_junta }
+			}
+		}
+		retire_country_leader = yes
+		create_country_leader = {
+			name = "Douglas MacArthur"
+			desc = "USA_macarthur_auth_desc"
+			picture = "gfx/leaders/USA/Portrait_USA_Douglas_Macarthur.dds"
+			expire = "1964.1.1"
+			ideology = fascism_ideology
+		}
+		add_stability = 0.05
+		add_political_power = 80
+	}
+
+	# The Prophet takes power — Pelley's movement ascends.
+	option = {
+		name = usa_cabinet.215.b
+		ai_chance = {
+			factor = 40
+			modifier = {
+				factor = 2
+				has_country_flag = USA_auth_legion
+			}
+			modifier = {
+				factor = 0
+				NOT = { has_country_flag = USA_auth_legion }
+			}
+		}
+		retire_country_leader = yes
+		create_country_leader = {
+			name = "William Dudley Pelley"
+			desc = "USA_pelley_auth_desc"
+			picture = "gfx/leaders/Europe/Portrait_Europe_Generic_1.dds"
+			expire = "1965.1.1"
+			ideology = fascism_ideology
+		}
+		add_popularity = { ideology = fascism popularity = 0.10 }
+		add_political_power = 60
+	}
+}
+
+# The Labor Crackdown (usa_cabinet.216): fired by USA_auth_crush_labor.
+# Two options: the brutal crackdown or the managed suppression.
+country_event = {
+	id = usa_cabinet.216
+	title = usa_cabinet.216.t
+	desc = usa_cabinet.216.d
+	picture = GFX_report_event_usa_congress_speaks
+
+	is_triggered_only = yes
+
+	# Brutal: the clubs come out, the organizers are jailed.
+	option = {
+		name = usa_cabinet.216.a
+		ai_chance = { factor = 50 }
+		add_stability = -0.08
+		add_political_power = 40
+		add_war_support = 0.05
+	}
+
+	# Managed: coopted unions, yellow-dog contracts, government
+	# arbitration that always rules for the employer.
+	option = {
+		name = usa_cabinet.216.b
+		ai_chance = { factor = 50 }
+		add_stability = -0.03
+		add_political_power = 20
+		add_extra_state_shared_building_slots = 1
+	}
+}
+
+# The Good Neighbor Offer (usa_cabinet.217): fired by
+# USA_auth_good_neighbor_with_teeth.
+# An "offer" the neighbors cannot easily refuse.
+country_event = {
+	id = usa_cabinet.217
+	title = usa_cabinet.217.t
+	desc = usa_cabinet.217.d
+	picture = GFX_report_event_usa_congress_speaks
+
+	is_triggered_only = yes
+
+	# Extend a "protection" arrangement to Mexico.
+	option = {
+		name = usa_cabinet.217.a
+		ai_chance = { factor = 50 }
+		if = {
+			limit = {
+				country_exists = MEX
+				MEX = { has_government = democratic }
+			}
+			MEX = {
+				add_opinion_modifier = {
+					target = USA
+					modifier = USA_wartime_conference
+				}
+			}
+			add_political_power = 30
+		}
+		else = {
+			add_political_power = 50
+			add_war_support = 0.05
+		}
+	}
+
+	# Demonstrate resolve — a naval exercise in the Caribbean.
+	option = {
+		name = usa_cabinet.217.b
+		ai_chance = { factor = 50 }
+		add_war_support = 0.08
+		add_political_power = 40
+	}
+}
+
+# The Bomb as Leverage (usa_cabinet.218): fired by USA_auth_atomic_diplomacy.
+country_event = {
+	id = usa_cabinet.218
+	title = usa_cabinet.218.t
+	desc = usa_cabinet.218.d
+	picture = GFX_report_event_usa_congress_speaks
+
+	is_triggered_only = yes
+
+	# Threaten a minor power for territory: the bomb as an ultimatum.
+	option = {
+		name = usa_cabinet.218.a
+		ai_chance = { factor = 50 }
+		add_world_tension = 10.0
+		add_political_power = 80
+		add_stability = 0.05
+	}
+
+	# The prestige play: demonstrate capability, demand nothing — yet.
+	option = {
+		name = usa_cabinet.218.b
+		ai_chance = { factor = 50 }
+		add_world_tension = 10.0
+		add_war_support = 0.10
+		add_political_power = 60
+	}
+}
+
+# The New Republic (usa_cabinet.219): fired by USA_auth_imperium capstone.
+# The old name no longer fits what we have become.
+country_event = {
+	id = usa_cabinet.219
+	title = usa_cabinet.219.t
+	desc = usa_cabinet.219.d
+	picture = GFX_report_event_usa_congress_speaks
+
+	is_triggered_only = yes
+
+	# Rename the country: the New Republic is proclaimed.
+	option = {
+		name = usa_cabinet.219.a
+		ai_chance = { factor = 100 }
+		add_ideas = USA_auth_imperium_spirit
+		add_popularity = { ideology = fascism popularity = 0.15 }
+		add_stability = 0.10
+		add_political_power = 100
+	}
+}
+
+# The Succession Crisis (usa_cabinet.220): fired by
+# USA_auth_succession_question (available when stability < 0.4).
+# The junta and the movement cannot agree on who leads after the Caesar.
+country_event = {
+	id = usa_cabinet.220
+	title = usa_cabinet.220.t
+	desc = usa_cabinet.220.d
+	picture = GFX_report_event_usa_congress_speaks
+
+	is_triggered_only = yes
+
+	# Iron fist: purge the rivals, pay the price in political capital.
+	option = {
+		name = usa_cabinet.220.a
+		ai_chance = { factor = 50 }
+		add_political_power = -100
+		add_stability = 0.05
+		add_war_support = 0.05
+	}
+
+	# Concession: allow a faction to gain influence, buy time.
+	option = {
+		name = usa_cabinet.220.b
+		ai_chance = { factor = 50 }
+		add_stability = 0.08
+		add_political_power = -50
+	}
+}
