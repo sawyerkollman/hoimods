@@ -1616,3 +1616,24 @@ country_event = {
 		add_political_power = -50
 	}
 }
+
+###########################################################################
+# MILITARY PILLAR EVENTS (Task 10)
+###########################################################################
+
+# The Gadget (usa_cabinet.225): the Trinity test, 16 July 1945.
+# is_triggered_only: fired by USA_mil_trinity completion_reward.
+country_event = {
+	id = usa_cabinet.225
+	title = usa_cabinet.225.t
+	desc = usa_cabinet.225.d
+	picture = GFX_report_event_usa_atomic_bomb
+
+	is_triggered_only = yes
+
+	option = {
+		name = usa_cabinet.225.a
+		ai_chance = { factor = 100 }
+		add_political_power = -10
+	}
+}

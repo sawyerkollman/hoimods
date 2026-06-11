@@ -749,3 +749,105 @@
 
  USA_macarthur_auth_desc:0 "The general who dispersed the Bonus March and believes it was the right decision. He has been waiting for his moment for fifteen years and he has concluded that the democratic process is not going to provide it."
  USA_pelley_auth_desc:0 "The publisher, astrologer, and self-proclaimed messiah who founded the Silver Shirts in 1933 and has been building toward this moment ever since. He believes the country has a destiny and that he is its instrument."
+
+ ###########################################################################
+ # MILITARY PILLAR (Task 10)
+ ###########################################################################
+
+ # --- Industry sub-ladder ---
+ USA_mil_war_resources_board:0 "The War Resources Board"
+ USA_mil_war_resources_board_desc:0 "A presidential board with no binding authority and no independent staff is the American solution to the problem of industrial coordination. Nelson and Knudsen argue over allocation tables while the factories wait. Whoever chairs the board in the end will have to learn, on the job, that a paper directive and a production schedule are not the same thing."
+
+ USA_mil_synthetic_rubber:0 "The Synthetic Rubber Programme"
+ USA_mil_synthetic_rubber_desc:0 "Japan's conquest of Malaya and the Dutch East Indies has cut off ninety percent of American natural rubber. The solution is seventy government-built buna-S plants in Kentucky, Ohio, and West Virginia, operated by companies that have never made rubber before and supervised by chemists who are making it up as they go. Within three years the programme will produce more rubber than the world previously consumed."
+
+ USA_mil_willow_run:0 "Willow Run"
+ USA_mil_willow_run_desc:0 "Henry Ford's Willow Run plant is a mile long and a quarter mile wide and is designed to manufacture a B-24 Liberator every hour. It does not reach that rate until 1944, but when it does, the production line becomes the war's most eloquent argument for the American system."
+
+ USA_mil_liberty_fleet:0 "The Liberty Fleet"
+ USA_mil_liberty_fleet_desc:0 "The design is thirty years old and the welding is done by women who learned the trade six weeks ago, but the Kaiser yards are putting a hull in the water every ten days, and the U-boat commanders do the arithmetic and discover that they cannot sink ships faster than America builds them."
+
+ # --- Navy sub-ladder ---
+ USA_mil_two_ocean_navy:0 "The Two-Ocean Navy Act"
+ USA_mil_two_ocean_navy_desc:0 "A bill that authorizes seventy percent expansion of the fleet passes the Senate by voice vote and the House in four hours. The admirals have been asking for this for twenty years. The question now is not whether to build the ships but whether the yards can build them before the Pacific requires them."
+
+ USA_mil_carrier_doctrine:0 "Carrier Doctrine"
+ USA_mil_carrier_doctrine_desc:0 "The battle line doctrine is dead; Taranto and Pearl Harbor killed it on the same weekend. The flat-tops have replaced the battleships as the capital ships of the new naval warfare, and the admirals who understood that early — Nimitz, Halsey, Mitscher — are the ones writing the doctrine that the rest of the world will spend twenty years catching up to."
+
+ USA_mil_essex_program:0 "The Essex Programme"
+ USA_mil_essex_program_desc:0 "Twenty-four Essex-class fleet carriers ordered; seventeen commissioned before the Japanese surrender; three more commissioned afterward because the steel was cut and the workers had nothing else to do. Each one displaces twenty-seven thousand tons and carries ninety aircraft and represents everything the Navy learned about carrier operations at Midway and the Philippine Sea."
+
+ USA_mil_fleet_train:0 "The Fleet Train"
+ USA_mil_fleet_train_desc:0 "The underway replenishment concept — oilers, ammunition ships, and stores ships sailing with the battle fleet rather than waiting in port — transforms the Pacific into a highway. Nimitz's fleet can remain at sea for months at a time, and Yamamoto has no answer for a supply chain that follows the enemy fleet to his doorstep."
+
+ # --- Air sub-ladder ---
+ USA_mil_air_corps_expansion:0 "Air Corps Expansion"
+ USA_mil_air_corps_expansion_desc:0 "GHQ Air Force acquires independent planning authority, a separate training pipeline, and a strategic mission that does not require the blessing of the Army ground commanders. The airmen have been arguing for this since Billy Mitchell. They have it now, and they intend to use it."
+
+ USA_mil_very_long_range:0 "Very Long Range"
+ USA_mil_very_long_range_desc:0 "The B-29 Superfortress is the most expensive weapons program in American history and it does not work. The engines overheat, the pressurization leaks, and the fire-control system is theoretical. Then LeMay takes it to the Marianas, strips out the guns, loads it with incendiaries, and burns Tokyo to the ground at night from five thousand feet. The design specifications were not the point."
+
+ USA_mil_strategic_air_command:0 "Strategic Air Command"
+ USA_mil_strategic_air_command_desc:0 "LeMay's SAC is not a command; it is a theology. The bombers are on alert twenty-four hours a day, the crews spend their off-hours in ground training, and the base commanders who fail the operational readiness inspections are relieved before the inspector general's staff car is out of the parking lot. It is the most exacting peacetime military organization in American history, and it is built entirely around delivering one weapon to one country."
+
+ USA_mil_jet_transition:0 "The Jet Transition"
+ USA_mil_jet_transition_desc:0 "The last piston-engined fighter in operational service is retired with ceremony and a press release. The jet age has no room for nostalgia. The pilots who flew Mustangs in the war are now flying something that goes twice as fast and cannot glide if the engine quits, and they are discovering that the skills translate only partially and the instincts translate not at all."
+
+ USA_mil_century_series:0 "The Century Series"
+ USA_mil_century_series_desc:0 "The F-100, F-101, F-102, F-104, F-105, and F-106 arrive so quickly that the Air Force barely has time to work out the bugs in one before the next one is declared operational. Each is supersonic. Each replaces something that was cutting-edge eighteen months ago. The procurement system is producing aircraft faster than the operational doctrine can absorb them."
+
+ # --- Atomic sub-ladder ---
+ USA_mil_uranium_committee:0 "The Uranium Committee"
+ USA_mil_uranium_committee_desc:0 "Einstein's letter to the President ends with a recommendation that the government take an interest in uranium research. The government's response is a committee, a modest appropriation, and a request that the physicists not talk to the newspapers. Within three years the committee will have become the Manhattan Project, and the appropriation will be two billion dollars, and the newspapers will not print anything because they will not know there is anything to print."
+
+ USA_mil_manhattan_project:0 "The Manhattan Project"
+ USA_mil_manhattan_project_desc:0 "Three cities built in secret in two years: Oak Ridge processes uranium; Hanford breeds plutonium; Los Alamos designs the weapon. One hundred thousand workers who do not know what they are building. A budget hidden in other budgets. A deadline that is the war itself. Oppenheimer runs the physics and Groves runs the construction and Roosevelt has not told the Vice President."
+
+ USA_mil_trinity:0 "Trinity"
+ USA_mil_trinity_desc:0 "The tower stands in the Jornada del Muerto desert, one hundred miles south of Albuquerque, at a site the project has named Trinity for reasons Oppenheimer says he cannot precisely explain. The test is scheduled for 4 a.m. on the sixteenth of July, 1945. It fires at 5:29. The yield is twenty-one kilotons. Fermi drops small pieces of paper from a height of five feet and measures how far the blast wave carries them. No one has very much to say."
+
+ USA_mil_the_super:0 "The Super"
+ USA_mil_the_super_desc:0 "Teller has wanted to build a hydrogen bomb since Los Alamos. Oppenheimer's General Advisory Committee recommends against it. Truman authorizes it anyway, on the grounds that if it is possible to build then the Soviets will build it, and if the Soviets build it first the question will be moot. The first thermonuclear device, Ivy Mike, yields ten and a half megatons. Teller is satisfied."
+
+ USA_mil_atoms_underwater:0 "Atoms Underwater"
+ USA_mil_atoms_underwater_desc:0 "The USS Nautilus departs New London on 17 January 1955 and signals UNDERWAY ON NUCLEAR POWER. Rickover's reactor runs for sixty-two days without refueling. The diesel-electric submarine that had to surface every two days to charge its batteries is obsolete before the Nautilus returns to port. The ocean ceases to be a barrier and becomes a medium."
+
+ # --- Korea-era sub-ladder ---
+ USA_mil_rotation_system:0 "The Rotation System"
+ USA_mil_rotation_system_desc:0 "Every soldier who serves in Korea does a thirteen-month tour and comes home. The policy is controversial — it breaks up units just as they learn to work together — but it means that by 1953 the Army has two hundred thousand combat veterans distributed through its ranks instead of concentrated in the Eighth Army. The institutional knowledge of war is no longer a casualty of peace."
+
+ USA_mil_helicopter_age:0 "The Helicopter Age"
+ USA_mil_helicopter_age_desc:0 "The H-13 Sioux carries wounded men out of Korean valleys that no wheeled vehicle can reach, over ridgelines that no road crosses, in weather that grounds fixed-wing aircraft. The surgeons of the Mobile Army Surgical Hospitals receive casualties within the golden hour. The helicopter has found its purpose, and the Army is beginning to understand that purpose is not yet exhausted."
+
+ USA_mil_continental_defense:0 "Continental Defense"
+ USA_mil_continental_defense_desc:0 "The DEW Line stretches three thousand miles across the Arctic, fifty-eight unmanned radar stations watching for Soviet bombers that have not yet been built. The Nike Ajax batteries ring every major American city. NORAD coordinates the intercept mission. The budget is enormous and the threat is largely theoretical, but the alternative — doing nothing and being wrong — is not available."
+
+ # --- Military ideas ---
+ USA_mil_wbr_spirit:0 "War Resources Board"
+ USA_mil_wbr_spirit_desc:0 "Federal allocation of strategic materials under a presidential coordinating board. The friction of committee government costs something in efficiency; the visibility into bottlenecks costs nothing."
+
+ USA_mil_rubber_spirit:0 "Synthetic Rubber Programme"
+ USA_mil_rubber_spirit_desc:0 "Buna-S plants running three shifts. The Axis cannot strangle a supply chain that begins in Kentucky."
+
+ USA_mil_fleet_train_spirit:0 "Fleet Train"
+ USA_mil_fleet_train_spirit_desc:0 "The supply ships that follow the battle fleet. Underway replenishment means the Pacific is no obstacle — it is an advantage."
+
+ USA_mil_sac_spirit:0 "Strategic Air Command"
+ USA_mil_sac_spirit_desc:0 "Bombers on alert. Crews in ready rooms. Targets already plotted. SAC does not wait for authorization; it waits for the President."
+
+ USA_mil_manhattan_spirit:0 "The Manhattan Project"
+ USA_mil_manhattan_spirit_desc:0 "Classified. The budget is in other budgets. The workers do not know what they are building. The physicists know, and most of them are not sleeping."
+
+ USA_mil_the_super_spirit:0 "Thermonuclear Programme"
+ USA_mil_the_super_spirit_desc:0 "Yield measured in megatons now. The question of sufficiency has been permanently retired."
+
+ USA_mil_atoms_spirit:0 "Nuclear Propulsion"
+ USA_mil_atoms_spirit_desc:0 "The Nautilus never needs to surface to breathe. Rickover's boats operate beneath the enemy's sensor horizon indefinitely."
+
+ USA_mil_continental_defense_spirit:0 "Continental Defense System"
+ USA_mil_continental_defense_spirit_desc:0 "DEW Line radar, Nike missile batteries, NORAD command authority. The continent is not undefended."
+
+ # --- Trinity event ---
+ usa_cabinet.225.t:0 "The Gadget"
+ usa_cabinet.225.d:0 "Five twenty-nine in the morning. The tower at Trinity site carries a plutonium device the engineers call the Gadget. The yield is twenty-one kilotons. Oppenheimer says afterward that a fragment of the Bhagavad Gita came to him: I am become Death, the destroyer of worlds. Fermi, who does not go in for poetry, drops small pieces of paper from a height of five feet and calculates the yield from how far the blast wave carries them. Both men understand what has happened. The world does not know yet. It will know soon."
+ usa_cabinet.225.a:0 "The world will never be the same."

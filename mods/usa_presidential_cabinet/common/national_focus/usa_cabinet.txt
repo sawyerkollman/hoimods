@@ -3082,6 +3082,10 @@ focus_tree = {
 
 	#######################################################################
 	# MILITARY - The shared military pillar (no prerequisite: always open)
+	# All focuses: no wing flags; gated only by date floors + internal prereqs.
+	# Sub-ladders: Industry (y 0-4) | Navy (y 5-9) | Air (y 10-14) |
+	#              Atomic (y 15-19) | Korea-era (y 20-22)
+	# Spine at x=44; branches at x=43 (left) and x=45 (right).
 	#######################################################################
 
 	focus = {
@@ -3095,4 +3099,523 @@ focus_tree = {
 		}
 		ai_will_do = { factor = 5 }
 	}
+
+	# =======================================================================
+	# INDUSTRY SUB-LADDER
+	# =======================================================================
+
+	# The War Resources Board: a presidential coordinating body that brings
+	# steel, rubber, and aluminium under federal allocation.
+	focus = {
+		id = USA_mil_war_resources_board
+		icon = GFX_goal_generic_production
+		relative_position_id = USA_mil_anchor
+		x = 0
+		y = 2
+		cost = 10
+		prerequisite = { focus = USA_mil_anchor }
+		available = {
+			date > 1939.1.1
+		}
+		completion_reward = {
+			# Two civilian factories — one in Texas (oil country), one in California.
+			366 = { # Texas
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			369 = { # California
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			add_ideas = USA_mil_wbr_spirit
+		}
+		ai_will_do = { factor = 10 }
+	}
+
+	# The Synthetic Rubber Programme: buna-S plants in Kentucky and Ohio
+	# end American dependence on Far Eastern latex.
+	focus = {
+		id = USA_mil_synthetic_rubber
+		icon = GFX_goal_generic_scientific_exchange
+		relative_position_id = USA_mil_anchor
+		x = -1
+		y = 3
+		cost = 10
+		prerequisite = { focus = USA_mil_war_resources_board }
+		available = {
+			date > 1940.1.1
+		}
+		completion_reward = {
+			add_ideas = USA_mil_rubber_spirit
+		}
+		ai_will_do = { factor = 10 }
+	}
+
+	# Willow Run: Henry Ford's mile-long bomber plant converts one B-24 into
+	# a production line, then converts the production line into a flood.
+	focus = {
+		id = USA_mil_willow_run
+		icon = GFX_goal_generic_construct_mil_factory
+		relative_position_id = USA_mil_anchor
+		x = 0
+		y = 4
+		cost = 10
+		prerequisite = { focus = USA_mil_war_resources_board }
+		available = {
+			date > 1941.1.1
+		}
+		completion_reward = {
+			# Two military factories: the roar of the River Rouge, redirected.
+			393 = { # Michigan
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			360 = { # Pennsylvania
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+		ai_will_do = { factor = 10 }
+	}
+
+	# The Liberty Fleet: ten thousand-ton hulls in eighteen days.
+	# Forty convoy hulls added to the American stockpile.
+	focus = {
+		id = USA_mil_liberty_fleet
+		icon = GFX_goal_generic_build_navy
+		relative_position_id = USA_mil_anchor
+		x = 1
+		y = 3
+		cost = 10
+		prerequisite = { focus = USA_mil_war_resources_board }
+		available = {
+			date > 1940.1.1
+		}
+		completion_reward = {
+			add_equipment_to_stockpile = {
+				type = convoy_1
+				amount = 40
+			}
+		}
+		ai_will_do = { factor = 10 }
+	}
+
+	# =======================================================================
+	# NAVY SUB-LADDER
+	# =======================================================================
+
+	# The Two-Ocean Navy Act: eighteen fleet carriers, eight battleships,
+	# and enough destroyers to make the act's authors uncomfortable.
+	focus = {
+		id = USA_mil_two_ocean_navy
+		icon = GFX_goal_generic_build_navy
+		relative_position_id = USA_mil_anchor
+		x = 0
+		y = 5
+		cost = 10
+		prerequisite = { focus = USA_mil_willow_run }
+		available = {
+			date > 1940.1.1
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = usa_mil_naval
+				bonus = 0.25
+				uses = 2
+				category = naval_equipment
+			}
+			navy_experience = 25
+		}
+		ai_will_do = { factor = 10 }
+	}
+
+	# Carrier Doctrine: the flat-tops replace the battle line.
+	# The Navy learns to fight from the air.
+	focus = {
+		id = USA_mil_carrier_doctrine
+		icon = GFX_goal_generic_navy_carrier
+		relative_position_id = USA_mil_anchor
+		x = -1
+		y = 6
+		cost = 10
+		prerequisite = { focus = USA_mil_two_ocean_navy }
+		available = {
+			date > 1941.1.1
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = usa_mil_carrier
+				bonus = 0.50
+				uses = 2
+				category = naval_air
+			}
+		}
+		ai_will_do = { factor = 10 }
+	}
+
+	# The Essex Programme: twenty-four fleet carriers ordered, seventeen
+	# built before the guns fell silent.
+	focus = {
+		id = USA_mil_essex_program
+		icon = GFX_goal_generic_construct_naval_dockyard
+		relative_position_id = USA_mil_anchor
+		x = 0
+		y = 7
+		cost = 10
+		prerequisite = { focus = USA_mil_carrier_doctrine }
+		available = {
+			date > 1942.1.1
+		}
+		completion_reward = {
+			# Dockyard expansion on the Pacific coast (state 369 = California).
+			369 = {
+				add_offsite_building = {
+					type = dockyard
+					level = 2
+				}
+			}
+		}
+		ai_will_do = { factor = 10 }
+	}
+
+	# The Fleet Train: underway replenishment transforms the Pacific
+	# into a highway the enemy cannot close.
+	focus = {
+		id = USA_mil_fleet_train
+		icon = GFX_goal_generic_positive_trade_relations
+		relative_position_id = USA_mil_anchor
+		x = 1
+		y = 6
+		cost = 10
+		prerequisite = { focus = USA_mil_two_ocean_navy }
+		available = {
+			date > 1942.1.1
+		}
+		completion_reward = {
+			navy_experience = 25
+			add_ideas = USA_mil_fleet_train_spirit
+		}
+		ai_will_do = { factor = 10 }
+	}
+
+	# =======================================================================
+	# AIR SUB-LADDER
+	# =======================================================================
+
+	# Air Corps Expansion: GHQ Air Force becomes a strategic force,
+	# not a battlefield taxi service.
+	focus = {
+		id = USA_mil_air_corps_expansion
+		icon = GFX_goal_generic_air_superiority
+		relative_position_id = USA_mil_anchor
+		x = 0
+		y = 10
+		cost = 10
+		prerequisite = { focus = USA_mil_essex_program }
+		available = {
+			date > 1937.1.1
+		}
+		completion_reward = {
+			air_experience = 25
+		}
+		ai_will_do = { factor = 10 }
+	}
+
+	# Very Long Range: the B-29 Superfortress, a weapon designed to reach
+	# Tokyo from the Marianas and return.
+	focus = {
+		id = USA_mil_very_long_range
+		icon = GFX_goal_generic_air_superiority
+		relative_position_id = USA_mil_anchor
+		x = -1
+		y = 11
+		cost = 10
+		prerequisite = { focus = USA_mil_air_corps_expansion }
+		available = {
+			date > 1942.1.1
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = usa_mil_strat_bomber
+				bonus = 0.50
+				uses = 2
+				category = strategic_bomber
+			}
+		}
+		ai_will_do = { factor = 10 }
+	}
+
+	# Strategic Air Command: LeMay's deterrent force, alert every hour
+	# of every day.
+	focus = {
+		id = USA_mil_strategic_air_command
+		icon = GFX_goal_generic_air_superiority
+		relative_position_id = USA_mil_anchor
+		x = 0
+		y = 12
+		cost = 10
+		prerequisite = { focus = USA_mil_very_long_range }
+		available = {
+			date > 1946.1.1
+		}
+		completion_reward = {
+			add_ideas = USA_mil_sac_spirit
+		}
+		ai_will_do = { factor = 10 }
+	}
+
+	# Jet Transition: the piston engine gives way to the turbine,
+	# and the old airframes become museum pieces overnight.
+	focus = {
+		id = USA_mil_jet_transition
+		icon = GFX_goal_generic_air_superiority
+		relative_position_id = USA_mil_anchor
+		x = 1
+		y = 11
+		cost = 10
+		prerequisite = { focus = USA_mil_air_corps_expansion }
+		available = {
+			date > 1945.1.1
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = usa_mil_jet_aircraft
+				bonus = 0.50
+				uses = 2
+				category = jet_equipment
+			}
+		}
+		ai_will_do = { factor = 10 }
+	}
+
+	# The Century Series: F-100, F-101, F-102 — each supersonic, each
+	# replacing something that was cutting-edge eighteen months ago.
+	focus = {
+		id = USA_mil_century_series
+		icon = GFX_goal_generic_air_superiority
+		relative_position_id = USA_mil_anchor
+		x = 0
+		y = 13
+		cost = 10
+		prerequisite = {
+			focus = USA_mil_strategic_air_command
+			focus = USA_mil_jet_transition
+		}
+		available = {
+			date > 1954.1.1
+		}
+		completion_reward = {
+			air_experience = 25
+			add_tech_bonus = {
+				name = usa_mil_century_jet
+				bonus = 0.50
+				uses = 2
+				category = jet_equipment
+			}
+		}
+		ai_will_do = { factor = 10 }
+	}
+
+	# =======================================================================
+	# ATOMIC SUB-LADDER
+	# =======================================================================
+
+	# The Uranium Committee: Einstein's letter reaches the President's desk.
+	# A handful of physicists are told to find out whether fission is
+	# a weapon or just a curiosity.
+	focus = {
+		id = USA_mil_uranium_committee
+		icon = GFX_goal_generic_secret_weapon
+		relative_position_id = USA_mil_anchor
+		x = 0
+		y = 15
+		cost = 10
+		prerequisite = { focus = USA_mil_century_series }
+		available = {
+			date > 1939.9.1
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = usa_mil_nuclear_research
+				bonus = 0.50
+				uses = 2
+				category = nuclear
+			}
+		}
+		ai_will_do = { factor = 10 }
+	}
+
+	# The Manhattan Project: three cities built in secret,
+	# one hundred thousand workers who did not know what they were building.
+	focus = {
+		id = USA_mil_manhattan_project
+		icon = GFX_goal_generic_secret_weapon
+		relative_position_id = USA_mil_anchor
+		x = -1
+		y = 16
+		cost = 10
+		prerequisite = { focus = USA_mil_uranium_committee }
+		available = {
+			date > 1942.1.1
+		}
+		completion_reward = {
+			add_ideas = USA_mil_manhattan_spirit
+		}
+		ai_will_do = { factor = 10 }
+	}
+
+	# Trinity: the first test detonation in the desert of New Mexico,
+	# 5:29 a.m., 16 July 1945. "Now I am become Death."
+	focus = {
+		id = USA_mil_trinity
+		icon = GFX_goal_generic_secret_weapon
+		relative_position_id = USA_mil_anchor
+		x = 0
+		y = 17
+		cost = 10
+		prerequisite = { focus = USA_mil_manhattan_project }
+		available = {
+			date > 1945.6.1
+		}
+		completion_reward = {
+			add_nuclear_bombs = 1
+			country_event = { id = usa_cabinet.225 hours = 6 }
+		}
+		ai_will_do = { factor = 10 }
+	}
+
+	# The Super: Teller's hydrogen bomb, a thousand times more powerful
+	# than the devices that ended the war.
+	focus = {
+		id = USA_mil_the_super
+		icon = GFX_goal_generic_secret_weapon
+		relative_position_id = USA_mil_anchor
+		x = 1
+		y = 17
+		cost = 10
+		prerequisite = { focus = USA_mil_trinity }
+		available = {
+			date > 1950.1.1
+		}
+		completion_reward = {
+			add_ideas = USA_mil_the_super_spirit
+		}
+		ai_will_do = { factor = 10 }
+	}
+
+	# Atoms Underwater: the USS Nautilus, the first nuclear-powered
+	# submarine, renders the old arithmetic of undersea endurance obsolete.
+	focus = {
+		id = USA_mil_atoms_underwater
+		icon = GFX_goal_generic_build_navy
+		relative_position_id = USA_mil_anchor
+		x = 0
+		y = 18
+		cost = 10
+		prerequisite = { focus = USA_mil_the_super }
+		available = {
+			date > 1954.1.1
+		}
+		completion_reward = {
+			navy_experience = 25
+			add_ideas = USA_mil_atoms_spirit
+		}
+		ai_will_do = { factor = 10 }
+	}
+
+	# =======================================================================
+	# KOREA-ERA SUB-LADDER
+	# =======================================================================
+
+	# The Rotation System: soldiers cycle through Korea every thirteen months,
+	# coming home veterans. The Army rebuilds its institutional knowledge.
+	focus = {
+		id = USA_mil_rotation_system
+		icon = GFX_goal_generic_allies_build_infantry
+		relative_position_id = USA_mil_anchor
+		x = 0
+		y = 20
+		cost = 10
+		prerequisite = { focus = USA_mil_atoms_underwater }
+		available = {
+			date > 1950.6.1
+		}
+		completion_reward = {
+			add_manpower = 150000
+			army_experience = 25
+		}
+		ai_will_do = { factor = 10 }
+	}
+
+	# The Helicopter Age: Sikorsky's machines prove themselves carrying
+	# wounded out of Korean valleys no ambulance could reach.
+	focus = {
+		id = USA_mil_helicopter_age
+		icon = GFX_goal_generic_allies_build_infantry
+		relative_position_id = USA_mil_anchor
+		x = -1
+		y = 21
+		cost = 10
+		prerequisite = { focus = USA_mil_rotation_system }
+		available = {
+			date > 1952.1.1
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = usa_mil_helicopter
+				bonus = 0.50
+				uses = 2
+				category = motorized_equipment
+			}
+		}
+		ai_will_do = { factor = 10 }
+	}
+
+	# Continental Defense: the DEW Line, the Nike missile batteries,
+	# and the first serious attempt to defend North America from the air.
+	focus = {
+		id = USA_mil_continental_defense
+		icon = GFX_goal_generic_fortify_city
+		relative_position_id = USA_mil_anchor
+		x = 1
+		y = 21
+		cost = 10
+		prerequisite = { focus = USA_mil_rotation_system }
+		available = {
+			date > 1952.1.1
+		}
+		completion_reward = {
+			every_owned_state = {
+				limit = {
+					is_core_of = USA
+					coast = yes
+				}
+				add_building_construction = {
+					type = anti_air_building
+					level = 1
+					instant_build = yes
+					province = { all_provinces = yes }
+				}
+			}
+			add_ideas = USA_mil_continental_defense_spirit
+		}
+		ai_will_do = { factor = 10 }
+	}
+
 }

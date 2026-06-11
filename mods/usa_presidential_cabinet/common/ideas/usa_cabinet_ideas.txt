@@ -803,5 +803,99 @@ ideas = {
 			}
 		}
 
+		###################################################################
+		# MILITARY PILLAR SPIRITS (Task 10)
+		###################################################################
+
+		# USA_mil_war_resources_board: federal allocation of steel, rubber,
+		# and aluminium under presidential direction.
+		USA_mil_wbr_spirit = {
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				industrial_capacity_factory = 0.05
+				production_speed_buildings_factor = 0.05
+			}
+		}
+
+		# USA_mil_synthetic_rubber: buna-S plants end dependence on Far
+		# Eastern latex. Tech-research bonus delivered via focus directly;
+		# this spirit represents the ongoing domestic production capacity.
+		USA_mil_rubber_spirit = {
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.05
+				consumer_goods_factor = -0.02
+			}
+		}
+
+		# USA_mil_fleet_train: underway replenishment — the supply ships that
+		# follow the battle fleet across the Pacific.
+		USA_mil_fleet_train_spirit = {
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				navy_max_range_factor = 0.10
+				experience_gain_navy = 0.05
+			}
+		}
+
+		# USA_mil_strategic_air_command: LeMay's deterrent force, bombers
+		# on alert around the clock.
+		USA_mil_sac_spirit = {
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				strategic_bomb_visibility = -0.15
+				air_strategic_bomber_bombing_factor = 0.15
+				air_experience_gain_factor = 0.05
+			}
+		}
+
+		# USA_mil_manhattan_project: the classified atomic programme.
+		# A static +15% bonus to nuclear reactor construction.
+		USA_mil_manhattan_spirit = {
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				nuclear_production_factor = 0.15
+			}
+		}
+
+		# USA_mil_the_super: the thermonuclear programme — yield measured
+		# not in kilotons but in megatons.
+		USA_mil_the_super_spirit = {
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				nuclear_production_factor = 0.50
+			}
+		}
+
+		# USA_mil_atoms_underwater: the Nautilus and the nuclear submarine
+		# fleet that follows. The ocean ceases to be a barrier.
+		USA_mil_atoms_spirit = {
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				experience_gain_navy = 0.10
+				navy_max_range_factor = 0.15
+				submarine_visibility = -0.10
+			}
+		}
+
+		# USA_mil_continental_defense: the DEW Line, Nike batteries,
+		# and NORAD — the first serious attempt to defend the continent.
+		USA_mil_continental_defense_spirit = {
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				air_intercept_efficiency = 0.10
+				production_speed_anti_air_building_factor = 0.15
+				defence = 0.03
+			}
+		}
+
 	}
 }
