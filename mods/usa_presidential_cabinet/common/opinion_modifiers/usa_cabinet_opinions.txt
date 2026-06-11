@@ -1,0 +1,29 @@
+###########################################################################
+# Presidential Cabinet - USA Overhaul : Opinion Modifiers
+# Small, permanent opinion modifiers granted by the diplomatic focuses of
+# the wing trees. The destroyers-for-bases deal uses the vanilla
+# destroyers_for_bases_opinion modifier instead of a custom one.
+###########################################################################
+
+opinion_modifiers = {
+
+	# USA_dem_cash_and_carry: the democracies may buy, pay, and carry.
+	USA_cash_and_carry_partner = {
+		value = 10
+	}
+
+	# USA_dem_atlantic_charter: co-signers of the eight principles.
+	USA_atlantic_charter_partner = {
+		value = 20
+	}
+
+	# USA_dem_tehran (and later wartime summits): seats at the same table.
+	USA_wartime_conference = {
+		value = 15
+	}
+
+	# USA_dem_truman_doctrine: America pledges support to free peoples.
+	USA_truman_doctrine_partner = {
+		value = 25
+	}
+}

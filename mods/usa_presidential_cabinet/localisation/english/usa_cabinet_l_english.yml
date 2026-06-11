@@ -2,119 +2,139 @@
 
  # ============================ FOCUSES ============================
 
- # --- Economic spine ---
- USA_a_nation_rebuilds:0 "A Nation Rebuilds"
- USA_a_nation_rebuilds_desc:0 "The worst of the Great Depression has passed, but one American worker in six is still idle and faith in the system runs dangerously thin. The federal government must steady the recovery, keep the banks solvent, and prove that democracy can still deliver where lesser nations have surrendered to dictators. Every branch of policy that follows rests on the foundation we pour now."
- USA_relief_programs:0 "Relief Programs"
- USA_relief_programs_desc:0 "The WPA, the CCC, and the PWA have already set millions of idle hands to honest work, raising schools, bridges, and post offices from coast to coast. Expanding direct relief will blunt the sharpest edge of poverty, restore the people's confidence, and quietly assemble the skilled workforce and infrastructure that a future war economy will one day demand."
- USA_public_works:0 "Public Works"
- USA_public_works_desc:0 "From the Tennessee Valley to the Grand Coulee, monumental dams and power lines are wiring an entire continent for the modern age. A nation knit together by concrete, copper, and cheap electricity is one whose factories will never want for power when at last the time comes to build in deadly earnest."
- USA_the_second_new_deal:0 "The Second New Deal"
- USA_the_second_new_deal_desc:0 "The first New Deal saved the patient; the second will remake him. Wagner Act protections for organized labor, sweeping social insurance, and a permanent federal hand upon the economic tiller are meant to outlast this administration entirely, if the Supreme Court and the conservative coalition in Congress can be faced down. The old order will not go quietly into the night."
- USA_social_security_expansion:0 "Social Security Expansion"
- USA_social_security_expansion_desc:0 "No American who has given a lifetime of honest labor should face old age, sickness, or sudden unemployment in destitution. Broadening the safety net wins the lasting loyalty of millions and emboldens the progressive wing of the party, who will soon expect a far louder voice at the cabinet table to come."
- USA_industrial_relations:0 "Industrial Relations"
- USA_industrial_relations_desc:0 "Sit-down strikes and pitched battles at the factory gates have cost the nation dearly in lost production. Bring labor and management to the same table under federal mediation, for a workforce that shares in the prosperity it creates is the one truly unshakeable bedrock of American industrial might."
- USA_a_managed_economy:0 "A Managed Economy"
- USA_a_managed_economy_desc:0 "The Depression taught a brutal lesson: left wholly to itself, the free market can starve a people atop full granaries. Planning boards, federal investment, and a coordinated industrial policy will keep the great engines of production turning at full song, and ready to be redirected from automobiles to tanks at a moment's notice."
-
- # --- The Brain Trust / Cabinet ---
- USA_the_brain_trust:0 "The Brain Trust"
- USA_the_brain_trust_desc:0 "Franklin Roosevelt does not govern alone. He governs through a 'Brain Trust' of professors, lawyers, and loyalists, and through the cabinet secretaries who command the great departments of state. The men you raise into this inner circle will counsel the President, run the bureaucracy, and quietly wage a war among themselves between progressive reformers and the conservative Old Guard. Assemble that circle with care, for its balance will decide which America emerges from the gathering storm."
+ # --- Trunk ---
+ USA_trunk_inheritance_of_32:0 "The Inheritance of '32"
+ USA_trunk_inheritance_of_32_desc:0 "Four years after the Crash the banks have reopened, but a quarter of the nation still stands idle. Whatever Washington becomes in the next twenty years begins with what it does about the Depression."
+ USA_trunk_brain_trust:0 "The Brain Trust"
+ USA_trunk_brain_trust_desc:0 "Roosevelt does not govern alone: he governs through a circle of professors, lawyers, and loyalists, and through the secretaries who command the great departments of state. Assemble that circle with care, for its quiet war between reformers and the Old Guard will decide which America emerges from the gathering storm."
  USA_secretary_of_state:0 "The State Department"
- USA_secretary_of_state_desc:0 "Foggy Bottom speaks for America to the world, and the Secretary of State sets the tone of its voice. In an age of dictators on the march, will that voice call for engagement and collective security, or insist that Europe's ancient blood feuds are no concern of ours? The answer will color every alliance and every war still to come."
+ USA_secretary_of_state_desc:0 "Foggy Bottom speaks for America to the world, and the Secretary of State sets the tone of its voice. In an age of dictators on the march, will that voice call for engagement, or insist that Europe's ancient quarrels are no concern of ours?"
  USA_appoint_hull:0 "Appoint Cordell Hull"
- USA_appoint_hull_desc:0 "Cordell Hull, the courtly Tennessean, is the longest-serving Secretary of State in the nation's history and a true believer in the power of commerce to bind nations together in peace. His reciprocal trade agreements and patient diplomacy will draw a reluctant America out of its shell toward the wider world, and lend the cabinet a steady, internationalist, and reform-minded voice."
+ USA_appoint_hull_desc:0 "The courtly Tennessean is a true believer in the power of commerce to bind nations together in peace. His trade agreements and patient diplomacy will draw a reluctant America toward the wider world, and lend the cabinet a steady, internationalist voice."
  USA_appoint_isolationist_state:0 "Appoint an Isolationist"
- USA_appoint_isolationist_state_desc:0 "Let the State Department be run by a man who reads the Neutrality Acts as holy writ, who believes the last war was a swindle of bankers and arms-makers and that the next will prove no different. America's true strength, he insists, lies behind its two great oceans, in minding its own hemisphere and leaving the Old World to stew in its own poison."
+ USA_appoint_isolationist_state_desc:0 "Let the State Department be run by a man who reads the Neutrality Acts as holy writ and remembers the last war as a swindle of bankers and arms-makers. America's true strength, he insists, lies behind its two great oceans."
  USA_secretary_of_treasury:0 "The Treasury"
- USA_secretary_of_treasury_desc:0 "Whoever holds the purse strings holds the future. The Treasury will decide whether the relief checks keep flowing and the public works keep rising, or whether the budget is balanced upon the back of the New Deal. It is the quiet battlefield upon which the entire domestic program is ultimately won or lost."
+ USA_secretary_of_treasury_desc:0 "Whoever holds the purse strings holds the future. The Treasury will decide whether the relief checks keep flowing and the public works keep rising, or whether the budget is balanced upon the back of the New Deal."
  USA_appoint_morgenthau:0 "Appoint Henry Morgenthau"
- USA_appoint_morgenthau_desc:0 "Henry Morgenthau Jr., gentleman farmer of Dutchess County and the President's own neighbor and intimate friend, is a New Dealer to the marrow of his bones. He will find the money for relief, for public works, and one day for war itself, and he will spend it without flinching, anchoring the progressive bloc squarely at the heart of the cabinet."
+ USA_appoint_morgenthau_desc:0 "Henry Morgenthau Jr., the President's Dutchess County neighbor and intimate friend, is a New Dealer to the marrow of his bones. He will find the money for relief, for public works, and one day for war itself, and he will spend it without flinching."
  USA_appoint_business_treasury:0 "Appoint a Man of Business"
- USA_appoint_business_treasury_desc:0 "A sound-money man who speaks the easy language of Wall Street and the country club, brought in to reassure the markets and the bond-holders. Industry will trust the dollar under his steady hand and expand with confidence, but from this day forward every relief program will have to fight for its very life at the Treasury's door."
+ USA_appoint_business_treasury_desc:0 "A sound-money man who speaks the easy language of Wall Street, brought in to reassure the markets and the bond-holders. Industry will trust the dollar under his steady hand, but every relief program will now fight for its life at the Treasury's door."
  USA_secretary_of_war:0 "The War Department"
- USA_secretary_of_war_desc:0 "Storm clouds are gathering over the Rhine and the Yangtze, and the War Department must decide how seriously to take them. Does America rearm now, while there is still precious time to prepare, or trust that two oceans and a small professional army will prove shield enough? The Secretary's answer will forge the very army that fights the coming war."
+ USA_secretary_of_war_desc:0 "Storm clouds are gathering over the Rhine and the Yangtze, and the War Department must decide how seriously to take them. Does America rearm now, while there is still time, or trust that two oceans and a small professional army will prove shield enough?"
  USA_appoint_stimson:0 "Appoint Henry Stimson"
- USA_appoint_stimson_desc:0 "Henry Stimson, a Republican elder statesman who served Taft and Hoover before him, takes up the War Department in open defiance of his own party's isolationists. Grim, principled, and utterly certain that war is coming whether America wills it or not, he will drive rearmament relentlessly forward and bend the whole cabinet toward the President's hardening resolve."
+ USA_appoint_stimson_desc:0 "Henry Stimson, Republican elder statesman, takes up the War Department in open defiance of his own party's isolationists. Grim, principled, and certain that war is coming whether America wills it or not, he will drive rearmament relentlessly forward."
  USA_appoint_woodring:0 "Appoint Harry Woodring"
- USA_appoint_woodring_desc:0 "Harry Woodring of Kansas speaks for the millions who swore 'never again' amid the trenches of 1918. He will keep the army small, the budget lean, and American boys clear of foreign quarrels, a comfort to the heartland even as it leaves the nation perilously unready should the very worst arrive on its shores."
+ USA_appoint_woodring_desc:0 "Harry Woodring of Kansas speaks for the millions who swore 'never again' amid the trenches of 1918. He will keep the army small, the budget lean, and American boys at home, however unready that leaves the Republic should the worst arrive."
  USA_attorney_general:0 "The Department of Justice"
- USA_attorney_general_desc:0 "The Justice Department guards the home front, and in dangerous times its writ runs very wide indeed. Will the Attorney General stand as the conscience of the nation, defending dissent and the rights of the accused, or as its iron shield, hunting subversion and fifth columns before they can strike? The very character of wartime America hangs upon the answer."
+ USA_attorney_general_desc:0 "The Justice Department guards the home front, and in dangerous times its writ runs very wide indeed. Will the Attorney General stand as the conscience of the nation, defending dissent, or as its iron shield, hunting subversion before it can strike?"
  USA_appoint_murphy:0 "Appoint Frank Murphy"
- USA_appoint_murphy_desc:0 "Frank Murphy, the former governor of Michigan who refused to break the Flint sit-down strikers by force of arms, is a Catholic crusader for civil liberties and the rights of working men. As Attorney General he will hold the administration to its loftiest ideals, found a Civil Liberties Unit within the Department, and give the progressives a fierce champion at the cabinet table."
+ USA_appoint_murphy_desc:0 "Frank Murphy, the Michigan governor who refused to break the Flint sit-down strike by force of arms, is a crusader for civil liberties and the rights of working men. As Attorney General he will hold the administration to its loftiest ideals."
  USA_appoint_security_ag:0 "Appoint a Security Hawk"
- USA_appoint_security_ag_desc:0 "A hard, watchful man for a hard and watchful hour. He sees spies in the union halls and saboteurs at the factory gates, and he will build the files, the wiretaps, and the task forces to root them out. The Republic will be guarded zealously from within, though honest dissenters may find the line between treason and mere disagreement growing thin."
- USA_the_inner_circle:0 "The Inner Circle"
- USA_the_inner_circle_desc:0 "The last chair is filled and the inner circle stands complete. These are the men who will sit with the President through the long nights of crisis, each pressing his own vision of the nation's destiny, each owing his place at the table to you. Whether they pull toward reform or restraint, they now move as the very machinery of American power, and the whole world will feel the weight of their decisions."
- USA_progressive_ascendancy:0 "Progressive Ascendancy"
- USA_progressive_ascendancy_desc:0 "The reformers have won the long, patient struggle within the cabinet. There will be no retreat from the New Deal now; instead it will be carried further than Roosevelt himself once dared, toward a nation that guarantees its people not merely liberty but genuine security. The conservative coalition lies broken, and a new American settlement is suddenly within reach."
- USA_conservative_resurgence:0 "Conservative Resurgence"
- USA_conservative_resurgence_desc:0 "The Old Guard has reasserted its grip upon the levers of power. The alphabet agencies will be reined in, the budget disciplined, and the wilder experiments of the past decade quietly rolled back in favor of order, enterprise, and the old verities that built the country. Business breathes easier at last, and the reformers find themselves out in the cold."
- USA_economic_bill_of_rights:0 "An Economic Bill of Rights"
- USA_economic_bill_of_rights_desc:0 "In his message to the Congress the President names a second Bill of Rights: the right to a useful job, a decent home, adequate medical care, a good education, and protection from the fears of old age and want. To enshrine economic security as the birthright of every citizen is to redefine what the word freedom itself shall mean in America."
- USA_a_cooperative_commonwealth:0 "A Cooperative Commonwealth"
- USA_a_cooperative_commonwealth_desc:0 "A few within the movement dream past mere reform toward outright transformation: an America where the commanding heights of industry answer to the many rather than the few, where the cooperative supplants the corporation as the engine of national life. It is a road no American president has ever dared to walk, and the powers that be will not surrender it without a bitter fight."
- USA_restore_the_old_republic:0 "Restore the Old Republic"
- USA_restore_the_old_republic_desc:0 "Tear down the regimented economy and the swollen bureaucracy that grew up under cover of the emergency. Return the nation to the constitutional order the Founders intended: limited government, balanced budgets, the sovereignty of the several states, and the free enterprise that made America the wonder of the world. The New Deal was a detour; this is the long road home."
- USA_the_american_caesar:0 "The American Caesar"
- USA_the_american_caesar_desc:0 "It is whispered, in certain clubs and certain barracks, that the Republic has grown too creaking and too divided for an age of strongmen, that what America truly needs is a firm executive hand unbound by quarrelsome congresses and meddling courts. It is a dark and profoundly un-American thought, and there are men ready and willing to act upon it. To walk this road is to gamble the Republic itself upon a single throw."
+ USA_appoint_security_ag_desc:0 "A hard, watchful man for a hard and watchful hour. He sees saboteurs at the factory gates and will build the files and wiretaps to root them out, though honest dissenters may find the line between treason and mere disagreement growing thin."
+ USA_trunk_election_1936:0 "The Election of 1936"
+ USA_trunk_election_1936_desc:0 "The first full verdict on the New Deal comes due in November. The President carries every advantage into the contest, yet the Literary Digest swears Governor Landon has the votes, and the cabinet's quarrels have a way of escaping into print."
+ USA_trunk_election_1940:0 "The Election of 1940"
+ USA_trunk_election_1940_desc:0 "No President has ever asked the country for a third term; Washington set the example and a hundred and forty years have honored it. But France has fallen, Britain stands alone, and millions of Americans are asking whether mid-ocean is any place to change pilots. November will decide more than an office. It will decide what traditions are worth in an age of emergencies."
+ USA_trunk_election_1944:0 "The Election of 1944"
+ USA_trunk_election_1944_desc:0 "On schedule, as the founders insisted, the Republic returns to the polls. The parties print their posters and the trains carry their candidates, and beneath the argument lies a quieter question: how much longer one man, and one coalition, can carry the country."
+ USA_trunk_election_1948:0 "The Election of 1948"
+ USA_trunk_election_1948_desc:0 "Nobody gives the President's party a prayer. The pollsters have stopped polling, the columnists have filed their inauguration copy, and Governor Dewey campaigns with the unhurried calm of a man measuring the White House for curtains. The whistle-stops tell a different story, if anyone cared to listen."
+ USA_trunk_election_1952:0 "The Election of 1952"
+ USA_trunk_election_1952_desc:0 "Twenty years of one coalition, a stalemate abroad, and a country grown weary of emergencies: 1952 is less an election than a changing of the age. The General is courted by both parties, the Governor of Illinois speaks in polished paragraphs, and the suburbs, fat with new prosperity, will render the verdict."
+ USA_trunk_infamy:0 "A Date Which Will Live in Infamy"
+ USA_trunk_infamy_desc:0 "The bombs have fallen, and the argument is over. Isolationist and interventionist, striker and magnate file behind the flag as the Republic turns, with terrible deliberation, to the business of total war. There is no neutrality left to preserve, only a victory to be organized."
+ USA_trunk_shape_of_the_peace:0 "The Shape of the Peace"
+ USA_trunk_shape_of_the_peace_desc:0 "The guns have stopped, and the harder work begins. Armies must come home, factories must find peacetime customers, and the men in Washington must decide what kind of world American power has just purchased, and at what continuing price they are prepared to keep it."
+ USA_trunk_third_term_crisis:0 "The Third Term Crisis"
+ USA_trunk_third_term_crisis_desc:0 "The administration's lawyers have found the arguments and the administration's men have found the votes: the election of 1940 is to be postponed until the emergency passes. Whatever the courts eventually say, something fundamental has been said already, and every chancellery in Europe has heard it."
+ USA_trunk_suspended_election:0 "The Suspended Election"
+ USA_trunk_suspended_election_desc:0 "With the nation under arms, the government announces that the ballot of 1944 will not be held. The soldiers cannot vote, the argument runs, so no one shall. Martial necessity is a doctrine with no natural stopping place, and the men around the President know it."
 
- # --- The Arsenal / Military ---
- USA_the_arsenal:0 "The Arsenal of Democracy"
- USA_the_arsenal_desc:0 "America's truest weapon is not an army but an assembly line; Detroit alone can out-produce empires. Begin the great retooling now, surveying which plants can be turned to war work and which engineers can be set to designing tanks in place of sedans, so that when at last the call comes, the nation can simply drown its enemies beneath an avalanche of materiel."
- USA_war_plan_revision:0 "War Plan Revision"
- USA_war_plan_revision_desc:0 "The old color-coded war plans, drawn up to fight Britain or Mexico or some lone Japanese raid, belong to a vanished world. The General Staff must tear them up and think anew about coalition warfare on a truly global scale, with modern armor, airpower, and logistics, before doctrine written for the trenches of 1918 gets a fresh generation of Americans killed."
- USA_two_ocean_navy:0 "The Two-Ocean Navy"
- USA_two_ocean_navy_desc:0 "A republic that fronts upon both the Atlantic and the Pacific can never be secure with a fleet sized for only one. The Vinson Acts authorize a navy unlike any the world has ever seen: fast carriers, fleet battleships, and the escorts and shipyards to sustain them, a force capable of fighting and winning in two oceans at the very same time."
- USA_total_mobilization:0 "Total Mobilization"
- USA_total_mobilization_desc:0 "The treachery at Pearl Harbor has settled the great argument once and for all. Now there can be no half-measures left. Convert the consumer economy wholesale to the demands of war: ration the home front, conscript the manpower, and unleash the full and terrifying productive capacity of the United States upon the Axis. This is the very hinge of the war."
- USA_strategic_bombing:0 "Strategic Bombing"
- USA_strategic_bombing_desc:0 "From bases in England and across the Pacific, vast formations of heavy bombers will carry the war clear over the heads of the enemy's armies and into the beating heart of his industry. Ball-bearing works, oil refineries, and rail yards will burn, and with them the enemy's very capacity to wage modern war, though the cost in young aircrews will be grievous beyond reckoning."
- USA_amphibious_doctrine:0 "Amphibious Doctrine"
- USA_amphibious_doctrine_desc:0 "To defeat enemies entrenched across the oceans, America must master the single most difficult operation in all of war: hurling an army onto a hostile, defended shore and keeping it supplied there. Landing craft, naval gunfire, and combined-arms assault doctrine will turn every contested beach, from Normandy to the Marianas, into an open door."
- USA_the_manhattan_project:0 "The Manhattan Project"
- USA_the_manhattan_project_desc:0 "In hidden laboratories at Los Alamos, Oak Ridge, and Hanford, under conditions of absolute secrecy, the finest physicists of a generation pursue a weapon that bends the very fabric of matter to military ends. If it should work, a single bomb could erase a city entire, and whoever wields it first may dictate the terms of the peace, and of the whole age that follows."
- USA_dawn_of_the_atomic_age:0 "Dawn of the Atomic Age"
- USA_dawn_of_the_atomic_age_desc:0 "The desert at Trinity has lit up brighter than a thousand suns. The bomb is real, and for this brief moment America alone possesses it. The nation stands atop a new and terrible age as sole master of the atom; the war itself may end in a single flash, but the long shadow this weapon casts will fall across the whole of the century to come."
- USA_scientific_establishment:0 "A Scientific Establishment"
- USA_scientific_establishment_desc:0 "Wars are no longer won by mass alone, but increasingly within the laboratory. Bind the great universities, the national laboratories, and the brightest minds of an entire generation to the service of the state through a permanent national research apparatus, the very seed of an enterprise that will keep America at the cutting edge long after the guns at last fall silent."
- USA_electronics_mastery:0 "Electronics Mastery"
- USA_electronics_mastery_desc:0 "Radar that sees clean through night and fog, the proximity fuze, fire-control computers, the first electronic calculating machines: the humble electron is fast becoming a weapon of war. A decisive American lead in electronics will sharpen every ship, gun, and aircraft in the arsenal, and fling open the door to the transformative technologies of the age to come."
- USA_operations_research:0 "Operations Research"
- USA_operations_research_desc:0 "A new breed of scientist turns rigorous mathematics upon the conduct of war itself: how best to hunt the U-boat, route the convoy, and run a factory at its peak. Institutionalize that discipline across government and industry, and the nation can pursue more lines of advance at once, wringing victory from sheer organizational genius."
+ # --- Wing anchors ---
+ USA_dem_anchor:0 "The New Deal Coalition"
+ USA_dem_anchor_desc:0 "Machine bosses and farm-belt populists, union men and Southern committee barons, professors and precinct captains: Roosevelt's improbable coalition holds the street corner and the statehouse alike. So long as it holds together, the New Deal is not merely a program but a governing majority."
+ USA_gop_anchor:0 "The Loyal Opposition"
+ USA_gop_anchor_desc:0 "Reduced to a corporal's guard in the Congress, the Grand Old Party endures in the boardrooms, the broadsheets, and the long memory of the small towns. Somebody must keep asking what all of this costs, and who will be left holding the bill."
+ USA_rad_anchor:0 "Voices of Discontent"
+ USA_rad_anchor_desc:0 "Huey Long promises every man a king's share, Father Coughlin thunders over the radio, and the new industrial unions are learning their strength on the picket line. Millions have concluded that the recovery is too slow, and far too gentle with the men who caused the Crash."
+ USA_auth_anchor:0 "The Whispering Gallery"
+ USA_auth_anchor_desc:0 "In certain boardrooms and certain barracks it is said, quietly, that the Republic has grown too divided for an age of dictators, and that a firmer hand could set things right inside a year. For now it is only talk. Such talk has toppled republics before."
+ USA_mil_anchor:0 "The Arsenal Question"
+ USA_mil_anchor_desc:0 "The Army of the United States musters fewer men than Romania's, and its arsenals hold the leftovers of 1918. Whoever rules in Washington, and whatever they believe, the question of American arms will not wait upon politics."
 
- # --- Old World Ties / Diplomacy and the Post-War Order ---
- USA_old_world_ties:0 "Old World Ties"
- USA_old_world_ties_desc:0 "America cannot simply wish the world away. Across two oceans, friends look to Washington for hope while rivals carefully gauge its resolve. The administration must now decide, deliberately and with open eyes, just how deeply the Republic will involve itself in the quarrels of the Old World, and upon whose side its vast weight will eventually come to rest."
- USA_lend_lease_expansion:0 "Lend-Lease Expansion"
- USA_lend_lease_expansion_desc:0 "Why send soldiers when one can send steel? Become the great quartermaster of every nation still fighting tyranny: lend them the destroyers, the tanks, the aircraft, and the food to hold their lines, and let American industry rather than American boys carry the first crushing weight of the war. Neutrality in name, perhaps, but belligerence in plain fact."
- USA_good_neighbor:0 "The Good Neighbor"
- USA_good_neighbor_desc:0 "Gunboat diplomacy has earned America nothing but suspicion south of the Rio Grande. Replace the big stick with the open hand: trade, mutual respect, and genuine partnership in place of armed intervention. A Western Hemisphere united firmly behind the United States is a fortress at the nation's back that no Old World aggressor could ever hope to breach."
- USA_the_grand_alliance:0 "The Grand Alliance"
- USA_the_grand_alliance_desc:0 "No single power can hope to bring down the Axis; it will demand a grand coalition spanning the globe and bridging even bitter ideologies. Forge and lead that alliance, coordinate its strategy and its supply, and hold its quarrelsome partners together through the darkest years, for in unity, and in unity alone, lies the certainty of final victory."
- USA_postwar_planning:0 "Postwar Planning"
- USA_postwar_planning_desc:0 "Even with the issue of the war still very much in doubt, the wise have already begun to plan the peace. The blunders that turned the last armistice into a mere twenty-year truce, the punitive treaties, the financial chaos, the headlong retreat into isolation, must never be repeated. The shape of the postwar world will be drafted now, in Washington's quiet planning rooms."
- USA_bretton_woods:0 "Bretton Woods"
- USA_bretton_woods_desc:0 "At a quiet resort in the New Hampshire hills, the financial architects of the Allied world will build the machinery of an entirely new economic order: stable exchange rates, an International Monetary Fund, a World Bank, and the dollar enthroned at the very center of it all. Anchor global commerce to American currency, and forestall another worldwide collapse."
- USA_the_united_nations:0 "The United Nations"
- USA_the_united_nations_desc:0 "The League of Nations failed because it had no teeth, and because America shamefully stayed home. This time must be different: a true assembly of nations with a Security Council empowered to act, founded at San Francisco with the United States standing at its very heart. A permanent forum to settle the disputes of nations before they can curdle into open war."
- USA_shape_the_peace:0 "Shape the Peace"
- USA_shape_the_peace_desc:0 "Victory confers upon the victor the very heaviest of responsibilities: the drawing of the map that comes after. In the conference halls of Yalta and Potsdam the fate of liberated peoples, defeated enemies, and a hundred contested borders will be decided, and America, now the mightiest power upon the earth, will hold the pen that writes the postwar world."
- USA_marshall_plan:0 "The Marshall Plan"
- USA_marshall_plan_desc:0 "A Europe of cold hearths and empty bellies is the most fertile soil imaginable for extremism. Pour American treasure, billions upon billions of it, into rebuilding the shattered economies of the continent, friend and former foe alike. Prosperous and grateful nations make the surest bulwark against tyranny, and the firmest of allies for the long struggle ahead."
- USA_iron_curtain:0 "The Iron Curtain Descends"
- USA_iron_curtain_desc:0 "From Stettin on the Baltic to Trieste on the Adriatic, as Churchill gravely warns, an iron curtain has descended across the continent. The great wartime partner has become the great postwar rival, swallowing whole nations behind its lengthening shadow. The hot war is won and done; a colder, longer, and perhaps far more dangerous one now begins."
- USA_containment_doctrine:0 "The Containment Doctrine"
- USA_containment_doctrine_desc:0 "The strategy for the long twilight struggle takes its shape: not to roll back the rival empire by force of arms, but to contain it, to meet its every probe and pressure with firm and unyielding counter-pressure at every point upon the globe, patiently and indefinitely, until its own contradictions at last bring it crashing down. Vigilance becomes the permanent price of peace."
- USA_return_to_normalcy:0 "Return to Normalcy"
- USA_return_to_normalcy_desc:0 "The boys are home, the factories hum once more with peacetime goods, and a weary nation longs only to be left alone to enjoy what it has so dearly won. Let America draw back from the world's endless quarrels, tend to its own prosperity, and remember that it was never meant to police the whole of the planet. The world can keep its troubles to itself."
- USA_demobilization:0 "Demobilization"
- USA_demobilization_desc:0 "Twelve million Americans under arms simply cannot be kept in uniform in peacetime; the people will not stand for it and the economy cannot bear it. Bring the boys home, muster them out, and turn the great war machine back toward the abundance of civilian life. Beat the swords into plowshares, and trust that the very worst now lies behind us."
- USA_permanent_establishment:0 "A Permanent Establishment"
- USA_permanent_establishment_desc:0 "The world of 1919 indulged the comforting fantasy that the war to end all wars had truly been fought and won; the world of today knows far better. America must maintain a powerful standing military and the industrial base to feed it, ready upon a moment's notice, for the next great threat is no longer a question of whether, but only of when and where."
- USA_the_american_century:0 "The American Century"
- USA_the_american_century_desc:0 "Industry without rival, ideals that still draw the hopes of the whole world, and the steady inner circle that guided the Republic through depression and total war: all of it together has carried America to a height no nation in history has ever before occupied. This is the American Century, and upon the wisdom and the will of the United States the fate of all mankind now turns."
+ # --- Democratic wing, 1945-56 (Task 6) ---
+ USA_dem_bretton_woods:0 "The Bretton Woods System"
+ USA_dem_bretton_woods_desc:0 "Forty-four nations send their delegates to a New Hampshire resort hotel, and in three weeks they reorganize the world's money. The dollar is fixed to gold at thirty-five dollars the ounce; every other currency is fixed to the dollar; and a new International Monetary Fund stands ready to lend to governments that cannot keep their peg. The pound sterling is not abolished, but it is subordinated, and the men at the Bank of England know it. The age of financial nationalism is over, and the age of American-managed globalism has begun, whether the world has quite agreed to it or not."
+ USA_dem_united_nations:0 "The United Nations"
+ USA_dem_united_nations_desc:0 "The last time the United States was invited to join the concert of nations it sent the invitation back unopened. This time the Senate ratifies the Charter with eighty-nine votes, the United Nations takes up its address in New York, and the Secretary of State begins learning what it means to chair meetings in which the Soviet Union has a permanent veto. The building on the East River is drafty and the translators are overworked, but it is the first machinery ever built for the governance of the whole world, and it is powered chiefly by American money and American faith that the institution will not be needed for very long."
+ USA_dem_containment:0 "Containment"
+ USA_dem_containment_desc:0 "The long telegram from Moscow runs to eight thousand words, and every word argues the same thing: the Soviet Union is a revolutionary power that cannot be appeased, only resisted. Mr. Kennan's doctrine reaches the desk of every senior official in Washington, where it is debated, edited, simplified, and finally issued as policy. The United States will meet Soviet expansion wherever it appears, at whatever cost, for as long as it takes. The Cold War is not yet a phrase in common usage, but its strategy is now a government memorandum, and the government is already spending to match it."
+ USA_dem_fair_deal:0 "The Fair Deal"
+ USA_dem_fair_deal_desc:0 "The President has come back from the dead politically, and he intends to use the time. National health insurance, civil rights legislation, federal aid to education, an expansion of Social Security to cover the workers the original act left out: the Fair Deal is the New Deal at full pressure, offered now by a man who has nothing left to lose and a Congress that is not quite sure how to tell him no. Some of it passes and some of it dies in committee, and the historians will argue about which was which, but the direction of the argument is established for a generation."
+ USA_dem_truman_doctrine:0 "The Truman Doctrine"
+ USA_dem_truman_doctrine_desc:0 "Greece is in civil war and Turkey is under Soviet pressure and the British have told Washington, with the exhausted candor of an empire that can no longer pay its own bills, that they cannot carry either burden past the spring. The President goes before a joint session of Congress and announces that the United States must support free peoples who are resisting subjugation. It is the first time an American president has asked Congress for money to fight someone else's communist insurgency, and the senators know it will not be the last. The check for Greece and Turkey is the smallest item on a bill that will run for decades."
+ USA_dem_red_scare_managed:0 "The Loyalty Boards With Limits"
+ USA_dem_red_scare_managed_desc:0 "The loyalty review boards are a fact of postwar Washington, and the Attorney General's list of subversive organizations is a bureaucratic inevitability no administration can wish away. What this one can do is run the machinery with a sense of proportion: require actual evidence before an accusation sticks, keep the hearings from becoming public inquisitions, and remind Congress that the Constitution has not been suspended for the duration of the Cold War. The security services are unhappy, the demagogues on Capitol Hill are furious, and the civil libertarians are cautiously satisfied, which is probably the correct distribution of discontent."
+ USA_dem_marshall_plan:0 "The Marshall Plan"
+ USA_dem_marshall_plan_desc:0 "The Secretary of State goes to Harvard in June and offers, in twelve minutes of quiet prose, to rebuild the economies of any European country willing to participate and account for the money. The offer is extended to the Soviet Union and its neighbors on principle, knowing they will refuse on principle, and they oblige. Sixteen nations accept and send their delegations to Paris to draw up a joint recovery program. Over the next four years thirteen billion dollars flows from the United States Treasury into the factories, railways, and coalfields of Western Europe. The customers are being rebuilt. The question is what they will buy once they are back on their feet."
+ USA_dem_nsc68:0 "NSC-68"
+ USA_dem_nsc68_desc:0 "The document is classified and runs to sixty-six pages, and its argument is as simple as it is expensive: the Soviet Union is pursuing a program of world domination, it will have a significant nuclear arsenal by 1954, and the United States military budget must treble if the free world is to survive the decade. The Secretary of Defense objects that the country cannot afford it. The Secretary of State argues that the country cannot afford not to. The Soviet test of an atomic device and the opening of the Korean War answer the question before the President has to, and the supplemental appropriations begin moving through the Congress before the summer is out."
+ USA_dem_nato:0 "The North Atlantic Treaty"
+ USA_dem_nato_desc:0 "For the first time since the French alliance of 1778, the United States commits by treaty to the defense of foreign soil. An attack on one is an attack on all, and all twelve signatories know which of the twelve will actually be expected to deter the Red Army. The skeptics call it an entangling alliance and quote Washington's farewell address; the supporters reply that Washington never faced Stalin, and that the farms of Kansas are only safe if the Rhine is held. The Senate ratifies with eighty-two votes, and a Supreme Commander is dispatched to Paris to organize the defense that everyone hopes will never be tested."
+ USA_dem_korea_line:0 "The Thirty-Eighth Parallel"
+ USA_dem_korea_line_desc:0 "The line was arbitrary to begin with — the work of two young officers with a National Geographic map on the night of Japan's surrender — and now it is the most important line in the world. The United Nations resolution passes in the Security Council while the Soviet delegate is away from his chair protesting the China seat, and American forces are moving north within the week. The General commanding promises it will be over by Christmas, and the men on the ground, counting the mountains, are not so sure. The line must hold, and the line does hold, and forty thousand Americans who came to hold it do not go home."
+ USA_dem_election_52_ike:0 "The General Comes Home"
+ USA_dem_election_52_ike_desc:0 "Both parties have courted him and the Democrats have landed him. General of the Army Dwight D. Eisenhower has spent his adult life in government service and declines, absolutely, to call himself a politician, which is the most political thing he could possibly say. He is the commander who won the war in Europe, the Supreme Commander who is organizing the peace, and the one candidate in the field whom nobody can accuse of having made the policy mistakes that landed America in its present discontents. The professionals in both parties regard him with the fondness that professionals reserve for amateurs who happen to be unbeatable."
+ USA_dem_election_52_egghead:0 "Eloquence Against the Tide"
+ USA_dem_election_52_egghead_desc:0 "The Governor of Illinois did not want the nomination and said so in terms that would have disqualified any other candidate. He drafts his own speeches, speaks in subordinate clauses, and tells audiences what he actually believes about the complexity of the world. The eggheads adore him and the machine politicians are uneasy and the General's grin has not dimmed for a moment, but Adlai Stevenson is asking the voters to think, and sometimes that is enough. The campaign is a masterpiece of political intelligence and a monument to what a democracy can demand of itself when it chooses to."
+ USA_dem_new_look:0 "The New Look"
+ USA_dem_new_look_desc:0 "The President was a soldier and he knows what soldiers cost, and he has decided that the country cannot afford the army it was fielding and a civil economy too. The New Look is his answer: fewer divisions, more bombers, a larger nuclear stockpile, and the doctrine of massive retaliation to fill the gap between the two. A dollar of deterrence, the budget-cutters explain, buys more security than a dollar of conventional forces. The Joint Chiefs are unhappy, the Europeans are nervous, and the President is firm. More bang for the buck, he says, and the phrase enters the vocabulary of strategy."
+ USA_dem_atoms_for_peace:0 "Atoms for Peace"
+ USA_dem_atoms_for_peace_desc:0 "The President goes before the General Assembly and offers to contribute American fissionable material to an international pool, administered by the United Nations, for peaceful purposes. It is the first time an American president has addressed the world on the subject of atomic energy without a threat attached, and the hall is genuinely moved. The Soviets are suspicious and the proposal takes years to negotiate into the International Atomic Energy Agency, but the speech itself does something treaties cannot: it establishes that the American government does not regard the atomic bomb as simply the largest artillery shell ever made, but as a thing that requires a different kind of politics."
+ USA_dem_saint_lawrence:0 "The Saint Lawrence Seaway"
+ USA_dem_saint_lawrence_desc:0 "The project has been proposed and deferred for thirty years while the railroads lobbied against it and Congress demurred. Now the shovels go in and the Great Lakes become a seaway: oceangoing vessels will be able to sail from Duluth to the Atlantic without a single portage, and the industrial heartland of the continent will have a direct passage to the world. The seaway opens in 1959 and the Queen herself comes for the ceremony, and the grain elevators of Minnesota are suddenly within reach of Liverpool."
+ USA_dem_interstate:0 "The Interstate Highway System"
+ USA_dem_interstate_desc:0 "The General had seen what the Autobahn did for Germany, and the President is not going to let the country that invented the automobile fall behind in the business of roads. The Federal Aid Highway Act authorizes forty-one thousand miles of divided highway across the whole breadth of the Republic, the largest public works program in human history, paid for in gasoline taxes and built to standards that will carry the traffic of the twenty-first century. The suburbs expand along the interchanges, the truck lines displace the railroads, and the American landscape is permanently reorganized around the automobile and the filling station."
+ USA_dem_hundred_million_strong:0 "The Affluent Society"
+ USA_dem_hundred_million_strong_desc:0 "A hundred and seventy million Americans and the largest economy the world has ever seen: the generation that survived the Depression and won the war is spending the proceeds. The suburbs fill with ranch houses and the garages fill with tail-finned automobiles and the children fill the schools, and a Harvard economist writes a book arguing that the country's chief problem is no longer scarcity but the quality of its abundance. The complaint is a luxury. A nation that can afford to worry about the spiritual cost of its prosperity is a nation that has, by any reasonable measure of history, already won."
+
+ # --- Democratic wing, 1936-44 ---
+ USA_dem_second_new_deal:0 "The Second New Deal"
+ USA_dem_second_new_deal_desc:0 "The first hundred days saved the banks; this second wave means to save the men. Works progress, rural power, and a federal payroll that reaches into every county: the New Deal stops apologizing for itself and starts building."
+ USA_dem_wagner_act:0 "The Wagner Act"
+ USA_dem_wagner_act_desc:0 "The right to organize is now the law of the land, with a National Labor Relations Board to make it stick. The companies may keep their lawyers, but the men have got the federal government, and labor peace is suddenly cheaper than the alternative."
+ USA_dem_social_security:0 "The Old-Age Compact"
+ USA_dem_social_security_desc:0 "A payroll tax, a ledger in Baltimore, and a promise: that no American who has worked a lifetime shall end it in the county poorhouse. It is the quietest revolution Washington has ever enacted, and it will prove the hardest to repeal."
+ USA_dem_court_fight:0 "The Court Fight"
+ USA_dem_court_fight_desc:0 "Nine old men have been striking down the New Deal statute by statute, and the President proposes to appoint a few young ones to keep them company. The country recoils and the Senate balks - but the Court, reading the election returns, may yet discover that the Constitution permits a minimum wage after all."
+ USA_dem_commitment:0 "The Coalition Holds"
+ USA_dem_commitment_desc:0 "Machine bosses and miners, professors and precinct captains: every element of the coalition has been paid in full and the contract renewed. Whatever comes - depression, war, or the wearing-out of one extraordinary man - the New Deal is no longer an experiment. It is the government."
+ USA_dem_rearmament_politics:0 "The Politics of Preparedness"
+ USA_dem_rearmament_politics_desc:0 "Secretary Stimson makes the case in cabinet and the President makes it on the radio: hemispheric defense, idle plants put to work, jobs in the aircraft factories. Rearmament is sold to a peace-minded public one appropriation at a time, and never once called by its name."
+ USA_dem_cash_and_carry:0 "Cash and Carry"
+ USA_dem_cash_and_carry_desc:0 "The Neutrality Acts stand - amended. Any belligerent may buy American goods, provided it pays in dollars and hauls them home in its own ships. The law is scrupulously impartial, and it happens that only one side of this war has both the gold and a navy."
+ USA_dem_destroyers_for_bases:0 "Destroyers for Bases"
+ USA_dem_destroyers_for_bases_desc:0 "Fifty old four-stackers, rust and all, traded for ninety-nine-year leases on harbors from Newfoundland to Trinidad. The lawyers call it an executive agreement; the isolationists call it war by installment; the Royal Navy calls it fifty more hulls between the convoys and the wolf packs."
+ USA_dem_lend_lease:0 "Lend-Lease"
+ USA_dem_lend_lease_desc:0 "When your neighbor's house is on fire, the President explains, you lend him your garden hose and settle accounts afterward. By act of Congress the arsenal opens its books to the democracies, and the dollar sign, as promised, is retired for the duration."
+ USA_dem_arsenal_of_democracy:0 "The Arsenal of Democracy"
+ USA_dem_arsenal_of_democracy_desc:0 "The assembly lines that built sedans learn to build bombers, and the cost-plus contract converts skeptical boardrooms into war plants by the week. No nation in history has retooled so much so fast - and the great machine is only beginning to turn."
+ USA_dem_wpb:0 "The War Production Board"
+ USA_dem_wpb_desc:0 "One board, one chairman, and priority numbers worth more than money: Washington takes the entire industrial economy into receivership for the duration. Civilian automobile production ends by order, and nobody in Detroit doubts what comes off the lines instead."
+ USA_dem_osrd:0 "Science Mobilized"
+ USA_dem_osrd_desc:0 "Dr. Bush's Office of Scientific Research and Development puts the universities under contract and the laboratories on war time. Radar, proximity fuzes, penicillin by the tank-car: the war will be won by production, but it will be shortened by physics."
+ USA_dem_atlantic_charter:0 "A Meeting at Placentia Bay"
+ USA_dem_atlantic_charter_desc:0 "In a fog-bound Newfoundland anchorage the President and the Prime Minister exchange hymns, courtesies, and eight common principles for a world neither yet governs. America is formally at peace; her war aims, curiously, are already in print."
+ USA_dem_tehran:0 "The Big Three"
+ USA_dem_tehran_desc:0 "For four days in the Soviet legation at Tehran the President sits between empires and plays honest broker of the alliance: a second front in France, agreed; a war on Japan, promised; the shape of the world to come, sketched over dinner and deferred."
+ USA_dem_yalta:0 "Yalta"
+ USA_dem_yalta_desc:0 "In a looted Crimean palace the three victors divide what their armies already hold. Poland is argued past midnight, the United Nations is purchased with two extra votes, and a tired President wagers that the word of Marshal Stalin will survive the peace it has just designed."
+ USA_dem_double_v:0 "The Double V"
+ USA_dem_double_v_desc:0 "Victory abroad and victory at home: the slogan travels from the Pittsburgh Courier to the shipyard gates. The war plants open to all hands by executive order, and a million new workers take up labor the emergency no longer permits the country to refuse."
+ USA_dem_gi_bill_groundwork:0 "Repaying the Uniform"
+ USA_dem_gi_bill_groundwork_desc:0 "Twelve million men will come home expecting something better than the bonus marches their fathers got. College tuition, home loans, a year of readjustment pay: the Republic quietly drafts the largest investment in its own citizens ever put to paper."
+ USA_dem_president_is_dead:0 "The President Is Dead"
+ USA_dem_president_is_dead_desc:0 "At Warm Springs, Georgia, in the first spring of victory, the only President a generation of Americans can remember slips away in an afternoon. The work of the age does not pause for grief: the oath waits in Washington, and the haberdasher must take it."
 
  # ============================ CABINET MEMBERS ============================
 
@@ -186,14 +206,808 @@
  USA_american_century_spirit:0 "The American Century"
  USA_american_century_spirit_desc:0 "Industry, ideals, and steady leadership together place America at the very summit of the world."
 
+ # --- Democratic wing spirits (Task 6) ---
+ USA_marshall_outlays_spirit:0 "Marshall Outlays"
+ USA_marshall_outlays_spirit_desc:0 "Thirteen billion dollars is flowing toward Europe over four years, and the Treasury is bearing the weight. The investment will be repaid in prosperity and in gratitude, but the bill comes first."
+ USA_nsc68_rearmament_spirit:0 "NSC-68 Rearmament"
+ USA_nsc68_rearmament_spirit_desc:0 "The defense budget has been trebled, the draft boards are busy, and the factories that retooled for consumer goods are retooling again. The Cold War is being waged at peacetime, and it costs nearly as much."
+ USA_nato_spirit:0 "The Atlantic Alliance"
+ USA_nato_spirit_desc:0 "For the first time in its history the Republic is committed by treaty to the defense of European soil. The commitment costs money and men and a permanent Supreme Headquarters, but it buys something the Atlantic Ocean alone cannot: deterrence by guarantee."
+ USA_new_look_spirit:0 "The New Look"
+ USA_new_look_spirit_desc:0 "The bomber force is built up, the nuclear stockpile is growing, and the conventional divisions are being thinned out. More bang for the buck is the doctrine, and the budget committees have no objection to the bang."
+ USA_hundred_million_strong_spirit:0 "The Affluent Society"
+ USA_hundred_million_strong_spirit_desc:0 "The highways are full, the suburbs are growing, and the economy is the largest and most productive in the history of the world. The country has arrived at the summit it has been climbing toward since 1936, and it is taking a moment to look around."
+
+ # --- Democratic wing spirits (Task 5) ---
+ USA_labor_peace_spirit:0 "Labor Peace"
+ USA_labor_peace_spirit_desc:0 "With the right to organize written into law, the great industrial unions settle their quarrels at the bargaining table rather than the factory gate."
+ USA_atlantic_bases_spirit:0 "Atlantic Bases"
+ USA_atlantic_bases_spirit_desc:0 "Ninety-nine-year leases from Argentia to Trinidad push America's ocean frontier a thousand miles eastward and give the fleet harbors it never had to build."
+ USA_lend_lease_capacity_spirit:0 "Lend-Lease Capacity"
+ USA_lend_lease_capacity_spirit_desc:0 "The machinery of lending is built: the depots, manifests, and shipping schedules that can arm half the world without a declaration of war."
+ USA_war_aims_spirit:0 "The Atlantic Charter"
+ USA_war_aims_spirit_desc:0 "Eight plain principles give the coming struggle an American meaning: self-government restored, the seas kept free, and freedom from fear and want for victor and vanquished alike."
+
  # ============================ EVENTS ============================
 
- USA_cabinet.1.t:0 "The Inner Circle Assembles"
- USA_cabinet.1.d:0 "Around the long table in the Cabinet Room, the men who will steer the Republic through the coming storm have at last taken their seats. Each carries his own ambitions and his own vision of America's future. The President listens, weighs, and decides; but it is these advisors who will turn each decision into action."
- USA_cabinet.1.a:0 "The work of governing begins."
- USA_cabinet.2.t:0 "Planning the Peace"
- USA_cabinet.2.d:0 "The war is not yet won, but already the cabinet turns its mind toward what must follow. The chaos that doomed the last peace cannot be permitted to repeat itself. Economists, diplomats, and soldiers alike sketch the architecture of a new world order, with America standing firmly at its center."
- USA_cabinet.2.a:0 "We will not repeat the mistakes of Versailles."
- USA_cabinet.3.t:0 "The American Century"
- USA_cabinet.3.d:0 "From the depths of the Depression to the very summit of the world, the Republic has been remade by the choices of these years and the men who counseled them. Whatever road was finally taken, America now stands as the decisive power of the age, and the century to come will surely bear her mark."
- USA_cabinet.3.a:0 "Let us be worthy of it."
+ # --- The Election of 1936 (usa_cabinet.100-104) ---
+ usa_cabinet.100.t:0 "The Election of 1936"
+ usa_cabinet.100.d:0 "The campaign of 1936 has been less an argument than a referendum. Governor Alf Landon of Kansas, the Republicans' amiable sunflower, promises sound money and a balanced budget; the President answers that the forces of organized money are unanimous in their hate for him, and that he welcomes their hatred. Now the ballots are cast, and the country sits up by the radio to learn what manner of mandate the next four years will carry."
+ usa_cabinet.100.a:0 "Campaign on the New Deal, and let them count the landslide."
+ usa_cabinet.100.b:0 "Let the cabinet's record speak for itself."
+ usa_cabinet.100.c:0 "The old parties have failed. Back the third-party surge."
+ usa_cabinet.101.t:0 "Roosevelt Triumphant"
+ usa_cabinet.101.d:0 "It is not a victory but an avalanche: forty-six states of forty-eight, and the greatest electoral margin since Monroe ran unopposed. The President has his mandate, the cabinet keeps its seats, and the Republic has answered, emphatically, that the New Deal shall go on."
+ usa_cabinet.101.a:0 "Four more years."
+ usa_cabinet.102.t:0 "A House Divided"
+ usa_cabinet.102.d:0 "The third-party ticket has not won the White House, but it has done something nearly as remarkable: it has broken the arithmetic. With the popular vote split three ways, the President returns to Washington with a plurality, a hostile press, and a Congress in open ferment. Men who only whispered last year now speak aloud; the old party system is cracking, and no one can yet say what will crawl out from beneath it."
+ usa_cabinet.102.a:0 "The center cannot hold forever."
+ usa_cabinet.103.t:0 "Landon!"
+ usa_cabinet.103.d:0 "The Literary Digest was right after all. The cabinet's open feuding and the Old Guard's quiet money have done what no Republican orator could: Governor Alfred M. Landon of Kansas is President-elect of the United States. The sunflower buttons come out of dresser drawers, Wall Street toasts the restoration, and a stunned New Deal apparatus begins packing its boxes."
+ usa_cabinet.103.a:0 "The business of America is business once more."
+ usa_cabinet.104.t:0 "A New Term Begins"
+ usa_cabinet.104.d:0 "On a gray January morning the Chief Justice administers the oath upon the Capitol steps, and the Republic, whatever its quarrels, once more hands power peaceably from one term to the next. The crowds disperse, the bands pack away their brass, and the long work of governing resumes."
+ usa_cabinet.104.a:0 "Hail to the Chief."
+
+ # --- The Election of 1940 (usa_cabinet.110-114) ---
+ usa_cabinet.110.t:0 "The Election of 1940"
+ usa_cabinet.110.d:0 "Paris has fallen, London burns by night, and in America the oldest unwritten law of the Republic is on the ballot. The President's men organize a conspicuously spontaneous draft in Chicago; Wendell Willkie, a registered Democrat eighteen months ago, storms the Republican convention on a wave of amateurs; and the country must decide whether tradition or the emergency is master."
+ usa_cabinet.110.a:0 "No time to change horses. A third term."
+ usa_cabinet.110.b:0 "Send in the amateur: back the Willkie crusade."
+ usa_cabinet.110.c:0 "Let the country make up its own mind."
+ usa_cabinet.111.t:0 "The Third Term"
+ usa_cabinet.111.d:0 "It is done: for the first time since the founding, the same hand will hold the office a third time. The margins are comfortable but not crushing, and even some who voted for him did so uneasily. The two-term tradition was a fence, and the fence is down; what else the emergency may yet justify, no one cares to guess aloud."
+ usa_cabinet.111.a:0 "The emergency commands; the people consent."
+ usa_cabinet.112.t:0 "Willkie!"
+ usa_cabinet.112.d:0 "The amateurs have done it. Wendell Willkie, who never held public office in his life, has talked himself hoarse in five hundred towns and talked his way into the White House. Wall Street celebrates carefully, the isolationists celebrate prematurely, and the New Deal apparatus begins, for the first time in eight years, packing its boxes."
+ usa_cabinet.112.a:0 "One world, and one new President."
+ usa_cabinet.113.t:0 "The Crusade Falls Short"
+ usa_cabinet.113.d:0 "The barnstorming made it close, closer than any challenger has come in a decade, but close is not the presidency. The President returns to Washington with a narrower mandate and a hoarse, exhausted opposition. The third term is now a fact; what it costs has merely been deferred."
+ usa_cabinet.113.a:0 "The champ keeps the title."
+ usa_cabinet.114.t:0 "The Center Gives Way"
+ usa_cabinet.114.d:0 "The returns make no familiar pattern: the old parties have been beaten in precincts they have owned since Appomattox. Something new is loose in the Republic, a politics of marching columns and meeting halls rather than smoke-filled rooms, and the men who manage the old order read the county totals with cold hands."
+ usa_cabinet.114.a:0 "The people have found their voice."
+ usa_cabinet.114.b:0 "The hour produces the man."
+ usa_cabinet.114.c:0 "The republic endures."
+
+ # --- The Election of 1944 (usa_cabinet.120-124) ---
+ usa_cabinet.120.t:0 "The Election of 1944"
+ usa_cabinet.120.d:0 "On schedule, as the Constitution insists, the Republic returns to the polls. The President's men speak of work left unfinished; Governor Thomas E. Dewey of New York offers brisk, modern management in place of tired improvisation; and beyond the bunting a weary country weighs whether twelve years of one voice is constancy or merely habit."
+ usa_cabinet.120.a:0 "Stay the course. A fourth term."
+ usa_cabinet.120.b:0 "Time for fresh blood: back Dewey."
+ usa_cabinet.120.c:0 "Let the country make up its own mind."
+ usa_cabinet.121.t:0 "The Fourth Term"
+ usa_cabinet.121.d:0 "Four terms. The phrase would have stopped conversation a decade ago; now it is merely the news. The coalition holds, older and thinner, like its chief, and the opposition begins to grasp that it is no longer running against a man but against an era."
+ usa_cabinet.121.a:0 "Again, and still."
+ usa_cabinet.122.t:0 "Dewey Takes the Prize"
+ usa_cabinet.122.d:0 "Precision has beaten poetry. Governor Dewey's machine-tooled campaign never raised its voice and never missed a county chairman, and the twelve-year reign is over. The transition is correct, even cordial; the New Deal's monuments will be audited rather than demolished, or so the new men say."
+ usa_cabinet.122.a:0 "Efficiency takes the oath."
+ usa_cabinet.123.t:0 "The Governor Falls Short"
+ usa_cabinet.123.d:0 "The Governor ran a faultless campaign and lost anyway. The coalition's roots proved deeper than its fatigue, and the prosecutor's precision never quite warmed into affection. The administration continues, but it governs a country that very nearly voted for somebody else."
+ usa_cabinet.123.a:0 "Four more years, once more."
+ usa_cabinet.124.t:0 "The Old Parties Repudiated"
+ usa_cabinet.124.d:0 "The two old parties spent the autumn arguing with one another and discovered in November that the country had stopped listening to both. The movements have come in from the margins with their own slates, their own songs, and their own ideas about what the Republic owes its people, and the count is not even close."
+ usa_cabinet.124.a:0 "The people have found their voice."
+ usa_cabinet.124.b:0 "The hour produces the man."
+ usa_cabinet.124.c:0 "The republic endures."
+
+ # --- The Election of 1948 (usa_cabinet.130-134; option four uses .e) ---
+ usa_cabinet.130.t:0 "The Election of 1948"
+ usa_cabinet.130.d:0 "Every poll, every columnist, and every betting parlor agrees the thing is decided; the only argument is the size of Governor Dewey's mandate. The President alone declines the verdict, whistle-stopping through the small towns and giving hell to the do-nothing Congress, while Henry Wallace's Gideon's Army sings on the party's ruined left flank."
+ usa_cabinet.130.a:0 "Give 'em hell. The whistle-stops know something the pollsters don't."
+ usa_cabinet.130.b:0 "The polls have it right: it is Dewey's year."
+ usa_cabinet.130.c:0 "Let the country make up its own mind."
+ usa_cabinet.130.e:0 "Gideon's Army marches: back Wallace."
+ usa_cabinet.131.t:0 "DEWEY DEFEATS TRUMAN"
+ usa_cabinet.131.d:0 "The headline is already printed, and it is already wrong. The morning editions proclaim the Governor's triumph while the farm belt and the trainmen quietly finish electing the haberdasher, and by dawn the President is holding the Tribune aloft, grinning like a man who has drawn to an inside straight. The experts will be apologizing for years."
+ usa_cabinet.131.a:0 "That ain't the way I heard it."
+ usa_cabinet.132.t:0 "President Dewey"
+ usa_cabinet.132.d:0 "This time the pollsters were right. The Governor's careful arithmetic holds from Maine to California, and the longest reign in the Republic's history ends not with a crash but with a concession telegram. The new administration arrives with binders, schedules, and a firm intention to prove that competence is a political philosophy."
+ usa_cabinet.132.a:0 "The era of good management."
+ usa_cabinet.133.t:0 "Gideon's Army"
+ usa_cabinet.133.d:0 "It was supposed to be a protest vote, and then the protest kept growing. Henry Wallace has carried the industrial belt the experts swore would never bolt, and the century of the common man has arrived a half-century ahead of schedule. The old parties still hold the Congress and the courts, and they intend, very firmly, to be consulted."
+ usa_cabinet.133.a:0 "The common man's century begins."
+ usa_cabinet.134.t:0 "The Man on Horseback"
+ usa_cabinet.134.d:0 "Order, the winning ticket promised, simply order, and a country exhausted by emergencies voted for it without reading the fine print. The victory parades have an unfamiliar cadence, and the men around the President-elect speak of mandates in a way that makes old senators check the locks on the Constitution."
+ usa_cabinet.134.a:0 "Order, at any price."
+
+ # --- The Election of 1952 (usa_cabinet.140-144) ---
+ usa_cabinet.140.t:0 "The Election of 1952"
+ usa_cabinet.140.d:0 "Both parties spent the spring courting the same man, and one of them has him: the General, home from his commands with a grin the cameras love and a distaste for politics the voters love better. Against him stands the Governor of Illinois, brilliant, ironic, and visibly outnumbered. Twenty years of one era are on the table."
+ usa_cabinet.140.a:0 "Draft the General."
+ usa_cabinet.140.b:0 "Eloquence over medals: back Stevenson."
+ usa_cabinet.140.c:0 "Let the country make up its own mind."
+ usa_cabinet.141.t:0 "I Like Ike"
+ usa_cabinet.141.d:0 "The avalanche was visible by nine o'clock: state after state falling to a man whose entire platform fit on a campaign button. The General has no enemies he cares to name and no debts he cares to honor, and after twenty years the old era ends gently, smiling, by acclamation."
+ usa_cabinet.141.a:0 "The General takes command."
+ usa_cabinet.142.t:0 "Madly for Adlai"
+ usa_cabinet.142.d:0 "The eggheads, the precinct captains, and just enough of everyone else: the Governor has done what the arithmetic said could not be done. He won by treating the voters as adults, and the voters, to the lasting astonishment of the professionals, returned the compliment."
+ usa_cabinet.142.a:0 "Let's talk sense to the American people."
+ usa_cabinet.144.t:0 "The Old Order Overturned"
+ usa_cabinet.144.d:0 "Under the prosperity, it turns out, the anger was still there. The movements the professionals wrote off as wartime fevers have carried the day outright, and the United States has elected a government that intends to be remembered as a founding, not an administration."
+ usa_cabinet.144.a:0 "The future arrives ahead of schedule."
+ usa_cabinet.144.b:0 "Strength, and no apologies."
+ usa_cabinet.144.c:0 "The republic endures."
+
+ # --- Shared inauguration flavour ---
+ usa_cabinet.149.t:0 "The Torch Passes"
+ usa_cabinet.149.d:0 "On a cold January noon the oath is administered upon the Capitol steps, thirty-five words that have outlasted every storm yet raised against them. The bands play, the crowds thin, the file boxes move through the corridors of the executive departments, and the Republic once again hands its immense and dangerous power from one set of hands to another."
+ usa_cabinet.149.a:0 "So help me God."
+
+ # --- The authoritarian on-ramps (usa_cabinet.200-201) ---
+ usa_cabinet.200.t:0 "The Third Term Crisis"
+ usa_cabinet.200.d:0 "The announcement is read at noon from the steps of the Justice Department: in view of the emergency, the November election is postponed by executive finding, indefinitely. Half the Congress calls it treason and the other half calls it prudence; three governors refuse to comply; and on the streets of Washington, for the first time in living memory, soldiers guard a government against its own citizens."
+ usa_cabinet.200.a:0 "The emergency is master now."
+ usa_cabinet.200.b:0 "Step back from the brink. The Republic is older than any of us."
+ usa_cabinet.201.t:0 "The Suspended Election"
+ usa_cabinet.201.d:0 "There will be no ballot this year. The proclamation cites the war powers, the impossibility of a soldiers' vote, and the manifest will of the people as already expressed; the Attorney General's opinion runs to forty pages and persuades no one who was not persuaded already. The courts adjourn for an indefinite recess. The Republic now runs on habit, and on the army."
+ usa_cabinet.201.a:0 "The state must hold, whatever else falls."
+ usa_cabinet.201.b:0 "Reverse course. Announce the ballot of 1948 now."
+
+ # --- The Truman succession (usa_cabinet.205) ---
+ usa_cabinet.205.t:0 "The President Is Dead"
+ usa_cabinet.205.d:0 "The flash comes up from Warm Springs in the late afternoon: Franklin Delano Roosevelt, thirty-second President of the United States, is dead of a cerebral hemorrhage in the thirteenth year of his presidency. In Washington the cabinet gathers in the dusk, a Bible is borrowed from a desk drawer, and the enormous machinery of the war does not stop for so much as an hour while the country learns to say a new name."
+ usa_cabinet.205.a:0 "Mr. Truman takes the oath."
+ usa_cabinet.205.b:0 "Wallace was kept on the ticket after all. The torch passes left."
+
+ # --- The Marshall Plan (usa_cabinet.251) ---
+ usa_cabinet.251.t:0 "The European Recovery Programme"
+ usa_cabinet.251.d:0 "The Secretary of State has offered American money to any European nation that will draw up a rational recovery program and submit to American accounting. The Soviets have called it dollar imperialism and declined on behalf of their neighbors; sixteen others have said yes, and their delegations are assembled in Paris. The question now is how much of the programme America is willing to fund at full scale, and whether the Congress will pass the appropriations before the French elections decide the matter for everyone."
+ usa_cabinet.251.a:0 "Full programme. Rebuild the customers."
+ usa_cabinet.251.b:0 "Partial commitment. Spend what the Congress will bear."
+ usa_cabinet.251.c:0 "No eligible recipients. The money stays home."
+
+ # --- Era flavour (usa_cabinet.250-299) ---
+ usa_cabinet.250.t:0 "The Switch in Time"
+ usa_cabinet.250.d:0 "Mr. Justice Roberts has crossed the aisle without leaving his chair: the minimum wage stands, the Wagner Act stands, and the court-packing bill dies quietly in committee, having accomplished everything it threatened. The President has lost the battle in the Senate and discovers, reading the morning's opinions, that he has won the Constitution."
+ usa_cabinet.250.a:0 "A switch in time saved nine."
+
+ # ============================ OPINION MODIFIERS ============================
+
+ # Keys for common/opinion_modifiers/usa_cabinet_opinions.txt.
+ USA_cash_and_carry_partner:0 "Cash and Carry"
+ USA_atlantic_charter_partner:0 "The Atlantic Charter"
+ USA_wartime_conference:0 "Wartime Conference"
+ USA_truman_doctrine_partner:0 "The Truman Doctrine"
+
+ # ============================ POWER BALANCE ============================
+
+ # Keys for common/power_balance/usa_cabinet_power_balance.txt: the balance
+ # id, both side ids, and the three range ids.
+ USA_cabinet_balance:0 "The Cabinet"
+ USA_pb_progressives:0 "Progressives"
+ USA_pb_oldguard:0 "Old Guard"
+ USA_pb_far_left:0 "New Deal Ascendant"
+ USA_pb_center:0 "Balanced Cabinet"
+ USA_pb_far_right:0 "Old Guard Ascendant"
+
+ # Per-wing alternative pole names used by scripted loc
+ # (common/scripted_localisation/usa_cabinet_scripted_loc.txt).
+ # These are NOT used by the balance widget (engine limitation — see file header);
+ # they appear via [USA_cabinet_left_pole_name] / [USA_cabinet_right_pole_name]
+ # in event text and focus descriptions.
+ USA_pb_loyalists:0 "Loyalists"
+ USA_pb_fellow_travelers:0 "Fellow Travelers"
+ USA_pb_junta:0 "The Junta"
+ USA_pb_movement:0 "The Movement"
+
+ # ============================ PARTIES & LEADERS ============================
+
+ USA_gop_party:0 "Republican Party"
+ USA_gop_party_long:0 "Republican Party"
+ USA_dem_party:0 "Democratic Party"
+ USA_dem_party_long:0 "Democratic Party"
+ USA_prog_party:0 "Progressive Party"
+ USA_prog_party_long:0 "Progressive Party"
+ USA_alf_landon_desc:0 "The amiable governor of Kansas, swept into the White House on a promise of sound money, balanced budgets, and a government that minds its own business."
+ USA_wendell_willkie_desc:0 "The barefoot boy from Wall Street: a utilities lawyer and lifelong Democrat turned Republican nominee, an internationalist in a party of isolationists, carried to the White House on raw charm and a promise to run the New Deal better than its inventors."
+ USA_thomas_dewey_desc:0 "The racket-busting prosecutor of New York, precise, tireless, and young, who promises a competent and modern administration that keeps the gains of the age while cutting away its excesses."
+ USA_harry_truman_desc:0 "The haberdasher from Independence, plain-spoken and stubborn, who never asked for the job and declines, absolutely, to lose it politely."
+ USA_henry_wallace_desc:0 "The dreamer-agronomist of the Progressive crusade, prophet of the century of the common man, carried into office by a country that decided the old parties had nothing left to say."
+ USA_dwight_eisenhower_desc:0 "The Supreme Commander himself, drafted by a nation that trusts the man far more than either party: smiling, moderate, and immovable."
+ USA_dwight_eisenhower_gop_desc:0 "The Supreme Allied Commander of Europe, persuaded at last that the Republican Party and not the Democratic Party will allow him to govern as he believes: fiscally prudent, internationally engaged, and never for a moment unaware of the weight of the office."
+ USA_adlai_stevenson_desc:0 "The Governor of Illinois, witty and literate to a fault, who asked the voters to think and was rewarded, against all professional advice, with their votes."
+ USA_robert_taft_desc:0 "Mr. Republican, the Senate's conscience: a man of iron principle, suspicious of entangling alliances, contemptuous of executive overreach, and utterly certain that the Republic's greatest enemy is not the Kremlin but an unlimited government in Washington."
+
+ # ============================ REPUBLICAN WING (TASK 7) ============================
+
+ # --- GOP wing, 1936-44 ---
+ USA_gop_landon_banner:0 "The Sunflower Standard"
+ USA_gop_landon_banner_desc:0 "Governor Alf Landon of Kansas carries the Republican standard: sound money, balanced accounts, and a government that knows its proper limits. The party is reduced and outnumbered, but it is not yet finished, and it means to prove the New Deal a costly detour rather than a permanent destination."
+ USA_gop_nine_old_men_win:0 "The Nine Old Men Hold"
+ USA_gop_nine_old_men_win_desc:0 "The President's court-packing scheme has been held at bay by the Republican opposition and the Senate's own jealousy of its prerogatives. Nine justices remain nine, the Constitution is not enlarged by executive convenience, and the party of Lincoln claims the victory of principle over politics."
+ USA_gop_balanced_budget:0 "Balance the Budget"
+ USA_gop_balanced_budget_desc:0 "The Republicans need no platform committee to tell them what they believe about deficits: a government that spends beyond its means is a government that mortgages its children to its own present appetite. The ledger must be brought to balance, the borrowing stopped, and the currency kept honest."
+ USA_gop_business_restoration:0 "Restore Business Confidence"
+ USA_gop_business_restoration_desc:0 "Four years of New Deal rhetoric have sent capital to ground like a frightened animal. The counting-houses of New York and New Jersey want a signal that Washington has stopped treating success as a crime, and the party of business means to send it: the factories will return when the climate invites them back."
+ USA_gop_commitment:0 "The Grand Old Party"
+ USA_gop_commitment_desc:0 "Tested by the worst economic calamity in living memory and reduced in Congress to a corporal's guard, the Republican Party has not broken and it has not surrendered. Its faith in limited government, sound money, and the productive energies of free men is not an accident of prosperity; it is a conviction that has outlasted the crash, and will outlast the New Deal."
+ USA_gop_america_first:0 "America First"
+ USA_gop_america_first_desc:0 "Europe's quarrels are Europe's to settle. The party's State Department believes it with every fiber, and the polling maps agree: from the small towns of the Midwest to the German-American wards of the great cities, the demand is the same. Keep America out. The Atlantic and Pacific are the widest moats ever dug, and the country proposes to use them."
+ USA_gop_neutrality_acts_teeth:0 "The Neutrality Acts With Teeth"
+ USA_gop_neutrality_acts_teeth_desc:0 "No loans. No convoys. No expeditionary forces. The Neutrality Acts are not a polite suggestion but the settled law of the land, and the Republican Congress means to keep them that way. If the democracies of Europe cannot defend themselves without American money and American blood, the fault is their own improvidence and not a bill America is obliged to pay."
+ USA_gop_fortress_america:0 "Fortress America"
+ USA_gop_fortress_america_desc:0 "If the country will not go out to meet the world's wars, it must at least be prepared to repel them. The coasts are fortified, the harbors are armed, and the hemisphere is organized as a single defensive system: two oceans guarded by a navy built for the purpose and a home army that can make any landing costly beyond calculation."
+ USA_gop_hemisphere_patrol:0 "The Monroe Doctrine Enforced"
+ USA_gop_hemisphere_patrol_desc:0 "No European power shall plant a new foothold in the Americas. The Monroe Doctrine is a century old and the Navy is prepared to enforce it with the same quiet assurance with which it was proclaimed. From the Aleutians to the Falklands, the hemisphere is American business, and the patrol fleets know where the line is drawn."
+ USA_gop_armed_neutrality:0 "Armed Neutrality"
+ USA_gop_armed_neutrality_desc:0 "A nation that is prepared is a nation that can afford to wait. The party believes that America can stay out of the war, but only if it is strong enough that no belligerent calculates it worth the trouble to bring in. The arsenals are stocked, the forts are manned, and the country watches the carnage abroad with grim resolve to keep its distance."
+ USA_gop_reluctant_crusade:0 "The Reluctant Crusade"
+ USA_gop_reluctant_crusade_desc:0 "War has come whether the party willed it or not, and the Republic's Republicans do not shirk from its demands. But they go in under no illusions about crusades and no promises of a remade world: they fight to win, to come home, and to see that the emergency does not become the permanent condition of the Republic."
+ USA_gop_war_on_our_terms:0 "War on Our Terms"
+ USA_gop_war_on_our_terms_desc:0 "The party of efficiency takes its seat at the war council. Republican governors and senators have always known how to build and manage large organizations; what the war effort needs above all is production, logistics, and a steady hand on the industrial machinery. The GOP proposes to provide it, and to ensure that when the peace comes, the party is there to negotiate it."
+ USA_gop_dewey_dawn:0 "Dewey for President"
+ USA_gop_dewey_dawn_desc:0 "Governor Thomas E. Dewey of New York has broken more rackets and sent more criminals to prison than any prosecutor in the country's history, and the party believes a nation tired of improvisation is ready for a man who makes the trains run on time. The '44 convention is being organized, the county chairmen are being called, and the Grand Old Party is preparing to remind the country that it remembers how to govern."
+
+ # --- GOP wing spirits (Task 7: 1936-44) ---
+ USA_gop_fiscal_discipline_spirit:0 "Fiscal Discipline"
+ USA_gop_fiscal_discipline_spirit_desc:0 "The budget is coming into balance and the borrowing is slowing: the markets breathe more easily, the bond-holders are reassured, and the quiet confidence that builds factories is returning to the boardrooms."
+ USA_gop_america_first_spirit:0 "America First"
+ USA_gop_america_first_spirit_desc:0 "The foreign entanglements are unwound, the neutrality machinery is running at full power, and the country turns its face inward. There is work enough at home, and the oceans are wide."
+ USA_gop_neutrality_fortress_spirit:0 "Neutrality Fortress"
+ USA_gop_neutrality_fortress_spirit_desc:0 "The legal architecture of non-entanglement is locked and bolted: no loans, no convoys, no expeditionary commitments. The Republic is armed and watchful and resolutely alone."
+ USA_fortress_america_spirit:0 "Fortress America"
+ USA_fortress_america_spirit_desc:0 "The coasts are fortified and the harbors are armed. Whatever comes across the ocean must first fight its way past steel and concrete built deliberately for the purpose."
+ USA_hemisphere_defense_spirit:0 "Hemisphere Defense"
+ USA_hemisphere_defense_spirit_desc:0 "The whole western hemisphere is organized as a single defensive system under American leadership. The patrol fleets know the coastlines and the Monroe Doctrine has teeth."
+ USA_gop_hemisphere_patrol_spirit:0 "Monroe Doctrine Enforced"
+ USA_gop_hemisphere_patrol_spirit_desc:0 "The Navy's patrol routes run from the Aleutians to the River Plate. Any foreign power that covets a New World foothold will find the calculation very expensive indeed."
+ USA_gop_war_effort_spirit:0 "Republican War Management"
+ USA_gop_war_effort_spirit_desc:0 "The party of efficiency has its hands on the war machine. Production schedules are met, contracts are audited, and the enormous industrial effort proceeds with something approaching discipline."
+
+ # --- GOP wing spirits (Task 7: 1945-56) ---
+ USA_gop_demobilization_spirit:0 "Bring the Boys Home"
+ USA_gop_demobilization_spirit_desc:0 "The armies are coming home and the economy is turning gratefully to peace. The factories retool, the GI loans are spent on ranch houses, and the country draws a long breath of uncomplicated relief."
+ USA_gop_latin_trade_spirit:0 "Western Hemisphere Trade Bloc"
+ USA_gop_latin_trade_spirit_desc:0 "From the Rio Grande to Tierra del Fuego the Americas are learning to trade with one another under American terms. The arrangement suits Washington very well and the partners well enough."
+ USA_gop_mccarthy_spirit:0 "McCarthyism"
+ USA_gop_mccarthy_spirit_desc:0 "The junior senator from Wisconsin has discovered that the country will attend to almost any accusation if it is delivered with sufficient volume. The files are growing, the reputations are falling, and the administration is uncomfortably aware that the man with the list is not its friend, and cannot easily be stopped."
+ USA_gop_bipartisan_containment_spirit:0 "Bipartisan Containment"
+ USA_gop_bipartisan_containment_spirit_desc:0 "The senior senator from Michigan has declared that politics stops at the water's edge, and the declaration has carried the day. Democrats and Republicans alike are funding the containment of Soviet expansion, and the argument now is about how, not whether."
+ USA_gop_dynamic_conservatism_spirit:0 "Dynamic Conservatism"
+ USA_gop_dynamic_conservatism_spirit_desc:0 "The President calls it dynamic conservatism, and what he means is that the government will not dismantle the New Deal but will run it more efficiently, more honestly, and without the ideological excitement that makes businessmen nervous. The country seems to find this an excellent arrangement."
+
+ # --- GOP wing, 1945-56 ---
+ USA_gop_mr_republican:0 "Mr. Republican"
+ USA_gop_mr_republican_desc:0 "Senator Robert Alphonso Taft of Ohio is the Republican Party's conscience, its anchor, and its most reliable source of inconvenience to men who want easy answers. He opposed the League of Nations and he will oppose NATO; he opposed the wartime draft and will oppose the peacetime one; but his opposition to every entanglement abroad comes from the same source as his opposition to every expansion of government at home: a principled suspicion of power exercised beyond its proper limits."
+ USA_gop_eastern_establishment:0 "The Eastern Establishment"
+ USA_gop_eastern_establishment_desc:0 "Wall Street lawyers, Ivy League trustees, and the editorial boards of the great Eastern newspapers have not given up on the Republican Party, however many primaries the Midwesterners win. Their man is an internationalist, their money is real, and their connections run through every major institution in the country. They believe, with the particular confidence of men who have never had to doubt their own importance, that America cannot withdraw from the world, and that the party that tries to do so will be punished at the polls."
+ USA_gop_fortress_doctrine:0 "Fortress Doctrine"
+ USA_gop_fortress_doctrine_desc:0 "The Senator from Ohio does not trust the Truman Doctrine, does not trust NATO, and does not trust the proposition that American security requires a permanent military establishment in Europe and Asia. He trusts the Navy, trusts the Bomb, and trusts the two oceans that kept the Republic safe for a hundred and sixty years before anyone thought of a State Department to mismanage its foreign relations."
+ USA_gop_bring_the_boys_home:0 "Bring the Boys Home"
+ USA_gop_bring_the_boys_home_desc:0 "The armies must come home, and home quickly, before the generals and the permanent bureaucrats of the National Security State develop a professional interest in keeping them abroad. Rapid demobilization will be painful in the short run and restorative in the long: the factories will retool, the men will find work, and the Republic will breathe freely again once it stops paying for an empire it does not need."
+ USA_gop_hemisphere_imperium_light:0 "Western Hemisphere Imperium"
+ USA_gop_hemisphere_imperium_light_desc:0 "If America must lead somewhere, let it lead in its own hemisphere. The Senator believes in a regional order under American protection and American trade terms: close enough to be useful, far enough from Eurasian complications to avoid another expeditionary army. The Latin republics will receive investment and guaranteed markets; Washington will receive raw materials, cooperation, and the satisfaction of a sphere of influence that asks little of the Treasury."
+ USA_gop_mccarthy_unleashed:0 "McCarthy Unleashed"
+ USA_gop_mccarthy_unleashed_desc:0 "The junior senator from Wisconsin has taken the floor and is reading names. Communists in the State Department, in the Army, in the universities, in the labor unions: the list keeps growing because no list can be proven complete. The Justice Department's files are opened, the hearings begin, and the country learns how many of its institutions can be made to feel ashamed of themselves when the microphones are turned on."
+ USA_gop_vandenberg_moment:0 "The Vandenberg Moment"
+ USA_gop_vandenberg_moment_desc:0 "Senator Arthur Vandenberg of Michigan has crossed the aisle and taken the Republicans with him: there will be bipartisan support for the Marshall Plan, for NATO, for the whole apparatus of containment, because the Senator has decided that the Soviet threat is real and that politics must stop at the water's edge. Taft is furious. The Senate is grateful. The decision is made."
+ USA_gop_ike_draft:0 "Draft Eisenhower"
+ USA_gop_ike_draft_desc:0 "The Establishment has found its candidate and his name is Eisenhower. The General has no enemies, no record to defend, no ideology to apologize for, and a grin that has been closing parades since North Africa. He is everything the Republican Party needs: internationally respectable, fiscally cautious, and impossible to dislike. The county chairmen are being told who to vote for, and the convention floor is being organized. Dwight D. Eisenhower is going to be the Republican nominee for President of the United States."
+ USA_gop_dynamic_conservatism:0 "Dynamic Conservatism"
+ USA_gop_dynamic_conservatism_desc:0 "The President has a name for what he is doing: dynamic conservatism, by which he means that the federal government will not be dismantled but will be run with the competence and restraint that a professional army commander brings to any large organization. No fireside chats; no grand programs; no ideology. Just management, and the steady accumulation of a prosperity that speaks for itself."
+ USA_gop_mccarthy_censured:0 "The Senate Acts"
+ USA_gop_mccarthy_censured_desc:0 "The junior senator from Wisconsin has at last gone too far, and the Senate has found its nerve. The censure resolution passes sixty-seven to twenty-two, and the era named for the man from Appleton is over. The files will be closed, the lists will be filed away, and the country will spend the next decade arguing about what exactly happened and who exactly permitted it to happen for as long as it did."
+
+ # --- GOP events (Task 7) ---
+ usa_cabinet.260.t:0 "Dewey for President"
+ usa_cabinet.260.d:0 "Governor Dewey's people are on the telephone to every county chairman in the country, and the convention machinery is beginning to move. The Governor himself is at his desk in Albany working through case files, demonstrating with every passing hour that competence is a form of argument. The party is ready to be led by a man who can actually win, and Thomas E. Dewey believes he is that man."
+ usa_cabinet.260.a:0 "Build the machine. Winning is a craft."
+ usa_cabinet.260.b:0 "Press all the way. The White House is within reach."
+ usa_cabinet.261.t:0 "The General Comes Home"
+ usa_cabinet.261.d:0 "SHAPE Headquarters in Paris is quiet tonight because its Supreme Commander is on a transatlantic telephone call with the Republican National Committee, telling the chairman, with the careful courtesy of a man who has spent forty years giving orders without raising his voice, that yes, he will accept the nomination. The Democrats can nominate their eloquent Governor; the Republicans will nominate the man who planned the liberation of Western Europe and then stayed to organize its defense. The convention hall is already full of 'I Like Ike' buttons."
+ usa_cabinet.261.a:0 "The General takes command of the party."
+
+ # ============================ RADICAL WING (TASK 8) ============================
+
+ # --- RAD wing, 1936-44 ---
+ USA_rad_voices:0 "Voices of Discontent"
+ USA_rad_voices_desc:0 "Every radio station carries a prophet of the people: the silver-voiced Senator from Louisiana who promises every man a king's share of the national wealth, the radio priest who has found a congregation of thirty million, the sit-down strikers who have discovered that a factory cannot run without its workers' consent. The Depression has not merely impoverished the country — it has radicalized it, and the voices of that radicalization are learning, for the first time, to speak to one another."
+
+ USA_rad_share_our_wealth:0 "Share Our Wealth"
+ USA_rad_share_our_wealth_desc:0 "Senator Huey P. Long of Louisiana has a plan, and it fits on a pamphlet: cap the fortunes of the rich at a million dollars, guarantee every American family an annual income, and use the surplus to build schools and pay pensions. The economists call it impossible and the newspapers call it dangerous, and the mail-room at the Senate office building handles ten thousand letters a week addressed, personally, to the Kingfish. There has not been a political movement this large in the country since the Populists, and the Populists never had the radio."
+
+ USA_rad_popular_front:0 "The Popular Front"
+ USA_rad_popular_front_desc:0 "In the union halls and the party offices the argument has been settled: the real enemy is fascism, and every force to the left of Wall Street must march together against it. The Communist Party is disciplined, the CIO has organizing money, and the intellectuals who have been drifting leftward since 1929 are ready to sign the manifestoes and staff the committees. A Popular Front is not a party and it is not a government, but it is a political force of the kind that can become one, and the men who built it know it."
+
+ USA_rad_sit_down_wave:0 "The Sit-Down Wave"
+ USA_rad_sit_down_wave_desc:0 "The workers of Flint, Michigan sit down inside General Motors and refuse to leave, and in six weeks they have won the right to organize — not because the law required it but because the factory could not run without them. The tactic spreads to steel, to rubber, to textiles, to the docks: fifty-six sit-downs in the first weeks of 1937 alone. Management has discovered that property rights are worth nothing if labor will not work, and labor has discovered that it is stronger than it knew."
+
+ USA_rad_general_strike:0 "The General Strike"
+ USA_rad_general_strike_desc:0 "What began in the factories has spread to the streets. A general strike is the final argument of organized labor, the proof that the economy runs on workers' consent and not employers' grace, and the question Washington faces is whether to crush it, negotiate it, or be swept aside by it. In San Francisco they know how this can go. In Washington they are about to find out."
+
+ USA_rad_commitment:0 "The People's Front"
+ USA_rad_commitment_desc:0 "The movement that began on the radio and in the union halls has become something new: a political majority with ambitions the old parties cannot satisfy. The People's Front is not the Democratic Party and it is not the Socialist Party — it is the coalescence of the American left into a single force, with a program, a constituency, and a demand that Washington reckon with it seriously, or make way."
+
+ USA_rad_peoples_front_government:0 "The People's Front Government"
+ USA_rad_peoples_front_government_desc:0 "The ballot is counted and the People's Front has won. Not a protest, not a third-party nuisance: an actual government, with the White House and enough of the Congress to govern. Now comes the harder question, the one every movement faces when it finally wins: what kind of government will it be? The democratic socialists want elections and legislation; the vanguard faction wants organization and command. The movement cannot serve two masters for long."
+
+ USA_rad_workers_democracy:0 "Workers' Democracy"
+ USA_rad_workers_democracy_desc:0 "The People's Front will govern democratically or it will not govern at all. Elections continue, the civil liberties are preserved, and the program advances through legislation rather than decree. The skeptics say you cannot change an economic order without breaking the rules that protect it; the democratic socialists answer that the rules are all that stand between a people's government and a tyranny, and they have not come this far to become what they defeated."
+
+ USA_rad_economic_bill_of_rights:0 "An Economic Bill of Rights"
+ USA_rad_economic_bill_of_rights_desc:0 "The political Bill of Rights was written in a time of quill pens and yeoman farmers, and it says nothing about whether a man has a job, a decent wage, or a doctor when his children fall sick. The second Bill of Rights addresses the rights the first one left out: a job, a living wage, decent housing, medical care, and a good education — not as charities but as constitutional guarantees, as firmly anchored in law as the right to speak freely. The republic is being rebuilt from the bottom."
+
+ USA_rad_one_big_union:0 "One Big Union"
+ USA_rad_one_big_union_desc:0 "Industrial unionism, not craft unionism: not the carpenters and the painters in separate halls but every worker in the plant in the same union, sitting at the same table, with the same card. The old AFL fought it for fifty years; the CIO built it anyway; and the People's Front is about to give it the force of law. One big union, representing everyone who works — and the republic that organized them will know where its true power lies."
+
+ USA_rad_vanguard_path:0 "The Vanguard"
+ USA_rad_vanguard_path_desc:0 "The lesson of history, the faction argues, is that you do not share power with the class that is trying to take it back. The People's Front will not be argued out of office by judges appointed for life, will not be voted out by newspapers owned by its enemies, and will not bargain away the revolution one concession at a time. The party takes its mandate as something more than an invitation to govern: it is a mandate to build the kind of state that cannot be undone."
+
+ USA_rad_smash_the_reaction:0 "Smash the Reaction"
+ USA_rad_smash_the_reaction_desc:0 "The committees have been sitting for weeks, the names are being read, and the apparatus of organized reaction — the company unions, the vigilante leagues, the bought judges and the red-baiting congressmen — is being systematically dismantled. The newspapers call it a purge. The party calls it necessary. The men in the dock call it persecution, and some of them are right, and some of them are guilty, and the party does not propose to stop long enough to sort out which is which."
+
+ USA_rad_premature_antifascists:0 "Premature Antifascists"
+ USA_rad_premature_antifascists_desc:0 "The People's Front warned them in 1936 and in 1937 and in 1938, and nobody in the editorial offices of the respectable press was listening. Now the flags are going up in capital after capital, and the men who marched in the Lincoln Brigade and the men who were blacklisted for saying it aloud turn out to have been right — not in retrospect, but in time. The United States is going to fight the fascists, and the radical left is going to fight them first."
+
+ USA_rad_peoples_war:0 "The People's War"
+ USA_rad_peoples_war_desc:0 "This is not a war of governments and armies; it is a war of peoples. The factory worker is a soldier now, and the partisan in the occupied city is a soldier, and the woman building bombers in the plant is a soldier, and all of them know what they are fighting for because the People's Front has been saying it for ten years. Antifascism was once a dirty word in the respectable press. Now it is the name of the war."
+
+ # --- RAD wing spirits (Task 8: 1936-44) ---
+ USA_rad_share_our_wealth_spirit:0 "Share Our Wealth"
+ USA_rad_share_our_wealth_spirit_desc:0 "The Kingfish's program has found its way into policy: capped fortunes, guaranteed incomes, and a federal government that has stopped pretending that inequality is natural. The money is moving, and the men with the pamplets are satisfied."
+
+ USA_rad_sit_down_disruption_spirit:0 "Factory Occupations"
+ USA_rad_sit_down_disruption_spirit_desc:0 "The workers sit inside the machines and the machines do not run. Production is disrupted and management is frightened and the workers know, for the first time, exactly what they are worth to the economy that has been telling them they are replaceable."
+
+ USA_rad_labor_force_spirit:0 "The Labor Force Organized"
+ USA_rad_labor_force_spirit_desc:0 "The general strike has been won, or negotiated to a settlement that looks like a win, and the organized labor movement emerges stronger and more unified than it entered the confrontation. The workers are learning what they can do when they act together."
+
+ USA_rad_people_state_spirit:0 "The People's State"
+ USA_rad_people_state_spirit_desc:0 "The party is the state, and the state is the party, and the party is building something. The organizational apparatus runs from the village soviets to the Central Committee, and the men at the top have no intention of letting it unwind."
+
+ USA_rad_workers_democracy_spirit:0 "Workers' Democracy"
+ USA_rad_workers_democracy_spirit_desc:0 "The ballot is preserved and the rights are protected and the program advances through vote by vote, law by law. It is the slower road, and the vanguard faction says it is the road that does not arrive. The democratic socialists say it is the only road worth taking."
+
+ USA_rad_economic_rights_spirit:0 "Economic Bill of Rights"
+ USA_rad_economic_rights_spirit_desc:0 "The second constitution is enacted, the one that speaks to economic life rather than merely political life. No American is now entitled to be destitute; the republic has acknowledged an obligation it will not be permitted to forget."
+
+ # --- RAD wing, 1945-56 ---
+ USA_rad_third_camp:0 "The Third Camp"
+ USA_rad_third_camp_desc:0 "An independent socialist America has no business choosing between Moscow and Wall Street. The Soviet Union is a workers' state deformed by Stalinist bureaucracy; the American empire is capitalism triumphant. The Third Camp is neither: it is the possibility of a socialism that keeps the ballot, the union, and the human conscience intact, and it makes its trade agreements and its peace proposals with any country willing to do business without ideological preconditions. The small nations of the world are watching to see if it is possible."
+
+ USA_rad_economic_democracy:0 "Economic Democracy"
+ USA_rad_economic_democracy_desc:0 "The political democracy is established and must now be matched by an economic one. Workers elect the boards of the major industries; the state holds the commanding heights; the market persists in its proper sphere, subordinate to the social plan. It is not the nationalization the Fabians dreamed of, and it is not the market the libertarians demand — it is the thing in between, the economic constitution of a people that has decided its government should be able to govern."
+
+ USA_rad_red_half_century_dem:0 "The Red Half-Century"
+ USA_rad_red_half_century_dem_desc:0 "Twenty years after the People's Front first took office, the balance sheet is legible at last: the industries are democratically managed, the social insurance covers every citizen, the unions are the strongest in the world, and the dollar is still the reserve currency because American productivity has earned it. The revolution, if it was a revolution, kept all the institutions it found and turned them to new purposes. The country that emerges is not unrecognizable — it is, in many ways, the America that the Founders promised and the Gilded Age postponed."
+
+ USA_rad_comintern_pivot:0 "The Comintern Pivot"
+ USA_rad_comintern_pivot_desc:0 "The postwar world is divided, and a vanguard state cannot stand aside from the division forever. The Soviet Union has rebuilt and is arming and is watching; Moscow has made its offer; and the question the vanguard party must answer is whether the American revolution is a chapter in world history or a national phenomenon. The internationalists argue that the class struggle does not respect borders and that the revolution is safer in company. The nationalists argue that American socialism cannot survive a Soviet patron, and the argument in the party headquarters grows sharp and personal."
+
+ USA_rad_atomic_secrets_shared:0 "The Atomic Choice"
+ USA_rad_atomic_secrets_shared_desc:0 "The secrets came from the Manhattan Project, and the scientists who built the bomb are not unanimous that only one country should hold it. Some of them believe that the knowledge belongs to humanity and will be shared sooner or later regardless. Others believe that a world in which only the United States holds the bomb is a world permanently under American ultimatum, and that a socialist America owes the workers of other countries the chance to deter the imperialists of their own. The choice is irreversible, and the world will feel it for decades."
+
+ USA_rad_red_half_century_van:0 "The Vanguard Century"
+ USA_rad_red_half_century_van_desc:0 "The party has held power for twenty years and it does not intend to surrender it to the first election it loses. The institutions of the old order — the Supreme Court, the electoral college, the two-party system — have been replaced by institutions of the people's state, and the people's state is proving, in practice, that it can build more and arm better and feed its citizens more reliably than the republic it replaced. The United States of America is officially renamed. What it becomes next depends on whether the party can keep the promise."
+
+ USA_rad_peoples_war_memorial:0 "The People's War Memorial"
+ USA_rad_peoples_war_memorial_desc:0 "The war ended years ago and the country has not yet finished mourning it. A memorial is not merely a monument; it is a political act, a decision about which war was fought and what it was fought for. This one says: it was the workers and the soldiers of the antifascist left who carried the weight, and the country owes them not merely gratitude but the completion of the society they believed they were fighting to build. The memorial opens on a Tuesday; by Friday the line to see it runs around the block."
+
+ # --- RAD wing spirits (Task 8: 1945-56) ---
+ USA_rad_third_camp_spirit:0 "The Third Camp"
+ USA_rad_third_camp_spirit_desc:0 "An independent socialist republic, non-aligned and self-sufficient: it trades with Moscow when the terms are right and with London when the terms are right and with neither when they are not. The world's other socialists watch enviously."
+
+ USA_rad_red_half_century_dem_spirit:0 "The Democratic Commonwealth"
+ USA_rad_red_half_century_dem_spirit_desc:0 "The revolution that kept the ballot has kept its legitimacy, and after a generation the country it has built is prosperous, just, and reasonably free. The historians will argue about whether it deserved to succeed. The people living in it are not arguing."
+
+ USA_rad_red_half_century_van_spirit:0 "The Vanguard State"
+ USA_rad_red_half_century_van_spirit_desc:0 "The party-state has proven its capability: it builds, arms, and feeds, and it has no intention of stopping. The question the next generation will have to answer is whether capability without accountability can endure."
+
+ # --- RAD events (Task 8: 1936-44) ---
+ usa_cabinet.210.t:0 "The People's Front Takes Office"
+ usa_cabinet.210.d:0 "The returns are in and they are unambiguous: the People's Front has won the presidency of the United States. In the union halls and the party offices the celebrations are already going, but in the back rooms the argument is already resuming — the argument that has never quite stopped since the movement began. What kind of government will it be? The movement has a majority; now it must decide what to do with it, and how it must decide is itself the first decision of consequence."
+ usa_cabinet.210.a:0 "A democratic socialist government: the ballot is sacred."
+ usa_cabinet.210.b:0 "The vanguard leads. The party must organize, not merely legislate."
+
+ usa_cabinet.211.t:0 "The General Strike Showdown"
+ usa_cabinet.211.d:0 "The strike is not a labor dispute anymore; it is a constitutional crisis. The strikers have shut down the ports, the railways, and half the city governments of the industrial belt, and the administration must answer the question that no one has asked out loud yet: which side is the government on? The police are waiting for orders. The National Guard is waiting for orders. The workers are waiting to find out if they won."
+ usa_cabinet.211.a:0 "Negotiate. The workers' demands are the government's program."
+ usa_cabinet.211.b:0 "Order must be restored, even at a cost."
+
+ usa_cabinet.212.t:0 "The Purge"
+ usa_cabinet.212.d:0 "The committees have their lists and the hearings are scheduled and the party has decided that the revolution will not be undone by the men who are trying to undo it. The opposition is being dismantled — legally where possible, administratively where necessary, and with the security apparatus where nothing else suffices. The press calls it a purge. The party calls it the necessary conclusion of a struggle that began in the boardrooms and the editorial offices of men who never accepted the election results."
+ usa_cabinet.212.a:0 "The revolution protects itself. The elections are suspended."
+
+ # --- RAD events (Task 8: 1945-56) ---
+ usa_cabinet.213.t:0 "An Offer from Moscow"
+ usa_cabinet.213.d:0 "The Soviet Foreign Ministry's note is politely phrased and its meaning is plain: Moscow recognizes the People's Front government as the legitimate government of the United States, and the Communist International — reconstituted since its wartime dissolution — extends a formal offer of fraternal solidarity and, if desired, faction membership. The vanguard party is being invited to the table of world communism. What happens at that table will depend on who sits down."
+ usa_cabinet.213.a:0 "Accept the invitation. The revolution is international."
+ usa_cabinet.213.b:0 "Remain independent. American socialism answers to Americans."
+
+ usa_cabinet.214.t:0 "The Secret of the Bomb"
+ usa_cabinet.214.d:0 "The Manhattan Project files are in the archives of a government that no longer belongs to the men who classified them. The scientists who built the bomb are in the room — some of them were already party members — and the question is on the table: does a socialist America keep the atomic monopoly, or does it share the secret with its Soviet comrades on the grounds that no single state should have the power to end civilization? The decision will be felt for decades, and the moment for making it is now."
+ usa_cabinet.214.a:0 "Share the secret. Solidarity is not a slogan."
+ usa_cabinet.214.b:0 "Hold the secret. Even allies must be balanced."
+
+ # --- RAD leaders ---
+ USA_norman_thomas_desc:0 "The Presbyterian minister turned socialist candidate, who ran for President six times and never won and shaped the country's politics more profoundly than most men who did."
+ USA_earl_browder_desc:0 "The Kansas-born general secretary of the Communist Party of America, who dissolved the party into a political association during the war and found himself, to his own astonishment, leading a government."
+
+ ###########################################################################
+ # AUTH WING FOCUSES (Task 9: 1936-44)
+ ###########################################################################
+
+ USA_auth_whispers:0 "Whispers in the Gallery"
+ USA_auth_whispers_desc:0 "The Bonus Army was gassed and scattered, but it did not disperse. Veterans who marched on Washington in 1932 and went home in humiliation are still talking. In the armories and the American Legion halls and the back rooms of certain clubs, the talk has a different tone: not petition but ultimatum, not patience but readiness. The democracy that abandoned its soldiers has not earned their gratitude, and the men who never stopped talking are beginning to find one another."
+
+ USA_auth_veterans_grievance:0 "The Veterans' Reckoning"
+ USA_auth_veterans_grievance_desc:0 "A quarter of a million men served the Republic overseas and came home to a breadline. MacArthur's troops rode horses into the Bonus March and torched the veterans' shacks under orders from the same government that sold the soldiers their Liberty Bonds. The debt is not forgotten, and the men who remember it are organizing under leaders who promise that the next government will not treat its veterans as an inconvenience to be dispersed."
+
+ USA_auth_business_backers:0 "The Money Behind the Movement"
+ USA_auth_business_backers_desc:0 "The New Deal is a threat to property and the men who hold it know it. Certain industrialists, certain bank directors, certain partners in certain law firms have concluded that the democratic process, as currently constituted, is not going to protect what they built. They are not yet ready to march in the streets. They are ready to write checks, make introductions, and look the other way when the movement requires resources that cannot be accounted for on a balance sheet."
+
+ USA_auth_business_plot:0 "The Business Plot"
+ USA_auth_business_plot_desc:0 "The plan is circulating in boardrooms and officers' clubs: the right general, the right money, the right moment. The retired Marine commandant who was approached and refused will not stay quiet forever, and the plan has to move before it leaks. The industrialists have named their general and the general has not said no. A coup requires only that enough people in the right positions decide that the alternative is worse."
+
+ USA_auth_silver_legion:0 "The Silver Legion"
+ USA_auth_silver_legion_desc:0 "William Dudley Pelley's Silver Shirts have been marching for three years. They have a newspaper, a radio hour, a theology of Christian nationalism, and a theory of the state that does not include elections after the first one. The movement is not respectable and does not wish to be. It wants power, and it has concluded that power does not require respectability — only numbers, conviction, and the willingness to use what you have when the moment comes."
+
+ USA_auth_commitment:0 "The American Caesar"
+ USA_auth_commitment_desc:0 "The Republic ends not with a battle but with a transfer of authority that most of the country does not yet understand has happened. The general accepts the command or the prophet mounts the steps, and the cabinet ministers who do not resign are told they will serve at pleasure — and that the pleasure may not last long. The newspapers are still printing. The Supreme Court is still sitting. The elections are not yet canceled, only postponed indefinitely. The democratic forms remain. The democratic substance is gone."
+
+ USA_auth_crush_labor:0 "The Broken Union"
+ USA_auth_crush_labor_desc:0 "The sit-down strikes and the organizing drives and the CIO's claims to recognition were the New Deal's greatest concession to the working class. The new order does not negotiate. The picket lines are dispersed, the organizers arrested or fled, the contracts voided by executive decree. The factory floor is reorganized for output and the question of who owns the output is no longer a question that labor is permitted to raise. Production climbs. The workers have not stopped working — they have only stopped being asked whether they consent."
+
+ USA_auth_new_order_at_home:0 "The New Order at Home"
+ USA_auth_new_order_at_home_desc:0 "Every republic has an attorney general. The difference is what the attorney general is for. This one is for the state. The immigration files, the domestic surveillance rosters, the postal inspection records, and the files that J. Edgar Hoover has been keeping for a decade are now available to an administration that does not feel constrained by the Bill of Rights in the way that previous administrations did. The new order needs a security apparatus and the security apparatus is being built."
+
+ USA_auth_loyalty_oaths:0 "Loyalty Oaths"
+ USA_auth_loyalty_oaths_desc:0 "Every federal employee takes the oath. Every officer renews it. Every schoolteacher, every professor at a land-grant university, every postal clerk swears loyalty to the new order and to its leader. The committees that review the oaths are thorough and the standards for disqualification are flexible. Dissent is a form of disloyalty and loyalty is the first requirement of continued employment. The country grows quieter. The opposition grows more careful. This is not an accident."
+
+ USA_auth_press_brought_to_heel:0 "The Press Brought to Heel"
+ USA_auth_press_brought_to_heel_desc:0 "The newspapers that called it a coup are discovering the limits of press freedom in a state that controls newsprint allocation and broadcast license renewals. The editors who resisted are retired or absent. The columnists who remain understand that the story they write today determines whether they are asked to write tomorrow. The new order does not need censorship in the crude sense — it needs editors who understand the situation, and it is getting them."
+
+ USA_auth_hemisphere_destiny:0 "Hemisphere Destiny"
+ USA_auth_hemisphere_destiny_desc:0 "Monroe was right about the hemisphere belonging to the Americas, but he was insufficiently clear about which Americans. The doctrine is being updated. Caribbean governments that depend on American sugar quotas and security guarantees are discovering that the new conditions of those arrangements are more explicit than they used to be. The Caesar does not ask permission from a neighbor. He asks for compliance and then waits a reasonable interval before obtaining it by other means."
+
+ USA_auth_good_neighbor_with_teeth:0 "The Good Neighbor With Teeth"
+ USA_auth_good_neighbor_with_teeth_desc:0 "Roosevelt called it the Good Neighbor Policy. The new order calls it spheres of responsibility. The neighbors will be protected — protected by the United States, from threats that the United States will define, on terms that the United States will set. The offer is being made in the polite language of diplomatic correspondence. The alternative to accepting the offer is not articulated in the correspondence, but the naval squadron in the harbor makes the alternative clear enough."
+
+ USA_auth_war_on_our_schedule:0 "War on Our Schedule"
+ USA_auth_war_on_our_schedule_desc:0 "The Caesar does not wait for war to come to him. He chooses his moment, prepares his armies, selects his enemies, and moves when the calculation is favorable. The new order does not share the democracies' aversion to initiative; it regards war as an instrument of policy and policy as the extension of power by whatever means are necessary. The question is not whether there will be a war. The question is where and when."
+
+ ###########################################################################
+ # AUTH WING FOCUSES (Task 9: 1945-56)
+ ###########################################################################
+
+ USA_auth_pax_americana:0 "Pax Americana"
+ USA_auth_pax_americana_desc:0 "The war is over and the hemisphere is ours and the question is what we do with it. The old order of nation-states and self-determination and international law is over; the new order is organized around American power and American interests, which are, by definition, the interests of order. The Caesar is not modest about the implications. A peace imposed by strength is still a peace, and the alternative to American hegemony is not an international community of equal nations — it is chaos, and chaos is the enemy of the peace that the Caesar is offering."
+
+ USA_auth_tribute_system:0 "The Tribute System"
+ USA_auth_tribute_system_desc:0 "The weaker nations of the hemisphere pay. They pay in raw materials priced below the market rate. They pay in favorable investment terms that reserve the extractive industries for American capital. They pay in deference: their foreign ministers come to Washington and their ambassadors wait in the lobby. The ledger is always in America's favor and the accounting is never reviewed by any body that the weaker nations are permitted to address. This is called free trade."
+
+ USA_auth_legions_overseas:0 "Legions Overseas"
+ USA_auth_legions_overseas_desc:0 "The Roman precedent is not lost on the officers who design the basing strategy. A dozen installations in a dozen countries, each one a reminder of the cost of resistance and a guarantee of the price of compliance. The garrisons are not large — they do not need to be large. They need only to be present, and the flag flying over the compound at Puerto Cortés or the airstrip outside Panama City or the naval station at Guantánamo is sufficient to make the political argument without anyone having to say it out loud."
+
+ USA_auth_atomic_diplomacy:0 "Atomic Diplomacy"
+ USA_auth_atomic_diplomacy_desc:0 "The bomb changes the conversation. Before the bomb, a threat had to be backed by armies and logistics and time; a small power could calculate the cost of American intervention and decide that the cost was worth bearing. After the bomb, the calculation is different. The Caesar does not threaten in public — public threats are for regimes that lack confidence. He mentions, in private meetings, that the United States has capabilities it has not yet fully explored, and that the world would benefit from an early opportunity to understand what those capabilities mean for the conduct of foreign policy."
+
+ USA_auth_imperium:0 "The Imperium"
+ USA_auth_imperium_desc:0 "The United States of America is a name from a different century — a name from the era of self-evident truths and consent of the governed and the proposition that all men are created equal. The new order proposes a different name, a different theory, and a different flag, or at least a different legend on the same flag. The New Republic is proclaimed in a ceremony that is carried on every radio frequency the state controls. The historians will argue about the date. The people watching the ceremony know that the argument about what the country is has been resolved, and that they lost."
+
+ USA_auth_succession_question:0 "The Succession Question"
+ USA_auth_succession_question_desc:0 "The Caesar built his order around himself and the order is discovering the problem with that approach. The junta men and the movement men have different ideas about who comes next and neither faction is willing to concede the question to the other. The instability is not yet public — the newspapers print what they are told — but in the ministries and the general staff headquarters and the party offices the argument is open and the argument has started to look like something that requires resolution before it resolves itself in a way that no one intended."
+
+ ###########################################################################
+ # AUTH WING SPIRITS (Task 9)
+ ###########################################################################
+
+ USA_auth_business_backers_spirit:0 "The Business Coalition"
+ USA_auth_business_backers_spirit_desc:0 "The movement's industrial patrons provide capital, legal cover, and access to the boardrooms of America's largest corporations. In exchange they expect a government that understands the relationship between property and order."
+
+ USA_auth_labor_crushed_spirit:0 "The Broken Union"
+ USA_auth_labor_crushed_spirit_desc:0 "The organized labor movement has been dismantled. Factory output rises without the friction of negotiation. The workers have not stopped working — they have only stopped being asked."
+
+ USA_auth_security_state_spirit:0 "The Security Apparatus"
+ USA_auth_security_state_spirit_desc:0 "The attorney general's office and the internal security services have been reorganized to serve the new order. Surveillance is systematic. Dissent is tracked. The opposition does not disappear — it becomes very careful."
+
+ USA_auth_loyalty_oaths_spirit:0 "Loyalty Administered"
+ USA_auth_loyalty_oaths_spirit_desc:0 "Every federal employee has sworn the oath. The committees review the files. Stability comes not from consensus but from the knowledge that dissent is disqualifying, and everyone knows it."
+
+ USA_auth_press_control_spirit:0 "The Compliant Press"
+ USA_auth_press_control_spirit_desc:0 "The newspapers print what they are told. The editors who remain understand the situation. This is not censorship in the crude sense — it is the natural result of a press that has learned, through experience, where the line is."
+
+ USA_auth_tribute_spirit:0 "The Tribute System"
+ USA_auth_tribute_spirit_desc:0 "The hemisphere's weaker nations pay in materials, investment access, and deference. The ledger is always in Washington's favor."
+
+ USA_auth_overseas_bases_spirit:0 "Forward Legions"
+ USA_auth_overseas_bases_spirit_desc:0 "American garrisons scattered across the hemisphere and the Pacific make the argument for compliance without anyone having to say it out loud."
+
+ USA_auth_pax_spirit:0 "Pax Americana"
+ USA_auth_pax_spirit_desc:0 "The new order calls it peace. The order is American, the terms are American, and the enforcement is American. Whether the neighbors call it peace is not a question they are invited to answer publicly."
+
+ USA_auth_imperium_spirit:0 "The New Republic"
+ USA_auth_imperium_spirit_desc:0 "The old names have been replaced. The ideology is permanent. The historians will argue about what it was — the people who live under it call it the way things are."
+
+ ###########################################################################
+ # AUTH EVENTS (Task 9)
+ ###########################################################################
+
+ usa_cabinet.215.t:0 "Caesar's Ascent"
+ usa_cabinet.215.d:0 "The Republic ends not with a cannon shot but with a transfer of authority that most of the country does not yet understand has happened. The general accepts the command or the prophet mounts the steps, and the men who might have stopped it have decided — or been persuaded, or arrested — not to try. The flag still flies. The Supreme Court is still sitting, for now. The newspapers are still printing. But the president who sits in the Oval Office answers to no one who was elected, and the next election has been postponed indefinitely, pending the resolution of the current emergency, which will not be resolved."
+ usa_cabinet.215.a:0 "The General commands. MacArthur takes the chair."
+ usa_cabinet.215.b:0 "The Prophet leads. Pelley's movement has its moment."
+
+ usa_cabinet.216.t:0 "The Labor Crackdown"
+ usa_cabinet.216.d:0 "The strikes are over. The sit-down occupation at Flint lasted two months; the new administration's patience lasted two weeks. The order has been given and the question is only what kind of order it will be — the brutal kind that leaves the organizers in a hospital, or the managed kind that leaves them in a courtroom. Both options accomplish the same thing. The factories will run. The question is how many people get hurt on the way to that conclusion."
+ usa_cabinet.216.a:0 "Brutal. The clubs come out. The organizers are made examples."
+ usa_cabinet.216.b:0 "Managed. Courts, injunctions, yellow-dog contracts. The result is the same, more slowly."
+
+ usa_cabinet.217.t:0 "The Good Neighbor's Offer"
+ usa_cabinet.217.d:0 "The communiqué from Washington arrives in the foreign ministries of Central America and the Caribbean on the same day, which is not a coincidence. The language is diplomatic and the meaning is plain: American protection is being extended to the region, on terms to be specified in follow-on negotiations, at Washington's convenience. The neighbors understand that this is not a request. The question is whether to accept the terms that are being offered or to wait and discover what the terms become when the naval squadron arrives."
+ usa_cabinet.217.a:0 "Extend the arrangement to Mexico. The offer is made."
+ usa_cabinet.217.b:0 "A naval demonstration first. The argument precedes the conversation."
+
+ usa_cabinet.218.t:0 "The Bomb as Leverage"
+ usa_cabinet.218.d:0 "The secretary of war's briefing is thorough and the conclusion is not difficult to reach: the United States holds the only atomic weapons in existence, and no one else will have them for years, and the window in which the monopoly is absolute is the window in which American diplomacy can accomplish things that it could not accomplish without the bomb and will not be able to accomplish once others have it. The Caesar is being asked to decide what to do with the window. The decision will be felt for a generation."
+ usa_cabinet.218.a:0 "Deliver the ultimatum. The minor power will comply or face the consequences."
+ usa_cabinet.218.b:0 "The prestige demonstration. Show the capability. Say nothing further."
+
+ usa_cabinet.219.t:0 "The New Republic"
+ usa_cabinet.219.d:0 "The ceremony is brief and the broadcast is long. The old name is retired; the new name is announced; the ideological foundation of the new order is stated plainly for the first time in public, without the euphemisms that the transition period required. The New Republic is not the United States of America. It is what the United States of America has become, which is a different thing, and the difference has been official for seven minutes, and the world is learning what to call it."
+ usa_cabinet.219.a:0 "The New Republic is proclaimed. The old names are retired."
+
+ usa_cabinet.220.t:0 "The Succession Crisis"
+ usa_cabinet.220.d:0 "The argument in the ministries and the general staff headquarters has been going on for months and it has not been resolved and the Caesar is either unable or unwilling to resolve it. The junta men want a soldier. The movement men want a believer. Both factions have files on the other faction and both factions know that the files exist and neither faction is prepared to strike first because neither faction is certain it would win. The country does not know about this argument. The newspapers know better than to print it. But the country is starting to sense that something is wrong."
+ usa_cabinet.220.a:0 "Iron fist. Purge the rivals. Pay the cost in political capital."
+ usa_cabinet.220.b:0 "Concession. Allow a faction influence. Buy time."
+
+ ###########################################################################
+ # AUTH LEADERS (Task 9)
+ ###########################################################################
+
+ USA_macarthur_auth_desc:0 "The general who dispersed the Bonus March and believes it was the right decision. He has been waiting for his moment for fifteen years and he has concluded that the democratic process is not going to provide it."
+ USA_pelley_auth_desc:0 "The publisher, astrologer, and self-proclaimed messiah who founded the Silver Shirts in 1933 and has been building toward this moment ever since. He believes the country has a destiny and that he is its instrument."
+
+ ###########################################################################
+ # MILITARY PILLAR (Task 10)
+ ###########################################################################
+
+ # --- Industry sub-ladder ---
+ USA_mil_war_resources_board:0 "The War Resources Board"
+ USA_mil_war_resources_board_desc:0 "A presidential board with no binding authority and no independent staff is the American solution to the problem of industrial coordination. Nelson and Knudsen argue over allocation tables while the factories wait. Whoever chairs the board in the end will have to learn, on the job, that a paper directive and a production schedule are not the same thing."
+
+ USA_mil_synthetic_rubber:0 "The Synthetic Rubber Programme"
+ USA_mil_synthetic_rubber_desc:0 "Japan's conquest of Malaya and the Dutch East Indies has cut off ninety percent of American natural rubber. The solution is seventy government-built buna-S plants in Kentucky, Ohio, and West Virginia, operated by companies that have never made rubber before and supervised by chemists who are making it up as they go. Within three years the programme will produce more rubber than the world previously consumed."
+
+ USA_mil_willow_run:0 "Willow Run"
+ USA_mil_willow_run_desc:0 "Henry Ford's Willow Run plant is a mile long and a quarter mile wide and is designed to manufacture a B-24 Liberator every hour. It does not reach that rate until 1944, but when it does, the production line becomes the war's most eloquent argument for the American system."
+
+ USA_mil_liberty_fleet:0 "The Liberty Fleet"
+ USA_mil_liberty_fleet_desc:0 "The design is thirty years old and the welding is done by women who learned the trade six weeks ago, but the Kaiser yards are putting a hull in the water every ten days, and the U-boat commanders do the arithmetic and discover that they cannot sink ships faster than America builds them."
+
+ # --- Navy sub-ladder ---
+ USA_mil_two_ocean_navy:0 "The Two-Ocean Navy Act"
+ USA_mil_two_ocean_navy_desc:0 "A bill that authorizes seventy percent expansion of the fleet passes the Senate by voice vote and the House in four hours. The admirals have been asking for this for twenty years. The question now is not whether to build the ships but whether the yards can build them before the Pacific requires them."
+
+ USA_mil_carrier_doctrine:0 "Carrier Doctrine"
+ USA_mil_carrier_doctrine_desc:0 "The battle line doctrine is dead; Taranto and Pearl Harbor killed it on the same weekend. The flat-tops have replaced the battleships as the capital ships of the new naval warfare, and the admirals who understood that early — Nimitz, Halsey, Mitscher — are the ones writing the doctrine that the rest of the world will spend twenty years catching up to."
+
+ USA_mil_essex_program:0 "The Essex Programme"
+ USA_mil_essex_program_desc:0 "Twenty-four Essex-class fleet carriers ordered; seventeen commissioned before the Japanese surrender; three more commissioned afterward because the steel was cut and the workers had nothing else to do. Each one displaces twenty-seven thousand tons and carries ninety aircraft and represents everything the Navy learned about carrier operations at Midway and the Philippine Sea."
+
+ USA_mil_fleet_train:0 "The Fleet Train"
+ USA_mil_fleet_train_desc:0 "The underway replenishment concept — oilers, ammunition ships, and stores ships sailing with the battle fleet rather than waiting in port — transforms the Pacific into a highway. Nimitz's fleet can remain at sea for months at a time, and Yamamoto has no answer for a supply chain that follows the enemy fleet to his doorstep."
+
+ # --- Air sub-ladder ---
+ USA_mil_air_corps_expansion:0 "Air Corps Expansion"
+ USA_mil_air_corps_expansion_desc:0 "GHQ Air Force acquires independent planning authority, a separate training pipeline, and a strategic mission that does not require the blessing of the Army ground commanders. The airmen have been arguing for this since Billy Mitchell. They have it now, and they intend to use it."
+
+ USA_mil_very_long_range:0 "Very Long Range"
+ USA_mil_very_long_range_desc:0 "The B-29 Superfortress is the most expensive weapons program in American history and it does not work. The engines overheat, the pressurization leaks, and the fire-control system is theoretical. Then LeMay takes it to the Marianas, strips out the guns, loads it with incendiaries, and burns Tokyo to the ground at night from five thousand feet. The design specifications were not the point."
+
+ USA_mil_strategic_air_command:0 "Strategic Air Command"
+ USA_mil_strategic_air_command_desc:0 "LeMay's SAC is not a command; it is a theology. The bombers are on alert twenty-four hours a day, the crews spend their off-hours in ground training, and the base commanders who fail the operational readiness inspections are relieved before the inspector general's staff car is out of the parking lot. It is the most exacting peacetime military organization in American history, and it is built entirely around delivering one weapon to one country."
+
+ USA_mil_jet_transition:0 "The Jet Transition"
+ USA_mil_jet_transition_desc:0 "The last piston-engined fighter in operational service is retired with ceremony and a press release. The jet age has no room for nostalgia. The pilots who flew Mustangs in the war are now flying something that goes twice as fast and cannot glide if the engine quits, and they are discovering that the skills translate only partially and the instincts translate not at all."
+
+ USA_mil_century_series:0 "The Century Series"
+ USA_mil_century_series_desc:0 "The F-100, F-101, F-102, F-104, F-105, and F-106 arrive so quickly that the Air Force barely has time to work out the bugs in one before the next one is declared operational. Each is supersonic. Each replaces something that was cutting-edge eighteen months ago. The procurement system is producing aircraft faster than the operational doctrine can absorb them."
+
+ # --- Atomic sub-ladder ---
+ USA_mil_uranium_committee:0 "The Uranium Committee"
+ USA_mil_uranium_committee_desc:0 "Einstein's letter to the President ends with a recommendation that the government take an interest in uranium research. The government's response is a committee, a modest appropriation, and a request that the physicists not talk to the newspapers. Within three years the committee will have become the Manhattan Project, and the appropriation will be two billion dollars, and the newspapers will not print anything because they will not know there is anything to print."
+
+ USA_mil_manhattan_project:0 "The Manhattan Project"
+ USA_mil_manhattan_project_desc:0 "Three cities built in secret in two years: Oak Ridge processes uranium; Hanford breeds plutonium; Los Alamos designs the weapon. One hundred thousand workers who do not know what they are building. A budget hidden in other budgets. A deadline that is the war itself. Oppenheimer runs the physics and Groves runs the construction and Roosevelt has not told the Vice President."
+
+ USA_mil_trinity:0 "Trinity"
+ USA_mil_trinity_desc:0 "The tower stands in the Jornada del Muerto desert, one hundred miles south of Albuquerque, at a site the project has named Trinity for reasons Oppenheimer says he cannot precisely explain. The test is scheduled for 4 a.m. on the sixteenth of July, 1945. It fires at 5:29. The yield is twenty-one kilotons. Fermi drops small pieces of paper from a height of five feet and measures how far the blast wave carries them. No one has very much to say."
+
+ USA_mil_the_super:0 "The Super"
+ USA_mil_the_super_desc:0 "Teller has wanted to build a hydrogen bomb since Los Alamos. Oppenheimer's General Advisory Committee recommends against it. Truman authorizes it anyway, on the grounds that if it is possible to build then the Soviets will build it, and if the Soviets build it first the question will be moot. The first thermonuclear device, Ivy Mike, yields ten and a half megatons. Teller is satisfied."
+
+ USA_mil_atoms_underwater:0 "Atoms Underwater"
+ USA_mil_atoms_underwater_desc:0 "The USS Nautilus departs New London on 17 January 1955 and signals UNDERWAY ON NUCLEAR POWER. Rickover's reactor runs for sixty-two days without refueling. The diesel-electric submarine that had to surface every two days to charge its batteries is obsolete before the Nautilus returns to port. The ocean ceases to be a barrier and becomes a medium."
+
+ # --- Korea-era sub-ladder ---
+ USA_mil_rotation_system:0 "The Rotation System"
+ USA_mil_rotation_system_desc:0 "Every soldier who serves in Korea does a thirteen-month tour and comes home. The policy is controversial — it breaks up units just as they learn to work together — but it means that by 1953 the Army has two hundred thousand combat veterans distributed through its ranks instead of concentrated in the Eighth Army. The institutional knowledge of war is no longer a casualty of peace."
+
+ USA_mil_helicopter_age:0 "The Helicopter Age"
+ USA_mil_helicopter_age_desc:0 "The H-13 Sioux carries wounded men out of Korean valleys that no wheeled vehicle can reach, over ridgelines that no road crosses, in weather that grounds fixed-wing aircraft. The surgeons of the Mobile Army Surgical Hospitals receive casualties within the golden hour. The helicopter has found its purpose, and the Army is beginning to understand that purpose is not yet exhausted."
+
+ USA_mil_continental_defense:0 "Continental Defense"
+ USA_mil_continental_defense_desc:0 "The DEW Line stretches three thousand miles across the Arctic, fifty-eight unmanned radar stations watching for Soviet bombers that have not yet been built. The Nike Ajax batteries ring every major American city. NORAD coordinates the intercept mission. The budget is enormous and the threat is largely theoretical, but the alternative — doing nothing and being wrong — is not available."
+
+ # --- Military ideas ---
+ USA_mil_wbr_spirit:0 "War Resources Board"
+ USA_mil_wbr_spirit_desc:0 "Federal allocation of strategic materials under a presidential coordinating board. The friction of committee government costs something in efficiency; the visibility into bottlenecks costs nothing."
+
+ USA_mil_rubber_spirit:0 "Synthetic Rubber Programme"
+ USA_mil_rubber_spirit_desc:0 "Buna-S plants running three shifts. The Axis cannot strangle a supply chain that begins in Kentucky."
+
+ USA_mil_fleet_train_spirit:0 "Fleet Train"
+ USA_mil_fleet_train_spirit_desc:0 "The supply ships that follow the battle fleet. Underway replenishment means the Pacific is no obstacle — it is an advantage."
+
+ USA_mil_sac_spirit:0 "Strategic Air Command"
+ USA_mil_sac_spirit_desc:0 "Bombers on alert. Crews in ready rooms. Targets already plotted. SAC does not wait for authorization; it waits for the President."
+
+ USA_mil_manhattan_spirit:0 "The Manhattan Project"
+ USA_mil_manhattan_spirit_desc:0 "Classified. The budget is in other budgets. The workers do not know what they are building. The physicists know, and most of them are not sleeping."
+
+ USA_mil_the_super_spirit:0 "Thermonuclear Programme"
+ USA_mil_the_super_spirit_desc:0 "Yield measured in megatons now. The question of sufficiency has been permanently retired."
+
+ USA_mil_atoms_spirit:0 "Nuclear Propulsion"
+ USA_mil_atoms_spirit_desc:0 "The Nautilus never needs to surface to breathe. Rickover's boats operate beneath the enemy's sensor horizon indefinitely."
+
+ USA_mil_continental_defense_spirit:0 "Continental Defense System"
+ USA_mil_continental_defense_spirit_desc:0 "DEW Line radar, Nike missile batteries, NORAD command authority. The continent is not undefended."
+
+ # --- Trinity event ---
+ usa_cabinet.225.t:0 "The Gadget"
+ usa_cabinet.225.d:0 "Five twenty-nine in the morning. The tower at Trinity site carries a plutonium device the engineers call the Gadget. The yield is twenty-one kilotons. Oppenheimer says afterward that a fragment of the Bhagavad Gita came to him: I am become Death, the destroyer of worlds. Fermi, who does not go in for poetry, drops small pieces of paper from a height of five feet and calculates the yield from how far the blast wave carries them. Both men understand what has happened. The world does not know yet. It will know soon."
+
+ # ============================ TASK 11: CABINET SLATES 1940-1952 ============================
+
+ # --- Cabinet Reset Focuses ---
+ USA_trunk_cabinet_40:0 "A New Administration's Cabinet"
+ USA_trunk_cabinet_40_desc:0 "A new term begins and the cabinet is reshuffled. The secretaries who served the first administration are thanked and shown the door; the President must now decide who will speak for the State Department, the Treasury, the War Department, and the Justice Department in the years ahead. The choices made in these offices will determine whether America enters the 1940s ready for the world as it is, or as it was."
+ USA_trunk_cabinet_44:0 "Building the Postwar Cabinet"
+ USA_trunk_cabinet_44_desc:0 "The war is not yet won but the victory is in sight, and the men who will govern the peace must be chosen now. The cabinet of the war years has served its purpose; what the country needs for 1945 and after is not necessarily what it needed for 1941 and before. The transition from war to peace will be managed by whoever fills these four desks."
+ USA_trunk_cabinet_52:0 "The New Administration Takes Office"
+ USA_trunk_cabinet_52_desc:0 "The election is decided and the new administration takes possession of the executive branch. The cabinet is the first instrument of governance, and the appointments made in January 1953 will set the tone for the decade. Four seats, four choices, and each one a declaration of intent."
+
+ # --- '40 Seat Focuses ---
+ USA_cab40_seat_state:0 "The State Department"
+ USA_cab40_seat_state_desc:0 "The Secretary of State will navigate a world in which Germany has overrun France, Britain stands alone, and the Soviet Union is collaborating with Berlin. An internationalist diplomat will keep America's options open; a confirmed America Firster will keep them closed."
+ USA_cab40_seat_treasury:0 "The Treasury"
+ USA_cab40_seat_treasury_desc:0 "The recovery is incomplete and the defense budget is rising fast. The next Secretary of the Treasury must find the money for both without breaking either the national faith or the bond market."
+ USA_cab40_seat_war:0 "The War Department"
+ USA_cab40_seat_war_desc:0 "Conscription has begun and the factories are converting. The Secretary of War will determine whether American rearmament is hurried, serious, and expensive, or cautious, limited, and popular."
+ USA_cab40_seat_ag:0 "The Department of Justice"
+ USA_cab40_seat_ag_desc:0 "In a time of growing emergency powers and alien registration acts, the Attorney General must decide where the Constitution ends and national security begins. The choice is not merely administrative; it is a statement about what kind of republic this remains."
+
+ # --- '40 Appointment Focuses ---
+ USA_appoint_cab40_hull:0 "Retain Cordell Hull"
+ USA_appoint_cab40_hull_desc:0 "Hull stays. He is tired and the President is conducting foreign policy over his head anyway, but the old Tennessean still commands the trade agreements network and his name reassures the professional foreign service. He will not be the architect of the peace, but he will hold the State Department together until the architect is found."
+ USA_appoint_cab40_welles:0 "Appoint Sumner Welles"
+ USA_appoint_cab40_welles_desc:0 "The Undersecretary becomes the Secretary, and the most intellectually aggressive American diplomatist of his generation takes formal charge of Foggy Bottom. Welles has been to see Hitler and to see Churchill and he has a clearer view of the continent than anyone else in Washington. His enemies are powerful and his personal life is a scandal waiting to happen, but for now the international architecture needs his mind."
+ USA_appoint_cab40_morgenthau:0 "Retain Henry Morgenthau"
+ USA_appoint_cab40_morgenthau_desc:0 "Morgenthau continues his stewardship of the Treasury, expanding the defense budget without flinching and finding the credits for the Lend-Lease program before the legislation that authorizes it has passed the Senate. His methods irritate the orthodox economists and his friendship with the President irritates the orthodox diplomats, but the money flows."
+ USA_appoint_cab40_jones:0 "Appoint Jesse Jones"
+ USA_appoint_cab40_jones_desc:0 "Jesse Jones of Houston, the Commerce Secretary who controls more money than any man in America through the Reconstruction Finance Corporation, moves to the Treasury with a mandate to run things on sound business principles. Credit will be extended to enterprises that can repay it; the government will not be a charity. Industry trusts him. Labor does not."
+ USA_appoint_cab40_stimson:0 "Retain Henry Stimson"
+ USA_appoint_cab40_stimson_desc:0 "The old Republican standard-bearer stays at his desk, driving conscription through the Congress and rearmament through the agencies with the grim energy of a man who knows exactly how little time is left. He is seventy-three years old and reads every cable. The General Staff regards him with something between exasperation and awe."
+ USA_appoint_cab40_johnson:0 "Appoint Louis Johnson"
+ USA_appoint_cab40_johnson_desc:0 "Louis Johnson, the former Assistant Secretary who quarreled with Woodring and very nearly got the cabinet job the year before, takes the War Department with ambitions that far exceed his brief. He will cut waste, improve efficiency, and resist the calls for blank-check rearmament, on the grounds that a nation still at peace cannot justify the expenditure. The Pentagon officers calculate what that means for the division program."
+ USA_appoint_cab40_jackson:0 "Appoint Robert Jackson"
+ USA_appoint_cab40_jackson_desc:0 "The Solicitor General who argued the New Deal cases and won moves to the Justice Department with a reputation for defending unpopular clients and an instinct that executive power is never as clean as the men who wield it believe. He will police the wiretap orders and the alien registration enforcement, and there will be fewer abuses for it, and more complaints from the intelligence services."
+ USA_appoint_cab40_biddle:0 "Appoint Francis Biddle"
+ USA_appoint_cab40_biddle_desc:0 "Francis Biddle of Pennsylvania succeeds his mentor as Attorney General with a legal intelligence equal to Jackson's and a political constitution less resistant to executive pressure. He will sign the Japanese internment order without resigning, though he advises against it; he will run the loyalty hearings efficiently; and he will keep the internal security apparatus well-oiled and regularly used. The civil libertarians will be disappointed. The security services will not."
+
+ # --- '44 Seat Focuses ---
+ USA_cab44_seat_state:0 "The State Department"
+ USA_cab44_seat_state_desc:0 "The great postwar institutions remain to be founded: the United Nations, the Bretton Woods system, the Marshall architecture of European recovery. The Secretary of State who takes office in January 1945 will be in the room when they are born."
+ USA_cab44_seat_treasury:0 "The Treasury"
+ USA_cab44_seat_treasury_desc:0 "The war economy must be wound down without crashing the boom and without reigniting the Depression. The Secretary of the Treasury will manage a transition more delicate than any that has come before it."
+ USA_cab44_seat_war:0 "The War Department"
+ USA_cab44_seat_war_desc:0 "The war is nearly won; the occupation must begin. The Secretary of War will supervise the demobilization, manage the occupation administrations in Germany and Japan, and decide how much of the wartime military can be preserved against the peace that is already looking unstable."
+ USA_cab44_seat_ag:0 "The Department of Justice"
+ USA_cab44_seat_ag_desc:0 "The postwar loyalty question will not wait. The FBI's files are full; the Congress is already asking questions about subversion; and the Attorney General who takes office in 1945 will set the terms on which the security state treats dissent in an era of permanent anxiety."
+
+ # --- '44 Appointment Focuses ---
+ USA_appoint_cab44_stettinius:0 "Appoint Edward Stettinius Jr."
+ USA_appoint_cab44_stettinius_desc:0 "The former Lend-Lease administrator takes over a State Department reorganized specifically to handle the postwar international architecture. Stettinius is not a visionary — he is a manager — but the vision has already been supplied by others, and what the San Francisco conference and the Dumbarton Oaks drafts require now is a man who can execute. He will preside over the founding of the United Nations with the quiet competence of someone who has run U.S. Steel."
+ USA_appoint_cab44_byrnes:0 "Appoint Jimmy Byrnes"
+ USA_appoint_cab44_byrnes_desc:0 "The Director of War Mobilization, the man who ran the home-front economy with a phone call and a stare, moves to Foggy Bottom with a realpolitiker's understanding of power and a South Carolinian's unsentimentality about the world's intentions. Byrnes believes the Soviets understand strength and nothing else, that atomic diplomacy is a legitimate tool, and that the United Nations is a pleasant fiction. He is right about two of these things."
+ USA_appoint_cab44_vinson:0 "Appoint Fred Vinson"
+ USA_appoint_cab44_vinson_desc:0 "Fred Vinson, the Kentucky congressman who has administered everything from the Office of Economic Stabilization to war finance, takes the Treasury with a politician's feel for what the public can absorb and a technician's feel for the levers that move the money. He will carry the fiscal architecture of the postwar settlement with a steadiness that reassures the bond markets and infuriates the deficit hawks in equal measure."
+ USA_appoint_cab44_snyder:0 "Appoint John Snyder"
+ USA_appoint_cab44_snyder_desc:0 "John Snyder, the President's old Missouri friend and a conservative banker by nature, takes the Treasury with a mandate to put the government's finances on a peacetime footing as rapidly as possible. Defense spending will be reviewed. New Deal programs will be reviewed. The bond market will be served. The liberals will complain, and Snyder will explain, patiently and correctly, that a government that cannot service its debt cannot govern."
+ USA_appoint_cab44_stimson:0 "Continue with Henry Stimson"
+ USA_appoint_cab44_stimson_desc:0 "The old Secretary stays for the end of the war, overseeing the atomic decision and the occupation directives, and then retires to Highhold with his diaries and his reputation intact. He has been the War Department through its greatest expansion and its greatest test; his successor will inherit an institution his predecessor has made."
+ USA_appoint_cab44_forrestal:0 "Appoint James Forrestal"
+ USA_appoint_cab44_forrestal_desc:0 "James Forrestal, the Secretary of the Navy who has run the greatest naval expansion in history, moves up to Secretary of Defense with a strategic vision that extends to the permanent militarization of American foreign policy. He sees the Soviet threat clearly and consistently and he believes the defense budget will never again be a peacetime number. He is right, and the strain of being right for the rest of his life will eventually kill him."
+ USA_appoint_cab44_clark:0 "Appoint Tom Clark"
+ USA_appoint_cab44_clark_desc:0 "Tom Clark of Texas takes the Justice Department with a background in antitrust law and a disposition to enforce civil rights legislation that the Solid South regards with suspicion. He will run the loyalty boards with what he considers proportionality — actually subpoenaing witnesses before accusing them, actually requiring evidence — and the FBI will regard him as a proceduralist obstructionist, which is more or less the correct description."
+ USA_appoint_cab44_mcgrath:0 "Appoint J. Howard McGrath"
+ USA_appoint_cab44_mcgrath_desc:0 "The Senator from Rhode Island who managed the President's 1948 campaign becomes the Attorney General with a debt to collect and a security apparatus eager to be used. McGrath's Justice Department will pursue subversion energetically, grant the FBI its wiretap requests without undue scrutiny, and provide the legal scaffolding for the Red Scare that is already building in the Congress. The civil libertarians will be very disappointed. The security services will not."
+
+ # --- '52 Seat Focuses ---
+ USA_cab52_seat_state:0 "The State Department"
+ USA_cab52_seat_state_desc:0 "The Truman foreign policy is either a great success or a terrible failure depending on whom you ask, and the new Secretary of State will either extend the containment architecture or tear it down. The choice defines the decade."
+ USA_cab52_seat_treasury:0 "The Treasury"
+ USA_cab52_seat_treasury_desc:0 "The Korean War surcharge is over and the defense spending plateau must be set. The next Secretary of the Treasury will balance the books, or not, and the balance will shape every domestic program that follows."
+ USA_cab52_seat_defense:0 "The Department of Defense"
+ USA_cab52_seat_defense_desc:0 "The Korean armistice has been signed and the question now is what kind of military the country maintains afterward. The defense budget, the strategic doctrine, and the career of every general officer will be determined in part by whoever sits in this office."
+ USA_cab52_seat_ag:0 "The Department of Justice"
+ USA_cab52_seat_ag_desc:0 "McCarthy is on the floor of the Senate and the question of civil liberties in a permanent emergency has no settled answer. The next Attorney General will either provide the constitutional limits the country needs or provide the legal cover the inquisitors want."
+
+ # --- '52 Appointment Focuses ---
+ USA_appoint_cab52_dulles:0 "Appoint John Foster Dulles"
+ USA_appoint_cab52_dulles_desc:0 "The former Senator and Wall Street lawyer who wrote the Japanese peace treaty and advised three Secretaries of State takes charge of Foggy Bottom with the rollback doctrine, the massive retaliation speech, and the absolute conviction that neutralism is immoral and accommodation with Soviet power is a form of appeasement. His brother runs the CIA. His rhetoric terrifies the Western Europeans and reassures the Republican right. Whether it deters the Soviets is a question history will answer expensively."
+ USA_appoint_cab52_taftman:0 "Appoint a Taft Republican"
+ USA_appoint_cab52_taftman_desc:0 "Mr. Republican's man at Foggy Bottom: a State Department that believes NATO is a fiscal trap, the United Nations is a distraction, and that the proper American posture toward the world is firm, unilateral, and cheap. The Europeans will be alarmed and the internationalists will be furious and the Taft wing of the party will be satisfied, which is a distribution of reactions that reflects exactly how the appointment was intended."
+ USA_appoint_cab52_humphrey:0 "Appoint George Humphrey"
+ USA_appoint_cab52_humphrey_desc:0 "The head of the M.A. Hanna Company takes Treasury with a businessman's instinct that a government which cannot balance its books eventually destroys itself. Humphrey will cut defense spending, cut domestic programs, and cut the deficit, and he will do it with the serene confidence of a man who has never met a budget he could not bring to heel. The Keynesians regard him as a dangerous anachronism. He regards them as a dangerous fashion."
+ USA_appoint_cab52_banker:0 "Appoint a Business Banker"
+ USA_appoint_cab52_banker_desc:0 "A conservative financier from the great banking houses takes the Treasury with a mandate to restore orthodox monetary policy and end the era of cheap money that has financed the wartime and postwar deficits. The Federal Reserve will be unshackled. Interest rates will find their natural level. Industrial investment will follow, according to the theory, and the practice will be tested."
+ USA_appoint_cab52_wilson:0 "Appoint Charles Wilson"
+ USA_appoint_cab52_wilson_desc:0 "What is good for General Motors is good for the country, and vice versa, the new Secretary of Defense tells the Senate confirmation hearings, and he means it as a straightforward observation about an economy in which three million people work for the largest private employer in the world. Wilson will run the defense establishment with the efficiency disciplines of industrial management, rationalize the procurement process, and set the Korean armistice conditions in place without apology. The Joint Chiefs will adapt or retire."
+ USA_appoint_cab52_macarthur:0 "Appoint Douglas MacArthur"
+ USA_appoint_cab52_macarthur_desc:0 "The General who was relieved by Truman and who has spent two years on the lecture circuit explaining what he would have done differently returns to federal service with the title of Secretary of Defense and an agenda. The Army will be modernized, the strategic doctrine will be revised, and the men in the Pacific theater who remember the Island-Hopping campaigns will finally get the recognition and the resources they deserve. The civilians will find him impossible. The soldiers will find him inspiring. The question is which group runs the defense policy."
+ USA_appoint_cab52_brownell:0 "Appoint Herbert Brownell"
+ USA_appoint_cab52_brownell_desc:0 "The New York lawyer who managed the Dewey campaigns and helped arrange the Eisenhower nomination takes the Justice Department with an awareness that the civil rights question will not be indefinitely deferred, and a willingness to use executive power to move the federal judiciary in the right direction. He will recommend Earl Warren for the Supreme Court vacancy and he will support the desegregation decision when it comes, and a significant portion of his party will never forgive him. It is, by the standards of the decade, a distinguished record."
+ USA_appoint_cab52_hawk:0 "Appoint a Security-First Attorney General"
+ USA_appoint_cab52_hawk_desc:0 "The new Attorney General comes from the prosecutorial tradition that built its reputation on subversion cases, and he intends to continue in that tradition. The loyalty review machinery will be expanded. The list of subversive organizations will be lengthened. Congressional investigators will receive cooperation and, where the law permits, assistance. McCarthy may be a blunt instrument, but a blunt instrument directed at genuine Soviet espionage networks is not, the new Attorney General considers, a misuse of power."
+
+ # ============================ TASK 11: CABINET SPIRIT IDEAS ============================
+
+ # --- '40 Cabinet Ideas ---
+ USA_cab40_hull:0 "Cordell Hull, Secretary of State"
+ USA_cab40_hull_desc:0 "The courtly Tennessean carries forward his work of building the international trade architecture. His reciprocal trade agreements now number twenty-two, and he continues to believe, against considerable evidence, that commerce will hold the democracies together."
+ USA_cab40_welles:0 "Sumner Welles, Secretary of State"
+ USA_cab40_welles_desc:0 "The brilliant and imperious Undersecretary steps up to run the department with a strategist's eye for European complications and a willingness to work around Washington bureaucracy that his predecessor found congenial rather than alarming."
+ USA_cab40_morgenthau:0 "Henry Morgenthau Jr., Secretary of the Treasury"
+ USA_cab40_morgenthau_desc:0 "The President's faithful Treasury secretary continues to find the money, expanding the defense budget without flinching and laying the financial groundwork for whatever the next four years demand."
+ USA_cab40_jones:0 "Jesse Jones, Secretary of the Treasury"
+ USA_cab40_jones_desc:0 "The Texas banker applies his RFC discipline to the federal Treasury: credit extended on sound terms, the budget managed with a conservative hand, and industry given the confidence of a government that respects the market."
+ USA_cab40_stimson:0 "Henry L. Stimson, Secretary of War"
+ USA_cab40_stimson_desc:0 "The old statesman drives conscription and rearmament with exhausting urgency, knowing better than anyone in the cabinet how little time may remain before the choice between preparation and catastrophe is settled by events."
+ USA_cab40_johnson:0 "Louis Johnson, Secretary of War"
+ USA_cab40_johnson_desc:0 "The ambitious Pennsylvanian runs the War Department with an efficiency expert's eye, cutting waste and resisting the generals' more expensive proposals while insisting that what remains will prove sufficient."
+ USA_cab40_jackson:0 "Robert H. Jackson, Attorney General"
+ USA_cab40_jackson_desc:0 "The former Solicitor General brings a constitutional lawyer's insistence on process and evidence to the Justice Department, holding the line between security necessity and civil liberty with the stubbornness of a man who argued the Bill of Rights for a living."
+ USA_cab40_biddle:0 "Francis Biddle, Attorney General"
+ USA_cab40_biddle_desc:0 "The patrician Philadelphian runs the Justice Department with high intelligence and imperfect resistance to executive pressure, providing the security apparatus with its legal framework while wincing, privately, at some of its applications."
+
+ # --- '44 Cabinet Ideas ---
+ USA_cab44_stettinius:0 "Edward Stettinius Jr., Secretary of State"
+ USA_cab44_stettinius_desc:0 "The efficient former Lend-Lease administrator manages the construction of the postwar international order with the same organizational competence he brought to the wartime supply machinery, if with somewhat less historical imagination."
+ USA_cab44_byrnes:0 "James F. Byrnes, Secretary of State"
+ USA_cab44_byrnes_desc:0 "The hardheaded South Carolinian deploys the bomb as a diplomatic instrument and negotiates with the Soviets from a position of atomic advantage, with results that satisfy the hawks and alarm the doves and confuse the historians."
+ USA_cab44_vinson:0 "Fred Vinson, Secretary of the Treasury"
+ USA_cab44_vinson_desc:0 "The Kentucky Congressman-turned-Treasury-Secretary manages the transition from war finance to peacetime with a politician's sense of what the public can absorb and a banker's sense of where the limits lie."
+ USA_cab44_snyder:0 "John W. Snyder, Secretary of the Treasury"
+ USA_cab44_snyder_desc:0 "The conservative St. Louis banker runs the Treasury on sound-money principles, restoring orthodox fiscal discipline after the emergency years and providing the bond market with the reassurance it has been waiting for."
+ USA_cab44_stimson:0 "Henry L. Stimson, Secretary of War"
+ USA_cab44_stimson_desc:0 "The old Secretary continues through the end of the war and the atomic decision, his diary recording the weight of the choice with a precision that neither exculpates nor condemns. He retires in September 1945 with the unconditional surrender in hand."
+ USA_cab44_forrestal:0 "James V. Forrestal, Secretary of Defense"
+ USA_cab44_forrestal_desc:0 "The Navy Secretary turned first Secretary of Defense oversees the unification of the military services with the strategic conviction of a man who believes the Cold War will last a generation and is already thinking about what the next decade's force structure should look like."
+ USA_cab44_clark:0 "Tom C. Clark, Attorney General"
+ USA_cab44_clark_desc:0 "The Texas antitrust lawyer runs the Justice Department with procedural regularity and a civil rights commitment that is real if limited, providing the loyalty machinery with its legal framework while keeping the worst abuses within reversible bounds."
+ USA_cab44_mcgrath:0 "J. Howard McGrath, Attorney General"
+ USA_cab44_mcgrath_desc:0 "The Rhode Island Senator-turned-Attorney General presides over the Justice Department in the full flower of the Red Scare, running the loyalty apparatus with the energy and the insufficient skepticism that the political moment demands."
+
+ # --- '52 Cabinet Ideas ---
+ USA_cab52_dulles:0 "John Foster Dulles, Secretary of State"
+ USA_cab52_dulles_desc:0 "The rollback rhetorician and massive retaliation architect gives America's Cold War foreign policy its most aggressive public face, terrifying the Western Europeans and reassuring the Republican right with equal efficiency."
+ USA_cab52_taftman:0 "Taft Republican, Secretary of State"
+ USA_cab52_taftman_desc:0 "A Taft man at Foggy Bottom executes a retrenchment foreign policy: fewer commitments, smaller budgets, and a hemispheric focus that the Truman internationalists regard as strategic illiteracy and the Old Guard regards as common sense."
+ USA_cab52_humphrey:0 "George M. Humphrey, Secretary of the Treasury"
+ USA_cab52_humphrey_desc:0 "The M.A. Hanna chairman imposes the discipline of industrial cost accounting on the federal budget, cutting what can be cut and insisting that the defense budget can be sustained only if the economy that pays for it is allowed to breathe."
+ USA_cab52_banker:0 "Business Banker, Secretary of the Treasury"
+ USA_cab52_banker_desc:0 "Orthodox monetary policy is restored: tight money, balanced budgets, and the confidence of the financial community that the postwar era's loose-money experiments are over. Industrial investment responds to the restored certainty."
+ USA_cab52_wilson:0 "Charles E. Wilson, Secretary of Defense"
+ USA_cab52_wilson_desc:0 "The General Motors man runs the Pentagon with the efficiency disciplines of industrial management, rationalizing procurement and setting the Korean armistice arrangements in place with a factory manager's unsentimental dispatch."
+ USA_cab52_macarthur:0 "Douglas MacArthur, Secretary of Defense"
+ USA_cab52_macarthur_desc:0 "The General returned brings an imperial will to the Pentagon, demanding the resources and the authority that Korea proved were necessary, and getting most of them from an administration that owes him the use of his name on the campaign trail."
+ USA_cab52_brownell:0 "Herbert Brownell Jr., Attorney General"
+ USA_cab52_brownell_desc:0 "The New York lawyer and kingmaker takes Justice with a willingness to push civil rights through the federal courts that his party's Southern wing regards as betrayal and history will regard as the beginning of the end of the legal architecture of segregation."
+ USA_cab52_hawk:0 "Security-First Attorney General"
+ USA_cab52_hawk_desc:0 "The new Attorney General expands the loyalty machinery, lengthens the subversive-organizations list, and provides the congressional investigations with the cooperation they have been requesting, producing a Justice Department that the security services find exactly as useful as they hoped."
+ usa_cabinet.225.a:0 "The world will never be the same."

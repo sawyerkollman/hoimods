@@ -107,12 +107,16 @@ ideas = {
 			}
 		}
 
+		# Granted by USA_dem_wpb (Task 5). The arms-factory construction line
+		# delivers the War Production Board's "-20% military construction
+		# cost" roster effect.
 		USA_managed_economy_spirit = {
 			allowed = { always = no }
 			removal_cost = -1
 			modifier = {
 				industrial_capacity_factory = 0.10
 				production_factory_max_efficiency_factor = 0.05
+				production_speed_arms_factory_factor = 0.20
 			}
 		}
 
@@ -319,5 +323,847 @@ ideas = {
 				research_speed_factor = 0.10
 			}
 		}
+
+		###################################################################
+		# DEMOCRATIC WING SPIRITS (Task 5: 1936-44)
+		###################################################################
+
+		# USA_dem_wagner_act: labor peace through recognition.
+		USA_labor_peace_spirit = {
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.03
+				production_factory_max_efficiency_factor = 0.05
+			}
+		}
+
+		# USA_dem_destroyers_for_bases: ninety-nine-year leases from
+		# Argentia to Trinidad.
+		USA_atlantic_bases_spirit = {
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				navy_max_range_factor = 0.10
+				experience_gain_navy = 0.05
+			}
+		}
+
+		# USA_dem_lend_lease: the machinery of lending, built to scale.
+		USA_lend_lease_capacity_spirit = {
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				lend_lease_tension = -0.25
+				production_factory_efficiency_gain_factor = 0.05
+			}
+		}
+
+		# USA_dem_atlantic_charter: eight common principles, in print
+		# before America is even at war.
+		USA_war_aims_spirit = {
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				war_support_factor = 0.05
+				political_power_gain = 0.05
+			}
+		}
+
+		###################################################################
+		# DEMOCRATIC WING SPIRITS (Task 6: 1945-56)
+		###################################################################
+
+		# USA_dem_marshall_plan event 251: the outlays flow for two years.
+		# Timed idea: expires after 730 days. Represents the ongoing costs
+		# of the program while the benefit comes from raised European opinion.
+		USA_marshall_outlays_spirit = {
+			allowed = { always = no }
+			removal_cost = -1
+			duration = 730
+			modifier = {
+				political_power_gain = -0.10
+				consumer_goods_factor = 0.02
+			}
+		}
+
+		# USA_dem_nsc68: the military buildup of 1950.
+		USA_nsc68_rearmament_spirit = {
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				conscription_factor = 0.05
+				army_org_factor = 0.05
+				production_speed_arms_factory_factor = 0.10
+			}
+		}
+
+		# USA_dem_nato: an entangling alliance at last.
+		USA_nato_spirit = {
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				improve_relations_maintain_cost_factor = -0.20
+				opinion_gain_monthly_factor = 0.15
+				army_org_factor = 0.05
+			}
+		}
+
+		# USA_dem_new_look: Eisenhower's economy-of-force doctrine.
+		USA_new_look_spirit = {
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				air_experience_gain_factor = 0.10
+				nuclear_production_factor = 0.25
+				consumer_goods_factor = -0.03
+			}
+		}
+
+		# USA_dem_hundred_million_strong: the affluent society capstone.
+		USA_hundred_million_strong_spirit = {
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.08
+				consumer_goods_factor = -0.05
+				production_speed_buildings_factor = 0.10
+				political_power_gain = 0.10
+			}
+		}
+
+		###################################################################
+		# REPUBLICAN WING SPIRITS (Task 7: 1936-44)
+		###################################################################
+
+		# USA_gop_balanced_budget: the Old Guard's fiscal creed (-3% consumer
+		# goods as the budget is balanced; stability boost).
+		USA_gop_fiscal_discipline_spirit = {
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				consumer_goods_factor = -0.03
+				stability_factor = 0.03
+				political_power_gain = 0.05
+			}
+		}
+
+		# USA_gop_america_first: the isolationist policy in full flower.
+		USA_gop_america_first_spirit = {
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.05
+				drift_defence_factor = 0.20
+				justify_war_goal_time_factor = 0.25
+				war_support_factor = -0.05
+			}
+		}
+
+		# USA_gop_neutrality_acts_teeth: the legal architecture of non-entanglement.
+		USA_gop_neutrality_fortress_spirit = {
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.03
+				drift_defence_factor = 0.15
+				lend_lease_tension = 0.25
+			}
+		}
+
+		# USA_gop_fortress_america: continental defense made doctrine.
+		# Grants fort-construction bonuses and a reinforced coastal perimeter.
+		USA_fortress_america_spirit = {
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				production_speed_bunker_factor = 0.25
+				production_speed_coastal_bunker_factor = 0.25
+				defence = 0.05
+			}
+		}
+
+		# USA_gop_fortress_america (companion): hemisphere defense spirit.
+		# The Monroe Doctrine as a military planning document.
+		USA_hemisphere_defense_spirit = {
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				navy_max_range_factor = 0.10
+				experience_gain_navy = 0.05
+				war_support_factor = 0.03
+			}
+		}
+
+		# USA_gop_hemisphere_patrol: the Navy enforces the Monroe Doctrine.
+		USA_gop_hemisphere_patrol_spirit = {
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				experience_gain_navy = 0.10
+				navy_max_range_factor = 0.15
+				improve_relations_maintain_cost_factor = -0.10
+			}
+		}
+
+		# USA_gop_war_on_our_terms: the party of efficiency shapes the war effort.
+		USA_gop_war_effort_spirit = {
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				army_org_factor = 0.05
+				production_factory_efficiency_gain_factor = 0.05
+				war_support_factor = 0.05
+			}
+		}
+
+		###################################################################
+		# REPUBLICAN WING SPIRITS (Task 7: 1945-56)
+		###################################################################
+
+		# USA_gop_bring_the_boys_home: rapid demobilization bonus.
+		USA_gop_demobilization_spirit = {
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				consumer_goods_factor = -0.08
+				stability_factor = 0.05
+				production_speed_arms_factory_factor = -0.10
+			}
+		}
+
+		# USA_gop_hemisphere_imperium_light: Latin trade bloc.
+		USA_gop_latin_trade_spirit = {
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				trade_opinion_factor = 0.15
+				improve_relations_maintain_cost_factor = -0.15
+				consumer_goods_factor = -0.03
+			}
+		}
+
+		# USA_gop_mccarthy_unleashed: the Red hunt begins.
+		USA_gop_mccarthy_spirit = {
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.03
+				drift_defence_factor = 0.25
+				political_power_gain = 0.10
+			}
+		}
+
+		# USA_gop_vandenberg_moment: bipartisan containment.
+		USA_gop_bipartisan_containment_spirit = {
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				opinion_gain_monthly_factor = 0.10
+				improve_relations_maintain_cost_factor = -0.15
+				war_support_factor = 0.05
+			}
+		}
+
+		# USA_gop_dynamic_conservatism: Eisenhower's middle way.
+		USA_gop_dynamic_conservatism_spirit = {
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.05
+				consumer_goods_factor = -0.03
+				production_speed_buildings_factor = 0.08
+				political_power_gain = 0.05
+			}
+		}
+
+		###################################################################
+		# RADICAL WING SPIRITS (Task 8: 1936-44)
+		###################################################################
+
+		# USA_rad_share_our_wealth: Long's populist program — spread the wealth.
+		USA_rad_share_our_wealth_spirit = {
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				political_power_gain = 0.10
+				consumer_goods_factor = -0.03
+			}
+		}
+
+		# USA_rad_sit_down_wave: production disruption during the occupation wave.
+		# Timed idea: expires after 365 days (the strike wave eventually crests).
+		USA_rad_sit_down_disruption_spirit = {
+			allowed = { always = no }
+			removal_cost = -1
+			duration = 365
+			modifier = {
+				industrial_capacity_factory = -0.05
+				war_support_factor = 0.02
+			}
+		}
+
+		# USA_rad_general_strike (via event .211): the labor force organized as
+		# a single army of production.
+		USA_rad_labor_force_spirit = {
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				production_factory_max_efficiency_factor = 0.08
+				production_speed_buildings_factor = 0.05
+				conscription_factor = 0.03
+			}
+		}
+
+		# USA_rad_vanguard_path: the party-state organizational spirit.
+		USA_rad_people_state_spirit = {
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.05
+				political_power_gain = 0.20
+				drift_defence_factor = 0.15
+			}
+		}
+
+		# USA_rad_workers_democracy: democratic socialist governance.
+		USA_rad_workers_democracy_spirit = {
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.05
+				political_power_gain = 0.10
+				consumer_goods_factor = -0.02
+			}
+		}
+
+		# USA_rad_economic_bill_of_rights: the full rights program in law.
+		USA_rad_economic_rights_spirit = {
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.08
+				consumer_goods_factor = -0.03
+				war_support_factor = 0.03
+			}
+		}
+
+		###################################################################
+		# RADICAL WING SPIRITS (Task 8: 1945-56)
+		###################################################################
+
+		# USA_rad_third_camp: the independent socialist path — neither
+		# Moscow nor Washington.
+		USA_rad_third_camp_spirit = {
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				trade_opinion_factor = 0.15
+				improve_relations_maintain_cost_factor = -0.15
+				political_power_gain = 0.10
+			}
+		}
+
+		# USA_rad_red_half_century_dem capstone: the victory of democratic
+		# socialism.
+		USA_rad_red_half_century_dem_spirit = {
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.10
+				political_power_gain = 0.15
+				consumer_goods_factor = -0.05
+				production_speed_buildings_factor = 0.10
+			}
+		}
+
+		# USA_rad_red_half_century_van capstone: the party-state at its apex.
+		USA_rad_red_half_century_van_spirit = {
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				war_support_factor = 0.10
+				political_power_gain = 0.20
+				army_org_factor = 0.05
+				stability_factor = -0.03
+			}
+		}
+
+		###################################################################
+		# AUTHORITARIAN WING SPIRITS (Task 9: 1936-44)
+		###################################################################
+
+		# USA_auth_business_backers: the industrialist coalition backing
+		# the movement. Money, connections, and legal cover.
+		USA_auth_business_backers_spirit = {
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				political_power_gain = 0.15
+				production_speed_buildings_factor = 0.05
+				industrial_capacity_factory = 0.03
+			}
+		}
+
+		# USA_auth_crush_labor effect: industry mobilized, unions broken.
+		USA_auth_labor_crushed_spirit = {
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				industrial_capacity_factory = 0.10
+				production_speed_buildings_factor = 0.05
+				stability_factor = -0.05
+			}
+		}
+
+		# USA_auth_new_order_at_home: secret police, surveillance, and
+		# internal security apparatus.
+		USA_auth_security_state_spirit = {
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				political_power_gain = 0.10
+				resistance_target = -0.10
+				drift_defence_factor = 0.20
+			}
+		}
+
+		# USA_auth_loyalty_oaths: mandatory loyalty, purged dissent.
+		USA_auth_loyalty_oaths_spirit = {
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				stability_weekly = 0.001
+				stability_factor = 0.05
+				political_power_gain = -0.05
+			}
+		}
+
+		# USA_auth_press_brought_to_heel: media under state control.
+		USA_auth_press_control_spirit = {
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				consumer_goods_factor = -0.05
+				stability_factor = 0.03
+				political_power_gain = 0.05
+			}
+		}
+
+		###################################################################
+		# AUTHORITARIAN WING SPIRITS (Task 9: 1945-56)
+		###################################################################
+
+		# USA_auth_tribute_system: trade exploitation of weaker neighbors.
+		USA_auth_tribute_spirit = {
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				trade_opinion_factor = 0.10
+				political_power_gain = 0.10
+				civilian_factory_use = -1
+			}
+		}
+
+		# USA_auth_legions_overseas: forward military bases in the
+		# American sphere.
+		USA_auth_overseas_bases_spirit = {
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				army_org_factor = 0.05
+				supply_consumption_factor = -0.05
+				war_support_factor = 0.05
+			}
+		}
+
+		# USA_auth_pax_americana: postwar American hegemony over the
+		# western world.
+		USA_auth_pax_spirit = {
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				political_power_gain = 0.20
+				stability_factor = 0.05
+				trade_opinion_factor = 0.15
+				war_support_factor = 0.10
+			}
+		}
+
+		# USA_auth_imperium capstone: the New Republic, ideology cemented.
+		USA_auth_imperium_spirit = {
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				political_power_gain = 0.25
+				stability_factor = 0.10
+				war_support_factor = 0.15
+				army_org_factor = 0.08
+				production_speed_buildings_factor = 0.10
+			}
+		}
+
+		###################################################################
+		# MILITARY PILLAR SPIRITS (Task 10)
+		###################################################################
+
+		# USA_mil_war_resources_board: federal allocation of steel, rubber,
+		# and aluminium under presidential direction.
+		USA_mil_wbr_spirit = {
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				industrial_capacity_factory = 0.05
+				production_speed_buildings_factor = 0.05
+			}
+		}
+
+		# USA_mil_synthetic_rubber: buna-S plants end dependence on Far
+		# Eastern latex. Tech-research bonus delivered via focus directly;
+		# this spirit represents the ongoing domestic production capacity.
+		USA_mil_rubber_spirit = {
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.05
+				consumer_goods_factor = -0.02
+			}
+		}
+
+		# USA_mil_fleet_train: underway replenishment — the supply ships that
+		# follow the battle fleet across the Pacific.
+		USA_mil_fleet_train_spirit = {
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				navy_max_range_factor = 0.10
+				experience_gain_navy = 0.05
+			}
+		}
+
+		# USA_mil_strategic_air_command: LeMay's deterrent force, bombers
+		# on alert around the clock.
+		USA_mil_sac_spirit = {
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				strategic_bomb_visibility = -0.15
+				air_strategic_bomber_bombing_factor = 0.15
+				air_experience_gain_factor = 0.05
+			}
+		}
+
+		# USA_mil_manhattan_project: the classified atomic programme.
+		# A static +15% bonus to nuclear reactor construction.
+		USA_mil_manhattan_spirit = {
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				nuclear_production_factor = 0.15
+			}
+		}
+
+		# USA_mil_the_super: the thermonuclear programme — yield measured
+		# not in kilotons but in megatons.
+		USA_mil_the_super_spirit = {
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				nuclear_production_factor = 0.50
+			}
+		}
+
+		# USA_mil_atoms_underwater: the Nautilus and the nuclear submarine
+		# fleet that follows. The ocean ceases to be a barrier.
+		USA_mil_atoms_spirit = {
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				experience_gain_navy = 0.10
+				navy_max_range_factor = 0.15
+				submarine_visibility = -0.10
+			}
+		}
+
+		# USA_mil_continental_defense: the DEW Line, Nike batteries,
+		# and NORAD — the first serious attempt to defend the continent.
+		USA_mil_continental_defense_spirit = {
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				air_intercept_efficiency = 0.10
+				production_speed_anti_air_building_factor = 0.15
+				defence = 0.03
+			}
+		}
+
+
+		###################################################################
+		# CABINET SLATES 1940-52 (Task 11)
+		###################################################################
+
+		# --- '40 Slate: Secretary of State ---
+		USA_cab40_hull = {
+			allowed = { always = no }
+			removal_cost = -1
+			picture = GFX_idea_generic_political_advisor_europe_2
+			modifier = {
+				improve_relations_maintain_cost_factor = -0.25
+				opinion_gain_monthly_factor = 0.15
+				political_power_gain = 0.10
+			}
+		}
+
+		USA_cab40_welles = {
+			allowed = { always = no }
+			removal_cost = -1
+			picture = GFX_idea_generic_political_advisor_europe_3
+			modifier = {
+				improve_relations_maintain_cost_factor = -0.30
+				opinion_gain_monthly_factor = 0.20
+			}
+		}
+
+		# --- '40 Slate: Secretary of the Treasury ---
+		USA_cab40_morgenthau = {
+			allowed = { always = no }
+			removal_cost = -1
+			picture = GFX_idea_generic_political_advisor_europe_2
+			modifier = {
+				consumer_goods_factor = -0.05
+				production_speed_buildings_factor = 0.10
+			}
+		}
+
+		USA_cab40_jones = {
+			allowed = { always = no }
+			removal_cost = -1
+			picture = GFX_idea_generic_political_advisor_europe_1
+			modifier = {
+				consumer_goods_factor = -0.03
+				production_factory_efficiency_gain_factor = 0.05
+			}
+		}
+
+		# --- '40 Slate: Secretary of War ---
+		USA_cab40_stimson = {
+			allowed = { always = no }
+			removal_cost = -1
+			picture = GFX_idea_generic_political_advisor_europe_1
+			modifier = {
+				army_org_factor = 0.05
+				war_support_factor = 0.05
+				conscription_factor = 0.05
+			}
+		}
+
+		USA_cab40_johnson = {
+			allowed = { always = no }
+			removal_cost = -1
+			picture = GFX_idea_generic_political_advisor_europe_2
+			modifier = {
+				training_time_army_factor = -0.05
+				industrial_capacity_factory = 0.05
+			}
+		}
+
+		# --- '40 Slate: Attorney General ---
+		USA_cab40_jackson = {
+			allowed = { always = no }
+			removal_cost = -1
+			picture = GFX_idea_generic_political_advisor_europe_3
+			modifier = {
+				stability_factor = 0.05
+				political_power_gain = 0.05
+			}
+		}
+
+		USA_cab40_biddle = {
+			allowed = { always = no }
+			removal_cost = -1
+			picture = GFX_idea_generic_political_advisor_europe_1
+			modifier = {
+				war_support_factor = 0.05
+				drift_defence_factor = 0.15
+				stability_factor = -0.02
+			}
+		}
+
+		# --- '44 Slate: Secretary of State ---
+		USA_cab44_stettinius = {
+			allowed = { always = no }
+			removal_cost = -1
+			picture = GFX_idea_generic_political_advisor_europe_2
+			modifier = {
+				improve_relations_maintain_cost_factor = -0.20
+				opinion_gain_monthly_factor = 0.20
+				political_power_gain = 0.05
+			}
+		}
+
+		USA_cab44_byrnes = {
+			allowed = { always = no }
+			removal_cost = -1
+			picture = GFX_idea_generic_political_advisor_europe_1
+			modifier = {
+				political_power_gain = 0.15
+				justify_war_goal_time_factor = -0.10
+			}
+		}
+
+		# --- '44 Slate: Secretary of the Treasury ---
+		USA_cab44_vinson = {
+			allowed = { always = no }
+			removal_cost = -1
+			picture = GFX_idea_generic_political_advisor_europe_3
+			modifier = {
+				political_power_gain = 0.10
+				production_speed_buildings_factor = 0.05
+			}
+		}
+
+		USA_cab44_snyder = {
+			allowed = { always = no }
+			removal_cost = -1
+			picture = GFX_idea_generic_political_advisor_europe_2
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.08
+				industrial_capacity_factory = 0.05
+				consumer_goods_factor = -0.02
+			}
+		}
+
+		# --- '44 Slate: Secretary of War / Defense ---
+		USA_cab44_stimson = {
+			allowed = { always = no }
+			removal_cost = -1
+			picture = GFX_idea_generic_political_advisor_europe_1
+			modifier = {
+				army_org_factor = 0.05
+				war_support_factor = 0.05
+				conscription_factor = 0.05
+			}
+		}
+
+		USA_cab44_forrestal = {
+			allowed = { always = no }
+			removal_cost = -1
+			picture = GFX_idea_generic_political_advisor_europe_3
+			modifier = {
+				experience_gain_navy = 0.10
+				industrial_capacity_factory = 0.05
+			}
+		}
+
+		# --- '44 Slate: Attorney General ---
+		USA_cab44_clark = {
+			allowed = { always = no }
+			removal_cost = -1
+			picture = GFX_idea_generic_political_advisor_europe_2
+			modifier = {
+				stability_factor = 0.05
+				political_power_gain = 0.05
+			}
+		}
+
+		USA_cab44_mcgrath = {
+			allowed = { always = no }
+			removal_cost = -1
+			picture = GFX_idea_generic_political_advisor_europe_1
+			modifier = {
+				war_support_factor = 0.05
+				drift_defence_factor = 0.15
+				stability_factor = -0.02
+			}
+		}
+
+		# --- '52 Slate: Secretary of State ---
+		USA_cab52_dulles = {
+			allowed = { always = no }
+			removal_cost = -1
+			picture = GFX_idea_generic_political_advisor_europe_2
+			modifier = {
+				war_support_factor = 0.08
+				opinion_gain_monthly_factor = 0.10
+				improve_relations_maintain_cost_factor = -0.10
+			}
+		}
+
+		USA_cab52_taftman = {
+			allowed = { always = no }
+			removal_cost = -1
+			picture = GFX_idea_generic_political_advisor_europe_3
+			modifier = {
+				drift_defence_factor = 0.20
+				stability_factor = 0.05
+				justify_war_goal_time_factor = 0.20
+			}
+		}
+
+		# --- '52 Slate: Secretary of the Treasury ---
+		USA_cab52_humphrey = {
+			allowed = { always = no }
+			removal_cost = -1
+			picture = GFX_idea_generic_political_advisor_europe_1
+			modifier = {
+				consumer_goods_factor = -0.05
+				production_factory_efficiency_gain_factor = 0.05
+			}
+		}
+
+		USA_cab52_banker = {
+			allowed = { always = no }
+			removal_cost = -1
+			picture = GFX_idea_generic_political_advisor_europe_2
+			modifier = {
+				industrial_capacity_factory = 0.05
+				production_speed_buildings_factor = 0.05
+			}
+		}
+
+		# --- '52 Slate: Secretary of Defense ---
+		USA_cab52_wilson = {
+			allowed = { always = no }
+			removal_cost = -1
+			picture = GFX_idea_generic_political_advisor_europe_3
+			modifier = {
+				industrial_capacity_factory = 0.05
+				production_speed_arms_factory_factor = 0.10
+			}
+		}
+
+		USA_cab52_macarthur = {
+			allowed = { always = no }
+			removal_cost = -1
+			picture = GFX_idea_generic_political_advisor_europe_1
+			modifier = {
+				army_org_factor = 0.08
+				war_support_factor = 0.10
+				conscription_factor = 0.05
+			}
+		}
+
+		# --- '52 Slate: Attorney General ---
+		USA_cab52_brownell = {
+			allowed = { always = no }
+			removal_cost = -1
+			picture = GFX_idea_generic_political_advisor_europe_2
+			modifier = {
+				stability_factor = 0.07
+				political_power_gain = 0.05
+			}
+		}
+
+		USA_cab52_hawk = {
+			allowed = { always = no }
+			removal_cost = -1
+			picture = GFX_idea_generic_political_advisor_europe_1
+			modifier = {
+				stability_factor = 0.02
+				war_support_factor = 0.05
+				drift_defence_factor = 0.15
+			}
+		}
+
 	}
 }
