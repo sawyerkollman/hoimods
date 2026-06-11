@@ -537,6 +537,592 @@ focus_tree = {
 		ai_will_do = { factor = 5 }
 	}
 
+	# --- DEM wing layout (Task 5: 1936-44) -------------------------------
+	# Three columns, abs x 12-14 (rel x -1/0/+1 off the anchor at abs 13,1).
+	# Everything stays at x <= 15, so the wing can never touch the '36
+	# cabinet cluster (abs x 16-22, y 3-5) or the trunk column (x >= 19).
+	# Era bands: '36-39 rows at abs y 2-6, '40-43 at y 7-11, '44-47 from
+	# y 12. Cabinet gates per the roster: has_idea on the '36 slate ideas.
+
+	# The reform wave of 1935-36: WPA, REA, and a federal payroll that
+	# reaches into every county.
+	focus = {
+		id = USA_dem_second_new_deal
+		icon = GFX_goal_generic_construct_civ_factory
+		relative_position_id = USA_dem_anchor
+		x = 0
+		y = 1
+		cost = 10
+		prerequisite = { focus = USA_dem_anchor }
+		completion_reward = {
+			# Two civilian factories in the industrial East.
+			358 = { # New York
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			360 = { # Pennsylvania
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 2
+				has_government = democratic
+			}
+		}
+	}
+
+	focus = {
+		id = USA_dem_wagner_act
+		icon = GFX_goal_generic_national_unity
+		relative_position_id = USA_dem_anchor
+		x = -1
+		y = 2
+		cost = 10
+		prerequisite = { focus = USA_dem_second_new_deal }
+		completion_reward = {
+			add_stability = 0.05
+			add_ideas = USA_labor_peace_spirit
+		}
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 2
+				has_government = democratic
+			}
+		}
+	}
+
+	# The court-packing gamble: an immediate political mauling, repaid with
+	# interest when the Court switches (usa_cabinet.250, +120 PP).
+	# MUTUAL-EXCLUSION (Task 7): this focus must become mutually exclusive
+	# with USA_gop_nine_old_men_win when the GOP wing lands; declaring that
+	# id today would be a dangling reference, so Task 7 must add the
+	# mutually_exclusive block on BOTH focuses.
+	focus = {
+		id = USA_dem_court_fight
+		icon = GFX_goal_generic_forceful_treaty
+		relative_position_id = USA_dem_anchor
+		x = 1
+		y = 2
+		cost = 10
+		prerequisite = { focus = USA_dem_second_new_deal }
+		available = {
+			date > 1937.1.1
+		}
+		completion_reward = {
+			add_political_power = -75
+			hidden_effect = {
+				country_event = { id = usa_cabinet.250 days = 30 }
+			}
+		}
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 2
+				has_government = democratic
+			}
+		}
+	}
+
+	# The old-age compact. The consumer-goods relief of the roster sketch is
+	# delivered via the existing Second New Deal reform spirit (the Act is
+	# the capstone of that program), rather than a new idea.
+	focus = {
+		id = USA_dem_social_security
+		icon = GFX_goal_generic_consumer_goods
+		relative_position_id = USA_dem_anchor
+		x = -1
+		y = 3
+		cost = 10
+		prerequisite = { focus = USA_dem_wagner_act }
+		completion_reward = {
+			add_ideas = USA_the_second_new_deal_spirit
+		}
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 2
+				has_government = democratic
+			}
+		}
+	}
+
+	# The wing-commitment focus: locks the USA onto the Democratic track.
+	#
+	# MUTUAL-EXCLUSION: Tasks 7/8/9 must add mutually_exclusive vs
+	# USA_dem_commitment on their commitment focuses (USA_gop_commitment,
+	# USA_rad_commitment, USA_auth_commitment) AND add the reciprocal
+	# mutually_exclusive block here. Declaring those ids today would be
+	# dangling references (the validator fails the build), so this focus
+	# ships without the exclusions until the other wings exist.
+	focus = {
+		id = USA_dem_commitment
+		icon = GFX_goal_support_democracy
+		relative_position_id = USA_dem_anchor
+		x = 0
+		y = 3
+		cost = 10
+		# "Any two Democratic-wing focuses": every branch below the anchor
+		# passes through USA_dem_second_new_deal first, so either of these
+		# second-rank focuses implies at least two completed dem focuses.
+		prerequisite = {
+			focus = USA_dem_wagner_act
+			focus = USA_dem_court_fight
+		}
+		completion_reward = {
+			add_stability = 0.05
+			set_country_flag = USA_wing_dem
+		}
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 2
+				has_government = democratic
+			}
+		}
+	}
+
+	# Cabinet gate: only a Stimson War Department can sell rearmament to a
+	# peace-minded public.
+	focus = {
+		id = USA_dem_rearmament_politics
+		icon = GFX_goal_generic_allies_build_infantry
+		relative_position_id = USA_dem_anchor
+		x = 0
+		y = 4
+		cost = 10
+		prerequisite = { focus = USA_dem_commitment }
+		available = {
+			date > 1938.1.1
+			has_idea = USA_cabinet_stimson
+		}
+		completion_reward = {
+			army_experience = 25
+			393 = { # Michigan
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 2
+				has_government = democratic
+			}
+		}
+	}
+
+	# Cabinet gate: Hull's State Department bends the Neutrality Acts. The
+	# USA_cash_and_carry flag is the "trade-law unlock" marker later wing
+	# and military content reads.
+	focus = {
+		id = USA_dem_cash_and_carry
+		icon = GFX_goal_generic_positive_trade_relations
+		relative_position_id = USA_dem_anchor
+		x = 0
+		y = 5
+		cost = 10
+		prerequisite = { focus = USA_dem_rearmament_politics }
+		available = {
+			date > 1939.1.1
+			has_idea = USA_cabinet_cordell_hull
+		}
+		completion_reward = {
+			set_country_flag = USA_cash_and_carry
+			if = {
+				limit = { country_exists = ENG }
+				ENG = {
+					add_opinion_modifier = {
+						target = USA
+						modifier = USA_cash_and_carry_partner
+					}
+				}
+			}
+			if = {
+				limit = { country_exists = FRA }
+				FRA = {
+					add_opinion_modifier = {
+						target = USA
+						modifier = USA_cash_and_carry_partner
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 2
+				has_government = democratic
+			}
+		}
+	}
+
+	# Fifty old four-stackers for ninety-nine-year leases. Convoys stand in
+	# for the destroyers (per plan: thematic approximation); the bases come
+	# back as the Atlantic Bases spirit.
+	focus = {
+		id = USA_dem_destroyers_for_bases
+		icon = GFX_goal_generic_military_deal
+		relative_position_id = USA_dem_anchor
+		x = 0
+		y = 6
+		cost = 10
+		prerequisite = { focus = USA_dem_cash_and_carry }
+		available = {
+			date > 1940.6.1
+		}
+		completion_reward = {
+			if = {
+				limit = { country_exists = ENG }
+				add_equipment_to_stockpile = {
+					type = convoy_1
+					amount = -50
+				}
+				ENG = {
+					add_equipment_to_stockpile = {
+						type = convoy_1
+						amount = 50
+						producer = USA
+					}
+					add_opinion_modifier = {
+						target = USA
+						modifier = destroyers_for_bases_opinion
+					}
+				}
+			}
+			add_ideas = USA_atlantic_bases_spirit
+		}
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 2
+				has_government = democratic
+			}
+		}
+	}
+
+	# Cabinet gate: Hull again - the arsenal opens its books.
+	focus = {
+		id = USA_dem_lend_lease
+		icon = GFX_goal_generic_trade
+		relative_position_id = USA_dem_anchor
+		x = 0
+		y = 7
+		cost = 10
+		prerequisite = { focus = USA_dem_destroyers_for_bases }
+		available = {
+			date > 1941.1.1
+			has_idea = USA_cabinet_cordell_hull
+		}
+		completion_reward = {
+			add_ideas = USA_lend_lease_capacity_spirit
+		}
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 2
+				has_government = democratic
+			}
+		}
+	}
+
+	focus = {
+		id = USA_dem_arsenal_of_democracy
+		icon = GFX_goal_generic_construct_mil_factory
+		relative_position_id = USA_dem_anchor
+		x = -1
+		y = 8
+		cost = 10
+		prerequisite = { focus = USA_dem_lend_lease }
+		completion_reward = {
+			# Three military factories: the conversion of an economy.
+			358 = { # New York
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			360 = { # Pennsylvania
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			393 = { # Michigan
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 2
+				has_government = democratic
+			}
+		}
+	}
+
+	# A meeting at Placentia Bay: war aims before the war.
+	focus = {
+		id = USA_dem_atlantic_charter
+		icon = GFX_goal_generic_alliance
+		relative_position_id = USA_dem_anchor
+		x = 1
+		y = 8
+		cost = 10
+		prerequisite = { focus = USA_dem_lend_lease }
+		completion_reward = {
+			add_ideas = USA_war_aims_spirit
+			if = {
+				limit = { country_exists = ENG }
+				ENG = {
+					add_opinion_modifier = {
+						target = USA
+						modifier = USA_atlantic_charter_partner
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 2
+				has_government = democratic
+			}
+		}
+	}
+
+	# The War Production Board. The roster's -20% military construction
+	# cost rides on the existing Managed Economy spirit, which Task 5
+	# extends with an arms-factory construction-speed line.
+	focus = {
+		id = USA_dem_wpb
+		icon = GFX_goal_generic_production
+		relative_position_id = USA_dem_anchor
+		x = -1
+		y = 9
+		cost = 10
+		prerequisite = { focus = USA_dem_arsenal_of_democracy }
+		available = {
+			OR = {
+				has_country_flag = USA_at_war
+				has_war = yes
+			}
+		}
+		completion_reward = {
+			add_ideas = USA_managed_economy_spirit
+		}
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 2
+				has_government = democratic
+			}
+		}
+	}
+
+	# The OSRD: a research slot, guarded so the tree cannot push the USA
+	# past six slots if other mods have already been generous.
+	focus = {
+		id = USA_dem_osrd
+		icon = GFX_goal_generic_scientific_exchange
+		relative_position_id = USA_dem_anchor
+		x = 0
+		y = 9
+		cost = 10
+		prerequisite = { focus = USA_dem_arsenal_of_democracy }
+		completion_reward = {
+			if = {
+				limit = { amount_research_slots < 6 }
+				add_research_slot = 1
+			}
+			else = {
+				add_tech_bonus = {
+					bonus = 0.25
+					uses = 2
+					category = electronics
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 2
+				has_government = democratic
+			}
+		}
+	}
+
+	# The Big Three convene.
+	focus = {
+		id = USA_dem_tehran
+		icon = GFX_goal_generic_major_alliance
+		relative_position_id = USA_dem_anchor
+		x = 1
+		y = 9
+		cost = 10
+		prerequisite = { focus = USA_dem_atlantic_charter }
+		available = {
+			date > 1943.1.1
+			OR = {
+				has_country_flag = USA_at_war
+				has_war = yes
+			}
+		}
+		completion_reward = {
+			if = {
+				limit = { country_exists = SOV }
+				SOV = {
+					add_opinion_modifier = {
+						target = USA
+						modifier = USA_wartime_conference
+					}
+				}
+			}
+			add_tech_bonus = {
+				bonus = 0.50
+				uses = 1
+				category = land_doctrine
+			}
+		}
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 2
+				has_government = democratic
+			}
+		}
+	}
+
+	# Home-front integration: Executive Order 8802 and the Double V.
+	# Flat manpower stands in for the roster's +2% recruitable.
+	focus = {
+		id = USA_dem_double_v
+		icon = GFX_goal_generic_propaganda
+		relative_position_id = USA_dem_anchor
+		x = -1
+		y = 10
+		cost = 10
+		prerequisite = { focus = USA_dem_wpb }
+		completion_reward = {
+			add_manpower = 150000
+			add_stability = 0.02
+		}
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 2
+				has_government = democratic
+			}
+		}
+	}
+
+	# The G.I. Bill groundwork. USA_postwar_growth is the postwar-growth
+	# flag Task 6's 1945-56 content reads.
+	focus = {
+		id = USA_dem_gi_bill_groundwork
+		icon = GFX_goal_generic_construct_civilian
+		relative_position_id = USA_dem_anchor
+		x = 0
+		y = 10
+		cost = 10
+		prerequisite = { focus = USA_dem_wpb }
+		available = {
+			date > 1944.1.1
+		}
+		completion_reward = {
+			set_country_flag = USA_postwar_growth
+			add_stability = 0.02
+		}
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 2
+				has_government = democratic
+			}
+		}
+	}
+
+	# Dividing the world to save it. USA_yalta_accords is the postwar
+	# framework flag later dem content (Task 6) reads; the planning spirit
+	# is the existing postwar-planning idea.
+	focus = {
+		id = USA_dem_yalta
+		icon = GFX_goal_generic_dangerous_deal
+		relative_position_id = USA_dem_anchor
+		x = 1
+		y = 10
+		cost = 10
+		prerequisite = { focus = USA_dem_tehran }
+		available = {
+			date > 1944.11.1
+		}
+		completion_reward = {
+			set_country_flag = USA_yalta_accords
+			add_ideas = USA_postwar_planning_spirit
+		}
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 2
+				has_government = democratic
+			}
+		}
+	}
+
+	# The haberdasher takes the oath. Story beat, so it costs 5 like the
+	# trunk's election focuses; only sensible while Roosevelt still rules
+	# (a Landon/Willkie/Dewey timeline has no Warm Springs to mourn).
+	focus = {
+		id = USA_dem_president_is_dead
+		icon = GFX_goal_generic_national_unity
+		relative_position_id = USA_dem_anchor
+		x = 1
+		y = 11
+		cost = 5
+		prerequisite = { focus = USA_dem_yalta }
+		available = {
+			date > 1945.1.1
+			has_country_leader = {
+				character = USA_franklin_delano_roosevelt
+				ruling_only = yes
+			}
+		}
+		completion_reward = {
+			country_event = { id = usa_cabinet.205 hours = 6 }
+		}
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 2
+				has_government = democratic
+			}
+		}
+	}
+
 	#######################################################################
 	# GOP - The loyal opposition
 	#######################################################################

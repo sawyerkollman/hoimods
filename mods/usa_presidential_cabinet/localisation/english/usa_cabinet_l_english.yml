@@ -62,6 +62,44 @@
  USA_mil_anchor:0 "The Arsenal Question"
  USA_mil_anchor_desc:0 "The Army of the United States musters fewer men than Romania's, and its arsenals hold the leftovers of 1918. Whoever rules in Washington, and whatever they believe, the question of American arms will not wait upon politics."
 
+ # --- Democratic wing, 1936-44 ---
+ USA_dem_second_new_deal:0 "The Second New Deal"
+ USA_dem_second_new_deal_desc:0 "The first hundred days saved the banks; this second wave means to save the men. Works progress, rural power, and a federal payroll that reaches into every county: the New Deal stops apologizing for itself and starts building."
+ USA_dem_wagner_act:0 "The Wagner Act"
+ USA_dem_wagner_act_desc:0 "The right to organize is now the law of the land, with a National Labor Relations Board to make it stick. The companies may keep their lawyers, but the men have got the federal government, and labor peace is suddenly cheaper than the alternative."
+ USA_dem_social_security:0 "The Old-Age Compact"
+ USA_dem_social_security_desc:0 "A payroll tax, a ledger in Baltimore, and a promise: that no American who has worked a lifetime shall end it in the county poorhouse. It is the quietest revolution Washington has ever enacted, and it will prove the hardest to repeal."
+ USA_dem_court_fight:0 "The Court Fight"
+ USA_dem_court_fight_desc:0 "Nine old men have been striking down the New Deal statute by statute, and the President proposes to appoint a few young ones to keep them company. The country recoils and the Senate balks - but the Court, reading the election returns, may yet discover that the Constitution permits a minimum wage after all."
+ USA_dem_commitment:0 "The Coalition Holds"
+ USA_dem_commitment_desc:0 "Machine bosses and miners, professors and precinct captains: every element of the coalition has been paid in full and the contract renewed. Whatever comes - depression, war, or the wearing-out of one extraordinary man - the New Deal is no longer an experiment. It is the government."
+ USA_dem_rearmament_politics:0 "The Politics of Preparedness"
+ USA_dem_rearmament_politics_desc:0 "Secretary Stimson makes the case in cabinet and the President makes it on the radio: hemispheric defense, idle plants put to work, jobs in the aircraft factories. Rearmament is sold to a peace-minded public one appropriation at a time, and never once called by its name."
+ USA_dem_cash_and_carry:0 "Cash and Carry"
+ USA_dem_cash_and_carry_desc:0 "The Neutrality Acts stand - amended. Any belligerent may buy American goods, provided it pays in dollars and hauls them home in its own ships. The law is scrupulously impartial, and it happens that only one side of this war has both the gold and a navy."
+ USA_dem_destroyers_for_bases:0 "Destroyers for Bases"
+ USA_dem_destroyers_for_bases_desc:0 "Fifty old four-stackers, rust and all, traded for ninety-nine-year leases on harbors from Newfoundland to Trinidad. The lawyers call it an executive agreement; the isolationists call it war by installment; the Royal Navy calls it fifty more hulls between the convoys and the wolf packs."
+ USA_dem_lend_lease:0 "Lend-Lease"
+ USA_dem_lend_lease_desc:0 "When your neighbor's house is on fire, the President explains, you lend him your garden hose and settle accounts afterward. By act of Congress the arsenal opens its books to the democracies, and the dollar sign, as promised, is retired for the duration."
+ USA_dem_arsenal_of_democracy:0 "The Arsenal of Democracy"
+ USA_dem_arsenal_of_democracy_desc:0 "The assembly lines that built sedans learn to build bombers, and the cost-plus contract converts skeptical boardrooms into war plants by the week. No nation in history has retooled so much so fast - and the great machine is only beginning to turn."
+ USA_dem_wpb:0 "The War Production Board"
+ USA_dem_wpb_desc:0 "One board, one chairman, and priority numbers worth more than money: Washington takes the entire industrial economy into receivership for the duration. Civilian automobile production ends by order, and nobody in Detroit doubts what comes off the lines instead."
+ USA_dem_osrd:0 "Science Mobilized"
+ USA_dem_osrd_desc:0 "Dr. Bush's Office of Scientific Research and Development puts the universities under contract and the laboratories on war time. Radar, proximity fuzes, penicillin by the tank-car: the war will be won by production, but it will be shortened by physics."
+ USA_dem_atlantic_charter:0 "A Meeting at Placentia Bay"
+ USA_dem_atlantic_charter_desc:0 "In a fog-bound Newfoundland anchorage the President and the Prime Minister exchange hymns, courtesies, and eight common principles for a world neither yet governs. America is formally at peace; her war aims, curiously, are already in print."
+ USA_dem_tehran:0 "The Big Three"
+ USA_dem_tehran_desc:0 "For four days in the Soviet legation at Tehran the President sits between empires and plays honest broker of the alliance: a second front in France, agreed; a war on Japan, promised; the shape of the world to come, sketched over dinner and deferred."
+ USA_dem_yalta:0 "Yalta"
+ USA_dem_yalta_desc:0 "In a looted Crimean palace the three victors divide what their armies already hold. Poland is argued past midnight, the United Nations is purchased with two extra votes, and a tired President wagers that the word of Marshal Stalin will survive the peace it has just designed."
+ USA_dem_double_v:0 "The Double V"
+ USA_dem_double_v_desc:0 "Victory abroad and victory at home: the slogan travels from the Pittsburgh Courier to the shipyard gates. The war plants open to all hands by executive order, and a million new workers take up labor the emergency no longer permits the country to refuse."
+ USA_dem_gi_bill_groundwork:0 "Repaying the Uniform"
+ USA_dem_gi_bill_groundwork_desc:0 "Twelve million men will come home expecting something better than the bonus marches their fathers got. College tuition, home loans, a year of readjustment pay: the Republic quietly drafts the largest investment in its own citizens ever put to paper."
+ USA_dem_president_is_dead:0 "The President Is Dead"
+ USA_dem_president_is_dead_desc:0 "At Warm Springs, Georgia, in the first spring of victory, the only President a generation of Americans can remember slips away in an afternoon. The work of the age does not pause for grief: the oath waits in Washington, and the haberdasher must take it."
+
  # ============================ CABINET MEMBERS ============================
 
  USA_cabinet_cordell_hull:0 "Cordell Hull"
@@ -131,6 +169,16 @@
  USA_permanent_establishment_spirit_desc:0 "A standing military and its supporting industry keep America ready for any threat that may come."
  USA_american_century_spirit:0 "The American Century"
  USA_american_century_spirit_desc:0 "Industry, ideals, and steady leadership together place America at the very summit of the world."
+
+ # --- Democratic wing spirits (Task 5) ---
+ USA_labor_peace_spirit:0 "Labor Peace"
+ USA_labor_peace_spirit_desc:0 "With the right to organize written into law, the great industrial unions settle their quarrels at the bargaining table rather than the factory gate."
+ USA_atlantic_bases_spirit:0 "Atlantic Bases"
+ USA_atlantic_bases_spirit_desc:0 "Ninety-nine-year leases from Argentia to Trinidad push America's ocean frontier a thousand miles eastward and give the fleet harbors it never had to build."
+ USA_lend_lease_capacity_spirit:0 "Lend-Lease Capacity"
+ USA_lend_lease_capacity_spirit_desc:0 "The machinery of lending is built: the depots, manifests, and shipping schedules that can arm half the world without a declaration of war."
+ USA_war_aims_spirit:0 "The Atlantic Charter"
+ USA_war_aims_spirit_desc:0 "Eight plain principles give the coming struggle an American meaning: self-government restored, the seas kept free, and freedom from fear and want for victor and vanquished alike."
 
  # ============================ EVENTS ============================
 
@@ -247,6 +295,24 @@
  usa_cabinet.201.d:0 "There will be no ballot this year. The proclamation cites the war powers, the impossibility of a soldiers' vote, and the manifest will of the people as already expressed; the Attorney General's opinion runs to forty pages and persuades no one who was not persuaded already. The courts adjourn for an indefinite recess. The Republic now runs on habit, and on the army."
  usa_cabinet.201.a:0 "The state must hold, whatever else falls."
  usa_cabinet.201.b:0 "Reverse course. Announce the ballot of 1948 now."
+
+ # --- The Truman succession (usa_cabinet.205) ---
+ usa_cabinet.205.t:0 "The President Is Dead"
+ usa_cabinet.205.d:0 "The flash comes up from Warm Springs in the late afternoon: Franklin Delano Roosevelt, thirty-second President of the United States, is dead of a cerebral hemorrhage in the thirteenth year of his presidency. In Washington the cabinet gathers in the dusk, a Bible is borrowed from a desk drawer, and the enormous machinery of the war does not stop for so much as an hour while the country learns to say a new name."
+ usa_cabinet.205.a:0 "Mr. Truman takes the oath."
+ usa_cabinet.205.b:0 "Wallace was kept on the ticket after all. The torch passes left."
+
+ # --- Era flavour (usa_cabinet.250-299) ---
+ usa_cabinet.250.t:0 "The Switch in Time"
+ usa_cabinet.250.d:0 "Mr. Justice Roberts has crossed the aisle without leaving his chair: the minimum wage stands, the Wagner Act stands, and the court-packing bill dies quietly in committee, having accomplished everything it threatened. The President has lost the battle in the Senate and discovers, reading the morning's opinions, that he has won the Constitution."
+ usa_cabinet.250.a:0 "A switch in time saved nine."
+
+ # ============================ OPINION MODIFIERS ============================
+
+ # Keys for common/opinion_modifiers/usa_cabinet_opinions.txt.
+ USA_cash_and_carry_partner:0 "Cash and Carry"
+ USA_atlantic_charter_partner:0 "The Atlantic Charter"
+ USA_wartime_conference:0 "Wartime Conference"
 
  # ============================ POWER BALANCE ============================
 

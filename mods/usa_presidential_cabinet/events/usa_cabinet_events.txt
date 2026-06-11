@@ -926,3 +926,123 @@ country_event = {
 		add_political_power = 25
 	}
 }
+
+#######################################################################
+# THE TRUMAN SUCCESSION (usa_cabinet.205)
+# Fired by USA_dem_president_is_dead (Task 5). Roosevelt dies at Warm
+# Springs; the Vice President takes the oath. Partial cabinet reset per
+# the roster: Treasury and Justice turn over with the new President,
+# State and War stay on for continuity of the war. The seat counter is
+# decremented only for ideas actually held, so it can never go negative.
+# If Wallace had been kept on the ticket (radical influence: the rad
+# anchor focus is complete), the torch can pass left instead.
+# Generic portraits for both successors - Task 13 GFX sweep swaps in
+# proper ones. Names/portraits match usa_cabinet.131/.133, so the 1948
+# chain's "is Truman already President?" guard keys off the same leader.
+#######################################################################
+
+country_event = {
+	id = usa_cabinet.205
+	title = usa_cabinet.205.t
+	desc = usa_cabinet.205.d
+	picture = GFX_report_event_usa_great_depression
+
+	is_triggered_only = yes
+
+	# Harry S. Truman takes the oath.
+	option = {
+		name = usa_cabinet.205.a
+		ai_chance = { factor = 90 }
+		add_stability = -0.03
+		add_political_power = -50
+		retire_country_leader = yes
+		create_country_leader = {
+			name = "Harry S. Truman"
+			desc = "USA_harry_truman_desc"
+			picture = "gfx/leaders/Europe/Portrait_Europe_Generic_3.dds"
+			expire = "1965.1.1"
+			ideology = liberalism
+		}
+		# Partial cabinet reset: the Treasury and Justice seats empty.
+		if = {
+			limit = { has_idea = USA_cabinet_morgenthau }
+			remove_ideas = USA_cabinet_morgenthau
+			subtract_from_variable = { USA_cabinet_seats_filled = 1 }
+		}
+		if = {
+			limit = { has_idea = USA_cabinet_business_treasury }
+			remove_ideas = USA_cabinet_business_treasury
+			subtract_from_variable = { USA_cabinet_seats_filled = 1 }
+		}
+		if = {
+			limit = { has_idea = USA_cabinet_murphy }
+			remove_ideas = USA_cabinet_murphy
+			subtract_from_variable = { USA_cabinet_seats_filled = 1 }
+		}
+		if = {
+			limit = { has_idea = USA_cabinet_security_ag }
+			remove_ideas = USA_cabinet_security_ag
+			subtract_from_variable = { USA_cabinet_seats_filled = 1 }
+		}
+	}
+
+	# Henry Wallace was on the ticket after all: radical influence only.
+	option = {
+		name = usa_cabinet.205.b
+		trigger = { has_completed_focus = USA_rad_anchor }
+		ai_chance = { factor = 10 }
+		add_stability = -0.05
+		add_political_power = -50
+		add_popularity = { ideology = communism popularity = 0.03 }
+		set_country_flag = USA_wallace_succession
+		retire_country_leader = yes
+		create_country_leader = {
+			name = "Henry A. Wallace"
+			desc = "USA_henry_wallace_desc"
+			picture = "gfx/leaders/Europe/Portrait_Europe_Generic_4.dds"
+			expire = "1965.1.1"
+			ideology = socialism
+		}
+		# Same partial cabinet reset.
+		if = {
+			limit = { has_idea = USA_cabinet_morgenthau }
+			remove_ideas = USA_cabinet_morgenthau
+			subtract_from_variable = { USA_cabinet_seats_filled = 1 }
+		}
+		if = {
+			limit = { has_idea = USA_cabinet_business_treasury }
+			remove_ideas = USA_cabinet_business_treasury
+			subtract_from_variable = { USA_cabinet_seats_filled = 1 }
+		}
+		if = {
+			limit = { has_idea = USA_cabinet_murphy }
+			remove_ideas = USA_cabinet_murphy
+			subtract_from_variable = { USA_cabinet_seats_filled = 1 }
+		}
+		if = {
+			limit = { has_idea = USA_cabinet_security_ag }
+			remove_ideas = USA_cabinet_security_ag
+			subtract_from_variable = { USA_cabinet_seats_filled = 1 }
+		}
+	}
+}
+
+#######################################################################
+# ERA FLAVOUR (usa_cabinet.250-299)
+#######################################################################
+
+# The Switch in Time: the delayed payoff of the court fight
+# (USA_dem_court_fight pays -75 PP up front and fires this 30 days on).
+country_event = {
+	id = usa_cabinet.250
+	title = usa_cabinet.250.t
+	desc = usa_cabinet.250.d
+	picture = GFX_report_event_usa_congress_speaks
+
+	is_triggered_only = yes
+
+	option = {
+		name = usa_cabinet.250.a
+		add_political_power = 120
+	}
+}

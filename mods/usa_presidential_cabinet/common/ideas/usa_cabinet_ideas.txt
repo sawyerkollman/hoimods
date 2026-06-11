@@ -107,12 +107,16 @@ ideas = {
 			}
 		}
 
+		# Granted by USA_dem_wpb (Task 5). The arms-factory construction line
+		# delivers the War Production Board's "-20% military construction
+		# cost" roster effect.
 		USA_managed_economy_spirit = {
 			allowed = { always = no }
 			removal_cost = -1
 			modifier = {
 				industrial_capacity_factory = 0.10
 				production_factory_max_efficiency_factor = 0.05
+				production_speed_arms_factory_factor = 0.20
 			}
 		}
 
@@ -317,6 +321,52 @@ ideas = {
 				industrial_capacity_factory = 0.10
 				opinion_gain_monthly_factor = 0.20
 				research_speed_factor = 0.10
+			}
+		}
+
+		###################################################################
+		# DEMOCRATIC WING SPIRITS (Task 5: 1936-44)
+		###################################################################
+
+		# USA_dem_wagner_act: labor peace through recognition.
+		USA_labor_peace_spirit = {
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.03
+				production_factory_max_efficiency_factor = 0.05
+			}
+		}
+
+		# USA_dem_destroyers_for_bases: ninety-nine-year leases from
+		# Argentia to Trinidad.
+		USA_atlantic_bases_spirit = {
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				navy_max_range_factor = 0.10
+				experience_gain_navy = 0.05
+			}
+		}
+
+		# USA_dem_lend_lease: the machinery of lending, built to scale.
+		USA_lend_lease_capacity_spirit = {
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				lend_lease_tension = -0.25
+				production_factory_efficiency_gain_factor = 0.05
+			}
+		}
+
+		# USA_dem_atlantic_charter: eight common principles, in print
+		# before America is even at war.
+		USA_war_aims_spirit = {
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				war_support_factor = 0.05
+				political_power_gain = 0.05
 			}
 		}
 	}
