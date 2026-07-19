@@ -1,0 +1,86 @@
+###########################################################################
+# One-Click Rail Upgrades
+# A single decision that upgrades every existing railway segment between
+# your own adjacent states by one level.
+#
+# Placed in the vanilla "economy_decisions" category so it appears in a
+# familiar tab without needing custom category art.
+#
+# How the sweep works (script cannot enumerate rail lines directly):
+# for every owned state A, for every neighboring owned state B that A has
+# an existing rail connection to, fire build_railway (+1) once per
+# unordered pair. The "visited" state flag guarantees each pair is
+# upgraded exactly once per activation (A-B is skipped later when B
+# iterates back toward flagged A).
+#
+# build_railway applies instantly, so the decision simulates construction:
+# it costs political power, reserves 3 civilian factories for 45 days
+# (modifier block), and only applies the upgrade when the timer completes.
+###########################################################################
+
+economy_decisions = {
+
+	OCR_upgrade_rail_network = {
+		icon = generic_trucks
+
+		allowed = {
+			always = yes
+		}
+
+		visible = {
+			has_dlc = "No Step Back"
+			is_ai = no
+		}
+
+		available = {
+			num_of_civilian_factories_available_for_projects > 2
+		}
+
+		cost = 50
+		days_remove = 45
+		days_re_enable = 90
+
+		modifier = {
+			civilian_factory_use = 3
+		}
+
+		ai_will_do = { factor = 0 }
+
+		complete_effect = {
+			custom_effect_tooltip = OCR_upgrade_started_tt
+		}
+
+		remove_effect = {
+			custom_effect_tooltip = OCR_upgrade_done_tt
+			hidden_effect = {
+				every_owned_state = {
+					every_neighbor_state = {
+						limit = {
+							is_owned_by = ROOT
+							NOT = { has_state_flag = OCR_pair_done }
+							ROOT = {
+								has_railway_connection = {
+									start_state = PREV.PREV
+									target_state = PREV
+								}
+							}
+						}
+						ROOT = {
+							build_railway = {
+								level = 1
+								build_only_on_allied = yes
+								start_state = PREV.PREV
+								target_state = PREV
+							}
+						}
+					}
+					set_state_flag = OCR_pair_done
+				}
+				# reset the pass flags so the decision can be used again
+				every_owned_state = {
+					clr_state_flag = OCR_pair_done
+				}
+			}
+		}
+	}
+}
