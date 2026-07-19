@@ -5,16 +5,6 @@
 #   this mod loads AFTER Road to 56, this effect runs last and wins.
 # - Initialise the cabinet tracking variables so check_variable comparisons
 #   in the focus tree behave predictably.
-# - War/peace story flags: on_declare_war / on_war_relation_added set
-#   USA_at_war the moment war touches America (either direction); the
-#   monthly pulse below is the fallback for both that and USA_postwar.
-# - Era-flag backstop: the monthly pulse runs USA_era_flag_backstop so the
-#   era flags advance even when an election focus was BYPASSED (at war, or
-#   under suspended elections) and therefore fired no outcome event -
-#   has_completed_focus is true for bypassed focuses, which the backstop
-#   relies on. Election events remain the primary era-flag setter.
-# Both pulse effects also run once at on_startup so late-start bookmarks
-# catch up immediately.
 ###########################################################################
 
 on_actions = {
@@ -22,7 +12,7 @@ on_actions = {
 		effect = {
 			USA = {
 				load_focus_tree = {
-					tree = USA_cabinet_focus_tree
+					tree = usa_focus
 					keep_completed = yes
 				}
 				if = {
@@ -32,43 +22,6 @@ on_actions = {
 					set_variable = { USA_progressive_influence = 0 }
 					set_variable = { USA_conservative_influence = 0 }
 				}
-				# Catch-up pass for non-1936 starts.
-				USA_war_peace_pulse = yes
-				USA_era_flag_backstop = yes
-			}
-		}
-	}
-
-	# ROOT is the declaring country.
-	on_declare_war = {
-		effect = {
-			if = {
-				limit = { tag = USA }
-				set_country_flag = USA_at_war
-			}
-		}
-	}
-
-	# ROOT is the country gaining the war relation; fires for both sides,
-	# so this catches America being declared upon as well.
-	on_war_relation_added = {
-		effect = {
-			if = {
-				limit = { tag = USA }
-				set_country_flag = USA_at_war
-			}
-		}
-	}
-
-	# Monthly pulse (ROOT = each country). Cheap: everything is behind a
-	# tag check. Monthly rather than yearly to keep the backstop latency
-	# short; both effects are idempotent.
-	on_monthly = {
-		effect = {
-			if = {
-				limit = { tag = USA }
-				USA_war_peace_pulse = yes
-				USA_era_flag_backstop = yes
 			}
 		}
 	}
