@@ -1,18 +1,19 @@
-# Presidential Cabinet — A USA Overhaul (HOI4)
+# Presidential Cabinet — A USA Expansion (HOI4)
 
-A standalone focus tree for the **United States** in Hearts of Iron IV. It
-replaces the vanilla US tree with a new one built around a **Presidential
-Cabinet / "inner circle"** system inspired by Germany's Götterdämmerung
-mechanic, plus a layered historical-and-alternate-history spine that gives
-the United States real depth **beyond 1942** (postwar planning, Bretton
-Woods, the UN, the Marshall Plan, and the opening moves of the Cold War).
+An expansion **built around the full vanilla United States focus tree** (all
+~135 vanilla focuses — Congress, the war plans, the civil-war alt-history
+paths, and every doctrine branch — are kept intact) that grafts on **62 new
+focuses**: a Götterdämmerung-style **Presidential Cabinet / inner circle**
+system, a **post-1942 Cold War endgame**, and — the heart of the expansion —
+**new deep branches off the non-historical routes**.
 
-## Features
+## Features (197 focuses total: 135 vanilla + 62 new)
 
 ### The Brain Trust (the cabinet / inner circle)
-Assemble FDR's inner circle through focuses. Each of four cabinet seats has
-two **mutually exclusive** candidates pulling the administration toward the
-**Progressive / New Deal** pole or the **Old Guard / Conservative** pole:
+Assemble FDR's inner circle through focuses, in a new cluster alongside the
+vanilla tree. Four contested seats each offer two **mutually exclusive**
+candidates pulling toward the **Progressive / New Deal** pole or the **Old
+Guard / Conservative** pole, plus two more historic appointments:
 
 | Seat | Progressive pick | Conservative pick |
 |------|------------------|-------------------|
@@ -20,25 +21,51 @@ two **mutually exclusive** candidates pulling the administration toward the
 | Secretary of the Treasury | Henry Morgenthau | A Man of Business |
 | Secretary of War | Henry Stimson | Harry Woodring |
 | Attorney General | Frank Murphy | A Security Hawk |
+| Secretary of Labor | Frances Perkins | — |
+| Secretary of the Navy | — | Frank Knox |
 
-Every appointment grants that member as a **national-spirit idea** (so the
-cabinet shows as a row of "inner circle" portraits with their own bonuses)
-and shifts a **Cabinet power balance** (Progressives ⟷ Old Guard). The
-make-up of your cabinet then unlocks divergent paths.
+Every appointment grants that member as a **national-spirit idea** and
+shifts a **Cabinet power balance** (Progressives ⟷ Old Guard). Cabinet
+make-up gates the Progressive Ascendancy / Conservative Resurgence forks,
+the Economic Bill of Rights, and *The President's Men* capstone.
 
-### Layered historical + alternate-history paths
-- **Historical spine:** A Nation Rebuilds → Second New Deal → Total
-  Mobilization (1941+) → Manhattan Project → Postwar Planning → Bretton
-  Woods → United Nations → Marshall Plan → Iron Curtain → **Containment vs.
-  Return to Normalcy**, capped by *The American Century*.
-- **Progressive offshoots:** Economic Bill of Rights, and (deep progressive)
-  *A Cooperative Commonwealth*.
-- **Conservative / reactionary offshoots:** Restore the Old Republic, and
-  (deep conservative) *The American Caesar*.
-- **Demobilization vs. a Permanent Military Establishment** after the war.
-- **R&D branch** (Scientific Establishment → Electronics Mastery →
-  Operations Research) granting electronics/research bonuses and an **extra
-  research slot** to push into the extended (Road to 56) tech trees.
+### The People's Republic — communist path expansion
+Picks up where vanilla's communist civil-war victory ends (*Reintegration /
+Unholy Alliance / Secure China*): proclaim the **People's Republic of
+America** (cosmetic tag), collectivize the Great Plains, empower workers'
+councils, then choose — **Look to Moscow** (Comintern alignment) or **An
+American Road to Socialism** (found your own faction, *The Continental
+International*, and spread revolution across the hemisphere), capped by
+*The Workers' Century*.
+
+### The Silver Republic — fascist path expansion
+Picks up from *Honor the Confederacy / Recruit the Free Corps*: proclaim the
+**Silver Republic of America** (cosmetic tag), impose the Leader Principle
+and the Corporate State, then choose — **An Understanding with Berlin** (the
+Atlantic Axis) or **America Stands Alone** (found *The Silver Pact* and
+ultimately claim a **war goal against Germany** as *A Rival New Order*),
+capped by *The Silver Century*.
+
+### The Business of America — conservative-democratic mini-branch
+Extends the gold-standard route: Wall Street Resurgent, the Republican
+Restoration, and An Engine of Prosperity.
+
+### The Postwar Order — the democratic endgame (beyond 1942)
+Anchored to vanilla's *The Giant Wakes*: Postwar Planning → Bretton Woods /
+United Nations → Shape the Peace → Marshall Plan / Iron Curtain →
+**Containment vs. Return to Normalcy** and **Demobilization vs. a Permanent
+Establishment**, capped by *The American Century* (requires your Inner
+Circle).
+
+### About the base tree
+The vanilla tree included here is taken from the community game-file mirror
+[hoi4-history](https://github.com/cbrzeczysz/hoi4-history) at game version
+**1.14.1** (the US tree has been essentially stable since Man the Guns). If
+a future patch changes the vanilla US tree, you can refresh the base: copy
+`common/national_focus/usa.txt` from your game install (e.g.
+`steamapps/common/Hearts of Iron IV/common/national_focus/usa.txt`) over
+this mod's copy and re-apply the graft section (everything below the
+`PRESIDENTIAL CABINET EXPANSION` banner comment).
 
 ## How the cabinet mechanic is implemented
 

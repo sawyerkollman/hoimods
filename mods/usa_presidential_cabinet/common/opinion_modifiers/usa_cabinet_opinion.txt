@@ -1,0 +1,5 @@
+opinion_modifiers = {
+	USA_fraternal_alignment = {
+		value = 50
+	}
+}

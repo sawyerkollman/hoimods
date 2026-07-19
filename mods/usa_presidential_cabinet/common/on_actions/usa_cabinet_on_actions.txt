@@ -12,7 +12,7 @@ on_actions = {
 		effect = {
 			USA = {
 				load_focus_tree = {
-					tree = USA_cabinet_focus_tree
+					tree = usa_focus
 					keep_completed = yes
 				}
 				if = {

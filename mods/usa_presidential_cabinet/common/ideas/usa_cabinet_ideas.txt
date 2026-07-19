@@ -546,5 +546,154 @@ ideas = {
 				war_support_factor = 0.03
 			}
 		}
+
+		#######################################################################
+		# THE PEOPLE'S REPUBLIC - communist expansion spirits
+		#######################################################################
+
+		USA_peoples_republic_spirit = {
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				political_power_gain = 0.10
+				stability_factor = 0.05
+			}
+		}
+
+		USA_collectivized_agriculture_spirit = {
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				consumer_goods_factor = -0.05
+				monthly_population = 0.10
+			}
+		}
+
+		USA_workers_councils_spirit = {
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				industrial_capacity_factory = 0.10
+				stability_factor = 0.03
+			}
+		}
+
+		USA_red_guards_spirit = {
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				conscription_factor = 0.05
+				army_morale_factor = 0.05
+			}
+		}
+
+		USA_american_socialism_spirit = {
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				political_power_gain = 0.10
+				drift_defence_factor = 0.30
+			}
+		}
+
+		USA_world_revolution_spirit = {
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				justify_war_goal_time_factor = -0.25
+				war_support_factor = 0.10
+			}
+		}
+
+		USA_workers_century_spirit = {
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				political_power_gain = 0.20
+				industrial_capacity_factory = 0.10
+				stability_factor = 0.05
+			}
+		}
+
+		#######################################################################
+		# THE SILVER REPUBLIC - fascist expansion spirits
+		#######################################################################
+
+		USA_silver_republic_spirit = {
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				political_power_gain = 0.10
+				war_support_factor = 0.05
+			}
+		}
+
+		USA_leader_principle_spirit = {
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				political_power_gain = 0.15
+				stability_factor = -0.02
+			}
+		}
+
+		USA_corporate_state_spirit = {
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				industrial_capacity_factory = 0.10
+				production_speed_buildings_factor = 0.05
+			}
+		}
+
+		USA_uniformed_nation_spirit = {
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				conscription_factor = 0.05
+				training_time_army_factor = -0.05
+			}
+		}
+
+		USA_hemisphere_iron_spirit = {
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				justify_war_goal_time_factor = -0.25
+				army_defence_factor = 0.05
+			}
+		}
+
+		USA_atlantic_axis_spirit = {
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				war_support_factor = 0.10
+				lend_lease_tension = -0.20
+			}
+		}
+
+		USA_silver_century_spirit = {
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				political_power_gain = 0.20
+				industrial_capacity_factory = 0.10
+				war_support_factor = 0.05
+			}
+		}
+
+		#######################################################################
+		# THE BUSINESS OF AMERICA - conservative-democratic spirit
+		#######################################################################
+
+		USA_business_republic_spirit = {
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.10
+				political_power_gain = 0.05
+			}
+		}
 	}
 }
