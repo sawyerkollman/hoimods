@@ -1,0 +1,6 @@
+﻿l_english:
+
+ OCR_upgrade_rail_network:0 "Modernize the Rail Network"
+ OCR_upgrade_rail_network_desc:0 "Rather than surveying every line by hand, direct the railroad companies to upgrade the whole network at once. Crews will spend several weeks re-grading beds, doubling tracks, and re-laying steel along every existing line between our states. Reserves 3 civilian factories while the work is under way; when it completes, every existing rail connection between our own adjacent states is upgraded by one level."
+ OCR_upgrade_started_tt:0 "Work crews are dispatched: §Y3 civilian factories§! are committed to the rail program for §Y45 days§!."
+ OCR_upgrade_done_tt:0 "Every existing railway between our own adjacent states is upgraded by §G+1 level§!."

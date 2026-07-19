@@ -10,6 +10,7 @@ several independent mods.
 |-----|--------|---------|
 | **Presidential Cabinet — A USA Overhaul** | [`mods/usa_presidential_cabinet`](mods/usa_presidential_cabinet) | Standalone US focus tree with a Götterdämmerung-style inner-circle cabinet and a layered historical / alt-history spine beyond 1942. Road to 56 submod. |
 | **More Dockyards Per Ship — Naval Blitz** | [`mods/more_dockyards_per_line`](mods/more_dockyards_per_line) | Raises the per-line naval dockyard caps (capital 5→50, screens/subs 10→50, convoys 15→50) so you can mass-produce a fleet. Standalone defines override. |
+| **One-Click Rail Upgrades** | [`mods/one_click_rails`](mods/one_click_rails) | One decision upgrades every existing railway between your adjacent states by +1 level (simulated construction: PP cost, 3 civs for 45 days). Requires No Step Back. |
 
 See each mod's own `README.md` for its features, requirements, and design notes.
 
