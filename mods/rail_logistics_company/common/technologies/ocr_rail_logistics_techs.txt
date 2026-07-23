@@ -1,0 +1,66 @@
+###########################################################################
+# Rail Logistics Company - hidden technologies
+#
+# None of these appear in a research tree (no folder block, allow = never),
+# so they cannot collide with vanilla or Road to 56 tech-tree layouts.
+# They are granted by script (common/scripted_effects + on_actions):
+#
+#   ocr_rail_logistics_unlock         - at game start (needs No Step Back);
+#                                       enables the support company itself
+#   ocr_rail_logistics_boost_wartime  - when Wartime Trains (wartime_train)
+#                                       is researched; tier-2 boost
+#   ocr_rail_logistics_boost_armored  - when Armored Trains (armored_train)
+#                                       is researched; tier-3 boost
+#
+# Boosts stack: with both train techs the company reaches
+# -15% supply consumption, 72h supply grace, -30% out-of-supply penalty.
+###########################################################################
+
+technologies = {
+
+	ocr_rail_logistics_unlock = {
+		enable_subunits = {
+			rail_logistics_company
+		}
+
+		research_cost = 0.1
+		allow = { always = no }
+
+		categories = {
+			support_tech
+			train_tech
+		}
+	}
+
+	ocr_rail_logistics_boost_wartime = {
+		rail_logistics_company = {
+			supply_consumption_factor = -0.05
+			supply_grace = 24
+			out_of_supply_factor = -0.10
+		}
+
+		research_cost = 0.1
+		allow = { always = no }
+
+		categories = {
+			support_tech
+			train_tech
+		}
+	}
+
+	ocr_rail_logistics_boost_armored = {
+		rail_logistics_company = {
+			supply_consumption_factor = -0.05
+			supply_grace = 24
+			out_of_supply_factor = -0.10
+		}
+
+		research_cost = 0.1
+		allow = { always = no }
+
+		categories = {
+			support_tech
+			train_tech
+		}
+	}
+}

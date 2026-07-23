@@ -1,0 +1,29 @@
+###########################################################################
+# Rail Logistics Company - grant logic
+# Idempotent: every check is guarded by has_tech, so this can safely run
+# from on_startup, on_research_complete, and the monthly fallback.
+###########################################################################
+
+ocr_rail_logistics_sync = {
+	if = {
+		limit = {
+			has_dlc = "No Step Back"
+			NOT = { has_tech = ocr_rail_logistics_unlock }
+		}
+		set_technology = { ocr_rail_logistics_unlock = 1 popup = no }
+	}
+	if = {
+		limit = {
+			has_tech = wartime_train
+			NOT = { has_tech = ocr_rail_logistics_boost_wartime }
+		}
+		set_technology = { ocr_rail_logistics_boost_wartime = 1 popup = no }
+	}
+	if = {
+		limit = {
+			has_tech = armored_train
+			NOT = { has_tech = ocr_rail_logistics_boost_armored }
+		}
+		set_technology = { ocr_rail_logistics_boost_armored = 1 popup = no }
+	}
+}

@@ -1,0 +1,63 @@
+###########################################################################
+# Rail Logistics Company
+# A support company that organizes divisional supply around the railhead:
+# grants reduced supply consumption and supply grace, and consumes trains
+# (train_equipment) so locomotive production matters beyond the rail map.
+#
+# Modelled on the vanilla logistics_company sub_unit. Stats here are the
+# BASE values; the hidden techs in common/technologies scale them up when
+# Wartime Trains and Armored Trains are researched.
+###########################################################################
+
+sub_units = {
+	rail_logistics_company = {
+		abbreviation = "RLG"
+		sprite = infantry
+		map_icon_category = infantry
+		priority = 0
+		ai_priority = 0
+		active = no
+		affects_speed = no
+
+		type = {
+			infantry
+			support
+		}
+
+		group = support
+
+		categories = {
+			category_support_battalions
+			category_army
+		}
+
+		combat_width = 0
+
+		#Size Definitions
+		max_strength = 1
+		max_organisation = 10
+		default_morale = 0.3
+		manpower = 500
+		training_time = 120
+
+		#Misc Abilities
+		weight = 0.1
+		can_be_parachuted = no
+
+		# Important Ability: railhead-organized supply
+		supply_consumption_factor = -0.05
+		supply_grace = 24
+		out_of_supply_factor = -0.10
+
+		own_equipment_fuel_consumption_mult = 0.0
+
+		essential = {
+			train_equipment
+		}
+
+		need = {
+			train_equipment = 10
+			support_equipment = 10
+		}
+	}
+}
