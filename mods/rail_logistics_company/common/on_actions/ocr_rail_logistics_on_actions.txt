@@ -1,0 +1,27 @@
+###########################################################################
+# Rail Logistics Company - hooks
+# on_startup: unlock the company for every country (NSB required) and
+#             catch up boosts for saves where train techs are already done.
+# on_research_complete: instant boost the moment a train tech finishes.
+# on_monthly: belt-and-braces fallback; all effects are idempotent.
+###########################################################################
+
+on_actions = {
+	on_startup = {
+		effect = {
+			every_country = {
+				ocr_rail_logistics_sync = yes
+			}
+		}
+	}
+	on_research_complete = {
+		effect = {
+			ocr_rail_logistics_sync = yes
+		}
+	}
+	on_monthly = {
+		effect = {
+			ocr_rail_logistics_sync = yes
+		}
+	}
+}

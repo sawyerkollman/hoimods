@@ -1,0 +1,13 @@
+﻿l_english:
+
+ rail_logistics_company:0 "Rail Logistics Company"
+ rail_logistics_company_desc:0 "A dedicated railhead detachment of dispatchers, loadmasters, and locomotive crews that organizes the division's supply around the rail net. The division draws less from the supply network and keeps fighting longer when cut off. Consumes trains from the national stockpile; better locomotive technology makes the company markedly more effective."
+ rail_logistics_company_short:0 "Rail Logistics"
+ OCR_RLG_ABBREV:0 "RLG"
+
+ ocr_rail_logistics_unlock:0 "Railhead Logistics Organization"
+ ocr_rail_logistics_unlock_desc:0 "The army may raise rail logistics companies that tie divisional supply to the railhead."
+ ocr_rail_logistics_boost_wartime:0 "Wartime Rail Logistics"
+ ocr_rail_logistics_boost_wartime_desc:0 "Mass-produced wartime locomotives deepen every rail logistics company's reach: less supply drawn and a longer grace period when cut off."
+ ocr_rail_logistics_boost_armored:0 "Armored Rail Logistics"
+ ocr_rail_logistics_boost_armored_desc:0 "Armored trains push the railhead almost to the front line itself, further improving every rail logistics company."
