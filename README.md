@@ -12,6 +12,8 @@ several independent mods.
 | **More Dockyards Per Ship — Naval Blitz** | [`mods/more_dockyards_per_line`](mods/more_dockyards_per_line) | Raises the per-line naval dockyard caps (capital 5→50, screens/subs 10→50, convoys 15→50) so you can mass-produce a fleet. Standalone defines override. |
 | **One-Click Rail Upgrades** | [`mods/one_click_rails`](mods/one_click_rails) | One decision upgrades every existing railway between your adjacent states by +1 level (simulated construction: PP cost, 3 civs for 45 days). Requires No Step Back. |
 | **Rail Logistics Company** | [`mods/rail_logistics_company`](mods/rail_logistics_company) | New support company granting supply reduction + supply grace; consumes trains as equipment, and each locomotive tech tier (Wartime/Armored Trains) auto-upgrades it. Requires No Step Back. |
+| **Designer Modules Plus** | [`mods/designer_modules_plus`](mods/designer_modules_plus) | New tank/ship/plane designer modules: A2A rockets & guided missiles, Gatling cannon, reactive armor, autoloaders, naval missiles & SAMs, plus wacky unreliable early gear. Auto-unlocked via hidden techs. |
+| **Domestic Alloys Program** | [`mods/domestic_alloys`](mods/domestic_alloys) | Tiered domestic chromium + tungsten production (up to +28 each in your capital) keyed to excavation techs, in the spirit of R56 steel/aluminium mills. |
 
 See each mod's own `README.md` for its features, requirements, and design notes.
 

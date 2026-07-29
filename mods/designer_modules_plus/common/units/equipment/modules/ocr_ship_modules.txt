@@ -1,0 +1,152 @@
+###########################################################################
+# Designer Modules Plus - Ships (requires Man the Guns)
+# New ship-designer modules. ocr_antiship_missiles uses category
+# ship_torpedo so it mounts in the torpedo slots of destroyers and light
+# cruisers; ocr_naval_sam uses ship_anti_air slots; the boilers replace a
+# destroyer engine (category light_ship_engine).
+###########################################################################
+
+equipment_modules = {
+
+	# Endgame: guided anti-ship missiles for destroyers and cruisers.
+	# Mounts wherever torpedoes fit; hits harder and far more accurately.
+	ocr_antiship_missiles = {
+		abbreviation = "asm"
+		category = ship_torpedo
+		sfx = sfx_ui_sd_module_turret
+		parent = ship_torpedo_2
+
+		add_stats = {
+			torpedo_attack = 48
+			naval_torpedo_hit_chance_factor = 0.05
+			build_cost_ic = 260
+		}
+		multiply_stats = {
+			naval_speed = -0.01
+		}
+		build_cost_resources = {
+			steel = 1
+			tungsten = 1
+		}
+		dismantle_cost_ic = 100
+
+		can_convert_from = {
+			module_category = ship_torpedo
+			convert_cost_ic = 150
+		}
+		critical_parts = { damaged_torpedoes }
+	}
+
+	# Endgame: guided surface-to-air missile battery.
+	ocr_naval_sam = {
+		abbreviation = "sam"
+		category = ship_anti_air
+		sfx = sfx_ui_sd_module_turret
+
+		add_stats = {
+			anti_air_attack = 42
+			build_cost_ic = 200
+		}
+		build_cost_resources = {
+			steel = 1
+			aluminium = 1
+		}
+		dismantle_cost_ic = 80
+
+		can_convert_from = {
+			module_category = ship_anti_air
+			convert_cost_ic = 120
+		}
+	}
+
+	# Early wacky: run the boilers past every safety margin. A destroyer
+	# that outruns anything afloat and drinks fuel like a battleship.
+	ocr_overpressured_boilers = {
+		abbreviation = "opb"
+		category = light_ship_engine
+		sfx = sfx_ui_sd_module_engine
+
+		add_stats = {
+			fuel_consumption = 14
+		}
+		multiply_stats = {
+			naval_speed = 0.25
+			build_cost_ic = 0.10
+		}
+
+		can_convert_from = {
+			module_category = light_ship_engine
+			convert_cost_ic = 200
+		}
+	}
+
+	# More torpedo tubes than sense. A staggering broadside that mostly
+	# goes somewhere near the enemy.
+	ocr_torpedo_broadside = {
+		abbreviation = "tbr"
+		category = ship_torpedo
+		sfx = sfx_ui_sd_module_turret
+
+		add_stats = {
+			torpedo_attack = 30
+			naval_torpedo_hit_chance_factor = -0.05
+			build_cost_ic = 90
+		}
+		multiply_stats = {
+			naval_speed = -0.03
+		}
+		dismantle_cost_ic = 40
+
+		can_convert_from = {
+			module_category = ship_torpedo
+			convert_cost_ic = 60
+		}
+		critical_parts = { damaged_torpedoes }
+	}
+
+	# Army field guns bolted to the deck. The navy is appalled. It works.
+	ocr_deck_artillery = {
+		abbreviation = "dka"
+		category = ship_light_battery
+		sfx = sfx_ui_sd_module_turret
+
+		add_stats = {
+			lg_attack = 3
+			build_cost_ic = 60
+		}
+		add_average_stats = {
+			lg_armor_piercing = 1
+		}
+		multiply_stats = {
+			naval_speed = -0.02
+		}
+		dismantle_cost_ic = 30
+
+		can_convert_from = {
+			module_category = ship_light_battery
+			convert_cost_ic = 40
+		}
+	}
+
+	# Saturate the whole grid square with depth charges and let God sort
+	# out the submarines.
+	ocr_depth_charge_carpet = {
+		abbreviation = "dcc"
+		category = ship_depth_charge
+		sfx = sfx_ui_sd_module_turret
+
+		add_stats = {
+			sub_attack = 25
+			build_cost_ic = 150
+		}
+		multiply_stats = {
+			naval_speed = -0.02
+		}
+		dismantle_cost_ic = 60
+
+		can_convert_from = {
+			module_category = ship_depth_charge
+			convert_cost_ic = 90
+		}
+	}
+}

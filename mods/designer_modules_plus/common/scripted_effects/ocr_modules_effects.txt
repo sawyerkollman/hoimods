@@ -1,0 +1,145 @@
+###########################################################################
+# Designer Modules Plus - grant logic (idempotent; safe from any hook)
+# Early/wacky modules unlock with the era's basic platform tech; the
+# powerful late modules require advanced airframes / chassis plus the
+# supporting weapon or rocketry technologies.
+###########################################################################
+
+ocr_modules_sync = {
+	# --- Aircraft ---
+	if = {
+		limit = {
+			has_dlc = "By Blood Alone"
+			has_tech = basic_small_airframe
+			NOT = { has_tech = ocr_tech_unguided_aa_rockets }
+		}
+		set_technology = { ocr_tech_unguided_aa_rockets = 1 popup = no }
+		set_technology = { ocr_tech_rocket_boosters = 1 popup = no }
+		set_technology = { ocr_tech_plane_field_mods = 1 popup = no }
+		set_technology = { ocr_tech_cas_pods = 1 popup = no }
+	}
+	if = {
+		limit = {
+			has_dlc = "By Blood Alone"
+			has_tech = advanced_small_airframe
+			has_tech = aa_cannon_2
+			NOT = { has_tech = ocr_tech_gatling_cannon }
+		}
+		set_technology = { ocr_tech_gatling_cannon = 1 popup = no }
+	}
+	if = {
+		limit = {
+			has_dlc = "By Blood Alone"
+			has_tech = advanced_small_airframe
+			has_tech = improved_rocket_engines
+			NOT = { has_tech = ocr_tech_guided_aa_missiles }
+		}
+		set_technology = { ocr_tech_guided_aa_missiles = 1 popup = no }
+	}
+
+	# --- Tanks ---
+	if = {
+		limit = {
+			has_dlc = "No Step Back"
+			has_tech = basic_medium_tank
+			NOT = { has_tech = ocr_tech_tank_wacky }
+		}
+		set_technology = { ocr_tech_tank_wacky = 1 popup = no }
+	}
+	if = {
+		limit = {
+			has_dlc = "No Step Back"
+			has_tech = advanced_medium_tank
+			NOT = { has_tech = ocr_tech_reactive_armor }
+		}
+		set_technology = { ocr_tech_reactive_armor = 1 popup = no }
+	}
+	if = {
+		limit = {
+			has_dlc = "No Step Back"
+			has_tech = main_battle_tank
+			NOT = { has_tech = ocr_tech_autoloader }
+		}
+		set_technology = { ocr_tech_autoloader = 1 popup = no }
+	}
+
+	# --- Ships ---
+	if = {
+		limit = {
+			has_dlc = "Man the Guns"
+			NOT = { has_tech = ocr_tech_overpressured_boilers }
+		}
+		set_technology = { ocr_tech_overpressured_boilers = 1 popup = no }
+	}
+	if = {
+		limit = {
+			has_dlc = "Man the Guns"
+			has_tech = improved_rocket_engines
+			NOT = { has_tech = ocr_tech_naval_missiles }
+		}
+		set_technology = { ocr_tech_naval_missiles = 1 popup = no }
+	}
+
+	# --- Wave 2 grants ---
+	if = {
+		limit = {
+			has_dlc = "By Blood Alone"
+			has_tech = improved_small_airframe
+			has_tech = aa_hmg
+			NOT = { has_tech = ocr_tech_buzzsaw }
+		}
+		set_technology = { ocr_tech_buzzsaw = 1 popup = no }
+	}
+	if = {
+		limit = {
+			has_dlc = "By Blood Alone"
+			has_tech = rocket_engines
+			NOT = { has_tech = ocr_tech_pulsejet }
+		}
+		set_technology = { ocr_tech_pulsejet = 1 popup = no }
+	}
+	if = {
+		limit = {
+			has_dlc = "By Blood Alone"
+			has_tech = improved_large_airframe
+			NOT = { has_tech = ocr_tech_parasite }
+		}
+		set_technology = { ocr_tech_parasite = 1 popup = no }
+	}
+	if = {
+		limit = {
+			has_dlc = "No Step Back"
+			has_tech = basic_medium_tank
+			has_tech = rocket_engines
+			NOT = { has_tech = ocr_tech_tank_sprint }
+		}
+		set_technology = { ocr_tech_tank_sprint = 1 popup = no }
+	}
+
+	# --- Wave 3 grants (CAS) ---
+	if = {
+		limit = {
+			has_dlc = "By Blood Alone"
+			has_tech = aa_cannon_1
+			NOT = { has_tech = ocr_tech_airborne_artillery }
+		}
+		set_technology = { ocr_tech_airborne_artillery = 1 popup = no }
+	}
+	if = {
+		limit = {
+			has_dlc = "By Blood Alone"
+			has_tech = heavy_bombs
+			NOT = { has_tech = ocr_tech_cluster_napalm }
+		}
+		set_technology = { ocr_tech_cluster_napalm = 1 popup = no }
+	}
+	if = {
+		limit = {
+			has_dlc = "By Blood Alone"
+			has_tech = advanced_small_airframe
+			has_tech = improved_rocket_engines
+			NOT = { has_tech = ocr_tech_glide_bombs }
+		}
+		set_technology = { ocr_tech_glide_bombs = 1 popup = no }
+	}
+}

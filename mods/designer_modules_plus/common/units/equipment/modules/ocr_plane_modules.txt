@@ -1,0 +1,329 @@
+###########################################################################
+# Designer Modules Plus - Aircraft (requires By Blood Alone)
+# New plane-designer modules. Categories/stat names follow vanilla
+# 00_plane_modules.txt so they slot into existing airframe module slots.
+###########################################################################
+
+equipment_modules = {
+
+	# Early-war saturation weapon: a battery of unguided rockets salvo-fired
+	# into bomber formations. Devastating on paper, wildly inaccurate, and
+	# the drag racks ruin the airframe's handling.
+	ocr_unguided_aa_rockets = {
+		abbreviation = "uar"
+		category = fighter_weapon
+		sfx = sfx_ui_sd_module_turret
+		add_equipment_type = { fighter heavy_fighter }
+
+		add_stats = {
+			air_attack = 28
+			air_agility = -3
+			air_defence = -2
+			weight = 4
+			build_cost_ic = 4
+		}
+		xp_cost = 3
+		allow_mission_type = {
+			air_superiority
+			interception
+		}
+	}
+
+	# Late-war rotary cannon: enormous weight of fire from a multi-barrel
+	# gun, at the cost of weight and ammunition capacity.
+	ocr_gatling_cannon = {
+		abbreviation = "gat"
+		category = fighter_weapon
+		sfx = sfx_ui_sd_module_turret
+		add_equipment_type = { fighter heavy_fighter }
+
+		add_stats = {
+			air_attack = 42
+			air_agility = -2
+			weight = 8
+			build_cost_ic = 16
+		}
+		xp_cost = 4
+		allow_mission_type = {
+			air_superiority
+			interception
+		}
+		mission_type_stats = {
+			limit = {
+				attack_logistics
+			}
+			add_stats = {
+				air_ground_attack = 4
+			}
+		}
+	}
+
+	# Endgame stand-off weapon: guided air-to-air missiles. Kills from
+	# beyond gun range - the deadliest air-to-air armament in the game.
+	ocr_guided_aa_missiles = {
+		abbreviation = "aam"
+		category = fighter_weapon
+		sfx = sfx_ui_sd_module_turret
+		add_equipment_type = { fighter heavy_fighter }
+		parent = ocr_unguided_aa_rockets
+
+		add_stats = {
+			air_attack = 60
+			air_agility = 1
+			weight = 6
+			build_cost_ic = 22
+		}
+		xp_cost = 5
+		allow_mission_type = {
+			air_superiority
+			interception
+		}
+	}
+
+	# Early wacky special: strap-on rocket boosters. A burst of speed that
+	# terrifies pilots and ground crews in equal measure.
+	ocr_rocket_booster_pods = {
+		abbreviation = "rbp"
+		category = plane_special_module_small
+		sfx = sfx_ui_sd_module_turret
+
+		add_stats = {
+			maximum_speed = 50
+			fuel_consumption = 6
+			air_defence = -3
+			weight = 2
+			build_cost_ic = 3
+		}
+		xp_cost = 2
+	}
+
+	# Every gun we own, in the nose. An airborne buzzsaw that turns like a
+	# freight train.
+	ocr_buzzsaw_nose = {
+		abbreviation = "bzz"
+		category = fighter_weapon
+		sfx = sfx_ui_sd_module_turret
+		add_equipment_type = { fighter heavy_fighter }
+
+		add_stats = {
+			air_attack = 50
+			air_agility = -6
+			weight = 10
+			build_cost_ic = 9
+		}
+		xp_cost = 3
+		allow_mission_type = {
+			air_superiority
+			interception
+		}
+	}
+
+	# Fuel in every void space and two more tanks under the wings. The
+	# range is incredible. So is the fireball.
+	ocr_drop_tank_overload = {
+		abbreviation = "dto"
+		category = plane_special_module_small
+		sfx = sfx_ui_sd_module_turret
+
+		add_stats = {
+			air_defence = -4
+			weight = 2
+			build_cost_ic = 2
+		}
+		multiply_stats = {
+			air_range = 0.35
+		}
+		xp_cost = 2
+	}
+
+	# An armored bathtub around the pilot. Confidence up, performance down.
+	ocr_armored_bathtub = {
+		abbreviation = "tub"
+		category = plane_special_module_small
+		sfx = sfx_ui_sd_module_turret
+
+		add_stats = {
+			air_defence = 6
+			maximum_speed = -20
+			weight = 5
+			build_cost_ic = 4
+		}
+		xp_cost = 2
+	}
+
+	# A pulsejet bolted to the fuselage. The droning terrifies everyone,
+	# including the pilot.
+	ocr_pulsejet_booster = {
+		abbreviation = "pjb"
+		category = plane_special_module_small
+		sfx = sfx_ui_sd_module_turret
+		parent = ocr_rocket_booster_pods
+
+		add_stats = {
+			maximum_speed = 80
+			fuel_consumption = 8
+			air_defence = -5
+			weight = 3
+			build_cost_ic = 5
+		}
+		xp_cost = 3
+	}
+
+	# A cradle under the bomber carrying its own escort fighter. What could
+	# possibly go wrong during recovery?
+	ocr_parasite_cradle = {
+		abbreviation = "par"
+		category = plane_special_module_large
+		sfx = sfx_ui_sd_module_turret
+
+		add_stats = {
+			air_attack = 18
+			air_agility = -2
+			weight = 12
+			build_cost_ic = 20
+		}
+		xp_cost = 4
+	}
+
+	# Underwing autocannon strafing pods. In 1936, nothing on the ground
+	# has an answer to this.
+	ocr_autocannon_strafe_pods = {
+		abbreviation = "asp"
+		category = cas_weapon
+		sfx = sfx_ui_sd_module_turret
+		add_equipment_type = cas
+
+		add_stats = {
+			air_defence = -2
+			build_cost_ic = 4
+		}
+		xp_cost = 2
+		allow_mission_type = {
+			cas
+			attack_logistics
+		}
+		mission_type_stats = {
+			limit = {
+				cas
+				attack_logistics
+			}
+			add_stats = {
+				air_ground_attack = 12
+				weight = 3
+			}
+		}
+	}
+
+	# A recoilless artillery battery in the bomb bay. Flying field guns.
+	ocr_airborne_artillery = {
+		abbreviation = "aar"
+		category = cas_weapon
+		sfx = sfx_ui_sd_module_turret
+		add_equipment_type = cas
+
+		add_stats = {
+			air_defence = -4
+			build_cost_ic = 7
+		}
+		xp_cost = 3
+		allow_mission_type = {
+			cas
+			attack_logistics
+		}
+		mission_type_stats = {
+			limit = {
+				cas
+				attack_logistics
+			}
+			add_stats = {
+				air_ground_attack = 16
+				weight = 5
+			}
+		}
+	}
+
+	# Cluster munition dispensers. One pass, one grid square, nothing left.
+	ocr_cluster_dispensers = {
+		abbreviation = "cld"
+		category = cas_weapon
+		sfx = sfx_ui_sd_module_turret
+		add_equipment_type = cas
+
+		add_stats = {
+			build_cost_ic = 8
+		}
+		xp_cost = 3
+		allow_mission_type = {
+			cas
+			attack_logistics
+		}
+		mission_type_stats = {
+			limit = {
+				cas
+				attack_logistics
+			}
+			add_stats = {
+				air_ground_attack = 20
+				weight = 4
+			}
+		}
+	}
+
+	# Napalm canisters. The infantry stops caring about their entrenchment
+	# bonus.
+	ocr_napalm_canisters = {
+		abbreviation = "npm"
+		category = cas_weapon
+		sfx = sfx_ui_sd_module_turret
+		add_equipment_type = cas
+
+		add_stats = {
+			air_agility = -2
+			build_cost_ic = 10
+		}
+		xp_cost = 3
+		allow_mission_type = {
+			cas
+			attack_logistics
+		}
+		mission_type_stats = {
+			limit = {
+				cas
+				attack_logistics
+			}
+			add_stats = {
+				air_ground_attack = 24
+				weight = 5
+			}
+		}
+	}
+
+	# Guided glide bombs dropped from stand-off range. The endgame of
+	# close air support: more than double the best conventional weapon.
+	ocr_guided_glide_bombs = {
+		abbreviation = "ggb"
+		category = cas_weapon
+		sfx = sfx_ui_sd_module_turret
+		add_equipment_type = cas
+		parent = ocr_cluster_dispensers
+
+		add_stats = {
+			build_cost_ic = 20
+		}
+		xp_cost = 5
+		allow_mission_type = {
+			cas
+			attack_logistics
+		}
+		mission_type_stats = {
+			limit = {
+				cas
+				attack_logistics
+			}
+			add_stats = {
+				air_ground_attack = 35
+				weight = 4
+			}
+		}
+	}
+}

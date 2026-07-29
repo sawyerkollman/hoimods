@@ -1,0 +1,46 @@
+###########################################################################
+# Domestic Alloys Program
+# Tiered domestic chromium + tungsten production keyed to the vanilla
+# excavation technologies (present in both vanilla and Road to 56), in the
+# spirit of R56's steel mills / aluminium refineries. Resources are added
+# permanently to the capital state. Idempotent via country flags.
+###########################################################################
+
+ocr_alloys_sync = {
+	if = {
+		limit = {
+			has_tech = excavation2
+			NOT = { has_country_flag = ocr_alloys_tier_1 }
+		}
+		set_country_flag = ocr_alloys_tier_1
+		capital_scope = {
+			add_resource = { type = chromium amount = 8 }
+			add_resource = { type = tungsten amount = 8 }
+		}
+		country_event = { id = ocr_alloys.1 }
+	}
+	if = {
+		limit = {
+			has_tech = excavation3
+			NOT = { has_country_flag = ocr_alloys_tier_2 }
+		}
+		set_country_flag = ocr_alloys_tier_2
+		capital_scope = {
+			add_resource = { type = chromium amount = 8 }
+			add_resource = { type = tungsten amount = 8 }
+		}
+		country_event = { id = ocr_alloys.2 }
+	}
+	if = {
+		limit = {
+			has_tech = excavation4
+			NOT = { has_country_flag = ocr_alloys_tier_3 }
+		}
+		set_country_flag = ocr_alloys_tier_3
+		capital_scope = {
+			add_resource = { type = chromium amount = 12 }
+			add_resource = { type = tungsten amount = 12 }
+		}
+		country_event = { id = ocr_alloys.3 }
+	}
+}

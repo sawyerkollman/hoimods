@@ -1,0 +1,47 @@
+###########################################################################
+# Domestic Alloys Program - notification events
+###########################################################################
+
+add_namespace = ocr_alloys
+
+country_event = {
+	id = ocr_alloys.1
+	title = ocr_alloys.1.t
+	desc = ocr_alloys.1.d
+	picture = GFX_report_event_generic_factory
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = ocr_alloys.1.a
+	}
+}
+
+country_event = {
+	id = ocr_alloys.2
+	title = ocr_alloys.2.t
+	desc = ocr_alloys.2.d
+	picture = GFX_report_event_generic_factory
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = ocr_alloys.2.a
+	}
+}
+
+country_event = {
+	id = ocr_alloys.3
+	title = ocr_alloys.3.t
+	desc = ocr_alloys.3.d
+	picture = GFX_report_event_generic_factory
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = ocr_alloys.3.a
+	}
+}
