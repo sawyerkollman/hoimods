@@ -1,0 +1,80 @@
+###########################################################################
+# Designer Modules Plus - grant logic (idempotent; safe from any hook)
+# Early/wacky modules unlock with the era's basic platform tech; the
+# powerful late modules require advanced airframes / chassis plus the
+# supporting weapon or rocketry technologies.
+###########################################################################
+
+ocr_modules_sync = {
+	# --- Aircraft ---
+	if = {
+		limit = {
+			has_dlc = "By Blood Alone"
+			has_tech = basic_small_airframe
+			NOT = { has_tech = ocr_tech_unguided_aa_rockets }
+		}
+		set_technology = { ocr_tech_unguided_aa_rockets = 1 popup = no }
+		set_technology = { ocr_tech_rocket_boosters = 1 popup = no }
+	}
+	if = {
+		limit = {
+			has_dlc = "By Blood Alone"
+			has_tech = advanced_small_airframe
+			has_tech = aa_cannon_2
+			NOT = { has_tech = ocr_tech_gatling_cannon }
+		}
+		set_technology = { ocr_tech_gatling_cannon = 1 popup = no }
+	}
+	if = {
+		limit = {
+			has_dlc = "By Blood Alone"
+			has_tech = advanced_small_airframe
+			has_tech = improved_rocket_engines
+			NOT = { has_tech = ocr_tech_guided_aa_missiles }
+		}
+		set_technology = { ocr_tech_guided_aa_missiles = 1 popup = no }
+	}
+
+	# --- Tanks ---
+	if = {
+		limit = {
+			has_dlc = "No Step Back"
+			has_tech = basic_medium_tank
+			NOT = { has_tech = ocr_tech_tank_wacky }
+		}
+		set_technology = { ocr_tech_tank_wacky = 1 popup = no }
+	}
+	if = {
+		limit = {
+			has_dlc = "No Step Back"
+			has_tech = advanced_medium_tank
+			NOT = { has_tech = ocr_tech_reactive_armor }
+		}
+		set_technology = { ocr_tech_reactive_armor = 1 popup = no }
+	}
+	if = {
+		limit = {
+			has_dlc = "No Step Back"
+			has_tech = main_battle_tank
+			NOT = { has_tech = ocr_tech_autoloader }
+		}
+		set_technology = { ocr_tech_autoloader = 1 popup = no }
+	}
+
+	# --- Ships ---
+	if = {
+		limit = {
+			has_dlc = "Man the Guns"
+			NOT = { has_tech = ocr_tech_overpressured_boilers }
+		}
+		set_technology = { ocr_tech_overpressured_boilers = 1 popup = no }
+	}
+	if = {
+		limit = {
+			has_dlc = "Man the Guns"
+			has_tech = improved_rocket_engines
+			NOT = { has_tech = ocr_tech_naval_missiles }
+		}
+		set_technology = { ocr_tech_naval_missiles = 1 popup = no }
+	}
+}

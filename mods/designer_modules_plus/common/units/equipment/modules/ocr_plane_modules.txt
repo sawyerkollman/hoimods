@@ -1,0 +1,99 @@
+###########################################################################
+# Designer Modules Plus - Aircraft (requires By Blood Alone)
+# New plane-designer modules. Categories/stat names follow vanilla
+# 00_plane_modules.txt so they slot into existing airframe module slots.
+###########################################################################
+
+equipment_modules = {
+
+	# Early-war saturation weapon: a battery of unguided rockets salvo-fired
+	# into bomber formations. Devastating on paper, wildly inaccurate, and
+	# the drag racks ruin the airframe's handling.
+	ocr_unguided_aa_rockets = {
+		abbreviation = "uar"
+		category = fighter_weapon
+		sfx = sfx_ui_sd_module_turret
+		add_equipment_type = { fighter heavy_fighter }
+
+		add_stats = {
+			air_attack = 28
+			air_agility = -3
+			air_defence = -2
+			weight = 4
+			build_cost_ic = 4
+		}
+		xp_cost = 3
+		allow_mission_type = {
+			air_superiority
+			interception
+		}
+	}
+
+	# Late-war rotary cannon: enormous weight of fire from a multi-barrel
+	# gun, at the cost of weight and ammunition capacity.
+	ocr_gatling_cannon = {
+		abbreviation = "gat"
+		category = fighter_weapon
+		sfx = sfx_ui_sd_module_turret
+		add_equipment_type = { fighter heavy_fighter }
+
+		add_stats = {
+			air_attack = 42
+			air_agility = -2
+			weight = 8
+			build_cost_ic = 16
+		}
+		xp_cost = 4
+		allow_mission_type = {
+			air_superiority
+			interception
+		}
+		mission_type_stats = {
+			limit = {
+				attack_logistics
+			}
+			add_stats = {
+				air_ground_attack = 4
+			}
+		}
+	}
+
+	# Endgame stand-off weapon: guided air-to-air missiles. Kills from
+	# beyond gun range - the deadliest air-to-air armament in the game.
+	ocr_guided_aa_missiles = {
+		abbreviation = "aam"
+		category = fighter_weapon
+		sfx = sfx_ui_sd_module_turret
+		add_equipment_type = { fighter heavy_fighter }
+		parent = ocr_unguided_aa_rockets
+
+		add_stats = {
+			air_attack = 60
+			air_agility = 1
+			weight = 6
+			build_cost_ic = 22
+		}
+		xp_cost = 5
+		allow_mission_type = {
+			air_superiority
+			interception
+		}
+	}
+
+	# Early wacky special: strap-on rocket boosters. A burst of speed that
+	# terrifies pilots and ground crews in equal measure.
+	ocr_rocket_booster_pods = {
+		abbreviation = "rbp"
+		category = plane_special_module_small
+		sfx = sfx_ui_sd_module_turret
+
+		add_stats = {
+			maximum_speed = 50
+			fuel_consumption = 6
+			air_defence = -3
+			weight = 2
+			build_cost_ic = 3
+		}
+		xp_cost = 2
+	}
+}

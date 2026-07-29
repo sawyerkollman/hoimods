@@ -1,0 +1,79 @@
+###########################################################################
+# Designer Modules Plus - Tanks (requires No Step Back)
+# New tank-designer special modules, modelled on vanilla armor_skirts.
+# category = tank_special_module fits the special slots on all chassis.
+###########################################################################
+
+equipment_modules = {
+
+	# Late-war: explosive reactive armor blocks. The successor to armor
+	# skirts - dramatic protection, slightly temperamental.
+	ocr_reactive_armor = {
+		abbreviation = "era"
+		category = tank_special_module
+		sfx = sfx_ui_sd_module_turret
+		parent = armor_skirts
+
+		add_stats = {
+			armor_value = 12
+			breakthrough = 4
+			reliability = -0.05
+			build_cost_ic = 3
+		}
+		xp_cost = 3
+	}
+
+	# Endgame: mechanical autoloader. A brutal rate of fire from a cramped,
+	# maintenance-hungry mechanism.
+	ocr_autoloader = {
+		abbreviation = "atl"
+		category = tank_special_module
+		sfx = sfx_ui_sd_module_turret
+
+		add_stats = {
+			breakthrough = 6
+			reliability = -0.10
+			build_cost_ic = 4
+		}
+		multiply_stats = {
+			soft_attack = 0.10
+			hard_attack = 0.10
+		}
+		xp_cost = 4
+	}
+
+	# Early wacky: a rack of artillery rockets welded to the hull. Terrifying
+	# barrage, terrible for the suspension, worse for the crew's nerves.
+	ocr_rocket_rack = {
+		abbreviation = "rkr"
+		category = tank_special_module
+		sfx = sfx_ui_sd_module_turret
+
+		add_stats = {
+			soft_attack = 9
+			breakthrough = 2
+			reliability = -0.20
+			build_cost_ic = 2
+		}
+		xp_cost = 2
+	}
+
+	# Early wacky: boiler plate and sandbags bolted on at the depot. Cheap
+	# protection that overloads the drivetrain.
+	ocr_boiler_plate_armor = {
+		abbreviation = "bpa"
+		category = tank_special_module
+		sfx = sfx_ui_sd_module_turret
+
+		add_stats = {
+			armor_value = 5
+			defense = 2
+			reliability = -0.15
+			build_cost_ic = 1
+		}
+		multiply_stats = {
+			maximum_speed = -0.05
+		}
+		xp_cost = 1
+	}
+}

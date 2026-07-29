@@ -1,0 +1,23 @@
+###########################################################################
+# Designer Modules Plus - hooks (idempotent sync from every angle)
+###########################################################################
+
+on_actions = {
+	on_startup = {
+		effect = {
+			every_country = {
+				ocr_modules_sync = yes
+			}
+		}
+	}
+	on_research_complete = {
+		effect = {
+			ocr_modules_sync = yes
+		}
+	}
+	on_monthly = {
+		effect = {
+			ocr_modules_sync = yes
+		}
+	}
+}

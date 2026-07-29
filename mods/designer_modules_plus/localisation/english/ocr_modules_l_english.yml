@@ -1,0 +1,49 @@
+﻿l_english:
+
+ # ===== Aircraft modules =====
+ ocr_unguided_aa_rockets:0 "Unguided A2A Rocket Battery"
+ ocr_unguided_aa_rockets_desc:0 "A salvo of unguided rockets fired into bomber formations. Devastating when it connects, wildly inaccurate, and the drag racks ruin the aircraft's handling."
+ ocr_gatling_cannon:0 "Rotary Gatling Cannon"
+ ocr_gatling_cannon_desc:0 "A multi-barrel rotary cannon pouring out an enormous weight of fire. Heavy, hungry, and utterly lethal in a firing pass."
+ ocr_guided_aa_missiles:0 "Guided A2A Missiles"
+ ocr_guided_aa_missiles_desc:0 "Guided air-to-air missiles that kill from beyond gun range. The deadliest air-to-air armament of the era."
+ ocr_rocket_booster_pods:0 "Rocket Booster Pods"
+ ocr_rocket_booster_pods_desc:0 "Strap-on rocket boosters for a terrifying burst of speed. The pilots are not consulted."
+
+ # ===== Tank modules =====
+ ocr_reactive_armor:0 "Reactive Armor Blocks"
+ ocr_reactive_armor_desc:0 "Explosive reactive armor that defeats incoming shaped charges. Dramatic protection, slightly temperamental."
+ ocr_autoloader:0 "Mechanical Autoloader"
+ ocr_autoloader_desc:0 "A mechanical loading carousel delivering a brutal rate of fire from a cramped, maintenance-hungry mechanism."
+ ocr_rocket_rack:0 "Hull Rocket Rack"
+ ocr_rocket_rack_desc:0 "A rack of artillery rockets welded to the hull. A terrifying barrage; terrible for the suspension and the crew's nerves."
+ ocr_boiler_plate_armor:0 "Boiler-Plate Applique"
+ ocr_boiler_plate_armor_desc:0 "Boiler plate and sandbags bolted on at the depot. Cheap protection that overloads the drivetrain."
+
+ # ===== Ship modules =====
+ ocr_antiship_missiles:0 "Guided Anti-Ship Missiles"
+ ocr_antiship_missiles_desc:0 "Guided anti-ship missiles mounted in place of torpedo tubes. Longer reach, far greater accuracy, and a warhead no destroyer shrugs off."
+ ocr_naval_sam:0 "Naval SAM Battery"
+ ocr_naval_sam_desc:0 "A battery of guided surface-to-air missiles - the end of the age of the massed air attack."
+ ocr_overpressured_boilers:0 "Overpressured Boilers"
+ ocr_overpressured_boilers_desc:0 "Run the boilers past every safety margin. Outruns anything afloat and drinks fuel like a battleship."
+
+ # ===== Hidden techs =====
+ ocr_tech_unguided_aa_rockets:0 "Air-to-Air Rocketry"
+ ocr_tech_unguided_aa_rockets_desc:0 "Unguided air-to-air rocket batteries can be fitted to our fighters."
+ ocr_tech_rocket_boosters:0 "Booster Rocketry"
+ ocr_tech_rocket_boosters_desc:0 "Strap-on rocket boosters can be fitted to our aircraft."
+ ocr_tech_gatling_cannon:0 "Rotary Cannon Mechanisms"
+ ocr_tech_gatling_cannon_desc:0 "Rotary Gatling cannon can be fitted to our advanced airframes."
+ ocr_tech_guided_aa_missiles:0 "Guided Missile Seekers"
+ ocr_tech_guided_aa_missiles_desc:0 "Guided air-to-air missiles can be fitted to our advanced airframes."
+ ocr_tech_tank_wacky:0 "Field Improvisation Kits"
+ ocr_tech_tank_wacky_desc:0 "Rocket racks and boiler-plate applique can be fitted to our tanks."
+ ocr_tech_reactive_armor:0 "Explosive Reactive Armor"
+ ocr_tech_reactive_armor_desc:0 "Reactive armor blocks can be fitted to our advanced tanks."
+ ocr_tech_autoloader:0 "Autoloader Mechanisms"
+ ocr_tech_autoloader_desc:0 "Mechanical autoloaders can be fitted to our modern tanks."
+ ocr_tech_overpressured_boilers:0 "Overpressure Steam Plants"
+ ocr_tech_overpressured_boilers_desc:0 "Overpressured boilers can be fitted to our destroyers."
+ ocr_tech_naval_missiles:0 "Naval Guided Missiles"
+ ocr_tech_naval_missiles_desc:0 "Guided anti-ship and surface-to-air missiles can be fitted to our warships."
