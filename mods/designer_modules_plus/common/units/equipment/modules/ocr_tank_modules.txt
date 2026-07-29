@@ -76,4 +76,74 @@ equipment_modules = {
 		}
 		xp_cost = 1
 	}
+
+	# Remove the factory speed governor. The engine screams, the mechanics
+	# weep, the tank flies.
+	ocr_governor_removal = {
+		abbreviation = "gov"
+		category = tank_special_module
+		sfx = sfx_ui_sd_module_turret
+
+		add_stats = {
+			reliability = -0.25
+			build_cost_ic = 0.2
+		}
+		multiply_stats = {
+			maximum_speed = 0.20
+		}
+		xp_cost = 1
+	}
+
+	# Poured concrete over the glacis. It is technically armor.
+	ocr_concrete_cladding = {
+		abbreviation = "con"
+		category = tank_special_module
+		sfx = sfx_ui_sd_module_turret
+
+		add_stats = {
+			armor_value = 8
+			reliability = -0.10
+			build_cost_ic = 0.5
+		}
+		multiply_stats = {
+			maximum_speed = -0.15
+		}
+		xp_cost = 1
+	}
+
+	# A reinforced ram prow. The armament of last resort is the vehicle.
+	ocr_ram_prow = {
+		abbreviation = "ram"
+		category = tank_special_module
+		sfx = sfx_ui_sd_module_turret
+
+		add_stats = {
+			breakthrough = 8
+			armor_value = 2
+			reliability = -0.10
+			build_cost_ic = 1
+		}
+		multiply_stats = {
+			maximum_speed = -0.05
+		}
+		xp_cost = 2
+	}
+
+	# Rocket-assisted sprint boosters, as tested by engineers who did not
+	# have to ride inside.
+	ocr_sprint_rockets = {
+		abbreviation = "spr"
+		category = tank_special_module
+		sfx = sfx_ui_sd_module_turret
+
+		add_stats = {
+			breakthrough = 2
+			reliability = -0.30
+			build_cost_ic = 2
+		}
+		multiply_stats = {
+			maximum_speed = 0.30
+		}
+		xp_cost = 2
+	}
 }

@@ -96,4 +96,92 @@ equipment_modules = {
 		}
 		xp_cost = 2
 	}
+
+	# Every gun we own, in the nose. An airborne buzzsaw that turns like a
+	# freight train.
+	ocr_buzzsaw_nose = {
+		abbreviation = "bzz"
+		category = fighter_weapon
+		sfx = sfx_ui_sd_module_turret
+		add_equipment_type = { fighter heavy_fighter }
+
+		add_stats = {
+			air_attack = 50
+			air_agility = -6
+			weight = 10
+			build_cost_ic = 9
+		}
+		xp_cost = 3
+		allow_mission_type = {
+			air_superiority
+			interception
+		}
+	}
+
+	# Fuel in every void space and two more tanks under the wings. The
+	# range is incredible. So is the fireball.
+	ocr_drop_tank_overload = {
+		abbreviation = "dto"
+		category = plane_special_module_small
+		sfx = sfx_ui_sd_module_turret
+
+		add_stats = {
+			air_defence = -4
+			weight = 2
+			build_cost_ic = 2
+		}
+		multiply_stats = {
+			air_range = 0.35
+		}
+		xp_cost = 2
+	}
+
+	# An armored bathtub around the pilot. Confidence up, performance down.
+	ocr_armored_bathtub = {
+		abbreviation = "tub"
+		category = plane_special_module_small
+		sfx = sfx_ui_sd_module_turret
+
+		add_stats = {
+			air_defence = 6
+			maximum_speed = -20
+			weight = 5
+			build_cost_ic = 4
+		}
+		xp_cost = 2
+	}
+
+	# A pulsejet bolted to the fuselage. The droning terrifies everyone,
+	# including the pilot.
+	ocr_pulsejet_booster = {
+		abbreviation = "pjb"
+		category = plane_special_module_small
+		sfx = sfx_ui_sd_module_turret
+		parent = ocr_rocket_booster_pods
+
+		add_stats = {
+			maximum_speed = 80
+			fuel_consumption = 8
+			air_defence = -5
+			weight = 3
+			build_cost_ic = 5
+		}
+		xp_cost = 3
+	}
+
+	# A cradle under the bomber carrying its own escort fighter. What could
+	# possibly go wrong during recovery?
+	ocr_parasite_cradle = {
+		abbreviation = "par"
+		category = plane_special_module_large
+		sfx = sfx_ui_sd_module_turret
+
+		add_stats = {
+			air_attack = 18
+			air_agility = -2
+			weight = 12
+			build_cost_ic = 20
+		}
+		xp_cost = 4
+	}
 }

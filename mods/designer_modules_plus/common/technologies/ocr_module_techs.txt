@@ -35,7 +35,7 @@ technologies = {
 
 	# --- Tanks (No Step Back) ---
 	ocr_tech_tank_wacky = {
-		enable_equipment_modules = { ocr_rocket_rack ocr_boiler_plate_armor }
+		enable_equipment_modules = { ocr_rocket_rack ocr_boiler_plate_armor ocr_governor_removal ocr_concrete_cladding ocr_ram_prow }
 		research_cost = 0.1
 		allow = { always = no }
 		categories = { armor }
@@ -55,7 +55,7 @@ technologies = {
 
 	# --- Ships (Man the Guns) ---
 	ocr_tech_overpressured_boilers = {
-		enable_equipment_modules = { ocr_overpressured_boilers }
+		enable_equipment_modules = { ocr_overpressured_boilers ocr_torpedo_broadside ocr_deck_artillery ocr_depth_charge_carpet }
 		research_cost = 0.1
 		allow = { always = no }
 		categories = { naval_equipment }
@@ -65,5 +65,37 @@ technologies = {
 		research_cost = 0.1
 		allow = { always = no }
 		categories = { naval_equipment }
+	}
+
+	# --- Wave 2: more wacky/broken hardware ---
+	ocr_tech_plane_field_mods = {
+		enable_equipment_modules = { ocr_drop_tank_overload ocr_armored_bathtub }
+		research_cost = 0.1
+		allow = { always = no }
+		categories = { air_equipment }
+	}
+	ocr_tech_buzzsaw = {
+		enable_equipment_modules = { ocr_buzzsaw_nose }
+		research_cost = 0.1
+		allow = { always = no }
+		categories = { air_equipment }
+	}
+	ocr_tech_pulsejet = {
+		enable_equipment_modules = { ocr_pulsejet_booster }
+		research_cost = 0.1
+		allow = { always = no }
+		categories = { air_equipment }
+	}
+	ocr_tech_parasite = {
+		enable_equipment_modules = { ocr_parasite_cradle }
+		research_cost = 0.1
+		allow = { always = no }
+		categories = { air_equipment }
+	}
+	ocr_tech_tank_sprint = {
+		enable_equipment_modules = { ocr_sprint_rockets }
+		research_cost = 0.1
+		allow = { always = no }
+		categories = { armor }
 	}
 }
