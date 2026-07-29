@@ -1,0 +1,23 @@
+###########################################################################
+# Domestic Alloys Program - hooks (idempotent sync)
+###########################################################################
+
+on_actions = {
+	on_startup = {
+		effect = {
+			every_country = {
+				ocr_alloys_sync = yes
+			}
+		}
+	}
+	on_research_complete = {
+		effect = {
+			ocr_alloys_sync = yes
+		}
+	}
+	on_monthly = {
+		effect = {
+			ocr_alloys_sync = yes
+		}
+	}
+}
