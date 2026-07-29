@@ -85,3 +85,23 @@
  ocr_tech_tank_sprint:0 "Rocket Sprint Trials"
  ocr_tech_tank_sprint_desc:0 "Sprint rocket boosters can be fitted to our tanks."
 
+ # ===== Wave 3: disgusting CAS =====
+ ocr_autocannon_strafe_pods:0 "Autocannon Strafe Pods"
+ ocr_autocannon_strafe_pods_desc:0 "Underwing autocannon pods for ground attack. In 1936, nothing on the ground has an answer to this."
+ ocr_airborne_artillery:0 "Airborne Recoilless Battery"
+ ocr_airborne_artillery_desc:0 "A recoilless artillery battery firing out of the bomb bay. Flying field guns, aimed by enthusiasm."
+ ocr_cluster_dispensers:0 "Cluster Munition Dispensers"
+ ocr_cluster_dispensers_desc:0 "One pass, one grid square, nothing left standing."
+ ocr_napalm_canisters:0 "Napalm Canisters"
+ ocr_napalm_canisters_desc:0 "The infantry below stops caring about its entrenchment bonus."
+ ocr_guided_glide_bombs:0 "Guided Glide Bombs"
+ ocr_guided_glide_bombs_desc:0 "Precision-guided glide bombs dropped from stand-off range. The endgame of close air support."
+ ocr_tech_cas_pods:0 "Ground-Attack Gun Pods"
+ ocr_tech_cas_pods_desc:0 "Autocannon strafe pods can be fitted to our aircraft."
+ ocr_tech_airborne_artillery:0 "Airborne Artillery Trials"
+ ocr_tech_airborne_artillery_desc:0 "Recoilless batteries can be fitted to our ground-attack aircraft."
+ ocr_tech_cluster_napalm:0 "Area Munitions"
+ ocr_tech_cluster_napalm_desc:0 "Cluster dispensers and napalm canisters can be fitted to our ground-attack aircraft."
+ ocr_tech_glide_bombs:0 "Guided Munitions"
+ ocr_tech_glide_bombs_desc:0 "Guided glide bombs can be fitted to our advanced airframes."
+

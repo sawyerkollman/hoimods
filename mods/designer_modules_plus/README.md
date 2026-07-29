@@ -21,6 +21,11 @@ degrades gracefully if you're missing one.
 | **Armored Bathtub Cockpit** | small special | Basic Small Airframe | +6 defence, slower and heavier |
 | **Pulsejet Booster** | small special | Rocket Engines | +80 km/h of droning terror |
 | **Parasite Fighter Cradle** | large special | Improved Large Airframe | Bombers carry their own escort (+18 air attack) |
+| **Autocannon Strafe Pods** | CAS weapon | Basic Small Airframe (1936) | 12 ground attack when vanilla's early best is ~4 |
+| **Airborne Recoilless Battery** | CAS weapon | Cannon I | 16 ground attack; flying field guns |
+| **Cluster Munition Dispensers** | CAS weapon | Heavy Bombs | 20 ground attack |
+| **Napalm Canisters** | CAS weapon | Heavy Bombs | 24 ground attack |
+| **Guided Glide Bombs** | CAS weapon | Advanced Small Airframe + Improved Rocket Engines | 35 ground attack - 2.3x vanilla's best |
 
 ### Tanks (No Step Back)
 | Module | Slot | Unlocks with | Character |

@@ -16,6 +16,7 @@ ocr_modules_sync = {
 		set_technology = { ocr_tech_unguided_aa_rockets = 1 popup = no }
 		set_technology = { ocr_tech_rocket_boosters = 1 popup = no }
 		set_technology = { ocr_tech_plane_field_mods = 1 popup = no }
+		set_technology = { ocr_tech_cas_pods = 1 popup = no }
 	}
 	if = {
 		limit = {
@@ -113,5 +114,32 @@ ocr_modules_sync = {
 			NOT = { has_tech = ocr_tech_tank_sprint }
 		}
 		set_technology = { ocr_tech_tank_sprint = 1 popup = no }
+	}
+
+	# --- Wave 3 grants (CAS) ---
+	if = {
+		limit = {
+			has_dlc = "By Blood Alone"
+			has_tech = aa_cannon_1
+			NOT = { has_tech = ocr_tech_airborne_artillery }
+		}
+		set_technology = { ocr_tech_airborne_artillery = 1 popup = no }
+	}
+	if = {
+		limit = {
+			has_dlc = "By Blood Alone"
+			has_tech = heavy_bombs
+			NOT = { has_tech = ocr_tech_cluster_napalm }
+		}
+		set_technology = { ocr_tech_cluster_napalm = 1 popup = no }
+	}
+	if = {
+		limit = {
+			has_dlc = "By Blood Alone"
+			has_tech = advanced_small_airframe
+			has_tech = improved_rocket_engines
+			NOT = { has_tech = ocr_tech_glide_bombs }
+		}
+		set_technology = { ocr_tech_glide_bombs = 1 popup = no }
 	}
 }

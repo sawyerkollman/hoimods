@@ -98,4 +98,30 @@ technologies = {
 		allow = { always = no }
 		categories = { armor }
 	}
+
+	# --- Wave 3: disgusting CAS ---
+	ocr_tech_cas_pods = {
+		enable_equipment_modules = { ocr_autocannon_strafe_pods }
+		research_cost = 0.1
+		allow = { always = no }
+		categories = { air_equipment }
+	}
+	ocr_tech_airborne_artillery = {
+		enable_equipment_modules = { ocr_airborne_artillery }
+		research_cost = 0.1
+		allow = { always = no }
+		categories = { air_equipment }
+	}
+	ocr_tech_cluster_napalm = {
+		enable_equipment_modules = { ocr_cluster_dispensers ocr_napalm_canisters }
+		research_cost = 0.1
+		allow = { always = no }
+		categories = { air_equipment }
+	}
+	ocr_tech_glide_bombs = {
+		enable_equipment_modules = { ocr_guided_glide_bombs }
+		research_cost = 0.1
+		allow = { always = no }
+		categories = { air_equipment }
+	}
 }
